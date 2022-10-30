@@ -17,6 +17,8 @@
 | [sirpdboy-netspeedtest][] | 网络速度诊断测试 |
 | [luci-app-speedtest-web][] | OpenWrt package of speedtest-go |
 | [luci-app-netmonitor][] | Network Monitor for LuCI |
+| [sirpdboy-netdata][] | netdata for LuCI |
+| [luci-app-netdata][] | netdata for LuCI |
 
 --------
 
@@ -36,3 +38,5 @@
 [sirpdboy-netspeedtest]: https://github.com/sirpdboy/netspeedtest.git
 [luci-app-speedtest-web]: https://github.com/ZeaKyX/luci-app-speedtest-web.git
 [luci-app-netmonitor]: https://github.com/muink/luci-app-netmonitor.git
+[sirpdboy-netdata]: https://github.com/sirpdboy/luci-app-netdata.git
+[luci-app-netdata]: https://github.com/Jason6111/luci-app-netdata.git
