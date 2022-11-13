@@ -20,7 +20,7 @@
 
 --------
 
-[luci-app-tinyfilemanager]: https://github.com/lynxnexy/luci-app-tinyfilemanager
+[luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager.git
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman.git
 [luci-app-smartinfo]: https://github.com/muink/luci-app-smartinfo.git
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info.git
