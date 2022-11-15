@@ -26,7 +26,7 @@
 [luci-app-natter]: https://github.com/muink/luci-app-natter.git
 [luci-app-natmap]: https://github.com/muink/luci-app-natmap.git
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy.git
-[luci-app-tn-netports]: https://github.com/tano-systems/luci-app-tn-netports.git
+[luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports.git
 [luci-app-onliner]: https://github.com/muink/luci-app-onliner.git
 [luci-app-serverchan]: https://github.com/tty228/luci-app-serverchan.git
 [sirpdboy-netspeedtest]: https://github.com/sirpdboy/netspeedtest.git
