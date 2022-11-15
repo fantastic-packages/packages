@@ -3,7 +3,6 @@
 | ---- | ---- |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
-| [luci-app-smartinfo][] | Monitor hard disk status |
 | [luci-app-disks-info][] | Connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
 | [luci-app-natter][] | TCP hole punching tool for LuCI |
@@ -22,7 +21,6 @@
 
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager.git
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman.git
-[luci-app-smartinfo]: https://github.com/muink/luci-app-smartinfo.git
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info.git
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac.git
 [luci-app-natter]: https://github.com/muink/luci-app-natter.git
