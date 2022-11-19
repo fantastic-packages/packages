@@ -1,3 +1,21 @@
+### How to use
+
+1. Add to `feeds.conf.default`
+```shell
+umask 022
+sed -i '1i src-git fantastic https://github.com/muink/fantastic-packages' feeds.conf.default
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+```
+
+2. Pull in the src/sdk directory
+```shell
+umask 022
+git clone https://github.com/muink/fantastic-packages package/fantastic-packages
+make menuconfig
+```
+
 ### Package description
 | Packages | Description |
 | ---- | ---- |
