@@ -26,7 +26,6 @@ make menuconfig
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
 | [luci-app-tn-netports][] | Network ports status LuCI |
-| [luci-app-tn-netports-config][] | Network ports status config LuCI |
 | [luci-app-serverchan][] | Service push |
 | [sirpdboy-netspeedtest][] | 网络速度诊断测试 |
 | [luci-app-speedtest-web][] | OpenWrt package of speedtest-go |
@@ -41,7 +40,6 @@ make menuconfig
 [luci-app-natter]: https://github.com/muink/luci-app-natter.git
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy.git
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports.git
-[luci-app-tn-netports-config]: https://github.com/muink/luci-app-tn-netports-config.git
 [luci-app-serverchan]: https://github.com/tty228/luci-app-serverchan.git
 [sirpdboy-netspeedtest]: https://github.com/sirpdboy/netspeedtest.git
 [luci-app-speedtest-web]: https://github.com/ZeaKyX/luci-app-speedtest-web.git
