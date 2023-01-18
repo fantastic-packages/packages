@@ -30,6 +30,7 @@ make menuconfig
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
 | [openwrt-go-stun][] | A GO STUN client  |
+| [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 
 --------
 
@@ -44,3 +45,4 @@ make menuconfig
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
+[openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
