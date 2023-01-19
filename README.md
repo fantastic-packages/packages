@@ -20,6 +20,7 @@ make menuconfig
 | Packages | Description |
 | ---- | ---- |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
+| [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
 | [luci-app-disks-info][] | Connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
@@ -30,11 +31,11 @@ make menuconfig
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
 | [openwrt-go-stun][] | A GO STUN client  |
-| [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 
 --------
 
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
+[luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
@@ -45,4 +46,3 @@ make menuconfig
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
-[openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
