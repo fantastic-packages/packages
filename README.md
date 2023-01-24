@@ -26,6 +26,7 @@ make menuconfig
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
+| [luci-app-packagesync][] | Used to build a local mirror feeds source on the router |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
 | [luci-app-serverchan][] | Service push |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
@@ -45,6 +46,7 @@ make menuconfig
 [luci-app-natter]: https://github.com/muink/luci-app-natter
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
+[luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
 [luci-app-serverchan]: https://github.com/tty228/luci-app-serverchan
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
