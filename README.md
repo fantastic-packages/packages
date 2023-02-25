@@ -21,14 +21,21 @@ make menuconfig
 | ---- | ---- |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
+| [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
+| [luci-app-cpu-status][] | CPU utilization info for the LuCI status page |
+| [luci-app-cpu-status-mini][] | CPU utilization info for the LuCI status page |
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
-| [luci-app-disks-info][] | Connected disk devices (partitions, filesystems, SMART) for LuCI |
+| [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
+| [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
+| [luci-app-internet-detector][] | Internet detector for OpenWrt |
+| [luci-app-log][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
 | [luci-app-packagesync][] | Used to build a local mirror feeds source on the router |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
 | [luci-app-serverchan][] | Service push |
+| [luci-app-temp-status][] | Temperature sensors data for the LuCI status page |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
 | [luci-app-tn-netports][] | Network ports status LuCI |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
@@ -41,14 +48,21 @@ make menuconfig
 
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
+[luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
+[luci-app-cpu-status]: https://github.com/gSpotx2f/luci-app-cpu-status
+[luci-app-cpu-status-mini]: https://github.com/gSpotx2f/luci-app-cpu-status-mini
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
+[luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
+[luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
+[luci-app-log]: https://github.com/gSpotx2f/luci-app-log
 [luci-app-natter]: https://github.com/muink/luci-app-natter
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
 [luci-app-serverchan]: https://github.com/tty228/luci-app-serverchan
+[luci-app-temp-status]: https://github.com/gSpotx2f/luci-app-temp-status
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline

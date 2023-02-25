@@ -29,12 +29,20 @@ define Package/$(PKG_NAME)
 		+rgmac \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
+		+luci-app-cpu-perf \
+		+luci-app-cpu-status \
+		+luci-app-cpu-status-mini \
 		+luci-app-diskman \
+		+luci-app-disks-info \
+		+luci-app-interfaces-statistics \
+		+luci-app-internet-detector \
+		+luci-app-log \
 		+luci-app-natter \
 		+luci-app-netdata \
 		+luci-app-netspeedtest \
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
+		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports
 	PKGARCH:=all
