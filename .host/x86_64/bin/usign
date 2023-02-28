@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+dir="$(dirname "$0")"
+export RUNAS_ARG0="$0"
+export LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD:}$dir/../lib/runas.so"
+exec "$dir/../lib/ld-linux-x86-64.so.2" --library-path "$dir/../lib/" "$dir/.usign.bin" "$@"
