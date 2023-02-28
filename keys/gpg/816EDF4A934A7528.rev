@@ -1,0 +1,37 @@
+This is a revocation certificate for the OpenPGP key:
+
+pub   rsa4096 2023-03-01 [SCEA]
+      9AC5366EB93689709308266E816EDF4A934A7528
+uid          fantastic packages <fantastic-packages@actions.github.com>
+
+A revocation certificate is a kind of "kill switch" to publicly
+declare that a key shall not anymore be used.  It is not possible
+to retract such a revocation certificate once it has been published.
+
+Use it to revoke this key in case of a compromise or loss of
+the secret key.  However, if the secret key is still accessible,
+it is better to generate a new revocation certificate and give
+a reason for the revocation.  For details see the description of
+of the gpg command "--generate-revocation" in the GnuPG manual.
+
+To avoid an accidental use of this file, a colon has been inserted
+before the 5 dashes below.  Remove this colon with a text editor
+before importing and publishing this revocation certificate.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iQI2BCABCgAgFiEEmsU2brk2iXCTCCZugW7fSpNKdSgFAmP/VxcCHQAACgkQgW7f
+SpNKdSgI9A//f1QgVcQNb+EqEIwvK4aS++CoP7R8Qh0jMmyxhG18gsQ+WCcsC3NP
+PK/gU9HK1+BYXrXK/iYamXp3wm/UjXvgFWKBKf5JajIZGwBkm3S/jnIw9aJEt/nE
+Jfl8w40nQo5pfvR6T4ijTHcMQH7nxQEPDL0uRgvlTAtMp7w/W6ilni/ROJs1Cb+m
+HQWQN5HbWWACCwkVK9dPkq8ngyhNQFlc+obKbyAJ98W9IOgcwQ/byli8QHGKr7/m
+tYxHJN+i7irZ9D6qyxZfQGlEfPTZ5nOKDgaGZwCMrQ/+wIGAnwJxc+Jkv7H25Lur
++SiixVN0e5OAMjvj34rRT0KIY1QQhux8l7E2luQw8d8GKLYOL8lY6GjHM15zbC+c
+49v+mcLE9qcdqfSjFwCtDLisR8tU/6ADyUOHyp9DHZ52VWKbFoyTp0gtGPNlwQeO
+BgJFMaA4XGrLyzK0fkGPzGObn3xIN1Gok+3OI+/X1iSVmZrADo3FudBlZ1k1IESI
+MQQkxmS3aDH9Sk4MiJFYJpPoY4zO+Ldwa+rziEmnp/unpM2A1o+J9UoeLpmAa9Ud
+DBzWhSgrrH34k0c2j3Z6U3YGhO6qr+ABnX8tQGY6Z44Pjo/A6EGntvW+atQ6l+W6
+H73RIkt9J6rQDuw30SZQxNOdV7YfWJcrQ93z2T5PbkQy3TjTPpDWizU=
+=78lO
+-----END PGP PUBLIC KEY BLOCK-----
