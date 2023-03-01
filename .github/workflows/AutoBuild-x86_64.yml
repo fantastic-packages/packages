@@ -1,0 +1,181 @@
+###########################################################
+#   Description: Compile OpenWrt by GitHub Actions        #
+#   Based on: https://github.com/P3TERX/Actions-OpenWrt   #
+#   Author: muink                                         #
+###########################################################
+
+name: x86_64
+
+### 以下内容请保持不变 ( 请修改下方的 [环境变量设置] )
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+### 环境变量设置
+env:
+# 编译版本信息参数
+  VERSIONS: '21.02.5 22.03.2'
+  TARGET: 'x86/64'
+  ARCH: 'x86_64'
+# 使用 GPG 签名 Packages (非必要)
+  GPG_SIGN: true
+# Pre-download Libraries
+  PRE_DOWNLOAD: false
+# 删除无用文件以增加编译空间
+  DELETE_USELESS_FILES: true
+# 删除早期的 workflow 任务
+  DELETE_OLD_WORKFLOW: false
+### 结束
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Maximize Build Space
+      if: env.DELETE_USELESS_FILES == 'true' && !cancelled()
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 5120
+        remove-dotnet: 'true'
+        remove-android: 'true'
+        remove-haskell: 'true'
+
+    - name: Initialize Environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo -E apt-get update
+        sudo -E apt-get -y install curl tar gzip bash gpg build-essential clang flex bison g++ gawk gcc-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget
+        sudo timedatectl set-timezone "Asia/Shanghai"
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
+        if [ "${{ env.DELETE_USELESS_FILES }}" == true ]
+        then
+            docker rmi $(docker images -q)
+            sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php
+            sudo -E apt-get -y autoremove --purge
+            sudo -E apt-get clean
+        fi
+
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        lfs: true
+        submodules: true
+
+    - name: Initialize OpenWRT SDK
+      shell: bash
+      run: |
+        mkdir -p "/workdir/DL"
+        for ver in $(echo $VERSIONS); do
+          sdk=$(curl --connect-timeout 10 --retry 3 -sSL https://downloads.openwrt.org/releases/$ver/targets/$TARGET | grep 'openwrt-sdk' | sed -En 's|.+\bhref="([^"]+)".+|\1|p')
+          curl --connect-timeout 10 --retry 3 -sSL -o "/workdir/$sdk" https://downloads.openwrt.org/releases/$ver/targets/$TARGET/$sdk
+          [ "$?" == 0 ] && {
+            tar -C "/workdir" -xf "/workdir/$sdk"
+            rm -f "/workdir/$sdk"
+            mv "/workdir/${sdk%.tar.*}" "/workdir/$ver"
+            pushd "/workdir/$ver" && umask 022
+            pushd "/workdir/$ver/package" && umask 022
+            ln -s "$GITHUB_WORKSPACE" "fantastic-packages"
+            popd
+            rm -rf dl 2>/dev/null
+            ln -s "/workdir/DL" dl
+            ./scripts/feeds update -a
+            ./scripts/feeds install -a
+            make defconfig
+            popd
+          }
+        done
+
+    - name: Pre-download Libraries
+      shell: bash
+      if: env.PRE_DOWNLOAD == 'true' && !cancelled()
+      run: |
+        for ver in $(echo $VERSIONS); do
+          [ -d "/workdir/$ver" ] && {
+            pushd "/workdir/$ver"
+            make download -j$(($(nproc)+1))
+            popd
+          }
+        done
+
+    - name: Build Packages
+      shell: bash
+      run: |
+        for ver in $(echo $VERSIONS); do
+          [ -d "/workdir/$ver" ] && {
+            pushd "/workdir/$ver"
+            make package/fantastic-packages/compile V=99
+            popd
+          }
+        done
+
+    - name: Checkout Packages
+      shell: bash
+      env:
+        USIGN_ID: '53FF2B6672243D28'
+        USIGN_KEY: ${{secrets.USIGN_53FF2B6672243D28}}
+        GPG_ID: '816EDF4A934A7528'
+        GPG_PW: ${{secrets.GPG_PW_816EDF4A934A7528}}
+        GPG_KEY: ${{secrets.GPG_816EDF4A934A7528}}
+      run: |
+        eval $(cat $GITHUB_WORKSPACE/Makefile|sed -En '/^\s*DEPENDS/,/^endef/{/^\s*(DEPENDS:=|\+)/p}'|tr '\n' ' '|sed -E "s|[:+\\]||g;s|\bluci-app-|luci-*-|g;s|\s+| |g;s|=|='|;s|\s*$|'|")
+        REGEXP=$(echo $DEPENDS|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')
+        mkdir -p "$GITHUB_WORKSPACE/releases" 2>/dev/null
+        for ver in $(echo $VERSIONS); do
+          if [ -d "/workdir/$ver" ]; then
+            PA="$PATH"
+            export PATH="$PATH:/workdir/$ver/staging_dir/host/bin"
+            sudo chmod -R +x "/workdir/$ver/staging_dir/host/bin/"
+            mkdir -p "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages" 2>/dev/null
+            eval $(find "/workdir/$ver/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages/"; |g;s|\$|\$|g')
+            pushd "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages"
+            # ref: SDK/package/Makefile:index:
+            sudo chmod +x "/workdir/$ver/scripts/ipkg-make-index.sh"
+            "/workdir/$ver/scripts/ipkg-make-index.sh" . 2>&1 > Packages.manifest
+            grep -vE '^(Maintainer|LicenseFiles|Source|SourceName|Require|SourceDateEpoch)' Packages.manifest > Packages
+            case "$(((64 + $(stat -L -c%s Packages)) % 128))" in 110|111)
+              # WARNING: Applying padding in $$d/Packages to workaround usign SHA-512 bug!
+              { echo ""; echo ""; } >> Packages;;
+            esac
+            gzip -9nc Packages > Packages.gz
+            # ref: SDK/package/Makefile:CONFIG_SIGNED_PACKAGES
+            usign -S -m Packages -s <(echo "${USIGN_KEY}")
+            cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ../Signature.pub
+            if [ "${{env.GPG_SIGN}}" == true ]; then
+              gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
+              echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
+              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ../Signature.gpg.finger
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ../Signature.gpg.pub
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ../Signature.gpg.rev
+            fi
+            popd
+            export PATH="$PA"
+          fi
+        done
+
+    - name: Commit and push Packages
+      env:
+        Branch: gh-pages
+      run: |
+        git config --local user.name "GitHub Action"
+        git config --local user.email "action@github.com"
+        git remote update
+        git fetch --no-tags --prune --depth=1 origin $Branch
+        git checkout -B $Branch refs/remotes/origin/$Branch
+        for ver in $(echo $VERSIONS); do
+          rm -rf "$GITHUB_WORKSPACE/releases/${ver%.*}/packages/$ARCH" 2>/dev/null
+          mkdir -p "$GITHUB_WORKSPACE/releases/${ver%.*}/packages" 2>/dev/null
+          mv "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH" "$GITHUB_WORKSPACE/releases/${ver%.*}/packages/$ARCH"
+          git add releases/${ver%.*}
+        done
+        git diff-index --cached --quiet HEAD -- || (git commit -m "Update $ARCH" && git push)
+
+    - name: Delete old Workflow Runs
+      uses: GitRML/delete-workflow-runs@main
+      if: env.DELETE_OLD_WORKFLOW == 'true' && !cancelled()
+      with:
+        retain_days: 1
+        keep_minimum_runs: 3
