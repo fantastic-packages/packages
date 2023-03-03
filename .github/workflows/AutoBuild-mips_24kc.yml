@@ -128,9 +128,9 @@ jobs:
             PA="$PATH"
             export PATH="$PATH:/workdir/$ver/staging_dir/host/bin"
             sudo chmod -R +x "/workdir/$ver/staging_dir/host/bin/"
-            mkdir -p "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages" 2>/dev/null
-            eval $(find "/workdir/$ver/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages/"; |g;s|\$|\$|g')
-            pushd "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH/packages"
+            mkdir -p "$GITHUB_WORKSPACE/releases/$ARCH/#$ver/packages" 2>/dev/null
+            eval $(find "/workdir/$ver/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/releases/$ARCH/#$ver/packages/"; |g;s|\$|\$|g')
+            pushd "$GITHUB_WORKSPACE/releases/$ARCH/#$ver/packages"
             # ref: SDK/package/Makefile:index:
             sudo chmod +x "/workdir/$ver/scripts/ipkg-make-index.sh"
             "/workdir/$ver/scripts/ipkg-make-index.sh" . 2>&1 > Packages.manifest
@@ -142,14 +142,14 @@ jobs:
             gzip -9nc Packages > Packages.gz
             # ref: SDK/package/Makefile:CONFIG_SIGNED_PACKAGES
             usign -S -m Packages -s <(echo "${USIGN_KEY}")
-            cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ../Signature.pub
+            cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ../${USIGN_ID}.pub
             if [ "${{env.GPG_SIGN}}" == true ]; then
               gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
               echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
-              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ../Signature.gpg.finger
-              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ../Signature.gpg.pub
-              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ../Signature.gpg.rev
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ../${GPG_ID}.gpg.finger
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ../${GPG_ID}.gpg.pub
+              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ../${GPG_ID}.gpg.rev
             fi
             popd
             export PATH="$PA"
@@ -166,10 +166,9 @@ jobs:
         git fetch --no-tags --prune --depth=1 origin $Branch
         git checkout -B $Branch refs/remotes/origin/$Branch
         for ver in $(echo $VERSIONS); do
-          rm -rf "$GITHUB_WORKSPACE/releases/${ver%.*}/packages/$ARCH" 2>/dev/null
-          mkdir -p "$GITHUB_WORKSPACE/releases/${ver%.*}/packages" 2>/dev/null
-          mv "$GITHUB_WORKSPACE/releases/#$ver/packages/$ARCH" "$GITHUB_WORKSPACE/releases/${ver%.*}/packages/$ARCH"
-          git add releases/${ver%.*}
+          rm -rf "$GITHUB_WORKSPACE/releases/$ARCH/${ver%.*}" 2>/dev/null
+          mv "$GITHUB_WORKSPACE/releases/$ARCH/#$ver" "$GITHUB_WORKSPACE/releases/$ARCH/${ver%.*}"
+          git add releases/$ARCH
         done
         git diff-index --cached --quiet HEAD -- || (git commit -m "Update $ARCH" && git push)
 
