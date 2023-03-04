@@ -5,7 +5,7 @@ FINGERPRINT=
 KEYSIZE=4096
 EXPIRE=0
 NAME="fantastic packages"
-MAIL="fantastic-packages@actions.github.com"
+MAIL="fantastic-packages@users.noreply.github.com"
 #
 out=$(gpg --full-gen-key --batch <(echo "Key-Type: 1"; \
                                    echo "Key-Length: ${KEYSIZE}"; \

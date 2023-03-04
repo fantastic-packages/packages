@@ -122,9 +122,9 @@ jobs:
       env:
         USIGN_ID: '53FF2B6672243D28'
         USIGN_KEY: ${{secrets.USIGN_53FF2B6672243D28}}
-        GPG_ID: '816EDF4A934A7528'
-        GPG_PW: ${{secrets.GPG_PW_816EDF4A934A7528}}
-        GPG_KEY: ${{secrets.GPG_816EDF4A934A7528}}
+        GPG_ID: 'A5F2461EC8F6DCAA'
+        GPG_PW: ${{secrets.GPG_PW_A5F2461EC8F6DCAA}}
+        GPG_KEY: ${{secrets.GPG_A5F2461EC8F6DCAA}}
       run: |
         export PATH="$PATH:/workdir/$VERSIONS/staging_dir/host/bin"
         sudo chmod -R +x "/workdir/$VERSIONS/staging_dir/host/bin/"
@@ -165,7 +165,7 @@ jobs:
         Branch: gh-pages
       run: |
         git config --local user.name "GitHub Action"
-        git config --local user.email "action@github.com"
+        git config --local user.email "actions-user@users.noreply.github.com"
         git remote update
         git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
         git checkout -B $Branch refs/remotes/origin/$Branch
