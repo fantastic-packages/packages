@@ -175,6 +175,7 @@ jobs:
         git checkout -B $Branch refs/remotes/origin/$Branch
         rm -rf "$GITHUB_WORKSPACE/releases/$ARCH/${VERSIONS%.*}" 2>/dev/null
         mv "$GITHUB_WORKSPACE/releases/$ARCH/#$VERSIONS" "$GITHUB_WORKSPACE/releases/$ARCH/${VERSIONS%.*}"
+        ./prenodes.sh
         git add releases/$ARCH
         git diff-index --cached --quiet HEAD -- || (git commit -m "Update $ARCH" && git push)
 
