@@ -159,6 +159,15 @@ jobs:
           # ref: SDK/package/Makefile:CONFIG_SIGNED_PACKAGES
           usign -S -m Packages -s <(echo "${USIGN_KEY}")
           cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ../${USIGN_ID}.pub
+        USIGN_PUBKEY="$(cat ../${USIGN_ID}.pub)"
+        cat <<- EOF > ../${USIGN_ID}.sh
+        #!/bin/sh
+        KEYID=${USIGN_ID}
+        mkdir -p /etc/opkg/keys 2>/dev/null
+        cat <<- PUBKEY > /etc/opkg/keys/\${KEYID,,}
+        ${USIGN_PUBKEY}
+        PUBKEY
+        EOF
           if [ "${{env.GPG_SIGN}}" == true ]; then
             gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
             echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
