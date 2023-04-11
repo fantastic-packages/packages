@@ -145,9 +145,9 @@ jobs:
         REGEXP=$(echo $DEPENDS|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')
         mkdir -p "$GITHUB_WORKSPACE/releases" 2>/dev/null
         if [ -d "/workdir/$VERSIONS" ]; then
-          mkdir -p "$GITHUB_WORKSPACE/releases/$ARCH/#$VERSIONS/packages" 2>/dev/null
-          eval $(find "/workdir/$VERSIONS/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/releases/$ARCH/#$VERSIONS/packages/"; |g;s|\$|\$|g')
-          pushd "$GITHUB_WORKSPACE/releases/$ARCH/#$VERSIONS/packages"
+          mkdir -p "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/#$ARCH/packages" 2>/dev/null
+          eval $(find "/workdir/$VERSIONS/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/#$ARCH/packages/"; |g;s|\$|\$|g')
+          pushd "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/#$ARCH/packages"
           # ref: SDK/package/Makefile:index:
           "/workdir/$VERSIONS/scripts/ipkg-make-index.sh" . 2>&1 > Packages.manifest
           grep -vE '^(Maintainer|LicenseFiles|Source|SourceName|Require|SourceDateEpoch)' Packages.manifest > Packages
@@ -158,9 +158,10 @@ jobs:
           gzip -9nc Packages > Packages.gz
           # ref: SDK/package/Makefile:CONFIG_SIGNED_PACKAGES
           usign -S -m Packages -s <(echo "${USIGN_KEY}")
-          cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ../${USIGN_ID}.pub
-        USIGN_PUBKEY="$(cat ../${USIGN_ID}.pub)"
-        cat <<- EOF > ../${USIGN_ID}.sh
+        pushd "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}"
+        cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ${USIGN_ID}.pub
+        USIGN_PUBKEY="$(cat ${USIGN_ID}.pub)"
+        cat <<- EOF > ${USIGN_ID}.sh
         #!/bin/sh
         KEYID=${USIGN_ID}
         mkdir -p /etc/opkg/keys 2>/dev/null
@@ -168,13 +169,16 @@ jobs:
         ${USIGN_PUBKEY}
         PUBKEY
         EOF
+        popd
           if [ "${{env.GPG_SIGN}}" == true ]; then
             gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
             echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
             gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
-            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ../${GPG_ID}.gpg.finger
-            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ../${GPG_ID}.gpg.pub
-            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ../${GPG_ID}.gpg.rev
+            pushd "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}"
+            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ${GPG_ID}.gpg.finger
+            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ${GPG_ID}.gpg.pub
+            cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ${GPG_ID}.gpg.rev
+            popd
           fi
           popd
         fi
@@ -188,10 +192,10 @@ jobs:
         git remote update
         git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
         git checkout -B $Branch refs/remotes/origin/$Branch
-        rm -rf "$GITHUB_WORKSPACE/releases/$ARCH/${VERSIONS%.*}" 2>/dev/null
-        mv "$GITHUB_WORKSPACE/releases/$ARCH/#$VERSIONS" "$GITHUB_WORKSPACE/releases/$ARCH/${VERSIONS%.*}"
+        rm -rf "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/$ARCH" 2>/dev/null
+        mv "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/#$ARCH" "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/$ARCH"
         ./prenodes.sh
-        git add releases/$ARCH
+        git add releases/
         git diff-index --cached --quiet HEAD -- || (git commit -m "Update $ARCH" && git push)
 
     - name: Delete old Workflow Runs
