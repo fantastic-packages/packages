@@ -204,7 +204,7 @@ jobs:
           pushd "/workdir/imagebuilder"
           sed -i "s|\(\bCONFIG_TARGET_ROOTFS_PARTSIZE\)=.*|\1=${ROOTFS_SIZE}|" .config
           eval $(find "$GITHUB_WORKSPACE/releases/${VERSIONS%.*}/packages/$ARCH/" -type f -name *.ipk | sed -E 's|^(.+)$|cp -f "\1" packages/; |g;s|\$|\$|g')
-          make image PACKAGES="$(echo $(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages"))"
+          make image PACKAGES="$(echo $(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH"))"
           popd
         }
 
