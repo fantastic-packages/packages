@@ -233,7 +233,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: OpenWRT-Images
+        name: OpenWRT-Build
         path: |
           releases/
         retention-days: 3
@@ -257,19 +257,13 @@ jobs:
         retain_days: 1
         keep_minimum_runs: 3
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+  deploy-pages:
     needs: compile
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: OpenWRT-Images
-        path: releases
-    
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: releases
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/jekyll.yml
+    with:
+      artifact_name: OpenWRT-Build
+      destination_path: releases
