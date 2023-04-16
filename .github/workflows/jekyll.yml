@@ -7,18 +7,8 @@
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: gh-pages
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
   workflow_call:
     inputs:
-      artifact_name:
-        required: true
-        type: string
       destination_path:
         required: true
         type: string
@@ -28,6 +18,9 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  release_path: ${{ inputs.destination_path }}
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -47,15 +40,15 @@ jobs:
           lfs: true
           submodules: true
       - name: Download artifact
-        if: inputs.artifact_name != '' && inputs.destination_path != '' && !cancelled()
         uses: actions/download-artifact@v3
-        with:
-          name: ${{ inputs.artifact_name }}
-          path: ${{ inputs.destination_path }}
+      - name: Move artifact
+        shell: bash
+        run: |
+          mkdir -p $release_path 2>/dev/null
+          cp -rf OpenWRT-Build-*/*/ $release_path/
       - name: Display structure of downloaded files
-        if: inputs.destination_path != '' && !cancelled()
         run: ls -R
-        working-directory: ${{ inputs.destination_path }}
+        working-directory: ${{ env.release_path }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
         with:
@@ -64,7 +57,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: prenodes
         env:
-          SERVER_HOME: 'releases/'
+          SERVER_HOME: ${{ env.release_path }}/
         run: ./prenodes.sh
       - name: Setup Pages
         id: pages

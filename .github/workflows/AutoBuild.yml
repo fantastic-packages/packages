@@ -1,0 +1,140 @@
+name: AutoBuild
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_mode:
+        description: 'Build mode'
+        required: true
+        default: 'build_pkgs_and_imgs'
+        type: choice
+        options:
+        - build_pkgs_and_imgs
+        - build_imgs
+      no_pages:
+        description: 'Donot deploy pages'
+        required: true
+        default: false
+        type: boolean
+
+  push:
+    branches: [ master ]
+    paths:
+    - 'Makefile'
+
+  watch:
+    types: [started]
+
+env:
+# Release path
+  release_path: 'releases'
+# 删除早期的 packages
+  DELETE_OLD_PACKAGES: true
+# 删除早期的 workflow 任务
+  DELETE_OLD_WORKFLOW: true
+### End
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: false
+
+jobs:
+  compile:
+    permissions:
+      contents: write  # To push a branch
+    strategy:
+      matrix:
+        version: [21.02.5, 22.03.4]
+        target: ['x86/64', 'ath79/nand']
+        include:
+          - usign_id: '53FF2B6672243D28'
+          - gpg_id: 'A5F2461EC8F6DCAA'
+          - release_path: 'releases'
+          - no_img: false
+          - target: 'x86/64'
+            arch: x86_64
+          - target: 'ath79/nand'
+            arch: mips_24kc
+            no_img: true
+    uses: ./.github/workflows/compile.yml
+    with:
+      build_mode: ${{ inputs.build_mode }}
+      no_img: ${{ matrix.no_img }}
+      TPATH: ${{ matrix.release_path }}
+      VERSION: ${{ matrix.version }}
+      TARGET: ${{ matrix.target }}
+      ARCH: ${{ matrix.arch }}
+      USIGN_ID: ${{ matrix.usign_id }}
+      GPG_ID: ${{ matrix.gpg_id }}
+    secrets: inherit
+
+  push_packages:
+    needs: compile
+    if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs') && !cancelled()
+    permissions:
+      contents: write  # To push a branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: 'gh-pages'
+          lfs: false
+          submodules: false
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+      - name: Move artifact
+        shell: bash
+        run: |
+          if [ "$DELETE_OLD_PACKAGES" == "true" ]; then
+            rm -rf $release_path/ 2>/dev/null
+          fi
+          mkdir -p $release_path 2>/dev/null
+          cp -rf OpenWRT-Build-*/*/ $release_path/
+      - name: Display structure of downloaded files
+        working-directory: ${{ env.release_path }}
+        run: ls -R
+      - name: Commit and push Packages
+        env:
+          Branch: gh-pages
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "actions-user@users.noreply.github.com"
+          git remote update
+          git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
+          git checkout -B $Branch refs/remotes/origin/$Branch
+          git add $release_path/**/
+          git reset HEAD $release_path/**/targets/
+          git diff-index --cached --quiet HEAD $release_path/**/packages/**/*.ipk \
+          && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
+          || (git commit -m "Update packages" && git push)
+
+  deploy_pages:
+    needs: [compile, push_packages]
+    if: inputs.no_pages == 0 && !cancelled()
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    strategy:
+      matrix:
+        release_path: ['releases']
+    uses: ./.github/workflows/jekyll.yml
+    with:
+      destination_path: ${{ matrix.release_path }}
+
+  clean-up-old-workflow:
+    needs: push_packages
+    permissions:
+      contents: read
+      actions: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old Workflow Runs
+        uses: GitRML/delete-workflow-runs@main
+        if: env.DELETE_OLD_WORKFLOW == true && !cancelled()
+        with:
+          retain_days: 7
+          keep_minimum_runs: 5
