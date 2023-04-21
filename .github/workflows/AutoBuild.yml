@@ -11,6 +11,7 @@ on:
         options:
         - build_pkgs_and_imgs
         - build_imgs
+        - build_pkgs
       no_pages:
         description: 'Donot deploy pages'
         required: true
@@ -72,7 +73,7 @@ jobs:
 
   push_packages:
     needs: compile
-    if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs') && !cancelled()
+    if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
     permissions:
       contents: write  # To push a branch
     runs-on: ubuntu-latest

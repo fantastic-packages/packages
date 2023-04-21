@@ -111,7 +111,7 @@ jobs:
 
       - name: Pre-download Libraries
         shell: bash
-        if: env.PRE_DOWNLOAD == true && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs') && !cancelled()
+        if: env.PRE_DOWNLOAD == true && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
           [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ] && {
             pushd "/workdir/sdk-$VERSION-${TARGET//\//-}"
@@ -121,7 +121,7 @@ jobs:
 
       - name: Build Packages
         shell: bash
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs') && !cancelled()
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
           [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ] && {
             pushd "/workdir/sdk-$VERSION-${TARGET//\//-}"
@@ -131,7 +131,7 @@ jobs:
 
       - name: Checkout Packages
         shell: bash
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs') && !cancelled()
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
           export PATH="$PATH:/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin"
           sudo chmod -R +x "/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
