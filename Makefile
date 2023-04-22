@@ -27,6 +27,7 @@ define Package/$(PKG_NAME)
 		+internet-detector \
 		+natter \
 		+pcap-dnsproxy \
+		+php8-nginx \
 		+rgmac \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
