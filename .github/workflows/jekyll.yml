@@ -46,6 +46,7 @@ jobs:
         run: |
           mkdir -p $release_path 2>/dev/null
           cp -rf OpenWRT-Build-*/*/ $release_path/
+          rm -rf OpenWRT-Build-*/ 2>/dev/null
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: ${{ env.release_path }}

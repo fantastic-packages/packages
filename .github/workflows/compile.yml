@@ -138,6 +138,11 @@ jobs:
           export MKHASH="/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/mkhash"
           sudo chmod +x "/workdir/sdk-$VERSION-${TARGET//\//-}/scripts/ipkg-make-index.sh"
           #
+          if [ "${{env.GPG_SIGN}}" == true ]; then
+            gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
+            echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
+          fi
+          #
           sign_packages() {
             # usign
             # ref: SDK/package/Makefile:index:
@@ -152,14 +157,12 @@ jobs:
             usign -S -m Packages -s <(echo "${USIGN_KEY}")
             # gpg
             if [ "${{env.GPG_SIGN}}" == true ]; then
-              gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-              echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
             fi
           }
           #
-          eval $(cat $GITHUB_WORKSPACE/Makefile|sed -En '/^\s*DEPENDS/,/^endef/{/^\s*(DEPENDS:=|\+)/p}'|tr '\n' ' '|sed -E "s|[:+\\]||g;s|\bluci-app-|luci-*-|g;s|\s+| |g;s|=|='|;s|\s*$|'|")
-          REGEXP=$(echo $DEPENDS|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')
+          eval "$(cat $GITHUB_WORKSPACE/Makefile|sed -En '/^\s*DEPENDS/,/^endef/{/^\s*(DEPENDS:=|\+)/p}'|tr '\n' ' '|sed -E "s|[:+\\]||g;s|\bluci-app-|luci-*-|g;s|\s+| |g;s|= *|='|;s|\s*$|'|")"
+          REGEXP="$(echo "$DEPENDS"|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')"
           mkdir -p "$GITHUB_WORKSPACE/$TPATH" 2>/dev/null
           if [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ]; then
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages" 2>/dev/null
