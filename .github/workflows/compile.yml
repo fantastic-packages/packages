@@ -144,7 +144,10 @@ jobs:
           if [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ]; then
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages" 2>/dev/null
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci" 2>/dev/null
             eval $(find "/workdir/sdk-$VERSION-${TARGET//\//-}/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages/"; |g;s|\$|\$|g')
+            eval $(find "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages/" -type f -name luci-*.ipk | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci/"; |g;s|\$|\$|g')
             pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages"
             # ref: SDK/package/Makefile:index:
             "/workdir/sdk-$VERSION-${TARGET//\//-}/scripts/ipkg-make-index.sh" . 2>&1 > Packages.manifest
