@@ -24,6 +24,7 @@ define Package/$(PKG_NAME)
 	DEPENDS:=\
 		+alwaysonline \
 		+go-stun \
+		+internet-detector \
 		+natter \
 		+pcap-dnsproxy \
 		+rgmac \
