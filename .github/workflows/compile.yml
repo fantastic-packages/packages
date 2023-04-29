@@ -31,6 +31,8 @@ on:
 env:
 # 使用 GPG 签名 Packages (非必要)
   GPG_SIGN: true
+# Cache Libraries
+  CACHE_DOWNLOAD: true
 # Pre-download Libraries
   PRE_DOWNLOAD: false
 # 删除无用文件以增加编译空间
@@ -109,6 +111,19 @@ jobs:
             sed -i 's,CONFIG_LUCI_CSSTIDY=y,# CONFIG_LUCI_CSSTIDY is not set,' .config
             popd
           }
+
+      - name: Cache DL dependencies
+        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        uses: actions/cache@v3
+        with:
+          path: /workdir/DL
+          key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('**/Makefile') }}
+          #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-DL-${{ github.ref_name }}-
+          #restore-keys: |
+          #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
+          #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
       - name: Pre-download Libraries
         shell: bash
