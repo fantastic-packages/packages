@@ -45,6 +45,8 @@ make menuconfig
 | [luci-app-temp-status][] | Temperature sensors data for the LuCI status page |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
 | [luci-app-tn-netports][] | Network ports status LuCI |
+| [luci-theme-argon][] | A clean and tidy OpenWrt LuCI theme |
+| [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
@@ -73,6 +75,8 @@ make menuconfig
 [luci-app-temp-status]: https://github.com/gSpotx2f/luci-app-temp-status
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports
+[luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
+[luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter

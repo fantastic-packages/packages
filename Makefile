@@ -46,7 +46,9 @@ define Package/$(PKG_NAME)
 		+luci-app-pcap-dnsproxy \
 		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
-		+luci-app-tn-netports
+		+luci-app-tn-netports \
+		+luci-theme-argon \
+		+luci-app-argon-config
 	PKGARCH:=all
 endef
 
