@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-packages
 PKG_VERSION:=1.0
-PKG_RELEASE:=20230220
+PKG_RELEASE:=20230428
 
 PKG_MAINTAINER:=muink <hukk1996@gmail.com>
 PKG_LICENSE:=GPL-3
@@ -27,7 +27,7 @@ define Package/$(PKG_NAME)
 		+internet-detector \
 		+natter \
 		+pcap-dnsproxy \
-		+php8-nginx \
+		+php-nginx \
 		+rgmac \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
