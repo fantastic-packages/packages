@@ -37,6 +37,8 @@ env:
   PRE_DOWNLOAD: false
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
+# Artifact retention days
+  ARTIFACT_RETENTION_DAYS: 3
 ### 结束
 
 jobs:
@@ -272,4 +274,4 @@ jobs:
           name: ${{ env.artifact }}
           path: |
             ${{ env.TPATH }}/
-          retention-days: 3
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}

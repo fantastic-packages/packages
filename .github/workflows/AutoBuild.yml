@@ -33,6 +33,8 @@ env:
   DELETE_OLD_PACKAGES: true
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
+  WORKFLOW_RETAIN_DAYS: 14
+  KEEP_RUNS_RECORD: 24
 ### End
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -138,5 +140,5 @@ jobs:
         uses: GitRML/delete-workflow-runs@main
         if: env.DELETE_OLD_WORKFLOW == 'true' && !cancelled()
         with:
-          retain_days: 7
-          keep_minimum_runs: 5
+          retain_days: ${{ env.WORKFLOW_RETAIN_DAYS }}
+          keep_minimum_runs: ${{ env.KEEP_RUNS_RECORD }}
