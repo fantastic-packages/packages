@@ -123,7 +123,6 @@ jobs:
           #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-
-            ${{ runner.os }}-DL-${{ github.ref_name }}-
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
