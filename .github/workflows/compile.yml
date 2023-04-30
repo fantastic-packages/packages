@@ -119,9 +119,10 @@ jobs:
         uses: actions/cache@v3
         with:
           path: /workdir/DL
-          key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('**/Makefile') }}
+          key: ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-${{ hashFiles('**/Makefile') }}
           #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
           restore-keys: |
+            ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-
             ${{ runner.os }}-DL-${{ github.ref_name }}-
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
