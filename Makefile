@@ -26,6 +26,7 @@ define Package/$(PKG_NAME)
 		+go-stun \
 		+internet-detector \
 		+natter \
+		+netdata-ssl \
 		+pcap-dnsproxy \
 		+php-nginx \
 		+rgmac \

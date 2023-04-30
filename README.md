@@ -50,6 +50,7 @@ make menuconfig
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
+| [openwrt-netdata-ssl][] | Real-time performance monitoring tool |
 | [openwrt-Pcap_DNSProxy][] | Pcap_DNSProxy for OpenWrt/LEDE |
 | [openwrt-php-nginx][] | PHP with Nginx as Webserver |
 | [openwrt-rgmac][] | a simple random MAC address generator for OpenWRT |
@@ -80,6 +81,7 @@ make menuconfig
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter
+[openwrt-netdata-ssl]: https://github.com/muink/openwrt-netdata-ssl
 [openwrt-Pcap_DNSProxy]: https://github.com/muink/openwrt-Pcap_DNSProxy
 [openwrt-php-nginx]: https://github.com/muink/openwrt-php-nginx
 [openwrt-rgmac]: https://github.com/muink/openwrt-rgmac
