@@ -84,10 +84,14 @@ jobs:
               sudo -E apt-get clean
           fi
 
+      - name: Generate short version
+        run: |
+          echo "shortversion=${VERSION%.*}" >> $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: 'master'
+          ref: ${{ env.shortversion }}
           lfs: true
           submodules: true
 
@@ -217,6 +221,11 @@ jobs:
         run: |
           git remote update
           git checkout origin/gh-pages -- $TPATH/
+
+      - name: Display structure of downloaded files
+        if: ${{ always() }}
+        run: ls -R
+        working-directory: ${{ env.TPATH }}
 
       - name: Initialize OpenWRT ImageBuilder
         shell: bash
