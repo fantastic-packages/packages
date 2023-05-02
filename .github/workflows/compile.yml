@@ -160,6 +160,7 @@ jobs:
           }
 
       - name: Checkout Packages
+        id: checkout_packags
         shell: bash
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
@@ -219,14 +220,19 @@ jobs:
           fi
 
       - name: Checkout Releases whitout compile
+        id: checkout_releases_whitout_compile
+        env:
+          Branch: gh-pages
         shell: bash
-        if: inputs.no_img == 0 && inputs.build_mode == 'build_imgs' && !cancelled()
+        if: inputs.build_mode == 'build_imgs' && !cancelled()
         run: |
-          git remote update
-          git checkout origin/gh-pages -- $TPATH/
+          git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
+          git checkout origin/$Branch -- $TPATH/
+          find $TPATH/* -maxdepth 0 2>/dev/null | grep -v "$shortversion" | xargs -I{} rm -rf "{}"
+          find $TPATH/$shortversion/packages/* -maxdepth 0 2>/dev/null | grep -v "$ARCH" | xargs -I{} rm -rf "{}"
 
       - name: Display structure of downloaded files
-        if: ${{ always() }}
+        if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases_whitout_compile.outcome == 'success' }}
         run: ls -R
         working-directory: ${{ env.TPATH }}
 
