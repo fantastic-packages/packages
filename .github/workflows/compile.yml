@@ -95,7 +95,15 @@ jobs:
           lfs: true
           submodules: true
 
+      - name: Import GPG keys
+        if: env.GPG_SIGN == 'true' && !cancelled()
+        shell: bash
+        run: |
+          gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
+          echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
+
       - name: Initialize OpenWRT SDK
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
         run: |
           mkdir -p "/workdir/DL"
@@ -159,11 +167,6 @@ jobs:
           sudo chmod -R +x "/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
           export MKHASH="/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/mkhash"
           sudo chmod +x "/workdir/sdk-$VERSION-${TARGET//\//-}/scripts/ipkg-make-index.sh"
-          #
-          if [ "${{env.GPG_SIGN}}" == "true" ]; then
-            gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-            echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
-          fi
           #
           sign_packages() {
             # usign
@@ -229,6 +232,7 @@ jobs:
 
       - name: Initialize OpenWRT ImageBuilder
         shell: bash
+        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         run: |
           imgbd=$(curl --connect-timeout 10 --retry 3 -sSL https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET | grep 'openwrt-imagebuilder' | sed -En 's|.+\bhref="([^"]+)".+|\1|p')
           curl --connect-timeout 10 --retry 3 -sSL -o "/workdir/$imgbd" https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$imgbd
@@ -256,8 +260,8 @@ jobs:
         shell: bash
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         run: |
-          export PATH="$PATH:/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin"
-          sudo chmod -R +x "/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
+          export PATH="$PATH:/workdir/imagebuilder-$VERSION-${TARGET//\//-}/staging_dir/host/bin"
+          sudo chmod -R +x "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
           #
           if [ -d "/workdir/imagebuilder-$VERSION-${TARGET//\//-}" ]; then
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET" 2>/dev/null
@@ -266,8 +270,6 @@ jobs:
             pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET"
             usign -S -m sha256sums -s <(echo "${USIGN_KEY}")
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
-              gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-              echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
             fi
             popd

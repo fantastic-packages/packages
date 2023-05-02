@@ -34,7 +34,7 @@ env:
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
   WORKFLOW_RETAIN_DAYS: 14
-  KEEP_RUNS_RECORD: 24
+  KEEP_RUNS_RECORD: 100
 ### End
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
