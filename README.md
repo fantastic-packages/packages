@@ -3,6 +3,7 @@ fantastic packages
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/fantastic-packages/packages/AutoBuild.yml?label=AutoBuild&style=flat-square)](https://github.com/fantastic-packages/packages/actions/workflows/AutoBuild.yml)
 [![Website](https://img.shields.io/website?down_message=offline&label=Donwload%20pages&style=flat-square&up_message=online&url=https%3A%2F%2Ffantastic-packages.github.io%2Fpackages%2F)](https://fantastic-packages.github.io/packages/)
+[![Website](https://img.shields.io/website?down_message=userguide&label=Custom%20Feeds&style=flat-square&up_message=userguide&url=https%3A%2F%2Fgithub.com%2Ffantastic-packages%2Fpackages%2Ftree%2Fgh-pages)](https://github.com/fantastic-packages/packages/tree/gh-pages#how-to-use-on-openwrt)
 [![GitHub](https://img.shields.io/github/license/fantastic-packages/packages?style=flat-square)](./LICENSE)
 
 ### How to use
