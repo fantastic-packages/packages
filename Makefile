@@ -49,7 +49,8 @@ define Package/$(PKG_NAME)
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
 		+luci-theme-argon \
-		+luci-app-argon-config
+		+luci-app-argon-config \
+		+uci-alwaysonline
 	PKGARCH:=all
 endef
 
