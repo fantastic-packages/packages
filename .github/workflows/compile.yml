@@ -292,19 +292,3 @@ jobs:
           path: |
             ${{ env.TPATH }}/
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
-
-      - name: Compress DL Cache
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        shell: bash
-        run: |
-          pushd /workdir/DL
-          tar -cJvf /workdir/DL.txz * --owner=0 --group=0
-          popd
-
-      - name: Upload DL Cache artifact
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        uses: actions/upload-artifact@v3
-        with:
-          name: DL.txz
-          path: /workdir/DL.txz
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
