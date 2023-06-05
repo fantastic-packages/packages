@@ -54,7 +54,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [21.02.6, 22.03.4]
+        version: [21.02.7, 22.03.5]
         target: ['x86/64', 'ath79/nand']
         include:
           - usign_id: '53FF2B6672243D28'
