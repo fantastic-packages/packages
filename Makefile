@@ -30,6 +30,7 @@ define Package/$(PKG_NAME)
 		+pcap-dnsproxy \
 		+php-nginx \
 		+rgmac \
+		+stuntman \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
 		+luci-app-cpu-perf \
