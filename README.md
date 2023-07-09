@@ -11,7 +11,7 @@ fantastic packages
 1. Add to `feeds.conf.default`
 ```shell
 umask 022
-sed -i '1i src-git fantastic-packages https://github.com/muink/fantastic-packages' feeds.conf.default
+sed -i '1i src-git fantastic-packages https://github.com/fantastic-packages/packages' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
@@ -20,7 +20,7 @@ make menuconfig
 2. Pull in the src/sdk directory
 ```shell
 umask 022
-git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodules https://github.com/muink/fantastic-packages package/fantastic-packages
+git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages package/fantastic-packages
 make menuconfig
 ```
 
