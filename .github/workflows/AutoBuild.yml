@@ -57,17 +57,11 @@ jobs:
         version: [21.02.7, 22.03.5]
         target: [
           'x86/64',
-          'x86/generic',
-          'x86/legacy',
           'ath79/nand',
-          'bcm27xx/bcm2708',
           'bcm27xx/bcm2709',
           'bcm27xx/bcm2710',
           'bcm27xx/bcm2711',
-          'bcm47xx/generic',
-          'bcm47xx/mips74k',
           'bcm53xx/generic',
-          'bcm63xx/generic',
           'ipq806x/generic',
           'ramips/mt7620',
           'rockchip/armv8'
@@ -80,28 +74,16 @@ jobs:
           - target: 'x86/64'
             arch: x86_64
             no_img: false
-          - target: 'x86/generic'
-            arch: i386_pentium4
-          - target: 'x86/legacy'
-            arch: i386_pentium-mmx
           - target: 'ath79/nand'
             arch: mips_24kc
-          - target: 'bcm27xx/bcm2708'
-            arch: arm_arm1176jzf-s_vfp
           - target: 'bcm27xx/bcm2709'
             arch: arm_cortex-a7_neon-vfpv4
           - target: 'bcm27xx/bcm2710'
             arch: aarch64_cortex-a53
           - target: 'bcm27xx/bcm2711'
             arch: aarch64_cortex-a72
-          - target: 'bcm47xx/generic'
-            arch: mipsel_mips32
-          - target: 'bcm47xx/mips74k'
-            arch: mipsel_74kc
           - target: 'bcm53xx/generic'
             arch: arm_cortex-a9
-          - target: 'bcm63xx/generic'
-            arch: mips_mips32
           - target: 'ipq806x/generic'
             arch: arm_cortex-a15_neon-vfpv4
           - target: 'ramips/mt7620'
