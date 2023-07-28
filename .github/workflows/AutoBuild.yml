@@ -60,12 +60,12 @@ jobs:
           - usign_id: '53FF2B6672243D28'
           - gpg_id: 'A5F2461EC8F6DCAA'
           - release_path: 'releases'
-          - no_img: false
+          - no_img: true
           - target: 'x86/64'
             arch: x86_64
+            no_img: false
           - target: 'ath79/nand'
             arch: mips_24kc
-            no_img: true
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
