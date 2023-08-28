@@ -55,41 +55,41 @@ jobs:
     strategy:
       matrix:
         version: [21.02.5, 22.03.5]
-        target: [
-          'x86/64',
-          'ath79/nand',
-          'bcm27xx/bcm2709',
-          'bcm27xx/bcm2710',
-          'bcm27xx/bcm2711',
-          'bcm53xx/generic',
-          'ipq806x/generic',
-          'ramips/mt7620',
-          'rockchip/armv8'
+        arch: [
+          x86_64,
+          mips_24kc,
+          arm_cortex-a7_neon-vfpv4,
+          aarch64_cortex-a53,
+          aarch64_cortex-a72,
+          arm_cortex-a9,
+          arm_cortex-a15_neon-vfpv4,
+          mipsel_24kc,
+          aarch64_generic
           ]
         include:
           - usign_id: '53FF2B6672243D28'
           - gpg_id: 'A5F2461EC8F6DCAA'
           - release_path: 'releases'
           - no_img: true
-          - target: 'x86/64'
-            arch: x86_64
+          - arch: x86_64
+            target: 'x86/64'
             no_img: false
-          - target: 'ath79/nand'
-            arch: mips_24kc
-          - target: 'bcm27xx/bcm2709'
-            arch: arm_cortex-a7_neon-vfpv4
-          - target: 'bcm27xx/bcm2710'
-            arch: aarch64_cortex-a53
-          - target: 'bcm27xx/bcm2711'
-            arch: aarch64_cortex-a72
-          - target: 'bcm53xx/generic'
-            arch: arm_cortex-a9
-          - target: 'ipq806x/generic'
-            arch: arm_cortex-a15_neon-vfpv4
-          - target: 'ramips/mt7620'
-            arch: mipsel_24kc
-          - target: 'rockchip/armv8'
-            arch: aarch64_generic
+          - arch: mips_24kc
+            target: 'ath79/nand'
+          - arch: arm_cortex-a7_neon-vfpv4
+            target: 'bcm27xx/bcm2709'
+          - arch: aarch64_cortex-a53
+            target: 'bcm27xx/bcm2710'
+          - arch: aarch64_cortex-a72
+            target: 'bcm27xx/bcm2711'
+          - arch: arm_cortex-a9
+            target: 'bcm53xx/generic'
+          - arch: arm_cortex-a15_neon-vfpv4
+            target: 'ipq806x/generic'
+          - arch: mipsel_24kc
+            target: 'ramips/mt7620'
+          - arch: aarch64_generic
+            target: 'rockchip/armv8'
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
