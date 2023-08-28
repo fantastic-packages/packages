@@ -25,6 +25,7 @@ define Package/$(PKG_NAME)
 		+alwaysonline \
 		+go-stun \
 		+internet-detector \
+		+natmapt \
 		+natter \
 		+netdata-ssl \
 		+pcap-dnsproxy \
@@ -41,6 +42,7 @@ define Package/$(PKG_NAME)
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
 		+luci-app-log \
+		+luci-app-natmapt \
 		+luci-app-natter \
 		+luci-app-netdata \
 		+luci-app-netspeedtest \

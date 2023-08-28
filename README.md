@@ -37,6 +37,7 @@ make menuconfig
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
 | [luci-app-log][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
+| [luci-app-natmapt][] | TCP/UDP port mapping for LuCI |
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
@@ -50,6 +51,7 @@ make menuconfig
 | [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-go-stun][] | A GO STUN client |
+| [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
 | [openwrt-netdata-ssl][] | Real-time performance monitoring tool |
 | [openwrt-Pcap_DNSProxy][] | Pcap_DNSProxy for OpenWrt/LEDE |
@@ -69,6 +71,7 @@ make menuconfig
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-log]: https://github.com/gSpotx2f/luci-app-log
+[luci-app-natmapt]: https://github.com/muink/luci-app-natmapt
 [luci-app-natter]: https://github.com/muink/luci-app-natter
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
@@ -82,6 +85,7 @@ make menuconfig
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
+[openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter
 [openwrt-netdata-ssl]: https://github.com/muink/openwrt-netdata-ssl
 [openwrt-Pcap_DNSProxy]: https://github.com/muink/openwrt-Pcap_DNSProxy
