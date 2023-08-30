@@ -2,7 +2,7 @@ bash nano getopt coreutils-base64 coreutils-stat
 wget curl ca-certificates
 unzip gzip tar bzip2 xz lzmainfo
 lscpu htop atop iftop
-ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3 go-stun
+ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3 stuntman-client
 coreutils-truncate losetup parted resize2fs lsblk coreutils-df
 kmod-ata-core kmod-ata-ahci
 kmod-scsi-core kmod-scsi-generic
@@ -17,8 +17,8 @@ kmod-tcp-bbr kmod-ipt-offload dnsmasq-full -dnsmasq
 zoneinfo-core zoneinfo-simple zoneinfo-asia
 luci luci-compat luci-lib-ipkg luci-mod-dashboard
 luci-theme-material
-luci-app-ttyd luci-app-natter luci-app-advanced-reboot luci-app-commands
+luci-app-ttyd luci-app-natmapt luci-app-advanced-reboot luci-app-commands
 luci-app-nlbwmon luci-app-tn-netports luci-app-smartdns luci-app-pcap-dnsproxy luci-app-change-mac
 luci-app-uhttpd luci-app-netspeedtest luci-app-tinyfilemanager luci-app-simple-adblock luci-app-diskman
 luci-app-disks-info luci-app-packagesync luci-app-log
-luci-app-alwaysonline uci-alwaysonline netdata-ssl luci-app-netdata
+luci-app-alwaysonline uci-alwaysonline
