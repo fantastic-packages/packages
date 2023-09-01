@@ -84,14 +84,16 @@ jobs:
               sudo -E apt-get clean
           fi
 
-      - name: Generate short version
+      - name: Determine branch name
         run: |
-          echo "shortversion=${VERSION%.*}" >> $GITHUB_ENV
+          BRANCH="${VERSION%.*}"
+          echo "Building for $BRANCH"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ env.shortversion }}
+          ref: ${{ env.BRANCH }}
           lfs: true
           submodules: true
 
@@ -195,16 +197,16 @@ jobs:
           REGEXP="$(echo "$DEPENDS"|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')"
           mkdir -p "$GITHUB_WORKSPACE/$TPATH" 2>/dev/null
           if [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ]; then
-            rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages" 2>/dev/null
-            rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci" 2>/dev/null
-            eval $(find "/workdir/sdk-$VERSION-${TARGET//\//-}/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages/"; |g;s|\$|\$|g')
-            eval $(find "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages/" -type f -name luci-*.ipk | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci/"; |g;s|\$|\$|g')
-            pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/packages"; sign_packages; popd
-            pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/luci"; sign_packages; popd
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages" 2>/dev/null
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci" 2>/dev/null
+            eval $(find "/workdir/sdk-$VERSION-${TARGET//\//-}/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages/"; |g;s|\$|\$|g')
+            eval $(find "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages/" -type f -name luci-*.ipk | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci/"; |g;s|\$|\$|g')
+            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages"; sign_packages; popd
+            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci"; sign_packages; popd
             #
-            pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}"
+            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH"
             cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ${USIGN_ID}.pub
             USIGN_PUBKEY="$(cat ${USIGN_ID}.pub)"
           cat <<- EOF > ${USIGN_ID}.sh
@@ -232,8 +234,8 @@ jobs:
         run: |
           git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
           git checkout origin/$Branch -- $TPATH/
-          find $TPATH/* -maxdepth 0 2>/dev/null | grep -v "$shortversion" | xargs -I{} rm -rf "{}"
-          find $TPATH/$shortversion/packages/* -maxdepth 0 2>/dev/null | grep -v "$ARCH" | xargs -I{} rm -rf "{}"
+          find $TPATH/* -maxdepth 0 2>/dev/null | grep -v "$BRANCH" | xargs -I{} rm -rf "{}"
+          find $TPATH/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "$ARCH" | xargs -I{} rm -rf "{}"
 
       - name: Display structure of downloaded files
         if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases_whitout_compile.outcome == 'success' }}
@@ -261,7 +263,7 @@ jobs:
           [ -d "/workdir/imagebuilder-$VERSION-${TARGET//\//-}" ] && {
             pushd "/workdir/imagebuilder-$VERSION-${TARGET//\//-}"
             sed -i "s|\(\bCONFIG_TARGET_ROOTFS_PARTSIZE\)=.*|\1=${ROOTFS_SIZE}|" .config
-            eval $(find "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/packages/$ARCH/" -type f -name *.ipk | sed -E 's|^(.+)$|cp -f "\1" packages/; |g;s|\$|\$|g')
+            eval $(find "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/" -type f -name *.ipk | sed -E 's|^(.+)$|cp -f "\1" packages/; |g;s|\$|\$|g')
             make image PACKAGES="$(echo $(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH"))"
             popd
           }
@@ -274,10 +276,10 @@ jobs:
           sudo chmod -R +x "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
           #
           if [ -d "/workdir/imagebuilder-$VERSION-${TARGET//\//-}" ]; then
-            rm -rf   "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET" 2>/dev/null
-            mv "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/bin/targets/$TARGET/"* "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET/"
-            pushd "$GITHUB_WORKSPACE/$TPATH/${VERSION%.*}/targets/$TARGET"
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET" 2>/dev/null
+            mv "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/bin/targets/$TARGET/"* "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/"
+            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET"
             usign -S -m sha256sums -s <(echo "${USIGN_KEY}")
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
