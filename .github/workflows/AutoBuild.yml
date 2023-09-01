@@ -72,24 +72,8 @@ jobs:
           - release_path: 'releases'
           - no_img: true
           - arch: x86_64
-            target: 'x86/64'
+            target: 'x86/64' # for imagebuilder
             no_img: false
-          - arch: mips_24kc
-            target: 'ath79/nand'
-          - arch: arm_cortex-a7_neon-vfpv4
-            target: 'bcm27xx/bcm2709'
-          - arch: aarch64_cortex-a53
-            target: 'bcm27xx/bcm2710'
-          - arch: aarch64_cortex-a72
-            target: 'bcm27xx/bcm2711'
-          - arch: arm_cortex-a9
-            target: 'bcm53xx/generic'
-          - arch: arm_cortex-a15_neon-vfpv4
-            target: 'ipq806x/generic'
-          - arch: mipsel_24kc
-            target: 'ramips/mt7620'
-          - arch: aarch64_generic
-            target: 'rockchip/armv8'
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
