@@ -124,7 +124,6 @@ jobs:
             ./scripts/feeds update -a
             ./scripts/feeds install -a
             make defconfig
-            sed -i 's,CONFIG_LUCI_CSSTIDY=y,# CONFIG_LUCI_CSSTIDY is not set,' .config
             popd
           }
 
