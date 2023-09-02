@@ -81,6 +81,7 @@ jobs:
         run: |
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
+          mkdir -p "/workdir/DL"
           if [ "${{ env.DELETE_USELESS_FILES }}" == "true" ]
           then
               docker rmi $(docker images -q)
@@ -152,6 +153,7 @@ jobs:
           #ARCH: ${{ env.ARCH }}-v${{ env.VERSION }}
           ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
           ARTIFACTS_DIR: /workdir
+          DL_DIR: /workdir/DL
           FEED_DIR: ${{ github.workspace }}
           EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }}
           NO_REPO_FEEDS: 1
