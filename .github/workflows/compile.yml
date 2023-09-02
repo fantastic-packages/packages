@@ -119,10 +119,6 @@ jobs:
             pushd "/workdir/sdk-$VERSION-${TARGET//\//-}/package" && umask 022
             ln -s "$GITHUB_WORKSPACE" "fantastic-packages"
             popd
-            # include libboost
-            #pushd "/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir" && pushd toolchain-*/include
-            #ln -s /usr/include/boost boost
-            #popd && popd
             rm -rf dl 2>/dev/null
             ln -s "/workdir/DL" dl
             ./scripts/feeds update -a

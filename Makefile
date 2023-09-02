@@ -63,9 +63,6 @@ endef
 define Build/Compile
 endef
 
-define Package/$(PKG_NAME)/install
-endef
-
 define Package/$(PKG_NAME)/conffiles
 endef
 
@@ -75,5 +72,8 @@ endef
 define Package/$(PKG_NAME)/prerm
 endef
 
+define Package/$(PKG_NAME)/install
+	:
+endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
