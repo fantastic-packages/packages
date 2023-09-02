@@ -16,12 +16,18 @@ PKG_LICENSE_FILES:=LICENSE
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/$(PKG_NAME)
+define Package/$(PKG_NAME)/Default
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=self-use openwrt extended packages
 	URL:=https://github.com/muink/fantastic-packages
-	DEPENDS:=\
+	DEPENDS:=
+	PKGARCH:=all
+endef
+
+define Package/$(PKG_NAME)-packages
+	$(call Package/$(PKG_NAME)/Default)
+	DEPENDS+:=\
 		+alwaysonline \
 		+go-stun \
 		+internet-detector \
@@ -32,6 +38,12 @@ define Package/$(PKG_NAME)
 		+php-nginx \
 		+rgmac \
 		+stuntman \
+		+uci-alwaysonline
+endef
+
+define Package/$(PKG_NAME)-luci
+	$(call Package/$(PKG_NAME)/Default)
+	DEPENDS+:=\
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
 		+luci-app-cpu-perf \
@@ -52,9 +64,44 @@ define Package/$(PKG_NAME)
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
 		+luci-theme-argon \
-		+luci-app-argon-config \
-		+uci-alwaysonline
-	PKGARCH:=all
+		+luci-app-argon-config
+endef
+
+define Package/$(PKG_NAME)
+	$(call Package/$(PKG_NAME)/Default)
+	DEPENDS+:=\
+		+alwaysonline \
+		+go-stun \
+		+internet-detector \
+		+natmapt \
+		+natter \
+		+netdata-ssl \
+		+pcap-dnsproxy \
+		+php-nginx \
+		+rgmac \
+		+stuntman \
+		+uci-alwaysonline \
+		+luci-app-alwaysonline \
+		+luci-app-change-mac \
+		+luci-app-cpu-perf \
+		+luci-app-cpu-status \
+		+luci-app-cpu-status-mini \
+		+luci-app-diskman \
+		+luci-app-disks-info \
+		+luci-app-interfaces-statistics \
+		+luci-app-internet-detector \
+		+luci-app-log \
+		+luci-app-natmapt \
+		+luci-app-natter \
+		+luci-app-netdata \
+		+luci-app-netspeedtest \
+		+luci-app-packagesync \
+		+luci-app-pcap-dnsproxy \
+		+luci-app-temp-status \
+		+luci-app-tinyfilemanager \
+		+luci-app-tn-netports \
+		+luci-theme-argon \
+		+luci-app-argon-config
 endef
 
 define Build/Configure
@@ -72,8 +119,14 @@ endef
 define Package/$(PKG_NAME)/prerm
 endef
 
-define Package/$(PKG_NAME)/install
+define Package/$(PKG_NAME)/install/Default
 	:
 endef
 
+Package/$(PKG_NAME)-packages/install = $(Package/$(PKG_NAME)/install/Default)
+Package/$(PKG_NAME)-luci/install = $(Package/$(PKG_NAME)/install/Default)
+Package/$(PKG_NAME)/install = $(Package/$(PKG_NAME)/install/Default)
+
+$(eval $(call BuildPackage,$(PKG_NAME)-packages))
+$(eval $(call BuildPackage,$(PKG_NAME)-luci))
 $(eval $(call BuildPackage,$(PKG_NAME)))
