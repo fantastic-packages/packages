@@ -146,41 +146,27 @@ jobs:
         shell: bash
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
-          export PATH="$PATH:/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin"
-          sudo chmod -R +x "/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
-          export MKHASH="/workdir/sdk-$VERSION-${TARGET//\//-}/staging_dir/host/bin/mkhash"
-          sudo chmod +x "/workdir/sdk-$VERSION-${TARGET//\//-}/scripts/ipkg-make-index.sh"
-          #
           sign_packages() {
-            # usign
-            # ref: SDK/package/Makefile:index:
-            "/workdir/sdk-$VERSION-${TARGET//\//-}/scripts/ipkg-make-index.sh" . 2>&1 > Packages.manifest
-            grep -vE '^(Maintainer|LicenseFiles|Source|SourceName|Require|SourceDateEpoch)' Packages.manifest > Packages
-            case "$(((64 + $(stat -L -c%s Packages)) % 128))" in 110|111)
-              # WARNING: Applying padding in $$d/Packages to workaround usign SHA-512 bug!
-              { echo ""; echo ""; } >> Packages;;
-            esac
-            gzip -9nc Packages > Packages.gz
-            # ref: SDK/package/Makefile:CONFIG_SIGNED_PACKAGES
-            usign -S -m Packages -s <(echo "${USIGN_KEY}")
             # gpg
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
             fi
           }
           #
-          eval "$(cat $GITHUB_WORKSPACE/Makefile|sed -En '/^\s*DEPENDS/,/^endef/{/^\s*(DEPENDS:=|\+)/p}'|tr '\n' ' '|sed -E "s|[:+\\]||g;s|\bluci-app-|luci-*-|g;s|\s+| |g;s|= *|='|;s|\s*$|'|")"
-          REGEXP="$(echo "$DEPENDS"|sed 's| |*.ipk -or -name |g;s|^|-name |;s|$|*.ipk|')"
           mkdir -p "$GITHUB_WORKSPACE/$TPATH" 2>/dev/null
-          if [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ]; then
+          if [ -d "/workdir/bin" ]; then
+            sudo chown -R $USER:$GROUPS /workdir/bin
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages" 2>/dev/null
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci" 2>/dev/null
-            eval $(find "/workdir/sdk-$VERSION-${TARGET//\//-}/bin/packages/$ARCH/" -type f $REGEXP | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages/"; |g;s|\$|\$|g')
-            eval $(find "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages/" -type f -name luci-*.ipk | sed -E 's|^(.+)$|mv -f "\1" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci/"; |g;s|\$|\$|g')
-            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages"; sign_packages; popd
-            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci"; sign_packages; popd
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/" 2>/dev/null
+            for EXTRA_FEED in $EXTRA_FEEDS; do
+              feed=$(echo "$EXTRA_FEED" | cut -d'|' -f2)
+              if [ -d "/workdir/bin/packages/$ARCH/$feed" ]; then
+                echo "mv /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"
+                mv -f "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"
+                pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"; sign_packages; popd
+              fi
+            done
             #
             pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH"
             cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ${USIGN_ID}.pub
