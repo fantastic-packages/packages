@@ -33,8 +33,6 @@ env:
   GPG_SIGN: true
 # Cache Libraries
   CACHE_DOWNLOAD: true
-# Pre-download Libraries
-  PRE_DOWNLOAD: false
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
 # Artifact retention days
@@ -140,16 +138,6 @@ jobs:
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
-
-      - name: Pre-download Libraries
-        shell: bash
-        if: env.PRE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        run: |
-          [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ] && {
-            pushd "/workdir/sdk-$VERSION-${TARGET//\//-}"
-            make download -j$(($(nproc)+1))
-            popd
-          }
 
       - name: Build Packages
         shell: bash
