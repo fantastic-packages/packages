@@ -113,6 +113,16 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
+      - name: Determine packages
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        shell: bash
+        run: |
+          _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
+          _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
+          PACKAGES="$_packages $_luci"
+          echo "Building $PACKAGES"
+          echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
+
       - name: Build Packages
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: muink/gh-action-sdk@master
@@ -126,7 +136,7 @@ jobs:
             src-link|fantasticpackages_luci|/feed/feeds/luci/
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
-          PACKAGES: 'fantastic-packages'
+          PACKAGES: ${{ env.PACKAGES }}
           INDEX: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           V: 99
