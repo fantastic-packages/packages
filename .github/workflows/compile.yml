@@ -70,8 +70,6 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo -E apt-get update
-          sudo -E apt-get -y install curl tar gzip bash gpg build-essential clang flex bison g++ gawk gcc-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget libncursesw5-dev xsltproc python3
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
           if [ "${{ env.DELETE_USELESS_FILES }}" == "true" ]
@@ -102,30 +100,6 @@ jobs:
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
           echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
 
-      - name: Initialize OpenWRT SDK
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        shell: bash
-        run: |
-          mkdir -p "/workdir/DL"
-          sdk=$(curl --connect-timeout 10 --retry 3 -sSL https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET | grep 'openwrt-sdk' | sed -En 's|.+\bhref="([^"]+)".+|\1|p')
-          curl --connect-timeout 10 --retry 3 -sSL -o "/workdir/$sdk" https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$sdk
-          [ "$?" == 0 ] && {
-            tar -C "/workdir" -xf "/workdir/$sdk"
-            rm -f "/workdir/$sdk"
-            mv "/workdir/${sdk%.tar.*}" "/workdir/sdk-$VERSION-${TARGET//\//-}"
-            pushd "/workdir/sdk-$VERSION-${TARGET//\//-}" && umask 022
-            pushd "/workdir/sdk-$VERSION-${TARGET//\//-}/package" && umask 022
-            ln -s "$GITHUB_WORKSPACE" "fantastic-packages"
-            popd
-            rm -rf dl 2>/dev/null
-            ln -s "/workdir/DL" dl
-            ./scripts/feeds update -a
-            ./scripts/feeds install -a
-            make defconfig
-            sed -i 's,CONFIG_LUCI_CSSTIDY=y,# CONFIG_LUCI_CSSTIDY is not set,' .config
-            popd
-          }
-
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: actions/cache@v3
@@ -140,14 +114,22 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
       - name: Build Packages
-        shell: bash
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        run: |
-          [ -d "/workdir/sdk-$VERSION-${TARGET//\//-}" ] && {
-            pushd "/workdir/sdk-$VERSION-${TARGET//\//-}"
-            make package/fantastic-packages/compile V=99
-            popd
-          }
+        uses: muink/gh-action-sdk@master
+        env:
+          #ARCH: ${{ env.ARCH }}-v${{ env.VERSION }}
+          ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
+          ARTIFACTS_DIR: /workdir
+          FEED_DIR: ${{ github.workspace }}
+          EXTRA_FEEDS: >-
+            src-link|fantasticpackages_packages|/feed/feeds/packages/
+            src-link|fantasticpackages_luci|/feed/feeds/luci/
+          NO_REPO_FEEDS: 1
+          NO_SHFMT_CHECK: 1
+          PACKAGES: 'fantastic-packages'
+          INDEX: 1
+          KEY_BUILD: ${{ env.USIGN_KEY }}
+          V: 99
 
       - name: Checkout Packages
         id: checkout_packags
