@@ -243,15 +243,12 @@ jobs:
         shell: bash
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         run: |
-          export PATH="$PATH:/workdir/imagebuilder-$VERSION-${TARGET//\//-}/staging_dir/host/bin"
-          sudo chmod -R +x "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/staging_dir/host/bin/"
-          #
-          if [ -d "/workdir/imagebuilder-$VERSION-${TARGET//\//-}" ]; then
-            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET" 2>/dev/null
-            mv "/workdir/imagebuilder-$VERSION-${TARGET//\//-}/bin/targets/$TARGET/"* "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/"
-            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET"
-            usign -S -m sha256sums -s <(echo "${USIGN_KEY}")
+          if [ -d "/workdir/bin" ]; then
+            sudo chown -R $USER:$GROUPS /workdir/bin
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/" 2>/dev/null
+            mv -f "/workdir/bin/targets/$TARGET/$SUBTARGET" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET"
+            pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET"
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
             fi
@@ -260,7 +257,7 @@ jobs:
 
       - name: Generate artifact name
         run: |
-          echo "artifact=OpenWRT-Build-$VERSION-${TARGET//\//-}" >> $GITHUB_ENV
+          echo "artifact=OpenWRT-Build-$VERSION-$ARCH-$TARGET-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
