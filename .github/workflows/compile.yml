@@ -16,7 +16,13 @@ on:
         required: true
         type: string
       TARGET:
-        required: true
+        required: false
+        type: string
+      SUBTARGET:
+        required: false
+        type: string
+      PROFILE:
+        required: false
         type: string
       ARCH:
         required: true
@@ -49,6 +55,8 @@ jobs:
       TPATH: ${{ inputs.TPATH }}
       VERSION: ${{ inputs.VERSION }}
       TARGET: ${{ inputs.TARGET }}
+      SUBTARGET: ${{ inputs.SUBTARGET }}
+      PROFILE: ${{ inputs.PROFILE }}
       ARCH: ${{ inputs.ARCH }}
       USIGN_ID: ${{ inputs.USIGN_ID }}
       USIGN_KEY: ${{ secrets[format('USIGN_{0}', inputs.USIGN_ID )] }}
@@ -93,10 +101,13 @@ jobs:
           lfs: true
           submodules: true
 
-      - name: Import GPG keys
-        if: env.GPG_SIGN == 'true' && !cancelled()
+      - name: Import keys
         shell: bash
         run: |
+          # usign
+          USIGN_PUBKEY="$(cat $GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub)"
+          echo "USIGN_PUBKEY=$USIGN_PUBKEY" >> $GITHUB_ENV
+          # gpg
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
           echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
 
@@ -169,8 +180,7 @@ jobs:
             done
             #
             pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH"
-            cp -f "$GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub" ${USIGN_ID}.pub
-            USIGN_PUBKEY="$(cat ${USIGN_ID}.pub)"
+            echo "$USIGN_PUBKEY" > ${USIGN_ID}.pub
           cat <<- EOF > ${USIGN_ID}.sh
           #!/bin/sh
           KEYID=${USIGN_ID}
@@ -204,31 +214,30 @@ jobs:
         run: ls -R
         working-directory: ${{ env.TPATH }}
 
-      - name: Initialize OpenWRT ImageBuilder
-        shell: bash
+      - name: Determine packages be installed
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        shell: bash
         run: |
-          imgbd=$(curl --connect-timeout 10 --retry 3 -sSL https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET | grep 'openwrt-imagebuilder' | sed -En 's|.+\bhref="([^"]+)".+|\1|p')
-          curl --connect-timeout 10 --retry 3 -sSL -o "/workdir/$imgbd" https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$imgbd
-          [ "$?" == 0 ] && {
-            tar -C "/workdir" -xf "/workdir/$imgbd"
-            rm -f "/workdir/$imgbd"
-            mv "/workdir/${imgbd%.tar.*}" "/workdir/imagebuilder-$VERSION-${TARGET//\//-}"
-          }
+          INSTALLS="$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH" | tr '\n' ' ')"
+          echo "Installing $INSTALLS"
+          echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
 
       - name: Build Images
-        env:
-          ROOTFS_SIZE: 256
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
-        shell: bash
-        run: |
-          [ -d "/workdir/imagebuilder-$VERSION-${TARGET//\//-}" ] && {
-            pushd "/workdir/imagebuilder-$VERSION-${TARGET//\//-}"
-            sed -i "s|\(\bCONFIG_TARGET_ROOTFS_PARTSIZE\)=.*|\1=${ROOTFS_SIZE}|" .config
-            eval $(find "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/" -type f -name *.ipk | sed -E 's|^(.+)$|cp -f "\1" packages/; |g;s|\$|\$|g')
-            make image PACKAGES="$(echo $(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH"))"
-            popd
-          }
+        uses: muink/gh-action-imagebuilder@master
+        env:
+          ARCH: ${{ env.TARGET }}-${{ env.SUBTARGET }}-${{ env.VERSION }}
+          PROFILE: ${{ env.PROFILE }}
+          ARTIFACTS_DIR: /workdir
+          REPO_DIR: ${{ github.workspace }}
+          EXTRA_REPOS: >-
+            src|${{ env.PREFIX }}packages|file:///repo/${{ env.TPATH }}/${{ env.BRANCH }}/packages/${{ env.ARCH }}/packages
+            src|${{ env.PREFIX }}luci|file:///repo/${{ env.TPATH }}/${{ env.BRANCH }}/packages/${{ env.ARCH }}/luci
+          NO_LOCAL_REPOS: 1
+          KEY_BUILD: ${{ env.USIGN_KEY }}
+          KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
+          PACKAGES: ${{ env.INSTALLS }}
+          ROOTFS_SIZE: 256
 
       - name: Checkout Images
         shell: bash

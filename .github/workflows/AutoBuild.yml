@@ -72,7 +72,8 @@ jobs:
           - release_path: 'releases'
           - no_img: true
           - arch: x86_64
-            target: 'x86/64' # for imagebuilder
+            target: ['x86', '64'] # for imagebuilder
+            profile: generic # for imagebuilder
             no_img: false
     uses: ./.github/workflows/compile.yml
     with:
@@ -80,7 +81,9 @@ jobs:
       no_img: ${{ matrix.no_img }}
       TPATH: ${{ matrix.release_path }}
       VERSION: ${{ matrix.version }}
-      TARGET: ${{ matrix.target }}
+      TARGET: ${{ matrix.target[0] }}
+      SUBTARGET: ${{ matrix.target[1] }}
+      PROFILE: ${{ matrix.profile }}
       ARCH: ${{ matrix.arch }}
       USIGN_ID: ${{ matrix.usign_id }}
       GPG_ID: ${{ matrix.gpg_id }}
