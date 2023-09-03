@@ -63,6 +63,7 @@ jobs:
       GPG_ID: ${{ inputs.GPG_ID }}
       GPG_PW: ${{ secrets[format('GPG_PW_{0}', inputs.GPG_ID )] }}
       GPG_KEY: ${{ secrets[format('GPG_{0}', inputs.GPG_ID )] }}
+      PREFIX: fantasticpackages_
 
     steps:
       - name: Maximize Build Space
@@ -126,10 +127,17 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
-      - name: Determine packages
+      - name: Determine EXTRA_FEEDS and PACKAGES
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
+        env:
+          EXTRA_FEEDS: >-
+            src-link|${{ env.PREFIX }}packages|/feed/feeds/packages/
+            src-link|${{ env.PREFIX }}luci|/feed/feeds/luci/
         run: |
+          # EXTRA_FEEDS
+          echo "EXTRA_FEEDS=$EXTRA_FEEDS" >> $GITHUB_ENV
+          # PACKAGES
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
           PACKAGES="$_packages $_luci"
@@ -137,6 +145,7 @@ jobs:
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
 
       - name: Build Packages
+        id: build_packags
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: muink/gh-action-sdk@master
         env:
@@ -144,9 +153,7 @@ jobs:
           ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
           ARTIFACTS_DIR: /workdir
           FEED_DIR: ${{ github.workspace }}
-          EXTRA_FEEDS: >-
-            src-link|fantasticpackages_packages|/feed/feeds/packages/
-            src-link|fantasticpackages_luci|/feed/feeds/luci/
+          EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }}
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
           PACKAGES: ${{ env.PACKAGES }}
@@ -175,9 +182,9 @@ jobs:
             for EXTRA_FEED in $EXTRA_FEEDS; do
               feed=$(echo "$EXTRA_FEED" | cut -d'|' -f2)
               if [ -d "/workdir/bin/packages/$ARCH/$feed" ]; then
-                echo "mv /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"
-                mv -f "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"
-                pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed#*_}"; sign_packages; popd
+                echo "mv /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
+                mv -f "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
+                pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"; sign_packages; popd
               fi
             done
             #
