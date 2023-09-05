@@ -217,8 +217,10 @@ jobs:
         run: |
           git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
           git checkout origin/$Branch -- $TPATH/
-          mkdir -p "/workdir/bin/packages" 2>/dev/null
-          cp -Rf $TPATH/$BRANCH/packages/$ARCH /workdir/bin/packages/$ARCH
+          mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
+          pushd $TPATH/$BRANCH/packages/$ARCH
+          find * -type d -maxdepth 0 2>/dev/null | xargs -I{} cp -Rf "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
+          popd
 
       - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ env.ARCH }})
         if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases_whitout_compile.outcome == 'success' }}
@@ -242,8 +244,8 @@ jobs:
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ env.ARCH }}
           EXTRA_REPOS: >-
-            src|${{ env.PREFIX }}packages|file:///repo/packages
-            src|${{ env.PREFIX }}luci|file:///repo/luci
+            src|${{ env.PREFIX }}packages|file:///repo/${{ env.PREFIX }}packages
+            src|${{ env.PREFIX }}luci|file:///repo/${{ env.PREFIX }}luci
           NO_LOCAL_REPOS: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
