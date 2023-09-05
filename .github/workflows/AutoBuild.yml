@@ -146,7 +146,7 @@ jobs:
 
   export_dl:
     needs: compile
-    if: inputs.export_dl == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+    if: inputs.export_dl == 1 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
     runs-on: ubuntu-latest
     steps:
       - name: Initialize Environment
