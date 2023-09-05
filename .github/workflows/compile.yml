@@ -220,7 +220,7 @@ jobs:
           mkdir -p "/workdir/bin/packages" 2>/dev/null
           cp -Rf $TPATH/$BRANCH/packages/$ARCH /workdir/bin/packages/$ARCH
 
-      - name: Display structure of downloaded files
+      - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ env.ARCH }})
         if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases_whitout_compile.outcome == 'success' }}
         run: ls -R
         working-directory: /workdir/bin/packages/
@@ -273,6 +273,10 @@ jobs:
           find $TPATH/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "$ARCH" | xargs -I{} rm -rf "{}"
           find $TPATH/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "$TARGET" | xargs -I{} rm -rf "{}"
           find $TPATH/$BRANCH/targets/$TARGET/* -maxdepth 0 2>/dev/null | grep -v "$SUBTARGET" | xargs -I{} rm -rf "{}"
+
+      - name: Display structure of upload files (${{ env.VERSION }}, ${{ env.ARCH }}, ${{ env.TARGET }}-${{ env.SUBTARGET }})
+        run: ls -R
+        working-directory: ${{ env.TPATH }}/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
