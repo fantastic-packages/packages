@@ -221,7 +221,7 @@ jobs:
           git checkout origin/$Branch -- $TPATH/
           mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
           pushd $TPATH/$BRANCH/packages/$ARCH
-          find * -type d -maxdepth 0 2>/dev/null | xargs -I{} cp -Rf "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
+          find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} cp -Rf "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
           popd
 
       - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ env.ARCH }})
