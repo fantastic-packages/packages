@@ -54,7 +54,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [21.02.7, 22.03.5]
+        version: [22.03.5]
         arch: [
           x86_64,
           mips_24kc,
@@ -106,9 +106,11 @@ jobs:
         uses: actions/download-artifact@v3
       - name: Move artifact
         shell: bash
+        env:
+          keepdir: '18.06|19.07|21.02'
         run: |
           if [ "$DELETE_OLD_PACKAGES" == "true" ]; then
-            rm -rf $release_path/ 2>/dev/null
+            find $release_path/* -maxdepth 0 -type d 2>/dev/null | grep -Ev "\b($keepdir)$" | xargs -I{} rm -rf "{}"
           fi
           mkdir -p $release_path 2>/dev/null
           cp -rf OpenWRT-Build-*/*/ $release_path/
