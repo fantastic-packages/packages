@@ -54,7 +54,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [21.02.5, 22.03.5]
+        version: [21.02.7, 22.03.5]
         arch: [
           x86_64,
           mips_24kc,
@@ -72,31 +72,18 @@ jobs:
           - release_path: 'releases'
           - no_img: true
           - arch: x86_64
-            target: 'x86/64'
+            target: ['x86', '64'] # for imagebuilder
+            profile: generic # for imagebuilder
             no_img: false
-          - arch: mips_24kc
-            target: 'ath79/nand'
-          - arch: arm_cortex-a7_neon-vfpv4
-            target: 'bcm27xx/bcm2709'
-          - arch: aarch64_cortex-a53
-            target: 'bcm27xx/bcm2710'
-          - arch: aarch64_cortex-a72
-            target: 'bcm27xx/bcm2711'
-          - arch: arm_cortex-a9
-            target: 'bcm53xx/generic'
-          - arch: arm_cortex-a15_neon-vfpv4
-            target: 'ipq806x/generic'
-          - arch: mipsel_24kc
-            target: 'ramips/mt7620'
-          - arch: aarch64_generic
-            target: 'rockchip/armv8'
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
       no_img: ${{ matrix.no_img }}
       TPATH: ${{ matrix.release_path }}
       VERSION: ${{ matrix.version }}
-      TARGET: ${{ matrix.target }}
+      TARGET: ${{ matrix.target[0] }}
+      SUBTARGET: ${{ matrix.target[1] }}
+      PROFILE: ${{ matrix.profile }}
       ARCH: ${{ matrix.arch }}
       USIGN_ID: ${{ matrix.usign_id }}
       GPG_ID: ${{ matrix.gpg_id }}
