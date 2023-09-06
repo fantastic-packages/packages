@@ -77,7 +77,7 @@ make menuconfig
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
-[luci-app-serverchan]: https://github.com/tty228/luci-app-serverchan
+[luci-app-serverchan]: https://github.com/tty228/luci-app-wechatpush
 [luci-app-temp-status]: https://github.com/gSpotx2f/luci-app-temp-status
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports
