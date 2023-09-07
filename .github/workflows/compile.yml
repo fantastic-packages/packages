@@ -137,6 +137,7 @@ jobs:
             src-link|${{ env.PREFIX }}luci|/feed/feeds/luci/
         run: |
           # EXTRA_FEEDS
+          echo "Feeds $EXTRA_FEEDS"
           echo "EXTRA_FEEDS=$EXTRA_FEEDS" >> $GITHUB_ENV
           # PACKAGES
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
@@ -219,6 +220,7 @@ jobs:
         run: |
           git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
           git checkout origin/$Branch -- $TPATH/
+          echo "cp $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${PREFIX}<feeds>"
           mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
           pushd $TPATH/$BRANCH/packages/$ARCH
           find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} cp -Rf "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
@@ -262,6 +264,7 @@ jobs:
             sudo chown -R $USER:$GROUPS /workdir/bin
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/" 2>/dev/null
+            echo "mv /workdir/bin/targets/$TARGET/$SUBTARGET to $GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET"
             mv -f "/workdir/bin/targets/$TARGET/$SUBTARGET" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET"
             pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/targets/$TARGET/$SUBTARGET"
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
