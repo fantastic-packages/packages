@@ -38,6 +38,7 @@ define Package/$(PKG_NAME)-packages
 		+php-nginx \
 		+rgmac \
 		+stuntman \
+		+Toolkit \
 		+uci-alwaysonline
 endef
 
@@ -80,6 +81,7 @@ define Package/$(PKG_NAME)
 		+php-nginx \
 		+rgmac \
 		+stuntman \
+		+Toolkit \
 		+uci-alwaysonline \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
