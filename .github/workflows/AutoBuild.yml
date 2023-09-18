@@ -136,6 +136,7 @@ jobs:
           git add $release_path/**/
           git reset HEAD $release_path/**/targets/
           git diff-index --cached --quiet HEAD $release_path/**/packages/**/*.ipk \
+          && git diff-index --cached --quiet HEAD $release_path/**/packages/**/Packages.manifest \
           && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
           || (git commit -m "Update packages" && git push)
 
