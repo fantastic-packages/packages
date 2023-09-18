@@ -6,6 +6,9 @@ on:
       build_mode:
         required: false
         type: string
+      compiles:
+        required: false
+        type: string
       no_img:
         required: false
         type: boolean
@@ -142,9 +145,31 @@ jobs:
           # PACKAGES
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
-          PACKAGES="$_packages $_luci"
+          _all="$_packages $_luci"
+          _manual=''
+          for _p in ${{ inputs.compiles }}; do
+            [ -z "$(find "$GITHUB_WORKSPACE/feeds" -maxdepth 2 -name $_p 2>/dev/null)" ] && continue
+            _manual="${_manual:+$_manual }$_p"
+          done
+          PACKAGES="${_manual:-$_all}"
           echo "Building $PACKAGES"
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
+
+      - name: Checkout Releases
+        id: checkout_releases
+        env:
+          Branch: gh-pages
+        shell: bash
+        run: |
+          git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
+          git checkout origin/$Branch -- $TPATH/$BRANCH/packages/$ARCH/ 2>/dev/null
+          echo "mv $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${PREFIX}<feeds>"
+          mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
+          if [ -d "$TPATH/$BRANCH/packages/$ARCH" ]; then
+            pushd $TPATH/$BRANCH/packages/$ARCH
+            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
+            popd
+          fi
 
       - name: Build Packages
         id: build_packags
@@ -211,23 +236,8 @@ jobs:
             rm -rf /workdir/bin/targets 2>/dev/null
           fi
 
-      - name: Checkout Releases whitout compile
-        id: checkout_releases_whitout_compile
-        env:
-          Branch: gh-pages
-        shell: bash
-        if: inputs.build_mode == 'build_imgs' && !cancelled()
-        run: |
-          git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
-          git checkout origin/$Branch -- $TPATH/
-          echo "cp $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${PREFIX}<feeds>"
-          mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
-          pushd $TPATH/$BRANCH/packages/$ARCH
-          find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} cp -Rf "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
-          popd
-
       - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ env.ARCH }})
-        if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases_whitout_compile.outcome == 'success' }}
+        if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
         run: ls -R
         working-directory: /workdir/bin/packages/
 

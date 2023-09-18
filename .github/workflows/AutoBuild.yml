@@ -12,6 +12,11 @@ on:
         - build_pkgs_and_imgs
         - build_imgs
         - build_pkgs
+      compile_packages:
+        description: 'Compile packages'
+        required: false
+        default: 'A B C etc.'
+        type: string
       no_pages:
         description: 'Donot deploy pages'
         required: true
@@ -78,6 +83,7 @@ jobs:
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
+      compiles: ${{ inputs.compile_packages }}
       no_img: ${{ matrix.no_img }}
       TPATH: ${{ matrix.release_path }}
       VERSION: ${{ matrix.version }}
