@@ -162,7 +162,7 @@ jobs:
         shell: bash
         run: |
           git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
-          git checkout origin/$Branch -- $TPATH/$BRANCH/packages/$ARCH/ 2>/dev/null
+          git checkout origin/$Branch -- $TPATH/$BRANCH/packages/$ARCH/ 2>/dev/null || echo
           echo "mv $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${PREFIX}<feeds>"
           mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
           if [ -d "$TPATH/$BRANCH/packages/$ARCH" ]; then
@@ -176,8 +176,8 @@ jobs:
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: fantastic-packages/gh-action-sdk@master
         env:
-          ARCH: ${{ env.ARCH }}-${{ env.VERSION }}
-          #ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
+          #ARCH: ${{ env.ARCH }}-${{ env.VERSION }}
+          ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
           ARTIFACTS_DIR: /workdir
           DL_DIR: /workdir/DL
           FEED_DIR: ${{ github.workspace }}
