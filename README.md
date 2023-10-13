@@ -58,6 +58,7 @@ make menuconfig
 | [openwrt-php-nginx][] | PHP with Nginx as Webserver |
 | [openwrt-rgmac][] | a simple random MAC address generator for OpenWRT |
 | [openwrt-stuntman][] | an open source STUN server and client code by john selbie |
+| [openwrt-Toolkit][] | DNS Toolkit |
 
 --------
 
@@ -92,3 +93,4 @@ make menuconfig
 [openwrt-php-nginx]: https://github.com/muink/openwrt-php-nginx
 [openwrt-rgmac]: https://github.com/muink/openwrt-rgmac
 [openwrt-stuntman]: https://github.com/muink/openwrt-stuntman
+[openwrt-Toolkit]: https://github.com/muink/openwrt-Toolkit
