@@ -88,7 +88,7 @@ make menuconfig
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
 [luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
-[luci-app-homeproxy]: https://github.com/muink/homeproxy
+[luci-app-homeproxy]: https://github.com/muink/luci-app-homeproxy
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-ipinfo]: https://github.com/animegasan/luci-app-ipinfo
