@@ -29,6 +29,7 @@ make menuconfig
 | ---- | ---- |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
+| [luci-app-chinadns-ng][] | ChinaDNS Next Generation for OpenWrt, refactoring with epoll and ipset |
 | [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
 | [luci-app-cpu-status][] | CPU utilization info for the LuCI status page |
 | [luci-app-cpu-status-mini][] | CPU utilization info for the LuCI status page |
@@ -50,6 +51,7 @@ make menuconfig
 | [luci-theme-argon][] | A clean and tidy OpenWrt LuCI theme |
 | [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
+| [openwrt-chinadns-ng][] | ChinaDNS Next Generation for OpenWrt, refactoring with epoll and ipset |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
@@ -64,6 +66,7 @@ make menuconfig
 
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
+[luci-app-chinadns-ng]: https://github.com/pexcn/openwrt-chinadns-ng/tree/luci
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
 [luci-app-cpu-status]: https://github.com/gSpotx2f/luci-app-cpu-status
 [luci-app-cpu-status-mini]: https://github.com/gSpotx2f/luci-app-cpu-status-mini
@@ -85,6 +88,7 @@ make menuconfig
 [luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
+[openwrt-chinadns-ng]: https://github.com/pexcn/openwrt-chinadns-ng/tree/master
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter

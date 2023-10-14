@@ -29,6 +29,7 @@ define Package/$(PKG_NAME)-packages
 	$(call Package/$(PKG_NAME)/Default)
 	DEPENDS+:=\
 		+alwaysonline \
+		+chinadns-ng \
 		+go-stun \
 		+internet-detector \
 		+natmapt \
@@ -47,6 +48,7 @@ define Package/$(PKG_NAME)-luci
 	DEPENDS+:=\
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
+		+luci-app-chinadns-ng \
 		+luci-app-cpu-perf \
 		+luci-app-cpu-status \
 		+luci-app-cpu-status-mini \
@@ -72,6 +74,7 @@ define Package/$(PKG_NAME)
 	$(call Package/$(PKG_NAME)/Default)
 	DEPENDS+:=\
 		+alwaysonline \
+		+chinadns-ng \
 		+go-stun \
 		+internet-detector \
 		+natmapt \
@@ -85,6 +88,7 @@ define Package/$(PKG_NAME)
 		+uci-alwaysonline \
 		+luci-app-alwaysonline \
 		+luci-app-change-mac \
+		+luci-app-chinadns-ng \
 		+luci-app-cpu-perf \
 		+luci-app-cpu-status \
 		+luci-app-cpu-status-mini \
