@@ -37,6 +37,7 @@ define Package/$(PKG_NAME)-packages
 		+netdata-ssl \
 		+pcap-dnsproxy \
 		+php-nginx \
+		+plain-nginx \
 		+rgmac \
 		+stuntman \
 		+Toolkit \
@@ -81,6 +82,7 @@ define Package/$(PKG_NAME)
 		+netdata-ssl \
 		+pcap-dnsproxy \
 		+php-nginx \
+		+plain-nginx \
 		+rgmac \
 		+stuntman \
 		+Toolkit \

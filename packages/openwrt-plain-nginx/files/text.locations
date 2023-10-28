@@ -1,0 +1,4 @@
+location ~ [^/]\.(txt|log|md|markdown)$ {
+    default_type text/plain;
+    charset utf-8;
+}
