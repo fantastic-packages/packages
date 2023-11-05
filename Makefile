@@ -54,6 +54,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-cpu-status-mini \
 		+luci-app-diskman \
 		+luci-app-disks-info \
+		+luci-app-dnsproxy \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
 		+luci-app-log \
@@ -94,6 +95,7 @@ define Package/$(PKG_NAME)
 		+luci-app-cpu-status-mini \
 		+luci-app-diskman \
 		+luci-app-disks-info \
+		+luci-app-dnsproxy \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
 		+luci-app-log \

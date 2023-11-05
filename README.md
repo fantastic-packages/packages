@@ -34,6 +34,7 @@ make menuconfig
 | [luci-app-cpu-status-mini][] | CPU utilization info for the LuCI status page |
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
 | [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
+| [luci-app-dnsproxy][] | A simple DNS proxy server |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
 | [luci-app-log][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
@@ -70,6 +71,7 @@ make menuconfig
 [luci-app-cpu-status-mini]: https://github.com/gSpotx2f/luci-app-cpu-status-mini
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
+[luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-log]: https://github.com/gSpotx2f/luci-app-log
