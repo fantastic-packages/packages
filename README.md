@@ -7,16 +7,15 @@ fantastic packages
 [![GitHub](https://img.shields.io/github/license/fantastic-packages/packages?style=flat-square)](./LICENSE)
 
 ### How to use
-
+Choose one of the following methods:
 1. Add to `feeds.conf.default`
 ```shell
 umask 022
-sed -i '1i src-git fantastic-packages https://github.com/fantastic-packages/packages' feeds.conf.default
+sed -i '1i src-git fantastic_packages https://github.com/fantastic-packages/packages.git' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
 ```
-
 2. Pull in the src/sdk directory
 ```shell
 umask 022
