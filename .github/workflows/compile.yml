@@ -43,7 +43,7 @@ env:
 # Cache Libraries
   CACHE_DOWNLOAD: true
 # 删除无用文件以增加编译空间
-  DELETE_USELESS_FILES: true
+  DELETE_USELESS_FILES: false
 # Artifact retention days
   ARTIFACT_RETENTION_DAYS: 3
 ### 结束

@@ -43,6 +43,7 @@ make menuconfig
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
 | [luci-app-packagesync][] | Used to build a local mirror feeds source on the router |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
+| [luci-app-qbittorrent][] | qBittorrent - A BitTorrent client in Qt6 |
 | [luci-app-serverchan][] | Service push |
 | [luci-app-temp-status][] | Temperature sensors data for the LuCI status page |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
@@ -71,6 +72,7 @@ make menuconfig
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
+[luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-log]: https://github.com/gSpotx2f/luci-app-log
