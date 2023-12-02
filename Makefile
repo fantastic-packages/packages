@@ -38,7 +38,6 @@ define Package/$(PKG_NAME)-packages
 		+pcap-dnsproxy \
 		+php-nginx \
 		+plain-nginx \
-		+qBittorrent \
 		+rgmac \
 		+stuntman \
 		+Toolkit \
@@ -86,7 +85,6 @@ define Package/$(PKG_NAME)
 		+pcap-dnsproxy \
 		+php-nginx \
 		+plain-nginx \
-		+qBittorrent \
 		+rgmac \
 		+stuntman \
 		+Toolkit \
