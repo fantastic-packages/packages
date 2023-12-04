@@ -36,7 +36,7 @@ make menuconfig
 | [luci-app-dnsproxy][] | A simple DNS proxy server |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
-| [luci-app-log][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
+| [luci-app-log-viewer][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
 | [luci-app-natmapt][] | TCP/UDP port mapping for LuCI |
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
 | [luci-app-netdata][] | Netdata for LuCI |
@@ -75,7 +75,7 @@ make menuconfig
 [luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
-[luci-app-log]: https://github.com/gSpotx2f/luci-app-log
+[luci-app-log-viewer]: https://github.com/gSpotx2f/luci-app-log
 [luci-app-natmapt]: https://github.com/muink/luci-app-natmapt
 [luci-app-natter]: https://github.com/muink/luci-app-natter
 [luci-app-netdata]: https://github.com/muink/luci-app-netdata
