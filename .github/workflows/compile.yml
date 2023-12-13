@@ -410,12 +410,18 @@ jobs:
         run: ls -R
         working-directory: ${{ env.TPATH }}/
 
+      - name: Compress artifact
+        run: |
+          pushd $TPATH/
+          tar -czvf $artifact.tgz * --owner=0 --group=0 --no-same-owner --no-same-permissions
+          popd
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifact }}
           path: |
-            ${{ env.TPATH }}/
+            ${{ env.TPATH }}/${{ env.artifact }}.tgz
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
       - name: Fix permissions of DL

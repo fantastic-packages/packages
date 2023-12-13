@@ -126,8 +126,9 @@ jobs:
             find $release_path/* -maxdepth 0 -type d 2>/dev/null | grep -Ev "\b($keepdir)$" | xargs -I{} rm -rf "{}"
           fi
           mkdir -p $release_path 2>/dev/null
-          cp -rf OpenWRT-Build-*/*/ $release_path/
-          rm -rf OpenWRT-Build-*/ 2>/dev/null
+          for f in OpenWRT-Build-*; do
+            tar -C $release_path/ -xvf $f/$f.tgz
+          done
       - name: Display structure of downloaded files
         working-directory: ${{ env.release_path }}
         run: ls -R
