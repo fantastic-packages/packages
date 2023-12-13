@@ -160,12 +160,12 @@ jobs:
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
-          tar -cJvf /workdir/DL.txz * --owner=0 --group=0
+          tar -cJvf /workdir/DL.txz * --owner=0 --group=0 --no-same-owner --no-same-permissions
           popd
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v3
         with:
-          name: DL.txz.zip
+          name: DL.txz
           path: /workdir/DL.txz
           retention-days: 1
 
