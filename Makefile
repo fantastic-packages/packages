@@ -57,6 +57,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-dnsproxy \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
+		+luci-app-ipinfo \
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
 		+luci-app-natter \
@@ -99,6 +100,7 @@ define Package/$(PKG_NAME)
 		+luci-app-dnsproxy \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
+		+luci-app-ipinfo \
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
 		+luci-app-natter \
