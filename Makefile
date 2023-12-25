@@ -69,6 +69,8 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
+		+luci-app-xray \
+		+luci-app-xray-status \
 		+luci-theme-argon \
 		+luci-app-argon-config
 endef
@@ -112,6 +114,8 @@ define Package/$(PKG_NAME)
 		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
+		+luci-app-xray \
+		+luci-app-xray-status \
 		+luci-theme-argon \
 		+luci-app-argon-config
 endef
