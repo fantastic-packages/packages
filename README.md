@@ -65,6 +65,7 @@ make menuconfig
 | [openwrt-Pcap_DNSProxy][] | Pcap_DNSProxy for OpenWrt/LEDE |
 | [openwrt-php-nginx][] | PHP with Nginx as Webserver |
 | [openwrt-rgmac][] | a simple random MAC address generator for OpenWRT |
+| [openwrt-speedtest-go][] | CLI and Go API to Test Internet Speed using speedtest.net |
 | [openwrt-stuntman][] | an open source STUN server and client code by john selbie |
 | [openwrt-Toolkit][] | DNS Toolkit |
 
@@ -105,5 +106,6 @@ make menuconfig
 [openwrt-Pcap_DNSProxy]: https://github.com/muink/openwrt-Pcap_DNSProxy
 [openwrt-php-nginx]: https://github.com/muink/openwrt-php-nginx
 [openwrt-rgmac]: https://github.com/muink/openwrt-rgmac
+[openwrt-speedtest-go]: https://github.com/muink/openwrt-speedtest-go
 [openwrt-stuntman]: https://github.com/muink/openwrt-stuntman
 [openwrt-Toolkit]: https://github.com/muink/openwrt-Toolkit

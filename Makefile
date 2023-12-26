@@ -39,6 +39,7 @@ define Package/$(PKG_NAME)-packages
 		+php-nginx \
 		+plain-nginx \
 		+rgmac \
+		+speedtest-go \
 		+stuntman \
 		+Toolkit \
 		+uci-alwaysonline
@@ -89,6 +90,7 @@ define Package/$(PKG_NAME)
 		+php-nginx \
 		+plain-nginx \
 		+rgmac \
+		+speedtest-go \
 		+stuntman \
 		+Toolkit \
 		+uci-alwaysonline \
