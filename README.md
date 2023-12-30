@@ -11,7 +11,14 @@ Choose one of the following methods:
 1. Add to `feeds.conf.default`
 ```shell
 umask 022
-git clone --branch master --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
+git clone --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
+cd fantastic_packages
+for v in 21.02 22.03 23.05; do
+	git remote set-branches --add origin $v
+	git fetch origin $v
+	git branch --track $v origin/$v
+done
+cd ..
 cat <<-EOF >> feeds.conf.default
 src-link fantastic_packages_packages fantastic_packages/feeds/packages
 src-link fantastic_packages_luci fantastic_packages/feeds/luci
