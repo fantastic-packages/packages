@@ -2,7 +2,7 @@ bash nano getopt coreutils-base64 coreutils-stat
 wget curl ca-certificates
 unzip gzip tar bzip2 xz lzmainfo
 lscpu htop atop iftop
-ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3 go-stun stuntman-client
+ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3 go-stun stuntman-client speedtest-go
 coreutils-truncate losetup parted resize2fs lsblk coreutils-df
 amd64-microcode intel-microcode open-vm-tools
 kmod-igbvf kmod-ixgbevf kmod-vmxnet3
@@ -18,10 +18,10 @@ kmod-fs-msdos kmod-nls-base kmod-nls-utf8 kmod-nls-cp932 kmod-nls-cp936 kmod-nls
 kmod-tcp-bbr kmod-ipt-offload dnsmasq-full -dnsmasq
 zoneinfo-core zoneinfo-simple zoneinfo-asia
 luci luci-compat luci-lib-ipkg luci-mod-dashboard
-luci-theme-material luci-theme-argon
+luci-theme-material luci-theme-argon luci-app-argon-config
 luci-app-ttyd luci-app-natmapt luci-app-advanced-reboot luci-app-commands
-luci-app-nlbwmon luci-app-pcap-dnsproxy luci-app-change-mac
+luci-app-nlbwmon luci-app-wifischedule luci-app-wol luci-app-dnsproxy luci-app-pcap-dnsproxy luci-app-change-mac
 luci-app-uhttpd luci-app-netspeedtest luci-app-tinyfilemanager luci-app-diskman
-luci-app-disks-info luci-app-packagesync luci-app-log-viewer
+luci-app-disks-info luci-app-log-viewer
 luci-app-alwaysonline uci-alwaysonline
 luci-app-cpu-status luci-app-tn-netports luci-app-interfaces-statistics
