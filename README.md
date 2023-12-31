@@ -45,6 +45,7 @@ make menuconfig
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
 | [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-dnsproxy][] | A simple DNS proxy server |
+| [luci-app-homeproxy][] | A homeproxy fork with clash api, selector/urltest node, node grouping & ruleset support |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
 | [luci-app-ipinfo][] | LuCI support for IP Geolocation API <br/> NOTE: `ip-api.com` uses the insecure `http` protocol to send responses, <br/> You need to bear the risk of possible information leakage. |
@@ -87,6 +88,7 @@ make menuconfig
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
 [luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
+[luci-app-homeproxy]: https://github.com/muink/homeproxy
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-ipinfo]: https://github.com/animegasan/luci-app-ipinfo
