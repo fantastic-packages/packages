@@ -30,7 +30,7 @@ make menuconfig
 2. Pull in the src/sdk directory
 ```shell
 umask 022
-git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages package/fantastic-packages
+git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages package/fantastic_packages
 make menuconfig
 ```
 
