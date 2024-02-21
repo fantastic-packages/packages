@@ -103,13 +103,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: 'gh-pages'
           lfs: false
           submodules: false
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
       - name: Move artifact
         shell: bash
         env:
@@ -151,7 +151,7 @@ jobs:
           sudo chown $USER:$GROUPS /workdir
           mkdir -p /workdir/DL
       - name: Cache DL dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /workdir/DL
           key: ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-${{ hashFiles('**/Makefile') }}
@@ -163,7 +163,7 @@ jobs:
           tar -cJvf /workdir/DL.txz * --owner=0 --group=0 --no-same-owner --no-same-permissions
           popd
       - name: Upload DL Cache artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DL.txz
           path: /workdir/DL.txz

@@ -100,7 +100,7 @@ jobs:
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ env.BRANCH }}
           lfs: true
@@ -120,7 +120,7 @@ jobs:
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /workdir/DL
           key: ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-${{ hashFiles('**/Makefile') }}
@@ -296,7 +296,7 @@ jobs:
         working-directory: ${{ env.TPATH }}/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifact }}
           path: |
