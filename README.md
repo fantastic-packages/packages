@@ -48,7 +48,7 @@ make menuconfig
 | [luci-app-homeproxy][] | A homeproxy fork with clash api, selector/urltest node, node grouping & ruleset support |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
-| [luci-app-ipinfo][] | LuCI support for IP Geolocation API <br/> NOTE: `ip-api.com` uses the insecure `http` protocol to send responses, <br/> You need to bear the risk of possible information leakage. |
+| [luci-app-ipinfo][] | LuCI support for ip.guide |
 | [luci-app-log-viewer][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
 | [luci-app-natmapt][] | TCP/UDP port mapping for LuCI |
 | [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
