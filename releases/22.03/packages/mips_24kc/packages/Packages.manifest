@@ -70,161 +70,161 @@ Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector
-Version: 1.0-3
+Version: 1.3-0
 Depends: libc, lua, luaposix, libuci-lua
 Source: /feed/luci/luci-app-internet-detector/internet-detector
 SourceName: internet-detector
 Section: net
-SourceDateEpoch: 1693342327
+SourceDateEpoch: 1708523869
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
-Installed-Size: 10672
-Filename: internet-detector_1.0-3_all.ipk
-Size: 11548
-SHA256sum: 61afc573940383a118f14d7ff0ef72c568a2022911501d94f968d765a8bf4257
+Installed-Size: 10086
+Filename: internet-detector_1.3-0_all.ipk
+Size: 10960
+SHA256sum: 50b8f3d6978a54499868e77fdeca25f44688286a0b91edf4676391444151da1b
 Description:  Internet-detector is a small daemon
  for checking Internet availability.
  Written in Lua using the luaposix library.
 
 Package: libQt6Concurrent
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Concurrent
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
 Installed-Size: 8213
-Filename: libQt6Concurrent_6.6.1-1_mips_24kc.ipk
-Size: 8975
-SHA256sum: 8dbe868712fa28c72221da1bd7345e743f24dec34686a4cf6be1bc121dbb257c
-Description:  This package provides the Qt6 Concurrent v6.6.1 library.
+Filename: libQt6Concurrent_6.6.2-1_mips_24kc.ipk
+Size: 8978
+SHA256sum: 44a924f228b12e3cb2d56a40ac386554e5c71261c2dd03cbb0acf179e3387324
+Description:  This package provides the Qt6 Concurrent v6.6.2 library.
 
 Package: libQt6Core
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Core
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 2891155
-Filename: libQt6Core_6.6.1-1_mips_24kc.ipk
-Size: 2878803
-SHA256sum: 5529e1ce78f08ed8159f3242ee27f0656d21576e95389fb35e569e0972a37172
-Description:  This package provides the Qt6 Core v6.6.1 library.
+Installed-Size: 2890000
+Filename: libQt6Core_6.6.2-1_mips_24kc.ipk
+Size: 2877804
+SHA256sum: 7cb3ef9df10156f4c30aeeb070b4dfead67dc1177d043c2954836ee5b59ab586
+Description:  This package provides the Qt6 Core v6.6.2 library.
 
 Package: libQt6DBus
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6DBus
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 305336
-Filename: libQt6DBus_6.6.1-1_mips_24kc.ipk
-Size: 305310
-SHA256sum: 71d8631d1b869bd81c96914805b722338171fea4eb66dc8bae8a0e969e16a613
-Description:  This package provides the Qt6 DBus v6.6.1 library.
+Installed-Size: 305400
+Filename: libQt6DBus_6.6.2-1_mips_24kc.ipk
+Size: 305398
+SHA256sum: 36f40385022c8fb182117c38def95376f803e7b32e7f0d2414c6f2ce0f7849ae
+Description:  This package provides the Qt6 DBus v6.6.2 library.
 
 Package: libQt6Gui
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Gui
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 2768202
-Filename: libQt6Gui_6.6.1-1_mips_24kc.ipk
-Size: 2761443
-SHA256sum: cbe51eabb0c7b4486b05c928c8559de2966123c5b1bb518a9dabe4f19f58eaae
-Description:  This package provides the Qt6 Gui v6.6.1 library.
+Installed-Size: 2772830
+Filename: libQt6Gui_6.6.2-1_mips_24kc.ipk
+Size: 2766249
+SHA256sum: a4d41ad9795e0efd5123372d8dbddfc202afa5768bc2bfeed7169a9c7a5f809c
+Description:  This package provides the Qt6 Gui v6.6.2 library.
 
 Package: libQt6Network
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl1.1, krb5-libs
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Network
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 717347
-Filename: libQt6Network_6.6.1-1_mips_24kc.ipk
-Size: 716150
-SHA256sum: e4c5dd29aab781a3cc23cb3491ac15b6e08742de8fa9ce41920e8f9cb4474b92
-Description:  This package provides the Qt6 Network v6.6.1 library.
+Installed-Size: 717644
+Filename: libQt6Network_6.6.2-1_mips_24kc.ipk
+Size: 716484
+SHA256sum: f58c357a95790bb2136dcb1a52187c92f428069e78f8ac1c745445d32706eab4
+Description:  This package provides the Qt6 Network v6.6.2 library.
 
 Package: libQt6PrintSupport
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6PrintSupport
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 154783
-Filename: libQt6PrintSupport_6.6.1-1_mips_24kc.ipk
-Size: 154990
-SHA256sum: d4b76cfcb442ad6c2ab3cc3ccbd61492ba24e7ec997c4b94e4e101871f366dc8
-Description:  This package provides the Qt6 PrintSupport v6.6.1 library.
+Installed-Size: 154787
+Filename: libQt6PrintSupport_6.6.2-1_mips_24kc.ipk
+Size: 155016
+SHA256sum: 7ecb08e88579853acc7c4384884f003bfc4118db005e3e4a26bdaa969c4afb0d
+Description:  This package provides the Qt6 PrintSupport v6.6.2 library.
 
 Package: libQt6Sql
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Sql
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 72010
-Filename: libQt6Sql_6.6.1-1_mips_24kc.ipk
-Size: 72807
-SHA256sum: 34fa8a68ea161c9a4307a34e440b7b543523fe9537986522db15e9be9f1e5ca4
-Description:  This package provides the Qt6 Sql v6.6.1 library.
+Installed-Size: 72051
+Filename: libQt6Sql_6.6.2-1_mips_24kc.ipk
+Size: 72845
+SHA256sum: cfb70dba7f7bc8512e2ceaf88694e4e438d66fa7d2a3ad39add8f1778695bf65
+Description:  This package provides the Qt6 Sql v6.6.2 library.
 
 Package: libQt6Test
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Test
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 137960
-Filename: libQt6Test_6.6.1-1_mips_24kc.ipk
-Size: 138207
-SHA256sum: 5c60594820fb5f7b54a00d13c96b440c9b81b4c6ba084d832bb6025d8b709710
-Description:  This package provides the Qt6 Test v6.6.1 library.
+Installed-Size: 137814
+Filename: libQt6Test_6.6.2-1_mips_24kc.ipk
+Size: 138083
+SHA256sum: 8f034949225e807b5c607403a5d7ae74443fb99ac55832b7d6e03e80cbfa97fd
+Description:  This package provides the Qt6 Test v6.6.2 library.
 
 Package: libQt6Widgets
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Widgets
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 3101153
-Filename: libQt6Widgets_6.6.1-1_mips_24kc.ipk
-Size: 3093223
-SHA256sum: 241332821fe3c0209a4da162a08ac7c8ca31f954a15e53b2e8c393edb23df550
-Description:  This package provides the Qt6 Widgets v6.6.1 library.
+Installed-Size: 3102822
+Filename: libQt6Widgets_6.6.2-1_mips_24kc.ipk
+Size: 3094599
+SHA256sum: 034b0e164d04a7d34d691811b74d35b293c9d55643d14175012a3434de03cde2
+Description:  This package provides the Qt6 Widgets v6.6.2 library.
 
 Package: libQt6Xml
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: libQt6Xml
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 59370
-Filename: libQt6Xml_6.6.1-1_mips_24kc.ipk
-Size: 59930
-SHA256sum: 9debfb039f41d954ccb5ac0ed167119cbfbe44d9c84cc08146f9b6c13f98e610
-Description:  This package provides the Qt6 Xml v6.6.1 library.
+Installed-Size: 59290
+Filename: libQt6Xml_6.6.2-1_mips_24kc.ipk
+Size: 59874
+SHA256sum: ae3568af424ec92d4a92d9e14903f8454cbc4b1b329a961854db0fa275c5e339
+Description:  This package provides the Qt6 Xml v6.6.2 library.
 
 Package: natmapt-client-script-deluge
 Version: 20240126-3
@@ -478,7 +478,7 @@ SHA256sum: 1c3c384ab5a62c0f3bb6001256029dc67f4a79db1a0acb1c21a6e616c62a7c9e
 Description:  Read text document directly
 
 Package: qbittorrent
-Version: 4.6.2-1
+Version: 4.6.3-1
 Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
 Provides: qBittorrent
 Source: /feed/luci/luci-app-qbittorrent/qBittorrent
@@ -486,13 +486,13 @@ SourceName: qbittorrent
 License: GPL-2.0+
 LicenseFiles: COPYING
 Section: net
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: mips_24kc
-Installed-Size: 7694229
-Filename: qbittorrent_4.6.2-1_mips_24kc.ipk
-Size: 7686799
-SHA256sum: 85e132dba66b69a0e61f8777a13cc2ca1b021bf57dab40ce6d70d4762474e306
+Installed-Size: 7709790
+Filename: qbittorrent_4.6.3-1_mips_24kc.ipk
+Size: 7702192
+SHA256sum: d217b52f3e38f216a764c9fb7ee0ce97f09f875b121a2ab5e4fdec22b4a5d113
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -500,119 +500,119 @@ Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that use
  well as many features.
 
 Package: qt6-plugin-libqcertonlybackend
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqcertonlybackend
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 35942
-Filename: qt6-plugin-libqcertonlybackend_6.6.1-1_mips_24kc.ipk
-Size: 36662
-SHA256sum: 619ea9a37c0d22dd543f8d9e2f9463ae23c1a7aff1c5ad479c867606059db76a
+Installed-Size: 36288
+Filename: qt6-plugin-libqcertonlybackend_6.6.2-1_mips_24kc.ipk
+Size: 37015
+SHA256sum: dba595d6be6f853194f92466cb2f6b5a05474140bc33023632433d32f017e039
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqminimal
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 8591
-Filename: qt6-plugin-libqminimal_6.6.1-1_mips_24kc.ipk
-Size: 9340
-SHA256sum: 7e5bcd483ccac7be05a1373a4ae8be543f36fe154db4245e82ef027c4acb4b8c
+Installed-Size: 8589
+Filename: qt6-plugin-libqminimal_6.6.2-1_mips_24kc.ipk
+Size: 9336
+SHA256sum: ebf515931a2fadf0c2445fc25c94a288d36c1bd57026bbc0ed132299a486c7d7
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqnetworkmanager
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
 Installed-Size: 25696
-Filename: qt6-plugin-libqnetworkmanager_6.6.1-1_mips_24kc.ipk
-Size: 26327
-SHA256sum: 6fc86cdc331f68bfedd78b81e1c4865e41bbbd2bae52bc5ca6f2668e511eaf5c
+Filename: qt6-plugin-libqnetworkmanager_6.6.2-1_mips_24kc.ipk
+Size: 26335
+SHA256sum: 10f8f8df41a69cd5a6b3d7ae021084410e1f004a1271f26c16ea8ba43f7f9ee9
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqoffscreen
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 36274
-Filename: qt6-plugin-libqoffscreen_6.6.1-1_mips_24kc.ipk
-Size: 36912
-SHA256sum: 4102f679edf7c4f2d4037093b56ddc2040ca62885ce02d441ceed54e7abc75c2
+Installed-Size: 36278
+Filename: qt6-plugin-libqoffscreen_6.6.2-1_mips_24kc.ipk
+Size: 36922
+SHA256sum: 8f99112e5bc1d58112c4038e5ca398641e86746189e888b22a289788111ba6d2
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqopensslbackend
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 112977
-Filename: qt6-plugin-libqopensslbackend_6.6.1-1_mips_24kc.ipk
-Size: 112980
-SHA256sum: 11c7cd0c35b00cb7574575bed54bfcfc1a625f0fd36bf9965ae258773fcd501a
+Installed-Size: 113268
+Filename: qt6-plugin-libqopensslbackend_6.6.2-1_mips_24kc.ipk
+Size: 113313
+SHA256sum: 8d230a04f1640e46590f66d867149df3dedd72eac8dea5a13f16a9fe78c680f0
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqsqlite
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 988853
-Filename: qt6-plugin-libqsqlite_6.6.1-1_mips_24kc.ipk
-Size: 987172
-SHA256sum: 4e2f395a5ed8271ed27da6b26260fc91f8d5c7ed068ae8fde301562bb9011611
+Installed-Size: 1003174
+Filename: qt6-plugin-libqsqlite_6.6.2-1_mips_24kc.ipk
+Size: 1001338
+SHA256sum: 4d228283c9fb07f04707850c35359e74857fe0027e0fe8dee4860b8a3290710b
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqtuiotouchplugin
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 39047
-Filename: qt6-plugin-libqtuiotouchplugin_6.6.1-1_mips_24kc.ipk
-Size: 39784
-SHA256sum: c4015e6406f426ac96821a0e1d370c7314c298f0d4b2e5823f044c467a6ee938
+Installed-Size: 39048
+Filename: qt6-plugin-libqtuiotouchplugin_6.6.2-1_mips_24kc.ipk
+Size: 39798
+SHA256sum: a3af03488ddacd2af6486618a5f4974507a9824b8d3e251903a05aa3618819c2
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
-Version: 6.6.1-1
+Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6-plugin-libqxdgdesktopportal
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 Architecture: mips_24kc
-Installed-Size: 40622
-Filename: qt6-plugin-libqxdgdesktopportal_6.6.1-1_mips_24kc.ipk
-Size: 41406
-SHA256sum: cdad1f31669bd8336f6fe9759f2065387ab19e5515f01af69c596e42a6bc42cf
+Installed-Size: 40618
+Filename: qt6-plugin-libqxdgdesktopportal_6.6.2-1_mips_24kc.ipk
+Size: 41390
+SHA256sum: db93fd865091c2bd992bd82d3b681a8f4188f9ac26a784efaa379d707de2c3ed
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
-Version: 2.0.9-1
+Version: 2.0.10-1
 Depends: libc, boost, boost-system, libatomic1, libgcc1, libopenssl1.1, libstdcpp6
 Provides: rblibtorrent
 Source: /feed/luci/luci-app-qbittorrent/rblibtorrent
@@ -620,13 +620,13 @@ SourceName: rblibtorrent
 License: BSD
 LicenseFiles: COPYING
 Section: libs
-SourceDateEpoch: 1701272128
+SourceDateEpoch: 1708350245
 ABIVersion: 2.0
 Architecture: mips_24kc
-Installed-Size: 1551646
-Filename: rblibtorrent2.0_2.0.9-1_mips_24kc.ipk
-Size: 1542803
-SHA256sum: 770f0dbdd655bc8be36f1763b3aeb6db92fcc9d58db5cc57905919bcd174a221
+Installed-Size: 1552108
+Filename: rblibtorrent2.0_2.0.10-1_mips_24kc.ipk
+Size: 1543228
+SHA256sum: a9f7190e42fa7328c472e7dc0f1c80afa06ebc94034e746b635dea8c8a14deb2
 Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
  all the other bittorrent implementations around. It is a library and not a
  full featured client, although it comes with a working example client.
