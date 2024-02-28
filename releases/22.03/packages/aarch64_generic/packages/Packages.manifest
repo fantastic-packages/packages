@@ -27,10 +27,10 @@ Require-User: alwaysonline:alwaysonline
 SourceDateEpoch: 1702876452
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: aarch64_generic
-Installed-Size: 1794227
+Installed-Size: 1794224
 Filename: alwaysonline_1.2.0-20231217_aarch64_generic.ipk
-Size: 1791104
-SHA256sum: 73fa6fbaf2e8e03b01d6d96755c6f68a7a69a53cc1fc9557efc848d5b001e059
+Size: 1791124
+SHA256sum: 3dad857393172594aedc0eebac8c9c091b14b5f4eff04c908e022c3734545321
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
@@ -63,8 +63,8 @@ Maintainer: muink <hukk1996@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 805813
 Filename: go-stun_0.1.4-9_aarch64_generic.ipk
-Size: 805642
-SHA256sum: de63fe129672643c48c78c8d836edc51032c29a28b2a50c0c459379506880746
+Size: 805689
+SHA256sum: 4adec5174dcfb56ab53352e19a00d96afb999e65852664bfcced3c0a55aff3eb
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -468,13 +468,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1708506789
+SourceDateEpoch: 1709023798
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 366
+Installed-Size: 365
 Filename: plain-nginx_20231028_all.ipk
-Size: 1158
-SHA256sum: 1c3c384ab5a62c0f3bb6001256029dc67f4a79db1a0acb1c21a6e616c62a7c9e
+Size: 1163
+SHA256sum: ef0d95edadd8fa12425034597b02798ed5cdfdcaa94ce8fea659c5a42f515b33
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -658,10 +658,10 @@ LicenseFiles: LICENSE
 Section: net
 SourceDateEpoch: 1703587154
 Architecture: aarch64_generic
-Installed-Size: 4589305
+Installed-Size: 4589304
 Filename: speedtest-go_1.6.10-1_aarch64_generic.ipk
-Size: 4578937
-SHA256sum: 2c6638362613bb04dedbb97b17ed187452b3ccd9f6f749f41c6cf75a180b83d2
+Size: 4578981
+SHA256sum: 89ad29a1aad3001b303dc61c794ccc27b0b1d3789534c337cb557507e8f81aa1
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 

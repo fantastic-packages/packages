@@ -16,10 +16,10 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: aarch64_cortex-a72
-Installed-Size: 1794227
+Installed-Size: 1794224
 Filename: alwaysonline_1.2.0-20231217_aarch64_cortex-a72.ipk
-Size: 1791111
-SHA256sum: 8b67b5439ace0f57e2ad88f4be6107c0ed7b43cee8c7cb019a7512a0042fdbb3
+Size: 1791132
+SHA256sum: dadb975d684112d8ce4cd9d5e9da26ff14616f44c0ec41d77b4f9f6a0739c0a0
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
@@ -42,8 +42,8 @@ Section: net
 Architecture: aarch64_cortex-a72
 Installed-Size: 805813
 Filename: go-stun_0.1.4-9_aarch64_cortex-a72.ipk
-Size: 805640
-SHA256sum: d4e48612feb635839b8ac0259cab40cb0603b9aae69bb9b13bd54f7a4bba2047
+Size: 805691
+SHA256sum: 43f663d01ee7b677af327bb2984ce25c6ab58734820690ab3a8264788b64a8f3
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -346,10 +346,10 @@ Depends: libc, luci-nginx
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 366
+Installed-Size: 365
 Filename: plain-nginx_20231028_all.ipk
-Size: 1158
-SHA256sum: 1c3c384ab5a62c0f3bb6001256029dc67f4a79db1a0acb1c21a6e616c62a7c9e
+Size: 1163
+SHA256sum: ef0d95edadd8fa12425034597b02798ed5cdfdcaa94ce8fea659c5a42f515b33
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -492,10 +492,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_cortex-a72
-Installed-Size: 4589305
+Installed-Size: 4589304
 Filename: speedtest-go_1.6.10-1_aarch64_cortex-a72.ipk
-Size: 4578937
-SHA256sum: 7a082ee986cc6e22a40c88182262a4644ac753a985ae018bb9caf634a6cc9421
+Size: 4578983
+SHA256sum: 49c16a02db93b8ae523eac13fbd62e2ac6f059971ba217588615044fb4ae8fd0
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 

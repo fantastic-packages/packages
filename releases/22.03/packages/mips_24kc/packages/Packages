@@ -16,10 +16,10 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: mips_24kc
-Installed-Size: 1775464
+Installed-Size: 1775458
 Filename: alwaysonline_1.2.0-20231217_mips_24kc.ipk
-Size: 1772152
-SHA256sum: 7a9f320a4e401410884a62e9ff5d32f075a7d44b937b48f96770fddaebeb56ea
+Size: 1772116
+SHA256sum: 7ce0289b5cf36e0a211c94fff533cf13d51b500ed57e9e793c614ad40e65f1aa
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
@@ -40,10 +40,10 @@ Depends: libc
 License: Apache-2.0
 Section: net
 Architecture: mips_24kc
-Installed-Size: 812223
+Installed-Size: 812225
 Filename: go-stun_0.1.4-9_mips_24kc.ipk
-Size: 812608
-SHA256sum: 1692e1d3600cb5b72cf6a966ae67fe49bf92371d6170b7d2ac0d78b1950a851a
+Size: 812602
+SHA256sum: a7d57f0a8dbf89a959de6626e4a3c3c46cf0e1bfc5bf64eee0c484952ee26f81
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -346,10 +346,10 @@ Depends: libc, luci-nginx
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 366
+Installed-Size: 365
 Filename: plain-nginx_20231028_all.ipk
-Size: 1158
-SHA256sum: 1c3c384ab5a62c0f3bb6001256029dc67f4a79db1a0acb1c21a6e616c62a7c9e
+Size: 1163
+SHA256sum: ef0d95edadd8fa12425034597b02798ed5cdfdcaa94ce8fea659c5a42f515b33
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -492,10 +492,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: mips_24kc
-Installed-Size: 4564749
+Installed-Size: 4564736
 Filename: speedtest-go_1.6.10-1_mips_24kc.ipk
-Size: 4554585
-SHA256sum: a28ead6a83e5d6ddf2fe9cb78d42fe951494e15b4fc2a41d1f986700fcb28894
+Size: 4554525
+SHA256sum: 176a8626fb4da8bfcaf7115d35a0b97274789a02e8e241480880cded27dd01b0
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 
