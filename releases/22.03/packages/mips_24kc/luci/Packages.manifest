@@ -219,19 +219,19 @@ SHA256sum: 8ffb31d47a560d80fae3d4716f068db20ce4d7b3f31f1e7738cc75695f6d2ba5
 Description:  Advanced syslog and kernel log (tail, search, etc)
 
 Package: luci-app-natmapt
-Version: 20231119
+Version: 20240305
 Depends: libc, natmapt, coreutils-timeout
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-app-natmapt
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: OpenWrt LuCI community
 Architecture: all
-Installed-Size: 6324
-Filename: luci-app-natmapt_20231119_all.ipk
-Size: 7214
-SHA256sum: 18e261e413376d78f751212c7b88ca58bb81189272b805904b69236bb026aed5
+Installed-Size: 6340
+Filename: luci-app-natmapt_20240305_all.ipk
+Size: 7227
+SHA256sum: 435e08ec07b97d2284f3abbc037a371bce13baff8e332f3cd924e323a83cff74
 Description:  TCP/UDP port mapping for full cone NAT
 
 Package: luci-app-natter
@@ -703,275 +703,275 @@ SHA256sum: 84180f89296bbea7d71c96e43805a4154aa155c72ccca0feec05d02cf879d2e5
 Description:  Translation for luci-app-log-viewer - Русский (Russian)
 
 Package: luci-i18n-natmapt-cs
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-cs
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 316
-Filename: luci-i18n-natmapt-cs_git-23.324.43855-b583464_all.ipk
-Size: 1178
-SHA256sum: 616e7b78f17d3448b0627ca0b6c4fd8fa84240d71d5e4f5aa35c04750a2ed795
+Installed-Size: 315
+Filename: luci-i18n-natmapt-cs_git-24.065.33359-3acb619_all.ipk
+Size: 1180
+SHA256sum: 2a9e4cb49072135599575f70f6edd54f391157296a60198a234b6f48cdc35b93
 Description:  Translation for luci-app-natmapt - Čeština (Czech)
 
 Package: luci-i18n-natmapt-da
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-da
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 628
-Filename: luci-i18n-natmapt-da_git-23.324.43855-b583464_all.ipk
-Size: 1483
-SHA256sum: 99311a1ab6d01d98ad1e2ffa8c0b17329b98c07250eadaad346d7f87ca413751
+Installed-Size: 627
+Filename: luci-i18n-natmapt-da_git-24.065.33359-3acb619_all.ipk
+Size: 1482
+SHA256sum: a77e51d0390080b555397f0db36bfeaa30e8aa06f16e0eb15121f825987ad116
 Description:  Translation for luci-app-natmapt - Dansk (Danish)
 
 Package: luci-i18n-natmapt-de
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-de
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 729
-Filename: luci-i18n-natmapt-de_git-23.324.43855-b583464_all.ipk
-Size: 1587
-SHA256sum: 25516034a871e96ae7eb521424524f9033f217f098f617eb9a8ccb03d6b46065
+Installed-Size: 728
+Filename: luci-i18n-natmapt-de_git-24.065.33359-3acb619_all.ipk
+Size: 1591
+SHA256sum: b10a161c6a1ca2d5cdedcb3861d32d1c59624cf9e13d8a8e454cb8d9d3b1db0a
 Description:  Translation for luci-app-natmapt - Deutsch (German)
 
 Package: luci-i18n-natmapt-es
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-es
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 739
-Filename: luci-i18n-natmapt-es_git-23.324.43855-b583464_all.ipk
+Filename: luci-i18n-natmapt-es_git-24.065.33359-3acb619_all.ipk
 Size: 1605
-SHA256sum: 46c3528df49081becadc5f996af4e8463d7a6c6da7798ebbd39b87cebb6ea675
+SHA256sum: 901c261b9a656b145384ebc2f5b77e7bdb1ebae4c973b969f954ec9ffb887fee
 Description:  Translation for luci-app-natmapt - Español (Spanish)
 
 Package: luci-i18n-natmapt-fr
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-fr
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 736
-Filename: luci-i18n-natmapt-fr_git-23.324.43855-b583464_all.ipk
+Installed-Size: 735
+Filename: luci-i18n-natmapt-fr_git-24.065.33359-3acb619_all.ipk
 Size: 1604
-SHA256sum: c2d8e30e71d45d822102e7e5bccb9e5938a87ed81b3a067be5e205cccd4bb583
+SHA256sum: dd8843a5c32d647d459fdf56f80ba7560b7c2bbf85a821daa6a33c8686c8ed9b
 Description:  Translation for luci-app-natmapt - Français (French)
 
 Package: luci-i18n-natmapt-it
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-it
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 535
-Filename: luci-i18n-natmapt-it_git-23.324.43855-b583464_all.ipk
-Size: 1389
-SHA256sum: ca4a9e7563db7ecc6d1ce350773ad64b8e4a95f3a02a0feea57a9f22ed2e93ee
+Filename: luci-i18n-natmapt-it_git-24.065.33359-3acb619_all.ipk
+Size: 1392
+SHA256sum: 141e39f0471a915dfc29370dc6af3dd21636574bb82fbe566ec5697a41270dee
 Description:  Translation for luci-app-natmapt - Italiano (Italian)
 
 Package: luci-i18n-natmapt-nl
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-nl
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 640
-Filename: luci-i18n-natmapt-nl_git-23.324.43855-b583464_all.ipk
-Size: 1491
-SHA256sum: 2d670780cc8d4b66911ae025e5e9e87bcd523286b9e68cdcc8ffcb1cec44d1e2
+Filename: luci-i18n-natmapt-nl_git-24.065.33359-3acb619_all.ipk
+Size: 1502
+SHA256sum: f2d967ca4a7c10b1039e7dd99d55e19fdfdf1d45c818c1154aa4505dd6c85784
 Description:  Translation for luci-app-natmapt - Nederlands (Dutch)
 
 Package: luci-i18n-natmapt-pl
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-pl
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 782
-Filename: luci-i18n-natmapt-pl_git-23.324.43855-b583464_all.ipk
+Filename: luci-i18n-natmapt-pl_git-24.065.33359-3acb619_all.ipk
 Size: 1645
-SHA256sum: 2e5628418ae859657d07af27b508aa677edba6abb23204ece0612ec981d3ba32
+SHA256sum: 167df76edffd838b319b9718cdeca89243cd2b0e25a96367bf12956e481b2728
 Description:  Translation for luci-app-natmapt - Polski (Polish)
 
 Package: luci-i18n-natmapt-pt-br
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-pt-br
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 740
-Filename: luci-i18n-natmapt-pt-br_git-23.324.43855-b583464_all.ipk
-Size: 1629
-SHA256sum: 3365ad6dcd78819cf9e5f7c16f19ef13b6ebaad80d7b96934c9bbe7057618a6c
+Filename: luci-i18n-natmapt-pt-br_git-24.065.33359-3acb619_all.ipk
+Size: 1619
+SHA256sum: 4b1cb04034f100c9eba3491f56b052059d4bb01e08649000a5ee950fac08e3a5
 Description:  Translation for luci-app-natmapt - Português do Brasil (Brazilian Portuguese)
 
 Package: luci-i18n-natmapt-pt
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-pt
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 717
-Filename: luci-i18n-natmapt-pt_git-23.324.43855-b583464_all.ipk
-Size: 1580
-SHA256sum: 564373686fecc8d77db9938c22b3182e7a52a3f1d9a212c9fe9ed5f6cc123210
+Installed-Size: 716
+Filename: luci-i18n-natmapt-pt_git-24.065.33359-3acb619_all.ipk
+Size: 1578
+SHA256sum: 1a99eb5c67c5351eeb6fe6eeb62a8baa7c4fb73643df13570fc0b729631115e7
 Description:  Translation for luci-app-natmapt - Português (Portuguese)
 
 Package: luci-i18n-natmapt-ro
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-ro
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 760
-Filename: luci-i18n-natmapt-ro_git-23.324.43855-b583464_all.ipk
-Size: 1626
-SHA256sum: 6505057572495787401c211da3a566b4506fb9c4f6ba48d2cd9da93113141c62
+Filename: luci-i18n-natmapt-ro_git-24.065.33359-3acb619_all.ipk
+Size: 1628
+SHA256sum: 37378decaad86a278cf1b40f4ffc2585df128c30d1d8122d062023c75e16408d
 Description:  Translation for luci-app-natmapt - Română (Romanian)
 
 Package: luci-i18n-natmapt-ru
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-ru
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 857
-Filename: luci-i18n-natmapt-ru_git-23.324.43855-b583464_all.ipk
-Size: 1738
-SHA256sum: 986558580382b0ae156764e23d97074b3769bdef9bf6706b0085e73eac27b45d
+Filename: luci-i18n-natmapt-ru_git-24.065.33359-3acb619_all.ipk
+Size: 1746
+SHA256sum: 1d58d921091502018a2f138edefa55529b279ce49f64147f86b907591b7c5286
 Description:  Translation for luci-app-natmapt - Русский (Russian)
 
 Package: luci-i18n-natmapt-sv
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-sv
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 310
-Filename: luci-i18n-natmapt-sv_git-23.324.43855-b583464_all.ipk
-Size: 1171
-SHA256sum: 4b634fb0d3e8da07d27d34c02a64769f63fb6b20dd46882af240106c29f4db69
+Installed-Size: 308
+Filename: luci-i18n-natmapt-sv_git-24.065.33359-3acb619_all.ipk
+Size: 1168
+SHA256sum: d59bcacad460b6212a35c8d3f2fda496c18ba7c1c1d56a6ec2061699a0202b98
 Description:  Translation for luci-app-natmapt - Svenska (Swedish)
 
 Package: luci-i18n-natmapt-tr
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-tr
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 315
-Filename: luci-i18n-natmapt-tr_git-23.324.43855-b583464_all.ipk
-Size: 1184
-SHA256sum: e8504c23c6dd44665e7a214e2a2110860efd2e08b21335fcea42b84ea37e2917
+Installed-Size: 314
+Filename: luci-i18n-natmapt-tr_git-24.065.33359-3acb619_all.ipk
+Size: 1179
+SHA256sum: 21de9d5b882edaada5276737b05eb11123792ee9d46cb546fe863a52b67b93e5
 Description:  Translation for luci-app-natmapt - Türkçe (Turkish)
 
 Package: luci-i18n-natmapt-vi
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-vi
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 765
-Filename: luci-i18n-natmapt-vi_git-23.324.43855-b583464_all.ipk
-Size: 1640
-SHA256sum: a902724519145c3b9ca5899bc2d239b2bd60f59e37dfc8765e3522553345cb5b
+Installed-Size: 764
+Filename: luci-i18n-natmapt-vi_git-24.065.33359-3acb619_all.ipk
+Size: 1649
+SHA256sum: 77b4967270cdcc96b2cd42daf8d135dbde83e6c38ec86b6113a3e02294058351
 Description:  Translation for luci-app-natmapt - Tiếng Việt (Vietnamese)
 
 Package: luci-i18n-natmapt-zh-cn
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-zh-cn
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
-Installed-Size: 1942
-Filename: luci-i18n-natmapt-zh-cn_git-23.324.43855-b583464_all.ipk
-Size: 2844
-SHA256sum: 69f6c10745ae0e97f266a85e9c3869d5b1b7e887c9e7b79e41ee45ebad00ed58
+Installed-Size: 1941
+Filename: luci-i18n-natmapt-zh-cn_git-24.065.33359-3acb619_all.ipk
+Size: 2845
+SHA256sum: 383abd0521f4bd9231b801ea62b453e9e421ecab488401776810b3c2688eac5d
 Description:  Translation for luci-app-natmapt - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-natmapt-zh-tw
-Version: git-23.324.43855-b583464
+Version: git-24.065.33359-3acb619
 Depends: libc, luci-app-natmapt
 Source: /feed/luci/luci-app-natmapt
 SourceName: luci-i18n-natmapt-zh-tw
 License: Apache-2.0
 Section: luci
-SourceDateEpoch: 1700482255
+SourceDateEpoch: 1709630159
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 1956
-Filename: luci-i18n-natmapt-zh-tw_git-23.324.43855-b583464_all.ipk
-Size: 2860
-SHA256sum: 6c10feb1a15da609c3adc3f13892ced5c26c717b65a2366b08b11a99a408fd2c
+Filename: luci-i18n-natmapt-zh-tw_git-24.065.33359-3acb619_all.ipk
+Size: 2863
+SHA256sum: 98a4ed6b9716dfde417eaf07998e7377cf56682044425c98129f9ea590d5972b
 Description:  Translation for luci-app-natmapt - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-natter-zh-cn
