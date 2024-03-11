@@ -18,8 +18,8 @@ Section: net
 Architecture: mipsel_24kc
 Installed-Size: 1747973
 Filename: alwaysonline_1.2.0-20231217_mipsel_24kc.ipk
-Size: 1744541
-SHA256sum: fcfb3be40eaacc1aa3b726c94fd7549af12550ee1e388bcef0d6bcf12f70469a
+Size: 1744682
+SHA256sum: fa8a180156d2ca971b2295c670f9325a2f903f5a63caeaf0f5662e9f748fbacf
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
@@ -40,10 +40,10 @@ Depends: libc
 License: Apache-2.0
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 799404
+Installed-Size: 799398
 Filename: go-stun_0.1.4-9_mipsel_24kc.ipk
-Size: 799724
-SHA256sum: 85d4c309db82359974c785c9917b2083d04d1f99d8225d6ed18f6bf954728e1f
+Size: 799734
+SHA256sum: cebbb3c642b5a62b7bfd77dcd376322691bdbb8b028bb2176afeb6a52d5ee79b
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -66,10 +66,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 8185
+Installed-Size: 8184
 Filename: libQt6Concurrent_6.6.2-1_mipsel_24kc.ipk
-Size: 8951
-SHA256sum: dd454f64832a048a175c93cdd4e4f95ccbfb9b7d3cbe00e08adffe77429c0011
+Size: 8945
+SHA256sum: 8825adbe83b13cc0c7eea69ee4e3dd9ecf1ed1f14b11aff073e4628944fcc5f4
 Description:  This package provides the Qt6 Concurrent v6.6.2 library.
 
 Package: libQt6Core
@@ -77,10 +77,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 2845856
+Installed-Size: 2845857
 Filename: libQt6Core_6.6.2-1_mipsel_24kc.ipk
-Size: 2835267
-SHA256sum: 4551c731dd50e840a2e162cbf55a39d1025941a577a29bbb0f3f815f30b021a6
+Size: 2835265
+SHA256sum: 7d6de4075d778cb95bbfc5903930dd3e68745037130190a92d5d7c3fe4f343cd
 Description:  This package provides the Qt6 Core v6.6.2 library.
 
 Package: libQt6DBus
@@ -90,8 +90,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 302897
 Filename: libQt6DBus_6.6.2-1_mipsel_24kc.ipk
-Size: 302717
-SHA256sum: 1786798d59fdada6f2cd52c03c61e7d89f3116592055c008fd28951d7df3908b
+Size: 302713
+SHA256sum: 1916de7a0b206d154482dd5acf50b1c84b30aeab5e2126fd201e78268789d708
 Description:  This package provides the Qt6 DBus v6.6.2 library.
 
 Package: libQt6Gui
@@ -99,10 +99,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 2752571
+Installed-Size: 2752569
 Filename: libQt6Gui_6.6.2-1_mipsel_24kc.ipk
-Size: 2744333
-SHA256sum: b6b19ca8bb83ab74c88e0725e4bc74621219647ad5306be03cc1cc85c0ca4468
+Size: 2744324
+SHA256sum: 0a6bda44ed5e96e7fd187cf9ad1f7579963dd61915bdefdd47aefcf1621ed6bb
 Description:  This package provides the Qt6 Gui v6.6.2 library.
 
 Package: libQt6Network
@@ -112,8 +112,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 711035
 Filename: libQt6Network_6.6.2-1_mipsel_24kc.ipk
-Size: 709552
-SHA256sum: 46e658ed95396708b361c78c0358d7013420d2524c1378dce588156de1f9d778
+Size: 709548
+SHA256sum: 688b5f08cca7ce5d02da47fee9da676bdd44c89a010375753e3a6dea32c1cbe3
 Description:  This package provides the Qt6 Network v6.6.2 library.
 
 Package: libQt6PrintSupport
@@ -121,10 +121,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 152713
+Installed-Size: 152715
 Filename: libQt6PrintSupport_6.6.2-1_mipsel_24kc.ipk
-Size: 153069
-SHA256sum: 418a553dd30a7ec19e0bf9c96b304ab8820eba26c090cba42f25a84174048521
+Size: 153081
+SHA256sum: 0a412ddfc205908212fb9bfb0bf5aa0ae23f83177e1f48e064fba8bb1e2355e0
 Description:  This package provides the Qt6 PrintSupport v6.6.2 library.
 
 Package: libQt6Sql
@@ -134,8 +134,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 71699
 Filename: libQt6Sql_6.6.2-1_mipsel_24kc.ipk
-Size: 72492
-SHA256sum: b8a0a5b114b9f31b51966a94cd277d18ca0e12a3bd4457e2eea9514524da131a
+Size: 72500
+SHA256sum: f9cf85743286944e06a91bfd7a14da0af76107054cdb63ea61d7bc66564d09e7
 Description:  This package provides the Qt6 Sql v6.6.2 library.
 
 Package: libQt6Test
@@ -143,10 +143,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 136102
+Installed-Size: 136104
 Filename: libQt6Test_6.6.2-1_mipsel_24kc.ipk
-Size: 136524
-SHA256sum: b66b80a688ef47c010b90e0ff019a497809ddefa5f2a8fe8c6942363eef525de
+Size: 136521
+SHA256sum: e3e3e1eac353f592b88a875f88991544bfaa48df69d5712d0e8c379bb5ee84fb
 Description:  This package provides the Qt6 Test v6.6.2 library.
 
 Package: libQt6Widgets
@@ -154,10 +154,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 3066398
+Installed-Size: 3066397
 Filename: libQt6Widgets_6.6.2-1_mipsel_24kc.ipk
-Size: 3055931
-SHA256sum: bbed0e8fc866735617b21c6d210a855bf23b4bafbea18a0195d85b977365fabb
+Size: 3055956
+SHA256sum: cd109045d7d1c2a151ba30b32f105d330f4044b12faa56c0f434b2395e33e1e4
 Description:  This package provides the Qt6 Widgets v6.6.2 library.
 
 Package: libQt6Xml
@@ -167,85 +167,85 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 58959
 Filename: libQt6Xml_6.6.2-1_mipsel_24kc.ipk
-Size: 59632
-SHA256sum: 0a07445d4f33c8acf0259ef71cbc3a4750e4c947fa810b325944c9f31bc37372
+Size: 59633
+SHA256sum: 919fbdd7894dba0aeee03fba3dae87decbe540d96350000aaad54535d608dc14
 Description:  This package provides the Qt6 Xml v6.6.2 library.
 
 Package: natmapt-client-script-deluge
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 815
-Filename: natmapt-client-script-deluge_20240303-2_all.ipk
-Size: 1613
-SHA256sum: a963e772cb5d19e47e47c03cf3cc4476174f1be4c2ace5b63f9f2772d0d71aa2
+Installed-Size: 814
+Filename: natmapt-client-script-deluge_20240303-3_all.ipk
+Size: 1617
+SHA256sum: 8ce4994352feaec5b234e4b6f291e662d8e805495851d5c1c683c456ff5f420a
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 635
-Filename: natmapt-client-script-transmission_20240303-2_all.ipk
-Size: 1431
-SHA256sum: 2e09ef1d6624d3188e509f8bcc3466e51084416545bd89f0f8e80e8419036eda
+Installed-Size: 634
+Filename: natmapt-client-script-transmission_20240303-3_all.ipk
+Size: 1428
+SHA256sum: 4edb15095b4d56f6a8c55e401e53f3bbcd27e5a98783ac5e54739b3d89044cf0
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 623
-Filename: natmapt-notify-script-pushbullet_20240303-2_all.ipk
-Size: 1422
-SHA256sum: ae82d283099993ba58d5e31d05c7b9b1bf1005b0c482ff23fe8d7978106c846d
+Installed-Size: 625
+Filename: natmapt-notify-script-pushbullet_20240303-3_all.ipk
+Size: 1423
+SHA256sum: 83ea50f926b88f2dca4d1ab88c98939fcb603c9533a8d2bbf8fb15e07b946fec
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 646
-Filename: natmapt-notify-script-pushover_20240303-2_all.ipk
+Installed-Size: 645
+Filename: natmapt-notify-script-pushover_20240303-3_all.ipk
 Size: 1440
-SHA256sum: f89fab17112a91916f37a24bbf1e711ed0f01dc83386c2ed74a325938a70843d
+SHA256sum: 2d52a61f41a6ca7728f35a1a7d2aedc04b31286466c1a81bcc21c8da8bc4583f
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
 Installed-Size: 640
-Filename: natmapt-notify-script-telegram_20240303-2_all.ipk
-Size: 1438
-SHA256sum: ab5603983665c9f7f93f8ae1e84d1faefff5bbf113def2725eb17887f28ed75a
+Filename: natmapt-notify-script-telegram_20240303-3_all.ipk
+Size: 1433
+SHA256sum: b9c1f9342165fc64217a07766464e3846c86dbd52fbe00b511bba1d6f3d96a47
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20240303-2
+Version: 20240303-3
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 24177
-Filename: natmapt_20240303-2_mipsel_24kc.ipk
-Size: 25008
-SHA256sum: 5b30b20c591f3e96ea9b5ce1424cd47a67739b344e1a18081fc60c0388ad3916
+Installed-Size: 24161
+Filename: natmapt_20240303-3_mipsel_24kc.ipk
+Size: 24993
+SHA256sum: 470c17378aee8bae2e75f60ada8ee55e31262166084b3100a5c0b63a149382d6
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: natter-ddns-script-cloudflare
@@ -349,7 +349,7 @@ Architecture: all
 Installed-Size: 366
 Filename: plain-nginx_20231028_all.ipk
 Size: 1163
-SHA256sum: ef509c9ba92129d74eb2a724b9f4f6f61d9843cffd1f8a1b0fd417a22ff7ea8f
+SHA256sum: 7c9dbdededb8f5d61f061565f107e3b268e8dc89cfad087f0b99785cda404602
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -360,10 +360,10 @@ License: GPL-2.0+
 Section: net
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: mipsel_24kc
-Installed-Size: 7692009
+Installed-Size: 7692049
 Filename: qbittorrent_4.6.3-1_mipsel_24kc.ipk
-Size: 7687231
-SHA256sum: 31ce3ed50f8cefe8849f744394a47efff47b0e1d038be804ce89b41d6e2133fb
+Size: 7687243
+SHA256sum: ec006b36b176d8f0039a57c985e488f199292765d6669a545ede816d2f76a0fb
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -377,8 +377,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 36343
 Filename: qt6-plugin-libqcertonlybackend_6.6.2-1_mipsel_24kc.ipk
-Size: 37094
-SHA256sum: 1ed6713b27a5ef77d802e4603d2c6c4e87b5447149e3802bffb671899c74e5a4
+Size: 37093
+SHA256sum: ad40e252dc1c8b7efc90d7f7c69f1635ea48aad745dc9583e4aaa853a923eace
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
@@ -386,10 +386,10 @@ Version: 6.6.2-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: mipsel_24kc
-Installed-Size: 8499
+Installed-Size: 8500
 Filename: qt6-plugin-libqminimal_6.6.2-1_mipsel_24kc.ipk
-Size: 9262
-SHA256sum: eabd8fb719b7a1d574fe6bd8038bdc64fddaa1b8e2f523862eeb7142bfea928c
+Size: 9257
+SHA256sum: 263e7a04d5b0d5996bf1884ca548a1a89ed2ad6a2dd551a243b0e103017693f7
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
@@ -399,8 +399,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 25738
 Filename: qt6-plugin-libqnetworkmanager_6.6.2-1_mipsel_24kc.ipk
-Size: 26388
-SHA256sum: 81af045a0d46b4ef35731f929d5fa1cd5f873b43aba109bf1cde1903178a9da4
+Size: 26391
+SHA256sum: 3fc39d8ec6c6dbe4e53ed4c020c2e410570217ed79b6eefd3892cfe8d82aea63
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
@@ -410,8 +410,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 36027
 Filename: qt6-plugin-libqoffscreen_6.6.2-1_mipsel_24kc.ipk
-Size: 36718
-SHA256sum: e01cb605d5dcbf79624f81b50cb0ef955fafd76c5cf1b7bf5dcc458ebe1c0416
+Size: 36721
+SHA256sum: b4ba800d3e91789370b69df9800c12da4cba9b6f42ba6db44897cb4360490f4d
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
@@ -421,8 +421,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 111764
 Filename: qt6-plugin-libqopensslbackend_6.6.2-1_mipsel_24kc.ipk
-Size: 112193
-SHA256sum: 944b39dde6c3b51e48783ae9398094dca3cea82c3b6fcf47bbbd8a4bb750e44e
+Size: 112190
+SHA256sum: 9ea9b80f5a23bdf4bd99c7eb09d46e52a7c5fc7bd4261fe397f7946913244281
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
@@ -432,8 +432,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 1004547
 Filename: qt6-plugin-libqsqlite_6.6.2-1_mipsel_24kc.ipk
-Size: 1003434
-SHA256sum: fa3e5b85b80e0ba1b3b0b23ce7145abcb53b8c9a930f6dc1975ef575575aab6a
+Size: 1003441
+SHA256sum: 675495e282203473d91fbe5ce6a135788dcaa8d96105c3db78a0f5944f2b088f
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
@@ -443,8 +443,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 39135
 Filename: qt6-plugin-libqtuiotouchplugin_6.6.2-1_mipsel_24kc.ipk
-Size: 39913
-SHA256sum: 1c16054062dc228f6973b588638ef045077c184a110dc14ea22de1bf24c8d64e
+Size: 39912
+SHA256sum: 1234aea184f0d9c2bc2ad2f2b5cfc036577068388c11fe05a0154ffdac5c4dc1
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
@@ -454,8 +454,8 @@ Section: libs
 Architecture: mipsel_24kc
 Installed-Size: 40377
 Filename: qt6-plugin-libqxdgdesktopportal_6.6.2-1_mipsel_24kc.ipk
-Size: 41165
-SHA256sum: 8ef0032c098da437ec4fea614f2d3b08d6c698bb505e57ba140a470affb8d41f
+Size: 41157
+SHA256sum: a793d050da1252bb9001b70eb94bf2048105027a1a12c8da0871c2e941902b30
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -492,10 +492,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 4492741
+Installed-Size: 4492759
 Filename: speedtest-go_1.6.10-1_mipsel_24kc.ipk
-Size: 4483380
-SHA256sum: b1935ceaf6f5f85c8a76ab03469ccde0b0122a8eed269049b0f0b6cc7a60f0a6
+Size: 4483286
+SHA256sum: 161a0ba0116b4ed654778707f0a85fccf20586ab0be72545fff1e10cb1f07250
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 

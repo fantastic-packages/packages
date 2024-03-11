@@ -150,18 +150,6 @@ Size: 9324
 SHA256sum: 715ed3c4c8080ced4444d293082aa892d4f5ae7089077112182b196c04bba01a
 Description:  Advanced syslog and kernel log (tail, search, etc)
 
-Package: luci-app-log
-Version: 0.8-0
-Depends: libc
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 6475
-Filename: luci-app-log_0.8-0_all.ipk
-Size: 7347
-SHA256sum: 8ffb31d47a560d80fae3d4716f068db20ce4d7b3f31f1e7738cc75695f6d2ba5
-Description:  Advanced syslog and kernel log (tail, search, etc)
-
 Package: luci-app-natmapt
 Version: 20240305
 Depends: libc, natmapt, coreutils-timeout
@@ -173,17 +161,6 @@ Filename: luci-app-natmapt_20240305_all.ipk
 Size: 7227
 SHA256sum: 435e08ec07b97d2284f3abbc037a371bce13baff8e332f3cd924e323a83cff74
 Description:  TCP/UDP port mapping for full cone NAT
-
-Package: luci-app-natter
-Version: 0.9-20230704
-Depends: libc, natter
-Section: luci
-Architecture: all
-Installed-Size: 5152
-Filename: luci-app-natter_0.9-20230704_all.ipk
-Size: 5942
-SHA256sum: c46c85a3c6cd9555e66604a5ea8218e686cd052ec1ae5f3b444d71fbc4624348
-Description:  Open Port under FullCone NAT (NAT 1)
 
 Package: luci-app-netdata
 Version: 20230507
@@ -506,18 +483,6 @@ Size: 5121
 SHA256sum: 7b3c7e74b276730003a865902abc9e052d8b65c99ee1872a5f319a66f68a542f
 Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
-Package: luci-i18n-log-ru
-Version: git-23.315.59986-181f344
-Depends: libc, luci-app-log
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 1179
-Filename: luci-i18n-log-ru_git-23.315.59986-181f344_all.ipk
-Size: 2008
-SHA256sum: 22e5d7d5839bcf6f5599322bf04ae8616587f3deb03642017aa523f6a740f585
-Description:  Translation for luci-app-log - Русский (Russian)
-
 Package: luci-i18n-log-viewer-ru
 Version: git-24.055.61734-d1bd2fa
 Depends: libc, luci-app-log-viewer
@@ -733,28 +698,6 @@ Filename: luci-i18n-natmapt-zh-tw_git-24.065.33359-3acb619_all.ipk
 Size: 2863
 SHA256sum: 98a4ed6b9716dfde417eaf07998e7377cf56682044425c98129f9ea590d5972b
 Description:  Translation for luci-app-natmapt - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-natter-zh-cn
-Version: git-23.252.34578-9408370
-Depends: libc, luci-app-natter
-Section: luci
-Architecture: all
-Installed-Size: 2041
-Filename: luci-i18n-natter-zh-cn_git-23.252.34578-9408370_all.ipk
-Size: 2880
-SHA256sum: 1e1c2532bf703ea35dd1e0eb715a3ff321da8b14888d1bf4acf74a4b9d90ddf5
-Description:  Translation for luci-app-natter - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-natter-zh-tw
-Version: git-23.252.34578-9408370
-Depends: libc, luci-app-natter
-Section: luci
-Architecture: all
-Installed-Size: 2061
-Filename: luci-i18n-natter-zh-tw_git-23.252.34578-9408370_all.ipk
-Size: 2893
-SHA256sum: c140e9397d058c1b535b657e2aaca5610cb8c4fb1aff18807678fc840395e70f
-Description:  Translation for luci-app-natter - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-netdata-zh-cn
 Version: git-23.131.60659-4cb13e1
