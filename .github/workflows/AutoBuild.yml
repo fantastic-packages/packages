@@ -59,7 +59,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [22.03.6, 23.05.3]
+        version: [23.05.3]
         arch: [
           x86_64,
           mips_24kc,
@@ -113,7 +113,7 @@ jobs:
       - name: Move artifact
         shell: bash
         env:
-          keepdir: '18.06|19.07|21.02'
+          keepdir: '19.07|21.02|22.03'
         run: |
           if [ "$DELETE_OLD_PACKAGES" == "true" ]; then
             find $release_path/* -maxdepth 0 -type d 2>/dev/null | grep -Ev "\b($keepdir)$" | xargs -I{} rm -rf "{}"
