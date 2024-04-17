@@ -1,8 +1,9 @@
 fantastic-keyring fantastic-packages-feeds
-wget curl ca-certificates
+wget-ssl curl ca-certificates
 bash nano getopt coreutils-base64 coreutils-sha1sum coreutils-stat jq
 unzip gzip tar bzip2 xz lzmainfo zstd
 lscpu htop atop iftop
+iw-full iwinfo
 ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3
 go-stun stuntman-client speedtest-go pppoe-discovery
 kmod-ikconfig
@@ -26,7 +27,8 @@ shadowsocks-rust-ssserver luci-app-shadowsocks-rust
 luci-app-nlbwmon luci-app-wifischedule luci-app-wol luci-app-change-mac luci-app-einat
 luci-app-dnsproxy luci-app-pcap-dnsproxy luci-app-alwaysonline uci-alwaysonline
 luci-app-uhttpd luci-app-netspeedtest luci-app-packagesync
-luci-app-tinyfilemanager luci-app-diskman luci-app-disks-info
+luci-app-filemanager luci-app-tinyfilemanager
+luci-app-diskman luci-app-disks-info
 luci-app-cpu-status luci-app-tn-netports luci-app-interfaces-statistics
 luci-app-internet-detector luci-app-ipinfo
 acme-acmesh-dnsapi luci-app-acme
