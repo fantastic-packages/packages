@@ -217,12 +217,12 @@ jobs:
             done
             #
             pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH"
-            echo "$USIGN_PUBKEY" > ${USIGN_ID}.pub
-          cat <<- EOF > ${USIGN_ID}.sh
+            echo "$USIGN_PUBKEY" > ${USIGN_ID,,}.pub
+          cat <<- EOF > ${USIGN_ID,,}.sh
           #!/bin/sh
-          KEYID=${USIGN_ID}
+          KEYID=${USIGN_ID,,}
           mkdir -p /etc/opkg/keys 2>/dev/null
-          cat <<- PUBKEY > /etc/opkg/keys/\${KEYID,,}
+          cat <<- PUBKEY > /etc/opkg/keys/\${KEYID}
           ${USIGN_PUBKEY}
           PUBKEY
           EOF
