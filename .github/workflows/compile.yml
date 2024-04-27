@@ -245,7 +245,8 @@ jobs:
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         shell: bash
         run: |
-          INSTALLS="$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH" | tr '\n' ' ')"
+          INSTALLS=$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/generic" | tr '\n' ' ')
+          INSTALLS=${INSTALLS:+$INSTALLS }$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH" 2>/dev/null | tr '\n' ' ')
           echo "Installing $INSTALLS"
           echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
 
