@@ -72,8 +72,8 @@ jobs:
           aarch64_generic
           ]
         include:
-          - usign_id: '53FF2B6672243D28'
-          - gpg_id: 'A5F2461EC8F6DCAA'
+          - usign_id: ${{ vars.USIGN_ID }}
+          - gpg_id: ${{ vars.GPG_ID }}
           - release_path: 'releases'
           - no_img: true
           - arch: x86_64
