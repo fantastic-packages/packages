@@ -37,6 +37,7 @@ make menuconfig
 ### Package description
 | Packages | Description |
 | ---- | ---- |
+| [fantastic-feeds][] | Installer for fantastic-packages feeds |
 | [fantastic-keyring][] | fantastic-packages Developer Keyring |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
@@ -80,6 +81,7 @@ make menuconfig
 
 --------
 
+[fantastic-feeds]: ./packages/fantastic-feeds
 [fantastic-keyring]: ./packages/fantastic-keyring
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac

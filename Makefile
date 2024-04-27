@@ -30,6 +30,7 @@ define Package/$(PKG_NAME)-packages
 	DEPENDS+:=\
 		+alwaysonline \
 		+chinadns-ng \
+		+fantastic-feeds \
 		+fantastic-keyring \
 		+go-stun \
 		+internet-detector \
@@ -82,6 +83,7 @@ define Package/$(PKG_NAME)
 	DEPENDS+:=\
 		+alwaysonline \
 		+chinadns-ng \
+		+fantastic-feeds \
 		+fantastic-keyring \
 		+go-stun \
 		+internet-detector \
