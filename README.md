@@ -37,6 +37,7 @@ make menuconfig
 ### Package description
 | Packages | Description |
 | ---- | ---- |
+| [fantastic-keyring][] | fantastic-packages Developer Keyring |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
 | [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
@@ -79,6 +80,7 @@ make menuconfig
 
 --------
 
+[fantastic-keyring]: ./packages/fantastic-keyring
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
