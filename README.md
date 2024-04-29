@@ -67,6 +67,7 @@ make menuconfig
 | [luci-theme-argon][] | A clean and tidy OpenWrt LuCI theme |
 | [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
+| [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-chinadns-ng][] | ChinaDNS Next Generation for OpenWrt, refactoring with epoll and ipset |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
@@ -112,6 +113,7 @@ make menuconfig
 [luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
+[openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-chinadns-ng]: https://github.com/muink/openwrt-chinadns-ng
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
