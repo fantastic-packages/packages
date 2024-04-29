@@ -30,6 +30,7 @@ define Package/$(PKG_NAME)-packages
 	DEPENDS+:=\
 		+alwaysonline \
 		+chinadns-ng \
+		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
 		+go-stun \
@@ -83,6 +84,7 @@ define Package/$(PKG_NAME)
 	DEPENDS+:=\
 		+alwaysonline \
 		+chinadns-ng \
+		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
 		+go-stun \
