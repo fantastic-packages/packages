@@ -37,8 +37,8 @@ make menuconfig
 ### Package description
 | Packages | Description |
 | ---- | ---- |
-| [fantastic-feeds][] | Installer for fantastic-packages feeds |
 | [fantastic-keyring][] | fantastic-packages Developer Keyring |
+| [fantastic-packages-feeds][] | Installer for fantastic-packages feeds |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
 | [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
@@ -83,8 +83,8 @@ make menuconfig
 
 --------
 
-[fantastic-feeds]: ./packages/fantastic-feeds
 [fantastic-keyring]: ./packages/fantastic-keyring
+[fantastic-packages-feeds]: ./packages/fantastic-packages-feeds
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf

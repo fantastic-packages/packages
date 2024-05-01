@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=fantastic-feeds
+PKG_NAME:=fantastic-packages-feeds
 PKG_VERSION:=20240427
 PKG_RELEASE:=2
 
