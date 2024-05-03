@@ -198,7 +198,7 @@ jobs:
           #
           group "Initialize Environment"
           sudo apt update
-          sudo apt -y install build-essential ccache clang curl flex bison g++ gawk \
+          sudo apt -y install axel build-essential ccache clang curl flex bison g++ gawk \
           gcc-multilib g++-multilib genisoimage gettext git libdw-dev libelf-dev \
           libncurses5-dev libssl-dev locales pv pwgen python3 python3-pip \
           python3-setuptools qemu-utils rsync signify-openbsd subversion swig unzip \
@@ -213,7 +213,7 @@ jobs:
           op_target_url_prefix="https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$SUBTARGET"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(echo "$sha256sums" | sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}')"
-          curl -LO "${op_target_url_prefix}/${sdk}"
+          axel -n8 "${op_target_url_prefix}/${sdk}"
           tar -xf "$sdk" && rm -f "$sdk"
           mv *-sdk-* SDK
           # bin
