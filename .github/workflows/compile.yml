@@ -43,7 +43,7 @@ env:
 # Cache Libraries
   CACHE_DOWNLOAD: true
 # 删除无用文件以增加编译空间
-  DELETE_USELESS_FILES: false
+  DELETE_USELESS_FILES: true
 # Artifact retention days
   ARTIFACT_RETENTION_DAYS: 3
 ### 结束
@@ -73,7 +73,7 @@ jobs:
         if: env.DELETE_USELESS_FILES == 'true' && !cancelled()
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 5120
+          root-reserve-mb: 20480
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
@@ -85,13 +85,6 @@ jobs:
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
           mkdir -p "/workdir/DL"
-          if [ "${{ env.DELETE_USELESS_FILES }}" == "true" ]
-          then
-              docker rmi $(docker images -q)
-              sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php
-              sudo -E apt-get -y autoremove --purge
-              sudo -E apt-get clean
-          fi
 
       - name: Determine branch name
         run: |
