@@ -74,6 +74,7 @@ jobs:
         uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 20480
+          swap-size-mb: 8192
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
@@ -131,22 +132,34 @@ jobs:
           EXTRA_FEEDS: >-
             src-link|${{ env.PREFIX }}packages|/feed/feeds/packages/
             src-link|${{ env.PREFIX }}luci|/feed/feeds/luci/
+          SPECIAL_FEEDS: >-
+            src-link|${{ env.PREFIX }}special|${{ github.workspace }}/feeds/special/
         run: |
           # EXTRA_FEEDS
           echo "Feeds $EXTRA_FEEDS"
           echo "EXTRA_FEEDS=$EXTRA_FEEDS" >> $GITHUB_ENV
-          # PACKAGES
+          # SPECIAL_FEEDS
+          echo "SpecFeeds $SPECIAL_FEEDS"
+          echo "SPECIAL_FEEDS=$SPECIAL_FEEDS" >> $GITHUB_ENV
+          # PACKAGES and SPECIALS
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
+          _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/ | tr '\n' ' ')"
           _all="$_packages $_luci"
           _manual=''
+          _specmanual=''
           for _p in ${{ inputs.compiles }}; do
             [ -z "$(find "$GITHUB_WORKSPACE/feeds" -maxdepth 2 -name $_p 2>/dev/null)" ] && continue
-            _manual="${_manual:+$_manual }$_p"
+            [ -e "$GITHUB_WORKSPACE/feeds/special/$_p" ] \
+              && _specmanual="${_specmanual:+$_specmanual }$_p" \
+              || _manual="${_manual:+$_manual }$_p"
           done
-          PACKAGES="${_manual:-$_all}"
+          PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo fantastic-keyring || echo $_all)}"
           echo "Building $PACKAGES"
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
+          SPECIALS="${_specmanual:-$([ -n "$_manual" ] && echo '' || echo $_special)}"
+          echo "SpecBuilding $SPECIALS"
+          echo "SPECIALS=$SPECIALS" >> $GITHUB_ENV
 
       - name: Checkout Releases
         id: checkout_releases
@@ -163,6 +176,95 @@ jobs:
             find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
             popd
           fi
+
+      - name: Build Specials
+        id: build_specials
+        shell: bash
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        run: |
+          echo "$SPECIALS" | grep -q '^\s*$' && exit 0
+          group() {
+            endgroup
+            echo "::group::  $1"
+            GROUP=1
+          }
+          endgroup() {
+            if [ -n "$GROUP" ]; then
+              echo "::endgroup::"
+            fi
+            GROUP=
+          }
+          trap 'endgroup' ERR
+          #
+          group "Initialize Environment"
+          sudo apt update
+          sudo apt -y install build-essential ccache clang curl flex bison g++ gawk \
+          gcc-multilib g++-multilib genisoimage gettext git libdw-dev libelf-dev \
+          libncurses5-dev libssl-dev locales pv pwgen python3 python3-pip \
+          python3-setuptools qemu-utils rsync signify-openbsd subversion swig unzip \
+          zlib1g-dev file wget zstd
+          endgroup
+          #
+          mkdir -p SPECIAL_WORKDIR
+          pushd SPECIAL_WORKDIR
+          #
+          group "Initialize SDK"
+          # Download SDK
+          op_target_url_prefix="https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$SUBTARGET"
+          sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
+          sdk="$(echo "$sha256sums" | sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}')"
+          curl -LO "${op_target_url_prefix}/${sdk}"
+          tar -xf "$sdk" && rm -f "$sdk"
+          mv *-sdk-* SDK
+          # bin
+          ln -s "/workdir/bin" SDK/bin
+          # dl
+          rm -rf SDK/dl
+          ln -s "/workdir/DL" SDK/dl
+          # feeds.conf.default
+          for SPECIAL_FEED in $SPECIAL_FEEDS; do
+            echo "$SPECIAL_FEED" | tr '|' ' ' >> SDK/feeds.conf.default
+          done
+          cat SDK/feeds.conf.default
+          # key-build
+          echo "$USIGN_KEY" > SDK/key-build
+          echo "$USIGN_PUBKEY" > SDK/key-build.pub
+          endgroup
+          # Build start
+          NPROC=$(nproc)
+          pushd SDK
+          #
+          group "scripts/feeds update -a"
+          scripts/feeds update -a
+          endgroup
+          #
+          group "scripts/feeds install $SPECIALS"
+          scripts/feeds install $SPECIALS
+          endgroup
+          #
+          group "make defconfig"
+          make defconfig
+          endgroup
+          #
+          group "make package/*/compile V=s -j$NPROC"
+          make package/compile V=s -j$NPROC
+          for PKG in $SPECIALS; do
+            make "package/$PKG/compile" \
+              BUILD_LOG="$BUILD_LOG" \
+              IGNORE_ERRORS="$IGNORE_ERRORS" \
+              CONFIG_AUTOREMOVE=y \
+              V=s \
+              -j$NPROC
+          done
+          endgroup
+          #
+          group "make package/index"
+          make package/index
+          endgroup
+          # Build done
+          popd
+          # popd SPECIAL_WORKDIR
+          popd
 
       - name: Build Packages
         id: build_packags
@@ -199,9 +301,10 @@ jobs:
             sudo chown -R $USER:$GROUPS /workdir/bin
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/packages" 2>/dev/null
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/luci" 2>/dev/null
+            rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/special" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/" 2>/dev/null
-            for EXTRA_FEED in $EXTRA_FEEDS; do
-              feed=$(echo "$EXTRA_FEED" | cut -d'|' -f2)
+            for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
+              feed=$(echo "$FEED" | cut -d'|' -f2)
               if [ -d "/workdir/bin/packages/$ARCH/$feed" ]; then
                 echo "cp /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
                 cp -Rf "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
@@ -254,6 +357,7 @@ jobs:
           EXTRA_REPOS: >-
             src|${{ env.PREFIX }}packages|file:///repo/${{ env.PREFIX }}packages
             src|${{ env.PREFIX }}luci|file:///repo/${{ env.PREFIX }}luci
+            src|${{ env.PREFIX }}special|file:///repo/${{ env.PREFIX }}special
           NO_LOCAL_REPOS: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
