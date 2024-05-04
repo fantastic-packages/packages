@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-packages-feeds
-PKG_VERSION:=20240427
-PKG_RELEASE:=2
+PKG_VERSION:=20240504
+PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Anya Lin <hukk1996@gmail.com>
 PKG_LICENSE:=MIT
@@ -64,8 +64,11 @@ fi
 if ! grep -q fantastic_packages_ "$$IPKG_INSTROOT/etc/opkg/customfeeds.conf"; then
 	BASE_URL="https://fantastic-packages.github.io/packages/releases"
 	BASE_URL="$$BASE_URL/$$BRANCH/packages/$$ARCH_PACKAGES"
-	echo "src/gz fantastic_packages_luci     $$BASE_URL/luci"     >> "$$IPKG_INSTROOT/etc/opkg/customfeeds.conf"
-	echo "src/gz fantastic_packages_packages $$BASE_URL/packages" >> "$$IPKG_INSTROOT/etc/opkg/customfeeds.conf"
+	cat <<- EOF >> "$$IPKG_INSTROOT/etc/opkg/customfeeds.conf"
+	src/gz fantastic_packages_packages $$BASE_URL/packages
+	src/gz fantastic_packages_luci     $$BASE_URL/luci
+	src/gz fantastic_packages_special  $$BASE_URL/special
+	EOF
 fi
 exit 0
 endef
