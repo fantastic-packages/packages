@@ -400,3 +400,9 @@ jobs:
           path: |
             ${{ env.TPATH }}/
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+
+      - name: Fix permissions of DL
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo chmod -R o+r /workdir/DL/
