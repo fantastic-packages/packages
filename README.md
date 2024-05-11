@@ -47,6 +47,7 @@ make menuconfig
 | [luci-app-diskman][] | A Simple Disk Manager for LuCI |
 | [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-dnsproxy][] | A simple DNS proxy server |
+| [luci-app-einat][] | LuCI Support for einat-ebpf |
 | [luci-app-homeproxy][] | A homeproxy fork with clash api, selector/urltest node, node grouping & ruleset support |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
@@ -93,7 +94,7 @@ make menuconfig
 [luci-app-diskman]: https://github.com/lisaac/luci-app-diskman
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
-[luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
+[luci-app-einat]: https://github.com/muink/luci-app-einat
 [luci-app-homeproxy]: https://github.com/muink/luci-app-homeproxy
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
@@ -105,6 +106,7 @@ make menuconfig
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
+[luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
 [luci-app-serverchan]: https://github.com/tty228/luci-app-wechatpush
 [luci-app-temp-status]: https://github.com/gSpotx2f/luci-app-temp-status
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
