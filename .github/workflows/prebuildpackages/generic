@@ -1,10 +1,10 @@
 fantastic-keyring fantastic-packages-feeds
-bash nano getopt coreutils-base64 coreutils-stat
 wget curl ca-certificates
+bash nano getopt coreutils-base64 coreutils-stat
 unzip gzip tar bzip2 xz lzmainfo zstd
 lscpu htop atop iftop
-ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3 go-stun stuntman-client speedtest-go
-coreutils-truncate losetup parted resize2fs lsblk coreutils-df coreutils-dd
+ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3
+go-stun stuntman-client speedtest-go
 kmod-ikconfig
 kmod-ata-core kmod-ata-ahci
 kmod-scsi-core kmod-scsi-generic
@@ -13,18 +13,18 @@ kmod-usb-storage kmod-usb-storage-uas kmod-usb-storage-extras
 kmod-sdhci kmod-mmc
 blockd mount-utils swap-utils usbutils pciutils
 lsblk blkid cfdisk cgdisk fixparts parted
+coreutils-truncate losetup parted resize2fs lsblk coreutils-df coreutils-dd
 kmod-fs-vfat kmod-fs-exfat kmod-fs-ext4
 kmod-fs-msdos kmod-nls-base kmod-nls-utf8 kmod-nls-cp932 kmod-nls-cp936 kmod-nls-cp950
 kmod-tcp-bbr kmod-ipt-offload kmod-nft-offload kmod-nft-tproxy kmod-tun ip-full dnsmasq-full -dnsmasq
 zoneinfo-core zoneinfo-simple zoneinfo-asia
 luci luci-compat luci-lib-ipkg luci-mod-dashboard
 luci-theme-material luci-theme-argon luci-app-argon-config
-luci-app-ttyd luci-app-advanced-reboot luci-app-commands
+luci-app-ttyd luci-app-advanced-reboot luci-app-commands luci-app-log-viewer
 luci-app-natmapt natmapt-client-script-transmission natmapt-notify-script-telegram
-luci-app-einat
-luci-app-nlbwmon luci-app-wifischedule luci-app-wol luci-app-dnsproxy luci-app-pcap-dnsproxy luci-app-change-mac
-luci-app-uhttpd luci-app-netspeedtest luci-app-tinyfilemanager luci-app-diskman
-luci-app-disks-info luci-app-log-viewer
-luci-app-alwaysonline uci-alwaysonline
+luci-app-nlbwmon luci-app-wifischedule luci-app-wol luci-app-change-mac luci-app-einat
+luci-app-dnsproxy luci-app-pcap-dnsproxy luci-app-alwaysonline uci-alwaysonline
+luci-app-uhttpd luci-app-netspeedtest
+luci-app-tinyfilemanager luci-app-diskman luci-app-disks-info
 luci-app-cpu-status luci-app-tn-netports luci-app-interfaces-statistics
 luci-app-internet-detector luci-app-ipinfo
