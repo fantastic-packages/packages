@@ -1,0 +1,748 @@
+Package: Toolkit
+Version: 0.4.0.2-2
+Depends: libc, libstdcpp6
+Source: /feed/packages/openwrt-Toolkit
+SourceName: Toolkit
+License: GPL-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1698502235
+Maintainer: Chengr28 <chengr28@twitter>
+Architecture: mips_24kc
+Installed-Size: 116014
+Filename: Toolkit_0.4.0.2-2_mips_24kc.ipk
+Size: 116563
+SHA256sum: abb3b9610b8cd1533e7c7cfb79ee328e461e2d0f9cef857fe76ff16c7bb572eb
+Description:  A network util can ping with DNS request.
+
+Package: alwaysonline
+Version: 1.2.0-20240731
+Depends: libc
+Source: /feed/packages/openwrt-alwaysonline
+SourceName: alwaysonline
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+Require-User: alwaysonline:alwaysonline
+SourceDateEpoch: 1722476186
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 1850196
+Filename: alwaysonline_1.2.0-20240731_mips_24kc.ipk
+Size: 1846927
+SHA256sum: c1d45242f7c98f08d0ff987c585b627d1651a59aa6e7915469eacf8cdf4c532b
+Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
+
+Package: chinadns-ng
+Version: 2023.10.28-1
+Depends: libc
+Source: /feed/packages/openwrt-chinadns-ng
+SourceName: chinadns-ng
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1698928090
+Maintainer: pexcn <pexcn97@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 27097
+Filename: chinadns-ng_2023.10.28-1_mips_24kc.ipk
+Size: 27864
+SHA256sum: 21f5ab44451603ecab0b4fedd0af9372afe3b16cc6a1352e4f83756668c19713
+Description:  ChinaDNS Next Generation, refactoring with epoll and ipset.
+
+Package: fantastic-keyring
+Version: 20240427-1
+Depends: libc
+Source: /feed/packages/fantastic-keyring
+SourceName: fantastic-keyring
+License: MIT
+LicenseFiles: License
+Section: base
+SourceDateEpoch: 1722391916
+Maintainer: Anya Lin <hukk1996@gmail.com>
+Architecture: all
+Installed-Size: 312
+Filename: fantastic-keyring_20240427-1_all.ipk
+Size: 1053
+SHA256sum: bd5e2d31d9f21955883348a277ae98578de712464bee21f3cac67abc4b2ee243
+Description:  The keyring of with the developer using.
+
+Package: fantastic-packages-feeds
+Version: 20240504-1
+Depends: libc, fantastic-keyring, opkg
+Source: /feed/packages/fantastic-packages-feeds
+SourceName: fantastic-packages-feeds
+License: MIT
+LicenseFiles: License
+Section: base
+SourceDateEpoch: 1722391916
+Maintainer: Anya Lin <hukk1996@gmail.com>
+Architecture: all
+Installed-Size: 97
+Filename: fantastic-packages-feeds_20240504-1_all.ipk
+Size: 1516
+SHA256sum: 09a99cca1c338125d2ad9c0b84a9701942c470a907b87d44756d2a43c45a7d84
+Description:  Installer for fantastic-packages feeds
+
+Package: go-stun
+Version: 0.1.4-10
+Depends: libc
+Source: /feed/packages/openwrt-go-stun
+SourceName: go-stun
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1714893725
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 838329
+Filename: go-stun_0.1.4-10_mips_24kc.ipk
+Size: 838052
+SHA256sum: d011cc97fcbc4fd878e197d3faff7f9bcd5663ff6edbc4123f13d690a0eb215f
+Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
+ RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
+ RFC 5389: Session Traversal Utilities for NAT (STUN)
+
+Package: internet-detector-mod-email
+Version: 1.3.0-1
+Depends: libc, internet-detector, mailsend
+Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-email
+SourceName: internet-detector-mod-email
+Section: net
+SourceDateEpoch: 1718291825
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 1782
+Filename: internet-detector-mod-email_1.3.0-1_all.ipk
+Size: 2532
+SHA256sum: e26760a287682466fbeda6d69b400fa738629fac105c5eabda90ba24d813f603
+Description:  Email support for internet-detector.
+
+Package: internet-detector-mod-modem-restart
+Version: 1.3.0-1
+Depends: libc, internet-detector, modemmanager
+Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-modem-restart
+SourceName: internet-detector-mod-modem-restart
+Section: net
+SourceDateEpoch: 1718291825
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 1061
+Filename: internet-detector-mod-modem-restart_1.3.0-1_all.ipk
+Size: 1816
+SHA256sum: 3378ffb223de462650665998372b8994cd18f9a600ea6cb3d9491f8ac2e75e49
+Description:  Support modem restart for internet detector.
+
+Package: internet-detector
+Version: 1.3.0-1
+Depends: libc, lua, luaposix, libuci-lua
+Source: /feed/luci/luci-app-internet-detector/internet-detector
+SourceName: internet-detector
+Section: net
+SourceDateEpoch: 1718291825
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 10089
+Filename: internet-detector_1.3.0-1_all.ipk
+Size: 10962
+SHA256sum: 9f3e9c11ad663b272998b89960d1652118debec8b18490fc27399dab75c59667
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
+
+Package: libQt6Concurrent
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Concurrent
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 8265
+Filename: libQt6Concurrent_6.7.2-1_mips_24kc.ipk
+Size: 8918
+SHA256sum: 81e32380a801187513117bb4a493dcced09af9dd0b66c31efe74ba348b60d7f1
+Description:  This package provides the Qt6 Concurrent v6.7.2 library.
+
+Package: libQt6Core
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Core
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 2942764
+Filename: libQt6Core_6.7.2-1_mips_24kc.ipk
+Size: 2929548
+SHA256sum: 63e1d472510f28c9a5beee8ce8603b5dbb6f7bc2b957beb59220ed28b6cb93b8
+Description:  This package provides the Qt6 Core v6.7.2 library.
+
+Package: libQt6DBus
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6DBus
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 309114
+Filename: libQt6DBus_6.7.2-1_mips_24kc.ipk
+Size: 308788
+SHA256sum: c1e1e97c8422853a1c5026b5e0256708f3446ec388a06eb435db18adbf46103d
+Description:  This package provides the Qt6 DBus v6.7.2 library.
+
+Package: libQt6Gui
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Gui
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 2810740
+Filename: libQt6Gui_6.7.2-1_mips_24kc.ipk
+Size: 2803739
+SHA256sum: 376e4833665eaa2f28c62a6e9da24471acc98a9991badc2a28a710f336fcb92d
+Description:  This package provides the Qt6 Gui v6.7.2 library.
+
+Package: libQt6Network
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Network
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 808333
+Filename: libQt6Network_6.7.2-1_mips_24kc.ipk
+Size: 806405
+SHA256sum: 1e8a56e7918bfab556bfcd52ee187fb559c8855b260152b5a682e890009b69fb
+Description:  This package provides the Qt6 Network v6.7.2 library.
+
+Package: libQt6PrintSupport
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6PrintSupport
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 153903
+Filename: libQt6PrintSupport_6.7.2-1_mips_24kc.ipk
+Size: 154006
+SHA256sum: 39bfcb1a056f3d56927c427735b8702e3dd9bb62be1b56ed52bae42c18cdf96e
+Description:  This package provides the Qt6 PrintSupport v6.7.2 library.
+
+Package: libQt6Sql
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Sql
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 71438
+Filename: libQt6Sql_6.7.2-1_mips_24kc.ipk
+Size: 72184
+SHA256sum: eaf8e3a4af3d941900fd1c74f452e70fa3c443181bcde1c60c00203323512504
+Description:  This package provides the Qt6 Sql v6.7.2 library.
+
+Package: libQt6Test
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Test
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 141445
+Filename: libQt6Test_6.7.2-1_mips_24kc.ipk
+Size: 141707
+SHA256sum: 06e78b31ee0bfea4f3c73738729e28cb76bbfa0b7310cca11e654f3fb2a4687b
+Description:  This package provides the Qt6 Test v6.7.2 library.
+
+Package: libQt6Widgets
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Widgets
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 3190800
+Filename: libQt6Widgets_6.7.2-1_mips_24kc.ipk
+Size: 3182403
+SHA256sum: 48ff825cd138c250f4dfcfa117ea60a484b4e13ae44fbbd20a0694aa3f6a27c8
+Description:  This package provides the Qt6 Widgets v6.7.2 library.
+
+Package: libQt6Xml
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: libQt6Xml
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 59166
+Filename: libQt6Xml_6.7.2-1_mips_24kc.ipk
+Size: 59616
+SHA256sum: dc65d70b025f31b9bf15bc62c8524ae76b451c024245a57a7f7db6c7062a985a
+Description:  This package provides the Qt6 Xml v6.7.2 library.
+
+Package: natmapt-client-script-deluge
+Version: 20240603-3
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt-client-script-deluge
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: all
+Installed-Size: 816
+Filename: natmapt-client-script-deluge_20240603-3_all.ipk
+Size: 1613
+SHA256sum: 387a7a1b7e8283438b11d0fe6f4ab7b7e89a3f067be216513886eaafbb63f33a
+Description:  NATMap client scripts (Deluge)
+
+Package: natmapt-client-script-transmission
+Version: 20240603-3
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt-client-script-transmission
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: all
+Installed-Size: 633
+Filename: natmapt-client-script-transmission_20240603-3_all.ipk
+Size: 1432
+SHA256sum: 9f480b8ac02fdc827fa414ae875bb47ef7a6af1db14d33fe37e58521bd62f9d2
+Description:  NATMap client scripts (Transmission)
+
+Package: natmapt-notify-script-pushbullet
+Version: 20240603-3
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt-notify-script-pushbullet
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: all
+Installed-Size: 626
+Filename: natmapt-notify-script-pushbullet_20240603-3_all.ipk
+Size: 1428
+SHA256sum: 22f1d252bdcf79993f1b71a52a3bbe7ec5cb7656af132138cbd5b709c42c9a47
+Description:  NATMap notify scripts (Pushbullet)
+
+Package: natmapt-notify-script-pushover
+Version: 20240603-3
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt-notify-script-pushover
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: all
+Installed-Size: 646
+Filename: natmapt-notify-script-pushover_20240603-3_all.ipk
+Size: 1443
+SHA256sum: 7f8a3fecd22628d6dfdcd3efb6707acffbe4a77f7dcda8e4237d61c7114b07a2
+Description:  NATMap notify scripts (Pushover)
+
+Package: natmapt-notify-script-telegram
+Version: 20240603-3
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt-notify-script-telegram
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: all
+Installed-Size: 639
+Filename: natmapt-notify-script-telegram_20240603-3_all.ipk
+Size: 1434
+SHA256sum: 20d426436b07f0417df2c21861e56d662404433d0497c2181bf2614b3c7e442f
+Description:  NATMap notify scripts (Telegram)
+
+Package: natmapt
+Version: 20240603-3
+Depends: libc, curl, jsonfilter, bash
+Source: /feed/packages/openwrt-natmapt
+SourceName: natmapt
+License: MIT
+LicenseFiles: License
+Section: net
+SourceDateEpoch: 1721477158
+Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
+Architecture: mips_24kc
+Installed-Size: 24870
+Filename: natmapt_20240603-3_mips_24kc.ipk
+Size: 25441
+SHA256sum: 7d5c8311768d804056f696331f1eeb51739eb798d7ab85e8122eff6ab9992114
+Description:  TCP/UDP port mapping tool for full cone NAT
+
+Package: netdata-ssl
+Version: 1.33.1-4
+Depends: libc, zlib, libuuid1, libuv1, libmnl0, libjson-c5, libopenssl3
+Source: /feed/packages/openwrt-netdata-ssl
+SourceName: netdata-ssl
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: admin
+SourceDateEpoch: 1693971228
+CPE-ID: cpe:/a:my-netdata:netdata
+Maintainer: Josef Schlehofer <pepe.schlehofer@gmail.com>, Daniel Engberg <daniel.engberg.lists@pyret.net>
+Architecture: mips_24kc
+Installed-Size: 8019820
+Filename: netdata-ssl_1.33.1-4_mips_24kc.ipk
+Size: 7985907
+SHA256sum: c27ef4772a2062a02e1580928b4bdaa91a83c6a258bd8ec9de50899f203bda1e
+Description:  netdata is a highly optimized Linux daemon providing real-time performance
+ monitoring for Linux systems, applications and SNMP devices over the web.
+ 
+ If you want to use Python plugins install python3, python3-yaml and
+ python3-urllib3
+
+Package: pcap-dnsproxy
+Version: 0.4.9.13-70a40bb
+Depends: libc, libpthread, libstdcpp6, libevent2-core7, libpcap1, libsodium, libopenssl3
+Source: /feed/packages/openwrt-Pcap_DNSProxy
+SourceName: pcap-dnsproxy
+License: GPL-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1714128149
+Maintainer: Chengr28 <chengr28@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 320580
+Filename: pcap-dnsproxy_0.4.9.13-70a40bb_mips_24kc.ipk
+Size: 319937
+SHA256sum: 63f495587303f12232b8a965fa7ebf083bbeebf6e48760ac4b7c78d08b9f613d
+Description:  A local DNS server based on LibPcap
+
+Package: php-nginx
+Version: 20230426
+Depends: libc, luci-nginx, luci-ssl-nginx
+Source: /feed/packages/openwrt-php-nginx
+SourceName: php-nginx
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1683823397
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: all
+Installed-Size: 853
+Filename: php-nginx_20230426_all.ipk
+Size: 1666
+SHA256sum: 3da9894589f73be5f3e1cae468359b8bede1fb91f5c5c91b833bc40c825dae4d
+Description:  PHP with Nginx as Webserver
+
+Package: plain-nginx
+Version: 20231028
+Depends: libc, luci-nginx
+Source: /feed/packages/openwrt-plain-nginx
+SourceName: plain-nginx
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1722391916
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: all
+Installed-Size: 366
+Filename: plain-nginx_20231028_all.ipk
+Size: 1164
+SHA256sum: f2991df98f40b2ebab5b40ae3dabf90dd3c7231ae2761d1c811ebc65aee64706
+Description:  Read text document directly
+
+Package: qbittorrent
+Version: 4.6.5-1
+Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qBittorrent
+Source: /feed/luci/luci-app-qbittorrent/qBittorrent
+SourceName: qbittorrent
+License: GPL-2.0+
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1719001455
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: mips_24kc
+Installed-Size: 7741787
+Filename: qbittorrent_4.6.5-1_mips_24kc.ipk
+Size: 7735106
+SHA256sum: b92d184b5adc20be5d51b5f6371feff98e3b1baf7aac9d5ba3365fefb961e4c4
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
+
+Package: qt6-plugin-libqcertonlybackend
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqcertonlybackend
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 36771
+Filename: qt6-plugin-libqcertonlybackend_6.7.2-1_mips_24kc.ipk
+Size: 37352
+SHA256sum: 57e1089e8dd4b06367f342e51317b1c5ea9e78a022cf30496b52863dae23476d
+Description:  Qt6 Plugin libqcertonlybackend
+
+Package: qt6-plugin-libqminimal
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqminimal
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 8659
+Filename: qt6-plugin-libqminimal_6.7.2-1_mips_24kc.ipk
+Size: 9292
+SHA256sum: 2cb98b66f08cdd4a2895a15a5c975c0c3d68714e3f371b2cea69753b4f68910b
+Description:  Qt6 Plugin libqminimal
+
+Package: qt6-plugin-libqnetworkmanager
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqnetworkmanager
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 24985
+Filename: qt6-plugin-libqnetworkmanager_6.7.2-1_mips_24kc.ipk
+Size: 25619
+SHA256sum: d0aec33735d1e57d4cd73e49f202f00624c83bc69bc481c718fccebde106f59d
+Description:  Qt6 Plugin libqnetworkmanager
+
+Package: qt6-plugin-libqoffscreen
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqoffscreen
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 36382
+Filename: qt6-plugin-libqoffscreen_6.7.2-1_mips_24kc.ipk
+Size: 36862
+SHA256sum: bd5feee32cf968cec9ee952c5ad159152be45f61c45ac8c3faaa1598fe8304fe
+Description:  Qt6 Plugin libqoffscreen
+
+Package: qt6-plugin-libqopensslbackend
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqopensslbackend
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 115745
+Filename: qt6-plugin-libqopensslbackend_6.7.2-1_mips_24kc.ipk
+Size: 115878
+SHA256sum: 30c987af6fc9730c17adb9011a3f177b43352b14c80bd948883514df04bdc68a
+Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqsqlite
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqsqlite
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 1028823
+Filename: qt6-plugin-libqsqlite_6.7.2-1_mips_24kc.ipk
+Size: 1026831
+SHA256sum: 24d53617d25ebd5d545b7559d1ac2f74c4d1c84d770b81cd2294fbd7cd1dbac1
+Description:  Qt6 Plugin libqsqlite
+
+Package: qt6-plugin-libqtuiotouchplugin
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqtuiotouchplugin
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 38455
+Filename: qt6-plugin-libqtuiotouchplugin_6.7.2-1_mips_24kc.ipk
+Size: 39094
+SHA256sum: 1935ed060d186fcc44d21345d1c499df3bfe49a06f48c8d6fceb97773622a9db
+Description:  Qt6 Plugin libqtuiotouchplugin
+
+Package: qt6-plugin-libqxdgdesktopportal
+Version: 6.7.2-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6-plugin-libqxdgdesktopportal
+Section: libs
+SourceDateEpoch: 1719001455
+Architecture: mips_24kc
+Installed-Size: 41271
+Filename: qt6-plugin-libqxdgdesktopportal_6.7.2-1_mips_24kc.ipk
+Size: 41889
+SHA256sum: 0d9fbccc347fe694c3e6a08cd70e02807d21e72221b9c11bed8950ac74a7dccc
+Description:  Qt6 Plugin libqxdgdesktopportal
+
+Package: rblibtorrent2.0
+Version: 2.0.10-1
+Depends: libc, boost, boost-system, libatomic1, libgcc1, libopenssl3, libstdcpp6
+Provides: rblibtorrent
+Source: /feed/luci/luci-app-qbittorrent/rblibtorrent
+SourceName: rblibtorrent
+License: BSD
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1719001455
+ABIVersion: 2.0
+Architecture: mips_24kc
+Installed-Size: 1571151
+Filename: rblibtorrent2.0_2.0.10-1_mips_24kc.ipk
+Size: 1562139
+SHA256sum: 506a5e6d6b1f1647baf9fc6f0d7e47f0c8edde4f433bcb4455a8fe0951e002e7
+Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
+ all the other bittorrent implementations around. It is a library and not a
+ full featured client, although it comes with a working example client.
+
+Package: rgmac
+Version: 1.5.0-20240101
+Depends: libc, bash, curl, coreutils-cksum, getopt
+Source: /feed/packages/openwrt-rgmac
+SourceName: rgmac
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1704169571
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: all
+Installed-Size: 3653
+Filename: rgmac_1.5.0-20240101_all.ipk
+Size: 4475
+SHA256sum: b02f60974df7d82a5be269329a0bd3ca0e38fe7a81fb96612766986505123f6c
+Description:  A random MAC address generator
+
+Package: speedtest-go
+Version: 1.7.7-1
+Depends: libc, ca-bundle
+Source: /feed/packages/openwrt-speedtest-go
+SourceName: speedtest-go
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1715962846
+Architecture: mips_24kc
+Installed-Size: 8913199
+Filename: speedtest-go_1.7.7-1_mips_24kc.ipk
+Size: 8891465
+SHA256sum: 0771cbef54597aef9be51e549e16fc0ffe0ac0cad77e88340927b6dc48a03310
+Description:  Command Line Interface and pure Go API to
+ Test Internet Speed using speedtest.net
+
+Package: stuntman-client
+Version: 1.2.16-20230829
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+Source: /feed/packages/openwrt-stuntman
+SourceName: stuntman-client
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1714896207
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 37356
+Filename: stuntman-client_1.2.16-20230829_mips_24kc.ipk
+Size: 38014
+SHA256sum: 46cd52c5664265068265de3480b1837f9a22fe879be64ae243e03e69ebbf8a8f
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-server
+Version: 1.2.16-20230829
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+Source: /feed/packages/openwrt-stuntman
+SourceName: stuntman-server
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1714896207
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 87656
+Filename: stuntman-server_1.2.16-20230829_mips_24kc.ipk
+Size: 87896
+SHA256sum: 35a48e045075d7037c730a43c9d11619cc2eb545d6a9012c0c593d1fa70aacea
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-testcode
+Version: 1.2.16-20230829
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+Source: /feed/packages/openwrt-stuntman
+SourceName: stuntman-testcode
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1714896207
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 63040
+Filename: stuntman-testcode_1.2.16-20230829_mips_24kc.ipk
+Size: 63532
+SHA256sum: 3ad7d0566870260ebe1090ec68a9d857839fdd15557459c9af640c67b604f851
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: uci-alwaysonline-nginx
+Version: 1.2.0-20231217
+Depends: libc, alwaysonline, luci-app-alwaysonline, nginx
+Provides: uci-alwaysonline
+Source: /feed/packages/openwrt-alwaysonline
+SourceName: uci-alwaysonline-nginx
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+Require-User: alwaysonline:alwaysonline
+SourceDateEpoch: 1702876452
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 2044
+Filename: uci-alwaysonline-nginx_1.2.0-20231217_mips_24kc.ipk
+Size: 2878
+SHA256sum: c7ec5065fcea2fdac3cd44d7f5f0cf66531e7e30dcec26cf5a827bc99e1572fc
+Description:  This variant of the alwaysonline package is based on the nginx.
+
+Package: uci-alwaysonline
+Version: 1.2.0-20240731
+Depends: libc, alwaysonline, kmod-tun, ip-full, rgmac
+Source: /feed/packages/openwrt-alwaysonline
+SourceName: uci-alwaysonline
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+Require-User: alwaysonline:alwaysonline
+SourceDateEpoch: 1722476186
+Maintainer: muink <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 2569
+Filename: uci-alwaysonline_1.2.0-20240731_mips_24kc.ipk
+Size: 3368
+SHA256sum: c0b7f50a28018d270caeda637d71bf82f390701909dfe3e2f24842b38d16b0fc
+Description:  alwaysonline uci metapackage
+
