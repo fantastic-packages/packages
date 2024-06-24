@@ -22,6 +22,7 @@ cd ..
 cat <<-EOF >> feeds.conf.default
 src-link fantastic_packages_packages fantastic_packages/feeds/packages
 src-link fantastic_packages_luci fantastic_packages/feeds/luci
+src-link fantastic_packages_special fantastic_packages/feeds/special
 EOF
 ./scripts/feeds update -a
 ./scripts/feeds install -a
