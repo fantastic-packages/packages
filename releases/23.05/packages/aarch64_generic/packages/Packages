@@ -16,10 +16,10 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 1858582
+Installed-Size: 1858584
 Filename: alwaysonline_1.2.0-20231217_aarch64_generic.ipk
-Size: 1854650
-SHA256sum: 7a570e1cc17fb75e65cc2062ebf401281af083120608cf9de0b7b92d14cac192
+Size: 1854586
+SHA256sum: 18c0f082c00aa23394e039c1f3225ba4c676c13e15f89f1b741aa4c4ffb7335b
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
@@ -42,8 +42,8 @@ Section: base
 Architecture: all
 Installed-Size: 309
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1050
-SHA256sum: acce722d6c2b500210ff66231335b66ec57a0a92703fa016273735e4d7dea69c
+Size: 1045
+SHA256sum: d50f18318f3088637f2b4845c1e88071112e6277259f3fdc4e7ea8330ee73c92
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -52,10 +52,10 @@ Depends: libc, fantastic-keyring, opkg
 License: MIT
 Section: base
 Architecture: all
-Installed-Size: 96
+Installed-Size: 95
 Filename: fantastic-packages-feeds_20240504-1_all.ipk
-Size: 1505
-SHA256sum: 63e51b2c63aee5c7124b0e5f728d97364f0610439ebd3cae15bbcad3e4a03480
+Size: 1506
+SHA256sum: a22b0b35e93c4505c750afe826ed6f169d6b7f2b358b35175b584907943be2c8
 Description:  Installer for fantastic-packages feeds
 
 Package: go-stun
@@ -64,10 +64,10 @@ Depends: libc
 License: Apache-2.0
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 829758
+Installed-Size: 829756
 Filename: go-stun_0.1.4-10_aarch64_generic.ipk
-Size: 828988
-SHA256sum: a92b2b3135678d9e267162a0de26cfe2e366956c4a8d5bb2ef63db6e995a733f
+Size: 828979
+SHA256sum: abac6f19d667b20df4638db2ec868c4b3fc7f2eae6741ff8faf248a0f900e7e9
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -114,8 +114,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 7630
 Filename: libQt6Concurrent_6.7.1-1_aarch64_generic.ipk
-Size: 8280
-SHA256sum: 28cd9daa0ed945605b700e644fcfc32cb80cd365fc99f298ddf813fdcf4cd8f1
+Size: 8278
+SHA256sum: edf5cb69887348658b4e43282158011400530ea543284bc1596c0996cff89fac
 Description:  This package provides the Qt6 Concurrent v6.7.1 library.
 
 Package: libQt6Core
@@ -125,8 +125,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 2815973
 Filename: libQt6Core_6.7.1-1_aarch64_generic.ipk
-Size: 2808699
-SHA256sum: 84033c2cdd82d4229bfa0a8924484bc7e3318aabbc221af2786dd251d04031a3
+Size: 2808703
+SHA256sum: c5841f2713fd4292d70c18425a2d5f8dcc5a65df3a448ababab2d9524e3ce4ed
 Description:  This package provides the Qt6 Core v6.7.1 library.
 
 Package: libQt6DBus
@@ -134,10 +134,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 329191
+Installed-Size: 329192
 Filename: libQt6DBus_6.7.1-1_aarch64_generic.ipk
-Size: 329611
-SHA256sum: 96895712b8fb08b696f19def56734ba3299115eb6e5c8bb0af79b00edad52600
+Size: 329612
+SHA256sum: 7b00f67ef2f8109f09c686c03593a41500ab1a7c8b54beb98f015fa72ab2290a
 Description:  This package provides the Qt6 DBus v6.7.1 library.
 
 Package: libQt6Gui
@@ -145,10 +145,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 2799248
+Installed-Size: 2799250
 Filename: libQt6Gui_6.7.1-1_aarch64_generic.ipk
-Size: 2794966
-SHA256sum: c553b90c8a93cb0fc06c93defca122079c3239ac86b11fc5edc728a2c3c6a72a
+Size: 2794958
+SHA256sum: 949cb333e66d09d235e6397bed9fc4690e999a562aa430044ad8d88ebffde69e
 Description:  This package provides the Qt6 Gui v6.7.1 library.
 
 Package: libQt6Network
@@ -156,10 +156,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 860995
+Installed-Size: 860996
 Filename: libQt6Network_6.7.1-1_aarch64_generic.ipk
-Size: 859716
-SHA256sum: 39fcc2a7431f3c44afcd995c0693ffc7201858898ed804d810a4434aa98ffcc3
+Size: 859722
+SHA256sum: 5574646411f8394f44e737746471d528a8e3c460ef56baac59556b24cb5f69ad
 Description:  This package provides the Qt6 Network v6.7.1 library.
 
 Package: libQt6PrintSupport
@@ -167,10 +167,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 163562
+Installed-Size: 163565
 Filename: libQt6PrintSupport_6.7.1-1_aarch64_generic.ipk
-Size: 163486
-SHA256sum: d489fe900afc0d54be8f6628f71ce409df4e1546bd9f6d4ec2af7cf2d4841482
+Size: 163499
+SHA256sum: 5d1d0cc41232964b4b29c40c43cf2986b119380654faf50cb0981dfe30c40282
 Description:  This package provides the Qt6 PrintSupport v6.7.1 library.
 
 Package: libQt6Sql
@@ -180,8 +180,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 80250
 Filename: libQt6Sql_6.7.1-1_aarch64_generic.ipk
-Size: 80684
-SHA256sum: f55e8ae17a163e299d99ece29210fd2887a794bdceae806c2e43b68124bd56c6
+Size: 80702
+SHA256sum: e52dfa3b9ba5df6fd43e902adfbdb49abf86645ab7f4ebea63f0d819c38cb389
 Description:  This package provides the Qt6 Sql v6.7.1 library.
 
 Package: libQt6Test
@@ -191,8 +191,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 133014
 Filename: libQt6Test_6.7.1-1_aarch64_generic.ipk
-Size: 133682
-SHA256sum: c2adbe0d3b69a059dee0314eb95232a22226bbc85550b1d8b50c1ddb50573f05
+Size: 133687
+SHA256sum: f4bd508bad6b579bf6299bf68c5849cf74ca7b4d5b8dbee854dbdad3159e9f84
 Description:  This package provides the Qt6 Test v6.7.1 library.
 
 Package: libQt6Widgets
@@ -200,10 +200,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 3282123
+Installed-Size: 3282121
 Filename: libQt6Widgets_6.7.1-1_aarch64_generic.ipk
-Size: 3274873
-SHA256sum: a2dff047e32d87f4e173fa87804738270327a064c3cd4f4d3587cadef4898184
+Size: 3274894
+SHA256sum: ffc79487635aef279d7a0914293b2c8eb562172aab6ffe31398b831618ea6f08
 Description:  This package provides the Qt6 Widgets v6.7.1 library.
 
 Package: libQt6Xml
@@ -211,10 +211,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 66779
+Installed-Size: 66780
 Filename: libQt6Xml_6.7.1-1_aarch64_generic.ipk
 Size: 67515
-SHA256sum: a31ec551347fe61a984c5e59c6046c51d4240e381b7f77c2295d1dd51996b77f
+SHA256sum: a2478dc502e8f2d6a0c777e5aa2c168f38e003584dfc445e6c3d3629a33dce49
 Description:  This package provides the Qt6 Xml v6.7.1 library.
 
 Package: natmapt-client-script-deluge
@@ -341,10 +341,10 @@ Depends: libc, luci-nginx
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 366
+Installed-Size: 367
 Filename: plain-nginx_20231028_all.ipk
-Size: 1162
-SHA256sum: 0d5846bb8ec0b3312848a03ad18c07dd4fe29e8c43f55c7894340e8dfb98fb0f
+Size: 1163
+SHA256sum: c9f827c1154af4c7054de407af25a32f0e0d572b44d5a113e1e2f094aac5476c
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -357,8 +357,8 @@ CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: aarch64_generic
 Installed-Size: 7868444
 Filename: qbittorrent_4.6.4-1_aarch64_generic.ipk
-Size: 7862890
-SHA256sum: 6056a9b5736c2f82c9b22c9ec39000a07436e3e04e1b5cb6e246b2448ab3c121
+Size: 7862866
+SHA256sum: 44813475ea15108a436a582e409d254450591cd777abbcc813655b5c5af3dc07
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -373,7 +373,7 @@ Architecture: aarch64_generic
 Installed-Size: 38909
 Filename: qt6-plugin-libqcertonlybackend_6.7.1-1_aarch64_generic.ipk
 Size: 39452
-SHA256sum: d7ab9521f7b647ba841606bdc09ffcbd1489d3252887a4760e3a44ca2c363ffd
+SHA256sum: 9635e4cb1511be724c09ecae0aefa6cfb9a4e73256c4320262b702251fc3973c
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
@@ -381,10 +381,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 9925
+Installed-Size: 9926
 Filename: qt6-plugin-libqminimal_6.7.1-1_aarch64_generic.ipk
-Size: 10486
-SHA256sum: bd779bf3f87cd71160b0fecd411d9015c10c1fb198c3952670d312397ac84f1e
+Size: 10484
+SHA256sum: 73ad90227e04be4db24714d5b84b6be190a0cf5b504c270cbccb9b75e19d4b2d
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
@@ -394,8 +394,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 27151
 Filename: qt6-plugin-libqnetworkmanager_6.7.1-1_aarch64_generic.ipk
-Size: 27650
-SHA256sum: fa1fa75898af95643b542d85db7668e4eb19f49d5d47633412d28f0613523280
+Size: 27647
+SHA256sum: 9509d60c4b79171f4b55a3c8a56777b8ecfec893ac0e5ed879e1c10e18d7f68e
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
@@ -403,10 +403,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 37845
+Installed-Size: 37844
 Filename: qt6-plugin-libqoffscreen_6.7.1-1_aarch64_generic.ipk
 Size: 38396
-SHA256sum: f36775cb1384908cc5fc05338b403a6d24f1afbcaaac3542a6c48250d61ebcc8
+SHA256sum: 0ae94f288e5ada189b8523267ab4417295f1915ea38f5dcc005d8438cad28617
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
@@ -414,10 +414,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 119364
+Installed-Size: 119363
 Filename: qt6-plugin-libqopensslbackend_6.7.1-1_aarch64_generic.ipk
-Size: 119706
-SHA256sum: dbf9661cd3cfb43e8e04635a3a90a56cc2f0d9da48a1a7d1f9adf4c40890e059
+Size: 119699
+SHA256sum: fb4d6854455025ba27a6af6d4a805b6c1c0bc052047d991860c62c72ee1f3e5f
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
@@ -425,10 +425,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 947597
+Installed-Size: 947598
 Filename: qt6-plugin-libqsqlite_6.7.1-1_aarch64_generic.ipk
 Size: 947626
-SHA256sum: e4c91011d1ec7f867f9781719d997c66b2cd69536559643dcbf55df905fe3735
+SHA256sum: 0e8d9ec0241ab9ce2fc7039877ca0f1a5215ada5187e13563bca327675774e5b
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
@@ -438,8 +438,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 36950
 Filename: qt6-plugin-libqtuiotouchplugin_6.7.1-1_aarch64_generic.ipk
-Size: 37554
-SHA256sum: 45b7e2746276a2e2e28e3fcf78e9b7808a14053f4255cd6c84b0194390518a6e
+Size: 37556
+SHA256sum: 3f759113e64cdeaf49c83a1c169c9ef0932ebd144128d85371196c29db49b650
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
@@ -447,10 +447,10 @@ Version: 6.7.1-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 45289
+Installed-Size: 45290
 Filename: qt6-plugin-libqxdgdesktopportal_6.7.1-1_aarch64_generic.ipk
-Size: 45976
-SHA256sum: d3434cd46af8941798dfd6671e0836b92b951818666f43f80f946b6b95b64561
+Size: 45974
+SHA256sum: 65fce6add4e7b9ef5257059dd8af8a5805093993cb5d27a341b469074f70b4cc
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -487,10 +487,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 8925882
+Installed-Size: 8926001
 Filename: speedtest-go_1.7.7-1_aarch64_generic.ipk
-Size: 8904185
-SHA256sum: a773f32f6f08a503d5073dd84bd8ddc289979057e9a78b48c35d0cc98ab7ef6a
+Size: 8904340
+SHA256sum: d1115d38e103cba7bedee358d4e67798f3799b0b1cc6b935a437c59cc1a803d9
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 
