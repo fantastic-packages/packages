@@ -59,7 +59,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [23.05.3]
+        version: [23.05.4]
         arch: [
           x86_64,
           mips_24kc,
