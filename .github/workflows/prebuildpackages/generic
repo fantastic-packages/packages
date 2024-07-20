@@ -1,6 +1,6 @@
 fantastic-keyring fantastic-packages-feeds
 wget curl ca-certificates
-bash nano getopt coreutils-base64 coreutils-stat
+bash nano getopt coreutils-base64 coreutils-sha1sum coreutils-stat jq
 unzip gzip tar bzip2 xz lzmainfo zstd
 lscpu htop atop iftop
 ethtool arp-scan arp-scan-database bind-tools knot-dig iperf3
@@ -16,7 +16,7 @@ lsblk blkid cfdisk cgdisk fixparts parted
 coreutils-truncate losetup parted resize2fs lsblk coreutils-df coreutils-dd
 kmod-fs-vfat kmod-fs-exfat kmod-fs-ext4
 kmod-fs-msdos kmod-nls-base kmod-nls-utf8 kmod-nls-cp932 kmod-nls-cp936 kmod-nls-cp950
-kmod-tcp-bbr kmod-ipt-offload kmod-nft-offload kmod-nft-tproxy kmod-tun ip-full dnsmasq-full -dnsmasq
+kmod-tcp-bbr kmod-ipt-offload kmod-nft-offload kmod-nft-tproxy kmod-tun ip-full iw-full dnsmasq-full -dnsmasq
 zoneinfo-core zoneinfo-simple zoneinfo-asia
 luci luci-compat luci-lib-ipkg luci-mod-dashboard
 luci-theme-material luci-theme-argon luci-app-argon-config
@@ -28,3 +28,5 @@ luci-app-uhttpd luci-app-netspeedtest
 luci-app-tinyfilemanager luci-app-diskman luci-app-disks-info
 luci-app-cpu-status luci-app-tn-netports luci-app-interfaces-statistics
 luci-app-internet-detector luci-app-ipinfo
+acme-acmesh-dnsapi luci-app-acme
+luci-app-upnp
