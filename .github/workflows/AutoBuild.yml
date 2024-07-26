@@ -62,14 +62,11 @@ jobs:
         version: [23.05.4]
         arch: [
           x86_64,
-          mips_24kc,
-          arm_cortex-a7_neon-vfpv4,
           aarch64_cortex-a53,
-          aarch64_cortex-a72,
-          arm_cortex-a9,
+          aarch64_generic,
           arm_cortex-a15_neon-vfpv4,
-          mipsel_24kc,
-          aarch64_generic
+          mips_24kc,
+          mipsel_24kc
           ]
         include:
           - usign_id: ${{ vars.USIGN_ID }}
@@ -80,22 +77,16 @@ jobs:
             target: ['x86', '64'] # for imagebuilder
             profile: generic # for imagebuilder
             no_img: false
-          - arch: mips_24kc
-            target: ['ath79', 'generic']
-          - arch: arm_cortex-a7_neon-vfpv4
-            target: ['bcm27xx', 'bcm2709']
           - arch: aarch64_cortex-a53
-            target: ['bcm27xx', 'bcm2710']
-          - arch: aarch64_cortex-a72
-            target: ['bcm27xx', 'bcm2711']
-          - arch: arm_cortex-a9
-            target: ['bcm53xx', 'generic']
+            target: ['mvebu', 'cortexa53']
+          - arch: aarch64_generic
+            target: ['armsr', 'armv8']
           - arch: arm_cortex-a15_neon-vfpv4
             target: ['armsr', 'armv7']
+          - arch: mips_24kc
+            target: ['ath79', 'generic']
           - arch: mipsel_24kc
             target: ['ramips', 'mt7621']
-          - arch: aarch64_generic
-            target: ['rockchip', 'armv8']
     uses: ./.github/workflows/compile.yml
     with:
       build_mode: ${{ inputs.build_mode }}
