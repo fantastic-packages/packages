@@ -58,13 +58,13 @@ SourceName: fantastic-keyring
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1722391916
+SourceDateEpoch: 1722492495
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 312
+Installed-Size: 310
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1053
-SHA256sum: bd5e2d31d9f21955883348a277ae98578de712464bee21f3cac67abc4b2ee243
+Size: 1050
+SHA256sum: 1e0a501fbf8467b635507ee3c02b13ca73f24c670c92507db0566b93eb86e917
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -708,25 +708,6 @@ Filename: stuntman-testcode_1.2.16-20230829_mips_24kc.ipk
 Size: 63532
 SHA256sum: 3ad7d0566870260ebe1090ec68a9d857839fdd15557459c9af640c67b604f851
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
-
-Package: uci-alwaysonline-nginx
-Version: 1.2.0-20231217
-Depends: libc, alwaysonline, luci-app-alwaysonline, nginx
-Provides: uci-alwaysonline
-Source: /feed/packages/openwrt-alwaysonline
-SourceName: uci-alwaysonline-nginx
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-Require-User: alwaysonline:alwaysonline
-SourceDateEpoch: 1702876452
-Maintainer: muink <hukk1996@gmail.com>
-Architecture: mips_24kc
-Installed-Size: 2044
-Filename: uci-alwaysonline-nginx_1.2.0-20231217_mips_24kc.ipk
-Size: 2878
-SHA256sum: c7ec5065fcea2fdac3cd44d7f5f0cf66531e7e30dcec26cf5a827bc99e1572fc
-Description:  This variant of the alwaysonline package is based on the nginx.
 
 Package: uci-alwaysonline
 Version: 1.2.0-20240731

@@ -40,10 +40,10 @@ Depends: libc
 License: MIT
 Section: base
 Architecture: all
-Installed-Size: 312
+Installed-Size: 310
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1053
-SHA256sum: bd5e2d31d9f21955883348a277ae98578de712464bee21f3cac67abc4b2ee243
+Size: 1050
+SHA256sum: 1e0a501fbf8467b635507ee3c02b13ca73f24c670c92507db0566b93eb86e917
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -529,19 +529,6 @@ Filename: stuntman-testcode_1.2.16-20230829_x86_64.ipk
 Size: 63924
 SHA256sum: eef594fdd1b27099f7dd7ed7ee87e6dce6f5e07b75b6768124bc7c18e91e9543
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
-
-Package: uci-alwaysonline-nginx
-Version: 1.2.0-20231217
-Depends: libc, alwaysonline, luci-app-alwaysonline, nginx
-Provides: uci-alwaysonline
-License: MIT
-Section: net
-Architecture: x86_64
-Installed-Size: 2044
-Filename: uci-alwaysonline-nginx_1.2.0-20231217_x86_64.ipk
-Size: 2878
-SHA256sum: cdb1e6fe9d2ccbcde1ed156003b60bb7914b8010e4db98a363da9826a373cef8
-Description:  This variant of the alwaysonline package is based on the nginx.
 
 Package: uci-alwaysonline
 Version: 1.2.0-20240731
