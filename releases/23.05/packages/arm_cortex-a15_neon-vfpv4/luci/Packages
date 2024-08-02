@@ -116,17 +116,6 @@ SHA256sum: 9aecd48f3212daa0913e937369418afb05c3c61f0f2898189ed78378d39d597b
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-homeproxy
-Version: git-24.210.24176-76846d5
-Depends: libc, sing-box, chinadns-ng, firewall4, kmod-nft-tproxy, unzip
-Section: luci
-Architecture: all
-Installed-Size: 448515
-Filename: luci-app-homeproxy_git-24.210.24176-76846d5_all.ipk
-Size: 449529
-SHA256sum: 13c15104803a01132e35d93cc79997e00c2e60429a34f51aa3ff7633549a42eb
-Description:  The modern ImmortalWrt proxy platform for ARM64/AMD64
-
-Package: luci-app-homeproxy
 Version: git-24.215.06463-eec1023
 Depends: libc, sing-box, chinadns-ng, firewall4, kmod-nft-tproxy, unzip
 Section: luci
@@ -291,10 +280,10 @@ Depends: libc, luci-app-xray, wget
 License: MPLv2
 Section: Custom
 Architecture: all
-Installed-Size: 3349
+Installed-Size: 3348
 Filename: luci-app-xray-status_3.4.1-1_all.ipk
-Size: 4122
-SHA256sum: e13402fa5fd0f0df624267bb3d349791da7c287dc19ea57d341d5225f4093d40
+Size: 4120
+SHA256sum: 000f2d95617966ee07259fe1d62572702217865815833e6ba6e430dbe46eaa3a
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -529,17 +518,6 @@ Filename: luci-i18n-einat-zh-tw_git-24.182.43430-d86075b_all.ipk
 Size: 1649
 SHA256sum: 656695dd58a408469b59e981cc0246ebc99a3ac629a7ef07dd627bd388e2aaa4
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-homeproxy-zh-cn
-Version: git-24.210.24176-76846d5
-Depends: libc, luci-app-homeproxy
-Section: luci
-Architecture: all
-Installed-Size: 10902
-Filename: luci-i18n-homeproxy-zh-cn_git-24.210.24176-76846d5_all.ipk
-Size: 11683
-SHA256sum: eec37246577376d0a6aa817ac82cc95c2d8889511b28f30be1181063ee953dad
-Description:  Translation for luci-app-homeproxy - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-homeproxy-zh-cn
 Version: git-24.215.06463-eec1023
