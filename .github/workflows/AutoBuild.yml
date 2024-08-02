@@ -39,7 +39,7 @@ on:
 env:
 # Release path
   release_path: 'releases'
-# 删除早期的 packages
+# 删除早期版本的 packages
   DELETE_OLD_PACKAGES: true
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
