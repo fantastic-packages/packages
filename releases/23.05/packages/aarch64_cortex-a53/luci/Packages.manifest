@@ -157,18 +157,18 @@ SHA256sum: 9aecd48f3212daa0913e937369418afb05c3c61f0f2898189ed78378d39d597b
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-homeproxy
-Version: git-24.210.24176-76846d5
+Version: git-24.215.06463-eec1023
 Depends: libc, sing-box, chinadns-ng, firewall4, kmod-nft-tproxy, unzip
 Source: /feed/luci/luci-app-homeproxy
 SourceName: luci-app-homeproxy
 Section: luci
-SourceDateEpoch: 1722148976
+SourceDateEpoch: 1722563263
 Maintainer: OpenWrt LuCI community
 Architecture: all
-Installed-Size: 448515
-Filename: luci-app-homeproxy_git-24.210.24176-76846d5_all.ipk
-Size: 449529
-SHA256sum: 13c15104803a01132e35d93cc79997e00c2e60429a34f51aa3ff7633549a42eb
+Installed-Size: 448634
+Filename: luci-app-homeproxy_git-24.215.06463-eec1023_all.ipk
+Size: 449642
+SHA256sum: f30f7e368ea27a0519ab5b8fb130a2ebc5bb343463cce0121d46d043f481bb78
 Description:  The modern ImmortalWrt proxy platform for ARM64/AMD64
 
 Package: luci-app-interfaces-statistics
@@ -694,17 +694,17 @@ SHA256sum: 656695dd58a408469b59e981cc0246ebc99a3ac629a7ef07dd627bd388e2aaa4
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-homeproxy-zh-cn
-Version: git-24.210.24176-76846d5
+Version: git-24.215.06463-eec1023
 Depends: libc, luci-app-homeproxy
 Source: /feed/luci/luci-app-homeproxy
 SourceName: luci-i18n-homeproxy-zh-cn
 Section: luci
-SourceDateEpoch: 1722148976
+SourceDateEpoch: 1722563263
 Architecture: all
-Installed-Size: 10902
-Filename: luci-i18n-homeproxy-zh-cn_git-24.210.24176-76846d5_all.ipk
-Size: 11683
-SHA256sum: eec37246577376d0a6aa817ac82cc95c2d8889511b28f30be1181063ee953dad
+Installed-Size: 11012
+Filename: luci-i18n-homeproxy-zh-cn_git-24.215.06463-eec1023_all.ipk
+Size: 11801
+SHA256sum: cff375dae20c72eb9f8d57a7a86b1d1d078417a6df4b4e4b4231ea8a83957b9b
 Description:  Translation for luci-app-homeproxy - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-interfaces-statistics-ru
