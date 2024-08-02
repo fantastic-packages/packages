@@ -14,7 +14,7 @@ src/gz fantastic_packages_special https://fantastic-packages.github.io/packages/
 ```
 
 **Note: Please refer to this [matrix](https://github.com/fantastic-packages/packages/blob/master/.github/workflows/AutoBuild.yml#L61) for currently supported Version and Architecture.
-If your device is not listed, you can fork this repo and modify the matrix to add support for your device, then compile it with Github Action in your own repo**
+If your device is not listed, you can fork this repo and modify the matrix to add support for your device, then compile it with Github Action in your own repo. For details, please refer to [ForkTheProject.md](https://github.com/fantastic-packages/packages/blob/master/ForkTheProject.md)**
 
 - like this
 ```ini
@@ -42,4 +42,4 @@ curl -sSL "https://fantastic-packages.github.io/packages/releases/<major.minor v
 ```
 - OR
 
-install [fantastic-feeds](https://github.com/openwrt-xiaomi/fantastic-feeds) by @remittor 
+install [fantastic-feeds](https://github.com/openwrt-xiaomi/fantastic-feeds) by @remittor
