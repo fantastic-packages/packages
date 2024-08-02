@@ -16,7 +16,7 @@
 4. goto `https://github.com/<your_fork>/settings/variables/actions`, add your public keys
    + `GPG_ID`: <your_gpg_key-id>
    + `GPG_PUB_<your_gpg_key-id>`: <your_gpg_pub-key>
-   + `GPG_FING_<your_gpg_key-finger>`: <your_gpg_finger>
+   + `GPG_FING_<your_gpg_key-id>`: <your_gpg_finger>
    + `USIGN_ID`: <your_usign_key-id>
    + `USIGN_PUB_<your_usign_key-id>`: <your_usign_pub-key>
    + `VERIFY_KEY_ID`: 53FF2B6672243D28
@@ -24,12 +24,11 @@
    + `./keys/usign/<external_feeds_usign_key-id>.pub`
    + `VERIFY_KEY_ID`: "53FF2B6672243D28 <the_usign_key-ids,_with_spaces_as_separators>"
 6. modify [ version, arch, target, profile, no_img ] matrix to replace the target devices
-   + edit `./.github/workflows/AutoBuild.yml`
+   + edit [AutoBuild.yml](./.github/workflows/AutoBuild.yml)
    + modify the values ​​in `jobs:compile:strategy:matrix` according to the actual situation
-   + available `arch, target` can refer to `./targets.txt`
+   + available `arch, target` can refer to [targets.txt](./targets.txt)
    + available `profile` can refer to `https://downloads.openwrt.org/releases/<version>/targets/<target[0]>/<target[1]>/config.buildinfo`
 
 7. adjust the imagebuilder preinstalled packages
-   + modify `./.github/workflows/prebuildpackages/generic`
+   + modify [./.github/workflows/prebuildpackages/generic](./.github/workflows/prebuildpackages/generic)
    + modify `./.github/workflows/prebuildpackages/<arch>`
-
