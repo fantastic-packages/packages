@@ -114,7 +114,7 @@ jobs:
           #echo "$EOF" >> $GITHUB_ENV
           # gpg
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-          echo "${GPG_FINGER//[[:space:]]/}:6:" | gpg --import-ownertrust
+          gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
@@ -186,7 +186,7 @@ jobs:
         shell: bash
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
-          echo "$SPECIALS" | grep -q '^\s*$' && exit 0
+          grep -q '^\s*$' <<< "$SPECIALS" && exit 0
           group() {
             endgroup
             echo "::group::  $1"
@@ -216,7 +216,7 @@ jobs:
           # Download SDK
           op_target_url_prefix="https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$SUBTARGET"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
-          sdk="$(echo "$sha256sums" | sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}')"
+          sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
           axel -n8 "${op_target_url_prefix}/${sdk}"
           tar -xf "$sdk" && rm -f "$sdk"
           mv *-sdk-* SDK
@@ -227,7 +227,7 @@ jobs:
           ln -s "/workdir/DL" SDK/dl
           # feeds.conf.default
           for SPECIAL_FEED in $SPECIAL_FEEDS; do
-            echo "$SPECIAL_FEED" | tr '|' ' ' >> SDK/feeds.conf.default
+            tr '|' ' ' <<< "$SPECIAL_FEED" >> SDK/feeds.conf.default
           done
           cat SDK/feeds.conf.default
           # key-build
@@ -308,7 +308,7 @@ jobs:
             rm -rf   "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/special" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/" 2>/dev/null
             for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
-              feed=$(echo "$FEED" | cut -d'|' -f2)
+              feed=$(cut -f2 -d'|' <<< "$FEED")
               if [ -d "/workdir/bin/packages/$ARCH/$feed" ]; then
                 echo "cp /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
                 cp -Rf "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
