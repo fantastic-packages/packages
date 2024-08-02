@@ -63,9 +63,13 @@ jobs:
       ARCH: ${{ inputs.ARCH }}
       USIGN_ID: ${{ inputs.USIGN_ID }}
       USIGN_KEY: ${{ secrets[format('USIGN_{0}', inputs.USIGN_ID )] }}
+      USIGN_PUBKEY: ${{ vars[format('USIGN_PUB_{0}', inputs.USIGN_ID )] }}
+      VERIFY_KEY_ID: ${{ vars.VERIFY_KEY_ID }}
       GPG_ID: ${{ inputs.GPG_ID }}
       GPG_PW: ${{ secrets[format('GPG_PW_{0}', inputs.GPG_ID )] }}
       GPG_KEY: ${{ secrets[format('GPG_{0}', inputs.GPG_ID )] }}
+      GPG_PUBKEY: ${{ vars[format('GPG_PUB_{0}', inputs.GPG_ID )] }}
+      GPG_FINGER: ${{ vars[format('GPG_FING_{0}', inputs.GPG_ID )] }}
       PREFIX: fantasticpackages_
 
     steps:
@@ -104,13 +108,13 @@ jobs:
         shell: bash
         run: |
           # usign
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "USIGN_PUBKEY<<$EOF" >> $GITHUB_ENV
-          cat $GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub >> $GITHUB_ENV
-          echo "$EOF" >> $GITHUB_ENV
+          #EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          #echo "USIGN_PUBKEY<<$EOF" >> $GITHUB_ENV
+          #cat $GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub >> $GITHUB_ENV
+          #echo "$EOF" >> $GITHUB_ENV
           # gpg
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-          echo "$(sed 's|\s||g' "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger"):6:" | gpg --import-ownertrust
+          echo "${GPG_FINGER//[[:space:]]/}:6:" | gpg --import-ownertrust
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
@@ -323,8 +327,8 @@ jobs:
           PUBKEY
           EOF
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
-              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.finger" ${GPG_ID}.gpg.finger
-              cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.pub" ${GPG_ID}.gpg.pub
+              echo "${GPG_FINGER}" > ${GPG_ID}.gpg.finger
+              echo "${GPG_PUBKEY}" > ${GPG_ID}.gpg.pub
               cp -f "$GITHUB_WORKSPACE/keys/gpg/${GPG_ID}.rev" ${GPG_ID}.gpg.rev
             fi
             popd
@@ -346,6 +350,18 @@ jobs:
           echo "Installing $INSTALLS"
           echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
 
+      - name: Gen KEY_VERIFY
+        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        shell: bash
+        run: |
+          KEY_VERIFY=''
+          for k in ${VERIFY_KEY_ID}; do
+            key="$(cat "$GITHUB_WORKSPACE/keys/usign/${k^^}.pub" | base64)"
+            KEY_VERIFY="${KEY_VERIFY:+$KEY_VERIFY }${key//[[:space:]]/}"
+          done
+          echo "KEY_VERIFY=$KEY_VERIFY"
+          echo "KEY_VERIFY=$KEY_VERIFY" >> $GITHUB_ENV
+
       - name: Build Images
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         uses: fantastic-packages/gh-action-imagebuilder@master
@@ -361,6 +377,7 @@ jobs:
           NO_LOCAL_REPOS: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
+          KEY_VERIFY: ${{ env.KEY_VERIFY }}
           PACKAGES: ${{ env.INSTALLS }}
           ROOTFS_SIZE: 256
 
