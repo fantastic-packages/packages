@@ -27,28 +27,28 @@ Require-User: alwaysonline:alwaysonline
 SourceDateEpoch: 1722476186
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 1820298
+Installed-Size: 1820300
 Filename: alwaysonline_1.2.0-20240731_mipsel_24kc.ipk
-Size: 1816675
-SHA256sum: 77658b8fbc2327dba442c09ef87482c43a60826f27e364066ea428b4eed31f6f
+Size: 1816636
+SHA256sum: 03edcd02e9fc93d91df27cb0f88ded0a09aefbcceb2c7856655c1d68daa62bc9
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
-Version: 2024.07.21-1
+Version: 2023.10.28-1
 Depends: libc
 Source: /feed/packages/openwrt-chinadns-ng
 SourceName: chinadns-ng
 License: AGPL-3.0-only
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1722492312
-Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+SourceDateEpoch: 1698928090
+Maintainer: pexcn <pexcn97@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 295081
-Filename: chinadns-ng_2024.07.21-1_mipsel_24kc.ipk
-Size: 294687
-SHA256sum: f7bbb7ec1fae879866141ed8ab04bf63bd1d198ef7f4b111213b9ac74c094fbf
-Description:  ChinaDNS next generation, refactoring with epoll and ipset.
+Installed-Size: 27067
+Filename: chinadns-ng_2023.10.28-1_mipsel_24kc.ipk
+Size: 27818
+SHA256sum: 81f0e060546792dcf53e3516f0a7a569f0bd01fabaf12450c128ecbd86eb1a0d
+Description:  ChinaDNS Next Generation, refactoring with epoll and ipset.
 
 Package: fantastic-keyring
 Version: 20240427-1
@@ -58,13 +58,13 @@ SourceName: fantastic-keyring
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 310
+Installed-Size: 309
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1050
-SHA256sum: 09fca141bf1967704f2ec490843f126a5fc7866e829cc43a2c6a801d42a13618
+Size: 1046
+SHA256sum: 8367ead034328522a52e06dcd19b82203e817068a30a2d1c8798ce0fb778d317
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -75,13 +75,13 @@ SourceName: fantastic-packages-feeds
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
 Installed-Size: 95
 Filename: fantastic-packages-feeds_20240504-1_all.ipk
-Size: 1511
-SHA256sum: 5dc3a9fcaf6205862ed2641faf80ec492c112588adcf8a6adef9d8f85850cc29
+Size: 1510
+SHA256sum: de16d0cd090d39924f3e29a00c13502db6bec265f69e2fa6b142ef89d40b0040
 Description:  Installer for fantastic-packages feeds
 
 Package: go-stun
@@ -95,10 +95,10 @@ Section: net
 SourceDateEpoch: 1714893725
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 824632
+Installed-Size: 824634
 Filename: go-stun_0.1.4-10_mipsel_24kc.ipk
-Size: 824453
-SHA256sum: 3ae7723247a6ea33508f280fd574f25ad957d487ca1bfa67b46cfab8c6514998
+Size: 824463
+SHA256sum: dcaba4ecde91c4372128fe665c349359e1d758d0d4c3eb3efca24a3439d83e25
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -158,10 +158,10 @@ SourceName: libQt6Concurrent
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 8202
+Installed-Size: 8203
 Filename: libQt6Concurrent_6.7.2-1_mipsel_24kc.ipk
-Size: 8858
-SHA256sum: 79082c901ba08ad488eb1c8176c0085a42cbe1f9a9f4b3ca66537cac48b1331b
+Size: 8854
+SHA256sum: f5d212f3a84424a1e9ed7dc88995cb5af24471c434dd230b9f8677ca79c717c8
 Description:  This package provides the Qt6 Concurrent v6.7.2 library.
 
 Package: libQt6Core
@@ -172,10 +172,10 @@ SourceName: libQt6Core
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 2894859
+Installed-Size: 2894864
 Filename: libQt6Core_6.7.2-1_mipsel_24kc.ipk
-Size: 2884518
-SHA256sum: 385e962e42af5d45952fa289a7a6e403ecd153c4cc74fefe2da1a9c56e3ec9d2
+Size: 2884532
+SHA256sum: f3988eab4a8a7ca6e8567b5548385ba8799580850221b07f701e3dd7a1b47500
 Description:  This package provides the Qt6 Core v6.7.2 library.
 
 Package: libQt6DBus
@@ -186,10 +186,10 @@ SourceName: libQt6DBus
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 306732
+Installed-Size: 306733
 Filename: libQt6DBus_6.7.2-1_mipsel_24kc.ipk
-Size: 306502
-SHA256sum: 7caa3323f4ec87ebc644d99b9a037ed292558b186e02aa720f3acd553d2a1bd8
+Size: 306524
+SHA256sum: 986f03673af37793dafe796301f7a569f13edac7d63ee51421d218163dd77fdc
 Description:  This package provides the Qt6 DBus v6.7.2 library.
 
 Package: libQt6Gui
@@ -202,8 +202,8 @@ SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
 Installed-Size: 2790267
 Filename: libQt6Gui_6.7.2-1_mipsel_24kc.ipk
-Size: 2781986
-SHA256sum: 58b059c2c45c2c41ac25ebc961cb3f898b32e98b73cfe97b90a7a66205d3766c
+Size: 2781968
+SHA256sum: fafddb76e3e112296827fc8d7fbbccd05749c085dd0684d4f383d309704bbc49
 Description:  This package provides the Qt6 Gui v6.7.2 library.
 
 Package: libQt6Network
@@ -214,10 +214,10 @@ SourceName: libQt6Network
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 800736
+Installed-Size: 800738
 Filename: libQt6Network_6.7.2-1_mipsel_24kc.ipk
-Size: 798452
-SHA256sum: a9fc838f873ce9ec9c762851a99a06070ae69e9efbc2dffe8f984c3bf195fc28
+Size: 798447
+SHA256sum: 1de1c61ca7c26716dbdd13220ced9e150b12c118685c7f43f5977499daaa2c1f
 Description:  This package provides the Qt6 Network v6.7.2 library.
 
 Package: libQt6PrintSupport
@@ -228,10 +228,10 @@ SourceName: libQt6PrintSupport
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 151773
+Installed-Size: 151775
 Filename: libQt6PrintSupport_6.7.2-1_mipsel_24kc.ipk
-Size: 152173
-SHA256sum: daa879c759f42a98c26a6b3bc993a4a1fba4ac06472e45199a6013834aec39d2
+Size: 152181
+SHA256sum: c7d9ba4e193a60527fced1c47852eb5fd93dfada3a02f72283aa9bd063ca08a6
 Description:  This package provides the Qt6 PrintSupport v6.7.2 library.
 
 Package: libQt6Sql
@@ -242,10 +242,10 @@ SourceName: libQt6Sql
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 71098
+Installed-Size: 71100
 Filename: libQt6Sql_6.7.2-1_mipsel_24kc.ipk
-Size: 71768
-SHA256sum: ef90bad75aa39adc499a76c61ea3069c951bbc26cf324f2ef8bab019c4cf1987
+Size: 71769
+SHA256sum: 9bbdeb10f0dac3f9efcd094a6e09d6cfe9b6a87f6016cfd664953bcff2cbb56b
 Description:  This package provides the Qt6 Sql v6.7.2 library.
 
 Package: libQt6Test
@@ -256,10 +256,10 @@ SourceName: libQt6Test
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 139923
+Installed-Size: 139925
 Filename: libQt6Test_6.7.2-1_mipsel_24kc.ipk
-Size: 140409
-SHA256sum: 62d749c1ec829425504da35177dee4054b7b28a73e15509c686eac15f679640a
+Size: 140414
+SHA256sum: 7f9290bce8e543ccba21e466d652367fa3e0a910ffd0f6d2c090e01fe026bdef
 Description:  This package provides the Qt6 Test v6.7.2 library.
 
 Package: libQt6Widgets
@@ -270,10 +270,10 @@ SourceName: libQt6Widgets
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 3153850
+Installed-Size: 3153849
 Filename: libQt6Widgets_6.7.2-1_mipsel_24kc.ipk
-Size: 3143218
-SHA256sum: 3684b0be8f0f16994efe5b62ba13bd5cf9ccc119f2a69f9359fa01cee942a795
+Size: 3143178
+SHA256sum: 3bec2a873c0226feb169a54dc513a7aba5f8f2788b22696ca27ba32c890130a2
 Description:  This package provides the Qt6 Widgets v6.7.2 library.
 
 Package: libQt6Xml
@@ -284,14 +284,14 @@ SourceName: libQt6Xml
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 58892
+Installed-Size: 58895
 Filename: libQt6Xml_6.7.2-1_mipsel_24kc.ipk
-Size: 59468
-SHA256sum: 9ba0376dc37c9f2b62561b5a1492c61fd65a9dfc4324f1a429a63fb5c6514e0f
+Size: 59462
+SHA256sum: e52fe3431f7d96eeec24c973eea22ff65b9a034496eef0039284b9cbd90d3fd0
 Description:  This package provides the Qt6 Xml v6.7.2 library.
 
 Package: natmapt-client-script-deluge
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -299,17 +299,17 @@ SourceName: natmapt-client-script-deluge
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 816
-Filename: natmapt-client-script-deluge_20240603-3_all.ipk
+Installed-Size: 815
+Filename: natmapt-client-script-deluge_20240603-5_all.ipk
 Size: 1613
-SHA256sum: 387a7a1b7e8283438b11d0fe6f4ab7b7e89a3f067be216513886eaafbb63f33a
+SHA256sum: 0aa4332b13b120ad471782fa9b64a9d31329a1d45acb6a3709d67c175c8c9ae1
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -317,17 +317,17 @@ SourceName: natmapt-client-script-transmission
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 633
-Filename: natmapt-client-script-transmission_20240603-3_all.ipk
-Size: 1432
-SHA256sum: 9f480b8ac02fdc827fa414ae875bb47ef7a6af1db14d33fe37e58521bd62f9d2
+Installed-Size: 635
+Filename: natmapt-client-script-transmission_20240603-5_all.ipk
+Size: 1428
+SHA256sum: 145e58e86af8293d8dd82cf1aa91898a48160575a091ee9589187220723be09b
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -335,17 +335,17 @@ SourceName: natmapt-notify-script-pushbullet
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 626
-Filename: natmapt-notify-script-pushbullet_20240603-3_all.ipk
-Size: 1428
-SHA256sum: 22f1d252bdcf79993f1b71a52a3bbe7ec5cb7656af132138cbd5b709c42c9a47
+Installed-Size: 627
+Filename: natmapt-notify-script-pushbullet_20240603-5_all.ipk
+Size: 1426
+SHA256sum: 52a596942f90b2753a37771ac5979a7cde2189adde0552c1ef4b832b80f9ce2d
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -353,17 +353,17 @@ SourceName: natmapt-notify-script-pushover
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 646
-Filename: natmapt-notify-script-pushover_20240603-3_all.ipk
-Size: 1443
-SHA256sum: 7f8a3fecd22628d6dfdcd3efb6707acffbe4a77f7dcda8e4237d61c7114b07a2
+Installed-Size: 647
+Filename: natmapt-notify-script-pushover_20240603-5_all.ipk
+Size: 1444
+SHA256sum: 7ca67ce43a22da0291f5890eb7017aa08c22fa0d148e20bf0a54d24c002ee511
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -371,30 +371,30 @@ SourceName: natmapt-notify-script-telegram
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 639
-Filename: natmapt-notify-script-telegram_20240603-3_all.ipk
-Size: 1434
-SHA256sum: 20d426436b07f0417df2c21861e56d662404433d0497c2181bf2614b3c7e442f
+Installed-Size: 640
+Filename: natmapt-notify-script-telegram_20240603-5_all.ipk
+Size: 1436
+SHA256sum: 338952e0b85c92141eb86803d6033ed2c4447a8ad93cc72a5d42deee8bc6e861
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, curl, jsonfilter, bash
 Source: /feed/packages/openwrt-natmapt
 SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: mipsel_24kc
-Installed-Size: 24788
-Filename: natmapt_20240603-3_mipsel_24kc.ipk
-Size: 25545
-SHA256sum: 8edd15e93ed3be41b5c022172fdacba271876f07210f48855ef8f0c4a3292dbc
+Installed-Size: 24841
+Filename: natmapt_20240603-5_mipsel_24kc.ipk
+Size: 25588
+SHA256sum: 70eaeeee6c1964a59a5110a5eb248432a03469a43eb8ac04ce31ab5e61c1426d
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
@@ -461,13 +461,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 366
+Installed-Size: 364
 Filename: plain-nginx_20231028_all.ipk
-Size: 1164
-SHA256sum: bd345091b93408464c14efa65cae33fed547f95062056cf59fa2d4227841ef37
+Size: 1158
+SHA256sum: c170fd39e5b054260d0c6fee65f230c906fd9207895e3215bfd31f3936e82804
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -482,10 +482,10 @@ Section: net
 SourceDateEpoch: 1719001455
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: mipsel_24kc
-Installed-Size: 7724790
+Installed-Size: 7724789
 Filename: qbittorrent_4.6.5-1_mipsel_24kc.ipk
-Size: 7721109
-SHA256sum: 353fc6e24d6d2cf27dd33c04e3963bb967db34e1b333847ad5bb11008244b650
+Size: 7721089
+SHA256sum: 3cb75ca95b867a678524000c560679d5e35df1b8a3378881773de6ab1d36e01d
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -500,10 +500,10 @@ SourceName: qt6-plugin-libqcertonlybackend
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 36827
+Installed-Size: 36828
 Filename: qt6-plugin-libqcertonlybackend_6.7.2-1_mipsel_24kc.ipk
 Size: 37430
-SHA256sum: 5adada4fafa504ddffa5f1595bf5939206bf2b01ab2bf555264654d5ee8f6678
+SHA256sum: 335a9626d8545590afafd91e7204c32eae46f56a98e94467bb31125a3c40bdc5
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
@@ -514,10 +514,10 @@ SourceName: qt6-plugin-libqminimal
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 8577
+Installed-Size: 8579
 Filename: qt6-plugin-libqminimal_6.7.2-1_mipsel_24kc.ipk
-Size: 9223
-SHA256sum: 0f12214d3664dc25e384c579954897a7f11cfaa4274fe616fb56f16c7cdd5795
+Size: 9215
+SHA256sum: f2a98f1c9143d8e869234fd8d858a6066060f487b0bbdf69e57e770984eee16c
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
@@ -528,10 +528,10 @@ SourceName: qt6-plugin-libqnetworkmanager
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 24777
+Installed-Size: 24779
 Filename: qt6-plugin-libqnetworkmanager_6.7.2-1_mipsel_24kc.ipk
-Size: 25426
-SHA256sum: a19c14856970c8fdd41b30430215c78419089c7d7ba6bdf9f68c9fefb9483088
+Size: 25436
+SHA256sum: 59baffb5eb86a4af3f7a37143ff9d103843ba8dd2332e7465768a69333ebf6d5
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
@@ -542,10 +542,10 @@ SourceName: qt6-plugin-libqoffscreen
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 36214
+Installed-Size: 36215
 Filename: qt6-plugin-libqoffscreen_6.7.2-1_mipsel_24kc.ipk
-Size: 36741
-SHA256sum: abaa83a5a891f0ecf36d6e6523efc77006060cf25aa10708bca01aeb04d0fa0d
+Size: 36740
+SHA256sum: 9c1862a8b541eaab1094328bde438e2e4c09e445fe81abf726f5ec1b97223931
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
@@ -556,10 +556,10 @@ SourceName: qt6-plugin-libqopensslbackend
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 114831
+Installed-Size: 114834
 Filename: qt6-plugin-libqopensslbackend_6.7.2-1_mipsel_24kc.ipk
-Size: 115076
-SHA256sum: 4816d5a19a3bfffec42825fe50eefef3afca61a559e20cb6010118250957c930
+Size: 115083
+SHA256sum: 398a6302f07401645fe245fdcb81c838bbf9eb5852aa7465f9a1dbfa0085b0ba
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
@@ -572,8 +572,8 @@ SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
 Installed-Size: 1028334
 Filename: qt6-plugin-libqsqlite_6.7.2-1_mipsel_24kc.ipk
-Size: 1027205
-SHA256sum: 43cb9c35e64929e2ceba6bc9a4b418e85f282bcde98f522a8e7d94be9f971246
+Size: 1027204
+SHA256sum: 708b8317eb7364f375f41ff802a8746ff88248c1d0cf3652d3dccfa93efe8b50
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
@@ -584,10 +584,10 @@ SourceName: qt6-plugin-libqtuiotouchplugin
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 38541
+Installed-Size: 38543
 Filename: qt6-plugin-libqtuiotouchplugin_6.7.2-1_mipsel_24kc.ipk
-Size: 39184
-SHA256sum: 816c2251a883f4481fc1e0ee982cf179b8188073557233d707e7bf328a50adbb
+Size: 39192
+SHA256sum: 016aae83412b2007f286e8c473e4d51a68dd89e348b898052034bdd9b3cf0102
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
@@ -598,10 +598,10 @@ SourceName: qt6-plugin-libqxdgdesktopportal
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: mipsel_24kc
-Installed-Size: 41070
+Installed-Size: 41072
 Filename: qt6-plugin-libqxdgdesktopportal_6.7.2-1_mipsel_24kc.ipk
-Size: 41723
-SHA256sum: 538de3f59663d980eb86ca14fb2791016c1e97f0496bf38f0acffb44245769fc
+Size: 41721
+SHA256sum: c75edc33372e279ef49d5bcdea2e2c005a2a1ce0dce518ddd6b08b2988535806
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -625,20 +625,20 @@ Description:  Rasterbar libtorrent is a C++ library that aims to be a good alter
  full featured client, although it comes with a working example client.
 
 Package: rgmac
-Version: 1.5.0-20240101
+Version: 1.5.1-20240803
 Depends: libc, bash, curl, coreutils-cksum, getopt
 Source: /feed/packages/openwrt-rgmac
 SourceName: rgmac
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1704169571
+SourceDateEpoch: 1722682550
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 3653
-Filename: rgmac_1.5.0-20240101_all.ipk
-Size: 4475
-SHA256sum: b02f60974df7d82a5be269329a0bd3ca0e38fe7a81fb96612766986505123f6c
+Installed-Size: 3656
+Filename: rgmac_1.5.1-20240803_all.ipk
+Size: 4473
+SHA256sum: 73d2f3b24f926dd130a4e6d746c664c6d749fce411d38106f19958c0f22f70e2
 Description:  A random MAC address generator
 
 Package: speedtest-go
@@ -651,10 +651,10 @@ LicenseFiles: LICENSE
 Section: net
 SourceDateEpoch: 1715962846
 Architecture: mipsel_24kc
-Installed-Size: 8762795
+Installed-Size: 8762799
 Filename: speedtest-go_1.7.7-1_mipsel_24kc.ipk
-Size: 8744325
-SHA256sum: 97e4e240168922e3fb740b88b12557a37c9bdbce920ac6f79834fee6481edfaa
+Size: 8744413
+SHA256sum: 0f4ad5c0daae5e9ce4e8c2d12f0403ec189c352896e59010f358a1a25ed62bad
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 

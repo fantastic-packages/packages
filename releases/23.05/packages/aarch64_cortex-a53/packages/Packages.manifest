@@ -29,26 +29,26 @@ Maintainer: muink <hukk1996@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 1856598
 Filename: alwaysonline_1.2.0-20240731_aarch64_cortex-a53.ipk
-Size: 1852862
-SHA256sum: e1105e3c544939ee324b115921da02b59179c7d0aa051e0b184112071d4ecdda
+Size: 1852914
+SHA256sum: 2bd408812bb0ca2123098b514100fe1a3e0da679bb35691540782a2f80620d53
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: chinadns-ng
-Version: 2024.07.21-1
+Version: 2023.10.28-1
 Depends: libc
 Source: /feed/packages/openwrt-chinadns-ng
 SourceName: chinadns-ng
 License: AGPL-3.0-only
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1722492312
-Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+SourceDateEpoch: 1698928090
+Maintainer: pexcn <pexcn97@gmail.com>
 Architecture: aarch64_cortex-a53
-Installed-Size: 264899
-Filename: chinadns-ng_2024.07.21-1_aarch64_cortex-a53.ipk
-Size: 264986
-SHA256sum: e1c899866aca6a80b6fb25826b7478d293bce385fa710d6260c573efc81cd9aa
-Description:  ChinaDNS next generation, refactoring with epoll and ipset.
+Installed-Size: 28048
+Filename: chinadns-ng_2023.10.28-1_aarch64_cortex-a53.ipk
+Size: 28850
+SHA256sum: a5d6f08c294e45bc0fab2a50997660cca26971f5ddbad7636585eda6c9ca236e
+Description:  ChinaDNS Next Generation, refactoring with epoll and ipset.
 
 Package: fantastic-keyring
 Version: 20240427-1
@@ -58,13 +58,13 @@ SourceName: fantastic-keyring
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 310
+Installed-Size: 309
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1050
-SHA256sum: 09fca141bf1967704f2ec490843f126a5fc7866e829cc43a2c6a801d42a13618
+Size: 1046
+SHA256sum: 8367ead034328522a52e06dcd19b82203e817068a30a2d1c8798ce0fb778d317
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -75,13 +75,13 @@ SourceName: fantastic-packages-feeds
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
 Installed-Size: 95
 Filename: fantastic-packages-feeds_20240504-1_all.ipk
-Size: 1511
-SHA256sum: 5dc3a9fcaf6205862ed2641faf80ec492c112588adcf8a6adef9d8f85850cc29
+Size: 1510
+SHA256sum: de16d0cd090d39924f3e29a00c13502db6bec265f69e2fa6b142ef89d40b0040
 Description:  Installer for fantastic-packages feeds
 
 Package: go-stun
@@ -95,10 +95,10 @@ Section: net
 SourceDateEpoch: 1714893725
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: aarch64_cortex-a53
-Installed-Size: 829742
+Installed-Size: 829745
 Filename: go-stun_0.1.4-10_aarch64_cortex-a53.ipk
-Size: 828871
-SHA256sum: ed7d7201ce52448e8b09b62d87fedafc1349387cab2ce076cbde293e8ee7674f
+Size: 828846
+SHA256sum: 00da2fa8a7895f08ddf257e5bb8a7f69f0c0fb8947a6987d7bdc46885ab13014
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -160,8 +160,8 @@ SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
 Installed-Size: 7633
 Filename: libQt6Concurrent_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 8290
-SHA256sum: 245e479fe39bfbd1aba7555cec1dc3136c0ab2118d29409f78f575f0d293ae45
+Size: 8288
+SHA256sum: 4cc7afdf7823a5c2dfe08df4658f73c4cbd19c74a84da31b53d8912ed1fc65ad
 Description:  This package provides the Qt6 Concurrent v6.7.2 library.
 
 Package: libQt6Core
@@ -174,8 +174,8 @@ SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
 Installed-Size: 2817511
 Filename: libQt6Core_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 2810108
-SHA256sum: 03feacfb78f0eaa2d14aed4ee486daa972674ed8987fb9f76925ca8127509fd5
+Size: 2810113
+SHA256sum: f7e4ea5590805345cd4006a73b351df6fce386c0ef6d3b4f8024562231cba949
 Description:  This package provides the Qt6 Core v6.7.2 library.
 
 Package: libQt6DBus
@@ -186,10 +186,10 @@ SourceName: libQt6DBus
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 329582
+Installed-Size: 329584
 Filename: libQt6DBus_6.7.2-1_aarch64_cortex-a53.ipk
 Size: 329961
-SHA256sum: d8fda81b3dc5eb3e200508f2f404839408e0d6489e8c53df5f0a44bf21439811
+SHA256sum: 7aacb2cdb9b90750802bd3def974e9870b4dc33558f3abda93fd176f0a586f3d
 Description:  This package provides the Qt6 DBus v6.7.2 library.
 
 Package: libQt6Gui
@@ -200,10 +200,10 @@ SourceName: libQt6Gui
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 2802062
+Installed-Size: 2802064
 Filename: libQt6Gui_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 2797905
-SHA256sum: ff1699276ea8a2228a745b92c333968e1a5aee583cfcdd167bd8d34a9168981e
+Size: 2797931
+SHA256sum: 204b087dd253d44c4e464eaa3a3ceec392ffc958a9c30787c121d49a3de3fda2
 Description:  This package provides the Qt6 Gui v6.7.2 library.
 
 Package: libQt6Network
@@ -214,10 +214,10 @@ SourceName: libQt6Network
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 861187
+Installed-Size: 861188
 Filename: libQt6Network_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 860070
-SHA256sum: bb7cd79f41d1c0fbfad39908e9949a789897b6ad484f87b13aee19221c07dee5
+Size: 860068
+SHA256sum: 03fd3cf9e40e46333f0175323cfbc5ccba65c5d19fa85d6a94725f53fd5bd0ec
 Description:  This package provides the Qt6 Network v6.7.2 library.
 
 Package: libQt6PrintSupport
@@ -230,8 +230,8 @@ SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
 Installed-Size: 163262
 Filename: libQt6PrintSupport_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 163315
-SHA256sum: 715140f91b0f8b9fc2d56fca72c8935188c365dc094a65d1c01db15585900663
+Size: 163313
+SHA256sum: a6eda05c9c3cc619a5197554150001ab0ddb262f5a591dc837b390ba74e7902c
 Description:  This package provides the Qt6 PrintSupport v6.7.2 library.
 
 Package: libQt6Sql
@@ -242,10 +242,10 @@ SourceName: libQt6Sql
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 79716
+Installed-Size: 79718
 Filename: libQt6Sql_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 80145
-SHA256sum: 656a3cb7b98a46b10740b9ffbfecaa2d0f98ed0b2660fe7170d1ee969db155bb
+Size: 80154
+SHA256sum: 651dd469c1df963df0b65823eb657e3d9750a0d00f198b89ffd792810dea6bb8
 Description:  This package provides the Qt6 Sql v6.7.2 library.
 
 Package: libQt6Test
@@ -258,8 +258,8 @@ SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
 Installed-Size: 133225
 Filename: libQt6Test_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 133666
-SHA256sum: 246844d07cea60d180e7a2ad45a35afe9662236a37e3eecaec532a04b46b62b2
+Size: 133664
+SHA256sum: 4d3a98ce543a6125853d56ffdedb04619db7824bb29909c28c377fe587da23af
 Description:  This package provides the Qt6 Test v6.7.2 library.
 
 Package: libQt6Widgets
@@ -272,8 +272,8 @@ SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
 Installed-Size: 3286500
 Filename: libQt6Widgets_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 3279179
-SHA256sum: 8227fe4aea6814367d967db7b340bb9c4f760b713c0ad02244c73cbc45a7796c
+Size: 3279190
+SHA256sum: 8f313139bb22306eddcad595dff43c5f68b7eebbe8b10d9c1b4b4307e7ebe0bc
 Description:  This package provides the Qt6 Widgets v6.7.2 library.
 
 Package: libQt6Xml
@@ -284,14 +284,14 @@ SourceName: libQt6Xml
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 66787
+Installed-Size: 66788
 Filename: libQt6Xml_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 67511
-SHA256sum: db3ab11f90d6e352bbfeee2f5d3682e55eedd135a32f302477dca7692eefc093
+Size: 67512
+SHA256sum: 80f9a16ed6ace688e4e154c54052c329e218b0b1d687e7e601900eaaac936cde
 Description:  This package provides the Qt6 Xml v6.7.2 library.
 
 Package: natmapt-client-script-deluge
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -299,17 +299,17 @@ SourceName: natmapt-client-script-deluge
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 816
-Filename: natmapt-client-script-deluge_20240603-3_all.ipk
+Installed-Size: 815
+Filename: natmapt-client-script-deluge_20240603-5_all.ipk
 Size: 1613
-SHA256sum: 387a7a1b7e8283438b11d0fe6f4ab7b7e89a3f067be216513886eaafbb63f33a
+SHA256sum: 0aa4332b13b120ad471782fa9b64a9d31329a1d45acb6a3709d67c175c8c9ae1
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -317,17 +317,17 @@ SourceName: natmapt-client-script-transmission
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 633
-Filename: natmapt-client-script-transmission_20240603-3_all.ipk
-Size: 1432
-SHA256sum: 9f480b8ac02fdc827fa414ae875bb47ef7a6af1db14d33fe37e58521bd62f9d2
+Installed-Size: 635
+Filename: natmapt-client-script-transmission_20240603-5_all.ipk
+Size: 1428
+SHA256sum: 145e58e86af8293d8dd82cf1aa91898a48160575a091ee9589187220723be09b
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -335,17 +335,17 @@ SourceName: natmapt-notify-script-pushbullet
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 626
-Filename: natmapt-notify-script-pushbullet_20240603-3_all.ipk
-Size: 1428
-SHA256sum: 22f1d252bdcf79993f1b71a52a3bbe7ec5cb7656af132138cbd5b709c42c9a47
+Installed-Size: 627
+Filename: natmapt-notify-script-pushbullet_20240603-5_all.ipk
+Size: 1426
+SHA256sum: 52a596942f90b2753a37771ac5979a7cde2189adde0552c1ef4b832b80f9ce2d
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -353,17 +353,17 @@ SourceName: natmapt-notify-script-pushover
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 646
-Filename: natmapt-notify-script-pushover_20240603-3_all.ipk
-Size: 1443
-SHA256sum: 7f8a3fecd22628d6dfdcd3efb6707acffbe4a77f7dcda8e4237d61c7114b07a2
+Installed-Size: 647
+Filename: natmapt-notify-script-pushover_20240603-5_all.ipk
+Size: 1444
+SHA256sum: 7ca67ce43a22da0291f5890eb7017aa08c22fa0d148e20bf0a54d24c002ee511
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 Source: /feed/packages/openwrt-natmapt
@@ -371,30 +371,30 @@ SourceName: natmapt-notify-script-telegram
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 639
-Filename: natmapt-notify-script-telegram_20240603-3_all.ipk
-Size: 1434
-SHA256sum: 20d426436b07f0417df2c21861e56d662404433d0497c2181bf2614b3c7e442f
+Installed-Size: 640
+Filename: natmapt-notify-script-telegram_20240603-5_all.ipk
+Size: 1436
+SHA256sum: 338952e0b85c92141eb86803d6033ed2c4447a8ad93cc72a5d42deee8bc6e861
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20240603-3
+Version: 20240603-5
 Depends: libc, curl, jsonfilter, bash
 Source: /feed/packages/openwrt-natmapt
 SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1721477158
+SourceDateEpoch: 1722845625
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: aarch64_cortex-a53
-Installed-Size: 27602
-Filename: natmapt_20240603-3_aarch64_cortex-a53.ipk
-Size: 28358
-SHA256sum: c1578fcb13b3b296c22fb7da2d9ccde7c215d4e8cb892f5668cb468b2a6c43a4
+Installed-Size: 27662
+Filename: natmapt_20240603-5_aarch64_cortex-a53.ipk
+Size: 28421
+SHA256sum: 6aad89368564649a782f373669f9a2961c14e2fb115112f0e93c4f70aeec48f9
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
@@ -461,13 +461,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1722600950
+SourceDateEpoch: 1722783696
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 366
+Installed-Size: 364
 Filename: plain-nginx_20231028_all.ipk
-Size: 1164
-SHA256sum: bd345091b93408464c14efa65cae33fed547f95062056cf59fa2d4227841ef37
+Size: 1158
+SHA256sum: c170fd39e5b054260d0c6fee65f230c906fd9207895e3215bfd31f3936e82804
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -484,8 +484,8 @@ CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: aarch64_cortex-a53
 Installed-Size: 7880151
 Filename: qbittorrent_4.6.5-1_aarch64_cortex-a53.ipk
-Size: 7874521
-SHA256sum: b92ff7c420061beaa871172feb4571c3b5b481507b0f355262f48f8b3ef29004
+Size: 7874537
+SHA256sum: 9fcd3d8a6adfc112f521b1a9b959873d9a86e912a9d22dcd354ce7f0ee749dad
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -503,7 +503,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 38706
 Filename: qt6-plugin-libqcertonlybackend_6.7.2-1_aarch64_cortex-a53.ipk
 Size: 39257
-SHA256sum: c8e8147dfb8a424c749e6a84d0b86396554964194424323581ecccb261cc50c8
+SHA256sum: e67028ff7bc455fa46d0b7fa643162a5b692ca67f08f57aadc70de3a8c7d5975
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
@@ -514,10 +514,10 @@ SourceName: qt6-plugin-libqminimal
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 9919
+Installed-Size: 9920
 Filename: qt6-plugin-libqminimal_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 10487
-SHA256sum: 82590195d7577153bb170378c09e0f1cf60ff13bc033fb2dc55940cfdba5487c
+Size: 10491
+SHA256sum: 6de7c60c392271cdd91cc710e44bcc0a802dbb2b159e65cc0bef09a826c0c20d
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
@@ -528,10 +528,10 @@ SourceName: qt6-plugin-libqnetworkmanager
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 27141
+Installed-Size: 27143
 Filename: qt6-plugin-libqnetworkmanager_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 27651
-SHA256sum: 4215a2f43a67f6e7e49254cf39ffc09b29aa2cb67672441a77f5c632825144fb
+Size: 27657
+SHA256sum: a082ccc61b000295051927caeadd2cf57b32543962add356fe932d0ebb893166
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
@@ -542,10 +542,10 @@ SourceName: qt6-plugin-libqoffscreen
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 37817
+Installed-Size: 37819
 Filename: qt6-plugin-libqoffscreen_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 38365
-SHA256sum: 8751dbdb2e7669b6543758454c10f2ec7bcb0986add8dc6db4feba222b1cb858
+Size: 38367
+SHA256sum: a4667469eef7830a9d59a7333dad23ae371ee3883d9af2fe571b831d958c5ca2
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
@@ -556,10 +556,10 @@ SourceName: qt6-plugin-libqopensslbackend
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 118618
+Installed-Size: 118619
 Filename: qt6-plugin-libqopensslbackend_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 118850
-SHA256sum: 549a9ddcf035073766d0ae907de4a6ecaa338d02ec0ddcae43b4583045662c18
+Size: 118852
+SHA256sum: 3284630a52c3b2ca5adf264d0027ee29e5c105c343c989e413a01a6b0d08fe23
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
@@ -570,10 +570,10 @@ SourceName: qt6-plugin-libqsqlite
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 957365
+Installed-Size: 957372
 Filename: qt6-plugin-libqsqlite_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 957512
-SHA256sum: 77b61b93e169331785ec136f7f0e48bf44bdc6060319fbd5823fcb5cb9d3cd8a
+Size: 957514
+SHA256sum: 8bc9936a11a8f65c12354c42e4470f8e035359273fc00548d61fd4435c61adab
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
@@ -584,10 +584,10 @@ SourceName: qt6-plugin-libqtuiotouchplugin
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 36190
+Installed-Size: 36192
 Filename: qt6-plugin-libqtuiotouchplugin_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 36871
-SHA256sum: 13998cc9c246e9d8caf692d491d81498970a40f56632d3b764a80a1e681655ea
+Size: 36872
+SHA256sum: 008508e4f77650a201fe8346a20850c0582846f33e5ba3b9e62319288f9e8146
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
@@ -598,10 +598,10 @@ SourceName: qt6-plugin-libqxdgdesktopportal
 Section: libs
 SourceDateEpoch: 1719001455
 Architecture: aarch64_cortex-a53
-Installed-Size: 45242
+Installed-Size: 45245
 Filename: qt6-plugin-libqxdgdesktopportal_6.7.2-1_aarch64_cortex-a53.ipk
-Size: 45958
-SHA256sum: ee0c8db9a62fca48a7cfe025d237f1005f88d0bdb55330acd7b70a2279471e7d
+Size: 45954
+SHA256sum: d4de88489499c19887b8cbe462f0b60eedc9a10d5bdbde6fff0ec6d62f943b7a
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -625,20 +625,20 @@ Description:  Rasterbar libtorrent is a C++ library that aims to be a good alter
  full featured client, although it comes with a working example client.
 
 Package: rgmac
-Version: 1.5.0-20240101
+Version: 1.5.1-20240803
 Depends: libc, bash, curl, coreutils-cksum, getopt
 Source: /feed/packages/openwrt-rgmac
 SourceName: rgmac
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1704169571
+SourceDateEpoch: 1722682550
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 3653
-Filename: rgmac_1.5.0-20240101_all.ipk
-Size: 4475
-SHA256sum: b02f60974df7d82a5be269329a0bd3ca0e38fe7a81fb96612766986505123f6c
+Installed-Size: 3656
+Filename: rgmac_1.5.1-20240803_all.ipk
+Size: 4473
+SHA256sum: 73d2f3b24f926dd130a4e6d746c664c6d749fce411d38106f19958c0f22f70e2
 Description:  A random MAC address generator
 
 Package: speedtest-go
@@ -651,10 +651,10 @@ LicenseFiles: LICENSE
 Section: net
 SourceDateEpoch: 1715962846
 Architecture: aarch64_cortex-a53
-Installed-Size: 8926695
+Installed-Size: 8926672
 Filename: speedtest-go_1.7.7-1_aarch64_cortex-a53.ipk
-Size: 8904245
-SHA256sum: bb6e65b4f821bc0978af4a3844956faccd8f359e0b7c6be7e3ec8d560e023c79
+Size: 8904255
+SHA256sum: e794a21a64b85ab050c629de766c8232ae9e4b28801d31edad8271f79a2481a0
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 
