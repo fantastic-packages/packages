@@ -208,14 +208,14 @@ SHA256sum: b44089ff3ffa222bcbb992df5a1147a2b26d2ebdfb6f779a4783e11b2bbab0b1
 Description:  Test Net speed
 
 Package: luci-app-packagesync
-Version: 20240804
+Version: 20240805
 Depends: libc, blockd, curl, getopt, rsync, bash, jsonfilter, ncat-full
 Section: luci
 Architecture: all
-Installed-Size: 11235
-Filename: luci-app-packagesync_20240804_all.ipk
-Size: 12141
-SHA256sum: b726194fe2e4e2292c0a040749180f21ee105ea868ff58a385e2b07503136474
+Installed-Size: 11356
+Filename: luci-app-packagesync_20240805_all.ipk
+Size: 12263
+SHA256sum: 6002a2bccc2389aaa2cd7380c69706eff399ea1e38cd2755d0666db094b7abfd
 Description:  Used to build a local mirror feeds source on the router
 
 Package: luci-app-pcap-dnsproxy
@@ -838,25 +838,25 @@ SHA256sum: 645fd267d82912e17e82bb3625750b4d1506eac27708f56152ecad999c3035ef
 Description:  Translation for luci-app-netspeedtest - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-packagesync-zh-cn
-Version: git-24.217.23666-09ba12f
+Version: git-24.219.52965-28f57e4
 Depends: libc, luci-app-packagesync
 Section: luci
 Architecture: all
-Installed-Size: 1468
-Filename: luci-i18n-packagesync-zh-cn_git-24.217.23666-09ba12f_all.ipk
-Size: 2234
-SHA256sum: cf381e0abb72c0fc92ac8fc5f81bf80e943a081d1e986eebb7caa63aa6acb60f
+Installed-Size: 1470
+Filename: luci-i18n-packagesync-zh-cn_git-24.219.52965-28f57e4_all.ipk
+Size: 2237
+SHA256sum: b5b833cd3c36766c59d9b1281d4a9a37c1a9b8633ceb0e4d24fda65a18c492be
 Description:  Translation for luci-app-packagesync - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-packagesync-zh-tw
-Version: git-24.217.23666-09ba12f
+Version: git-24.219.52965-28f57e4
 Depends: libc, luci-app-packagesync
 Section: luci
 Architecture: all
-Installed-Size: 1479
-Filename: luci-i18n-packagesync-zh-tw_git-24.217.23666-09ba12f_all.ipk
-Size: 2245
-SHA256sum: df068304b89f2eb9c376393695970403332ca72b828daa09a814be819aa42c9c
+Installed-Size: 1480
+Filename: luci-i18n-packagesync-zh-tw_git-24.219.52965-28f57e4_all.ipk
+Size: 2250
+SHA256sum: b41ec09fe4381aa8356906631551181645ba46cf4862d87586dd83a58e3c20a8
 Description:  Translation for luci-app-packagesync - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-pcap-dnsproxy-zh-cn
