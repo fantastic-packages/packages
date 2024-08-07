@@ -659,54 +659,54 @@ Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 
 Package: stuntman-client
-Version: 1.2.16-20230829
+Version: 1.2.17-20240806
 Depends: libc, libpthread, libstdcpp6, libopenssl3
 Source: /feed/packages/openwrt-stuntman
 SourceName: stuntman-client
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1714896207
+SourceDateEpoch: 1723010223
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 37151
-Filename: stuntman-client_1.2.16-20230829_mipsel_24kc.ipk
-Size: 37847
-SHA256sum: 91506f2c9f65d098e88e62f2010882049b07e612079503d62e04a32da38ce13b
+Installed-Size: 37339
+Filename: stuntman-client_1.2.17-20240806_mipsel_24kc.ipk
+Size: 38054
+SHA256sum: f4d09706409def26f4771de9976b4ec1b2a8be419e98a1dceb3539446b6b8540
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-server
-Version: 1.2.16-20230829
+Version: 1.2.17-20240806
 Depends: libc, libpthread, libstdcpp6, libopenssl3
 Source: /feed/packages/openwrt-stuntman
 SourceName: stuntman-server
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1714896207
+SourceDateEpoch: 1723010223
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 87049
-Filename: stuntman-server_1.2.16-20230829_mipsel_24kc.ipk
-Size: 87629
-SHA256sum: 339f5640104d12af1005040c38e636fe4ec80a21d8208047b4f383d243fda3f1
+Installed-Size: 87445
+Filename: stuntman-server_1.2.17-20240806_mipsel_24kc.ipk
+Size: 88024
+SHA256sum: d015b1919f6ac3165438e06787abd68b314d584da5b71aa43e64f639f15a9053
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode
-Version: 1.2.16-20230829
+Version: 1.2.17-20240806
 Depends: libc, libpthread, libstdcpp6, libopenssl3
 Source: /feed/packages/openwrt-stuntman
 SourceName: stuntman-testcode
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1714896207
+SourceDateEpoch: 1723010223
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 62393
-Filename: stuntman-testcode_1.2.16-20230829_mipsel_24kc.ipk
-Size: 63033
-SHA256sum: d75ce41f0f2ff1e9efae7df26f04c1b4b701a5b4d99490cca343c964c6e4c610
+Installed-Size: 63552
+Filename: stuntman-testcode_1.2.17-20240806_mipsel_24kc.ipk
+Size: 64189
+SHA256sum: 4caf20849ac18c42886ae2ea78648a2e3b8da264b6eb3570b39ec5e53436636d
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: uci-alwaysonline
