@@ -42,6 +42,7 @@ define Package/$(PKG_NAME)-packages
 		+php-nginx \
 		+plain-nginx \
 		+rgmac \
+		+shadowsocks-rust \
 		+speedtest-go \
 		+stuntman \
 		+Toolkit \
@@ -97,6 +98,7 @@ define Package/$(PKG_NAME)
 		+php-nginx \
 		+plain-nginx \
 		+rgmac \
+		+shadowsocks-rust \
 		+speedtest-go \
 		+stuntman \
 		+Toolkit \
