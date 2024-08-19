@@ -62,7 +62,7 @@ make menuconfig
 | [luci-app-packagesync][] | Used to build a local mirror feeds source on the router |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
 | [luci-app-qbittorrent][] | qBittorrent - A BitTorrent client in Qt6 |
-| [luci-app-serverchan][] | Service push |
+| [luci-app-ssrust][] | ssrust server |
 | [luci-app-temp-status][] | Temperature sensors data for the LuCI status page |
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
 | [luci-app-tn-netports][] | Network ports status LuCI |
@@ -110,7 +110,7 @@ make menuconfig
 [luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
 [luci-app-qbittorrent]: https://github.com/sbwml/luci-app-qbittorrent
-[luci-app-serverchan]: https://github.com/tty228/luci-app-wechatpush
+[luci-app-ssrust]: https://github.com/muink/luci-app-ssrust
 [luci-app-temp-status]: https://github.com/gSpotx2f/luci-app-temp-status
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports

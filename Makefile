@@ -72,6 +72,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
 		+luci-app-qbittorrent \
+		+luci-app-ssrust \
 		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
@@ -123,6 +124,7 @@ define Package/$(PKG_NAME)
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
 		+luci-app-qbittorrent \
+		+luci-app-ssrust \
 		+luci-app-temp-status \
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
