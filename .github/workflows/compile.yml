@@ -97,10 +97,22 @@ jobs:
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
+      - name: Check ${{ env.BRANCH }} if deployed
+        run: |
+          rcode=$(curl -sL -w '%{http_code}' -o /dev/null https://github.com/$GITHUB_REPOSITORY/tree/$BRANCH)
+          if [ "$rcode" != "404" ]; then
+            echo Branch $BRANCH is deployed. will be used.
+            BUILDBRANCH="$BRANCH"
+          else
+            echo Branch $BRANCH is not deployed, branch $GITHUB_REF_NAME will be used.
+            BUILDBRANCH="$GITHUB_REF_NAME"
+          fi
+          echo "BUILDBRANCH=$BUILDBRANCH" >> $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.BRANCH }}
+          ref: ${{ env.BUILDBRANCH }}
           lfs: true
           submodules: true
 
