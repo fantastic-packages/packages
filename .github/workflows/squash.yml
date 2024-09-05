@@ -1,0 +1,31 @@
+name: Squash commits
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "0 0 1 * *"
+
+jobs:
+  deploy:
+    name: Squash commits
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push a branch
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 'gh-pages'
+        fetch-depth: 0
+
+    - name: Init repo
+      shell: bash
+      run: |
+        git config --local user.name "GitHub Action"
+        git config --local user.email "actions-user@users.noreply.github.com"
+
+    - name: Commit and push files
+      shell: bash
+      run: |
+        git reset --soft $(git log --grep 'THE HORiZON' | head -1 | sed 's|^commit *||')
+        git commit -m "Update packages"
+        git push -f
