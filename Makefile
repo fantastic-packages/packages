@@ -35,6 +35,7 @@ define Package/$(PKG_NAME)-packages
 		+fantastic-packages-feeds \
 		+go-stun \
 		+internet-detector \
+		+mihomo \
 		+natmapt \
 		+natter \
 		+netdata-ssl \
@@ -61,6 +62,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-disks-info \
 		+luci-app-dnsproxy \
 		+luci-app-einat \
+		+luci-app-fchomo \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
 		+luci-app-ipinfo \
@@ -92,6 +94,7 @@ define Package/$(PKG_NAME)
 		+fantastic-packages-feeds \
 		+go-stun \
 		+internet-detector \
+		+mihomo \
 		+natmapt \
 		+natter \
 		+netdata-ssl \
@@ -113,6 +116,7 @@ define Package/$(PKG_NAME)
 		+luci-app-disks-info \
 		+luci-app-dnsproxy \
 		+luci-app-einat \
+		+luci-app-fchomo \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
 		+luci-app-ipinfo \
