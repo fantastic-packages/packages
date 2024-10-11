@@ -5,10 +5,10 @@ Provides: einat
 License: GPL-2.0-or-later GPL-2.0-only
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 869626
+Installed-Size: 869553
 Filename: einat-ebpf_0.1.2-8_aarch64_generic.ipk
-Size: 865079
-SHA256sum: 511b823ae4168ce719f21a230bdb01eba99e53caf33f2e25e307e8a3527ebcdb
+Size: 865585
+SHA256sum: f71d6fe38d85239a33644c625bb0e959d8bab0b4733a18deee2afd799b712cda
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -487,10 +487,10 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 3060135
+Installed-Size: 3060335
 Filename: shadowsocks-rust-ssservice_1.21.0-1_aarch64_generic.ipk
-Size: 3015555
-SHA256sum: dc235fddfbcb99cc710b9e1a4b0aca4b1d225839776a7f454e564de5d1d7e2a0
+Size: 3013862
+SHA256sum: a5db671a9488409882c5de0a26a1bcc4cf60cb399eeda61e0999f512308938a6
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl
@@ -499,9 +499,9 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 1063806
+Installed-Size: 1063536
 Filename: shadowsocks-rust-ssurl_1.21.0-1_aarch64_generic.ipk
-Size: 1043184
-SHA256sum: 6adfda79cb350875b2f7890de66ca71719f6eed4665598827efb4dab84b8ea8d
+Size: 1042609
+SHA256sum: 41c9f4d2936418f2272d9a483cbb4fc8d39a5baee0821222832f6c1ab7ff7898
 Description:  shadowsocks-rust ssurl. for encoding/decoding SIP002 URLs.
 
