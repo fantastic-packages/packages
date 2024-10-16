@@ -120,10 +120,10 @@ Version: git-24.289.42394-7aa5ce2
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-nft-tproxy, yq
 Section: luci
 Architecture: all
-Installed-Size: 202236
+Installed-Size: 205384
 Filename: luci-app-fchomo_git-24.289.42394-7aa5ce2_all.ipk
-Size: 203364
-SHA256sum: b19243ad6d526d079101f89b1efd36a501882007c3406350cc8fb3dbba7fb025
+Size: 206478
+SHA256sum: 2f4d8fcb26666790c47b4dc749da4414deb8e5ce6583311a3f44309dcd56c60a
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-homeproxy
@@ -131,10 +131,10 @@ Version: git-24.238.29320-de2cf6f
 Depends: libc, sing-box, chinadns-ng, firewall4, kmod-nft-tproxy, unzip
 Section: luci
 Architecture: all
-Installed-Size: 490464
+Installed-Size: 493803
 Filename: luci-app-homeproxy_git-24.238.29320-de2cf6f_all.ipk
-Size: 491456
-SHA256sum: 1dc4715643dab0b76d023d455e57f15b1edbb999e1a6455b44e1013ab8e064ed
+Size: 494845
+SHA256sum: 082280f07a7270a1942a85a08cbc89bd075936d375a1b9a209010958376547ac
 Description:  The modern ImmortalWrt proxy platform for ARM64/AMD64
 
 Package: luci-app-interfaces-statistics
@@ -291,10 +291,10 @@ Depends: libc, luci-app-xray, wget
 License: MPLv2
 Section: Custom
 Architecture: all
-Installed-Size: 3374
+Installed-Size: 3375
 Filename: luci-app-xray-status_3.4.1-1_all.ipk
-Size: 4149
-SHA256sum: d3ab5e1190aee6822e2876c3d74c8a23b4a4dc338e72fd86112bcc296580e26d
+Size: 4148
+SHA256sum: c325493c0338b6444b06050a296a4b1fc2856ee7bb0f4323dfbd160de884cb10
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
