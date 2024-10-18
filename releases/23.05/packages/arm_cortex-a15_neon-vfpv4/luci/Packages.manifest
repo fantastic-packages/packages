@@ -157,18 +157,18 @@ SHA256sum: d2796da708a9c6fa4a8b12a1cae519cb0ed8427ca35ff54a3863271443c8eb18
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: git-24.292.23878-110a0da
-Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq
+Version: git-24.291.46523-cb87de9
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-nft-tproxy, yq
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1729233478
+SourceDateEpoch: 1729169723
 Maintainer: OpenWrt LuCI community
 Architecture: all
-Installed-Size: 206261
-Filename: luci-app-fchomo_git-24.292.23878-110a0da_all.ipk
-Size: 207387
-SHA256sum: 2d510df5ad13ac14377aa87579b38e74595ae1a4f3359db9ee7fb9a1ff76314a
+Installed-Size: 206254
+Filename: luci-app-fchomo_git-24.291.46523-cb87de9_all.ipk
+Size: 207375
+SHA256sum: 2f83468a2e11264b3561995cd1dab14ee5bee0ee376728401cd75c901ea37571
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-homeproxy
@@ -397,10 +397,10 @@ Section: Custom
 SourceDateEpoch: 1721986499
 Maintainer: yichya <mail@yichya.dev>
 Architecture: all
-Installed-Size: 3375
+Installed-Size: 3374
 Filename: luci-app-xray-status_3.4.1-1_all.ipk
-Size: 4149
-SHA256sum: 4f67f0d1508f739e016efc1bcf5ce6a986d69a2ce6b80d409d3db0968d90105b
+Size: 4151
+SHA256sum: b7a5e31b83f5443bb868e3b7bad3a8963dd6d2312d0cd943d983ebf2fe0df321
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -709,17 +709,17 @@ SHA256sum: 57c928e8fb2d6542d4b4f6361e79ed04552db41f3082832e0d2c637d9cd974e8
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: git-24.292.23878-110a0da
+Version: git-24.291.46523-cb87de9
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-i18n-fchomo-zh-cn
 Section: luci
-SourceDateEpoch: 1729233478
+SourceDateEpoch: 1729169723
 Architecture: all
 Installed-Size: 6709
-Filename: luci-i18n-fchomo-zh-cn_git-24.292.23878-110a0da_all.ipk
-Size: 7525
-SHA256sum: 651e59f3b48b0f00c5a4f5cbabaf08cc8d6a99e47d9564f60ba0084b87d98c04
+Filename: luci-i18n-fchomo-zh-cn_git-24.291.46523-cb87de9_all.ipk
+Size: 7519
+SHA256sum: 0b34c77742751fad40ec6d13d2d56365bd9c08c39c4b76805d2f72e514e7d9a6
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-homeproxy-zh-cn
