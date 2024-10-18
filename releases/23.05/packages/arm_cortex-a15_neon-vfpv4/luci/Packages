@@ -116,14 +116,14 @@ SHA256sum: d2796da708a9c6fa4a8b12a1cae519cb0ed8427ca35ff54a3863271443c8eb18
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: git-24.291.46523-cb87de9
-Depends: libc, mihomo, ca-bundle, firewall4, kmod-nft-tproxy, yq
+Version: git-24.292.32800-3b5e8d3
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq
 Section: luci
 Architecture: all
-Installed-Size: 206254
-Filename: luci-app-fchomo_git-24.291.46523-cb87de9_all.ipk
-Size: 207375
-SHA256sum: 2f83468a2e11264b3561995cd1dab14ee5bee0ee376728401cd75c901ea37571
+Installed-Size: 206253
+Filename: luci-app-fchomo_git-24.292.32800-3b5e8d3_all.ipk
+Size: 207385
+SHA256sum: 1d88f2794247312cf6f2e7f8cc5b21c9c87c40abbca96ff0e1f7ccbe888fb6cf
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-homeproxy
@@ -531,14 +531,14 @@ SHA256sum: 57c928e8fb2d6542d4b4f6361e79ed04552db41f3082832e0d2c637d9cd974e8
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: git-24.291.46523-cb87de9
+Version: git-24.292.32800-3b5e8d3
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 6709
-Filename: luci-i18n-fchomo-zh-cn_git-24.291.46523-cb87de9_all.ipk
-Size: 7519
-SHA256sum: 0b34c77742751fad40ec6d13d2d56365bd9c08c39c4b76805d2f72e514e7d9a6
+Filename: luci-i18n-fchomo-zh-cn_git-24.292.32800-3b5e8d3_all.ipk
+Size: 7512
+SHA256sum: 618c5ba16409d2289df8a70002e27149b34edc911cbfa038a1881c9691710c46
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-homeproxy-zh-cn
