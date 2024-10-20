@@ -29,7 +29,6 @@ define Package/$(PKG_NAME)-packages
 	$(call Package/$(PKG_NAME)/Default)
 	DEPENDS+:=\
 		+alwaysonline \
-		+chinadns-ng \
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
@@ -88,7 +87,6 @@ define Package/$(PKG_NAME)
 	$(call Package/$(PKG_NAME)/Default)
 	DEPENDS+:=\
 		+alwaysonline \
-		+chinadns-ng \
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \

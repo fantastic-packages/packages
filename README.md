@@ -50,7 +50,6 @@ make menuconfig
 | [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-dnsproxy][] | A simple DNS proxy server |
 | [luci-app-einat][] | LuCI Support for einat-ebpf |
-| [luci-app-homeproxy][] | A homeproxy fork with clash api, selector/urltest node, node grouping & ruleset support |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
 | [luci-app-ipinfo][] | LuCI support for ip.guide |
@@ -72,7 +71,6 @@ make menuconfig
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-fchomo][] | FullCombo Mihomo supplies maximum customization on OpenWrt |
-| [openwrt-chinadns-ng][] | ChinaDNS Next Generation for OpenWrt, refactoring with epoll and ipset |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
@@ -99,7 +97,6 @@ make menuconfig
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
 [luci-app-einat]: https://github.com/muink/luci-app-einat
-[luci-app-homeproxy]: https://github.com/muink/luci-app-homeproxy
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-ipinfo]: https://github.com/animegasan/luci-app-ipinfo
@@ -121,7 +118,6 @@ make menuconfig
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fchomo]: https://github.com/muink/openwrt-fchomo
-[openwrt-chinadns-ng]: https://github.com/muink/openwrt-chinadns-ng
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter
