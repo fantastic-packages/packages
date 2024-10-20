@@ -223,10 +223,10 @@ Depends: libc
 License: GPL-2.0
 Section: net
 Architecture: mips_24kc
-Installed-Size: 11038684
+Installed-Size: 11038683
 Filename: mihomo_1.18.9-1_mips_24kc.ipk
-Size: 11011007
-SHA256sum: 419fae4b52ce37893c28e929a41a49f7d55d882ef7e67fc8641cabcb7496c752
+Size: 11010980
+SHA256sum: 0d6fa4b21161481bd0daf55a20d02eee3458c482d3a196ced7ac962e6ec6de4d
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -367,10 +367,10 @@ License: GPL-2.0+
 Section: net
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: mips_24kc
-Installed-Size: 7578084
+Installed-Size: 7578065
 Filename: qbittorrent_5.0.0-1_mips_24kc.ipk
-Size: 7571159
-SHA256sum: 4058ecf7d185596c3955cfb1aa6518403e1d23f924ec9428dee72ddf71a3391c
+Size: 7571142
+SHA256sum: 5d6e644340d35c63b68aeb817618158718e4fa1e50d7d7b5ad99f8ab219731b5
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -473,10 +473,10 @@ License: BSD
 Section: libs
 ABIVersion: 2.0
 Architecture: mips_24kc
-Installed-Size: 1571005
+Installed-Size: 1571149
 Filename: rblibtorrent2.0_2.0.10-1_mips_24kc.ipk
-Size: 1561715
-SHA256sum: ab8e5c802b975f03e66942e51fe50c2bcc74be8fb291f829fbd918549c0366cc
+Size: 1562091
+SHA256sum: cdc41f26ef504e63825ecb6953d6b2e4ab1a4be739e4ca1c87bd7b05e29ba3b5
 Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
  all the other bittorrent implementations around. It is a library and not a
  full featured client, although it comes with a working example client.
@@ -524,10 +524,10 @@ Depends: libc, libpthread, libstdcpp6, libopenssl3
 License: Apache-2.0
 Section: net
 Architecture: mips_24kc
-Installed-Size: 88051
+Installed-Size: 88046
 Filename: stuntman-server_1.2.17-20240806_mips_24kc.ipk
-Size: 88268
-SHA256sum: d1409e1a254fa48916ec645dcfa476404fa9d863e182f27f970df8d807ddb926
+Size: 88261
+SHA256sum: 36a3c0b67727f06024747f1996fb28bb321f187b7ee207206c87e3f61693a76f
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode
