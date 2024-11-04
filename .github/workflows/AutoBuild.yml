@@ -117,17 +117,21 @@ jobs:
           submodules: false
       - name: Download artifact
         uses: actions/download-artifact@v4
+        with:
+          pattern: OpenWRT-Build-*
+          path: packages-artifact
+          merge-multiple: true
       - name: Move artifact
         shell: bash
         env:
-          keepdir: '19.07|21.02|22.03'
+          keepdir: '21.02|22.03'
         run: |
           if [ "$DELETE_OLD_PACKAGES" == "true" ]; then
             find $release_path/* -maxdepth 0 -type d 2>/dev/null | grep -Ev "\b($keepdir)$" | xargs -I{} rm -rf "{}"
           fi
           mkdir -p $release_path 2>/dev/null
-          cp -rf OpenWRT-Build-*/*/ $release_path/
-          rm -rf OpenWRT-Build-*/ 2>/dev/null
+          cp -rf packages-artifact/*/ $release_path/
+          rm -rf packages-artifact/ 2>/dev/null
       - name: Display structure of downloaded files
         working-directory: ${{ env.release_path }}
         run: ls -R
