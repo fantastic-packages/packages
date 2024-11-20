@@ -429,8 +429,8 @@ jobs:
         run: |
           sign_packages() {
             # gpg
-            if [ "${{env.GPG_SIGN}}" == "true" ]; then
-              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
+            if [ "${{env.GPG_SIGN}}" == "true" -a -f packages.adb ]; then
+              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o packages.adb.asc --detach-sign packages.adb
             fi
           }
           # clean old apk
@@ -510,9 +510,9 @@ jobs:
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ inputs.ARCH }}
           EXTRA_REPOS: >-
-            src|${{ env.FTSPKGPREFIX }}packages|file:///repo/${{ env.FTSPKGPREFIX }}packages
-            src|${{ env.FTSPKGPREFIX }}luci|file:///repo/${{ env.FTSPKGPREFIX }}luci
-            src|${{ env.FTSPKGPREFIX }}special|file:///repo/${{ env.FTSPKGPREFIX }}special
+            file:///repo/${{ env.FTSPKGPREFIX }}packages/packages.adb
+            file:///repo/${{ env.FTSPKGPREFIX }}luci/packages.adb
+            file:///repo/${{ env.FTSPKGPREFIX }}special/packages.adb
           NO_LOCAL_REPOS: 1
           PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
           #PRIVATE_KEY_PUB: ${{ env.APK_SIGN_PUBKEY }}
