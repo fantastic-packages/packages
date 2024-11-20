@@ -229,7 +229,7 @@ jobs:
           op_target_url_prefix="https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$SUBTARGET"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
-          axel -n8 "${op_target_url_prefix}/${sdk}"
+          axel -q -n8 "${op_target_url_prefix}/${sdk}"
           tar $(echo "$sdk" | grep -qE '\.tar\.zst$' && echo '-I zstd') -xf "$sdk" && rm -f "$sdk"
           mv *-sdk-* SDK
           # bin
@@ -263,10 +263,9 @@ jobs:
           endgroup
           #
           group "make package/*/compile V=s -j$NPROC"
-          make package/compile V=s -j$NPROC
           for PKG in $SPECIALS; do
             make "package/$PKG/compile" \
-              BUILD_LOG="$BUILD_LOG" \
+              BUILD_LOG=y \
               IGNORE_ERRORS="$IGNORE_ERRORS" \
               CONFIG_AUTOREMOVE=y \
               V=s \
