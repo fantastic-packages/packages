@@ -282,6 +282,13 @@ jobs:
           # popd SPECIAL_WORKDIR
           popd
 
+      - name: Upload Specials
+        if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Specials-SDK-${{ hashFiles('**/Makefile') }}
+          path: ${{ github.workspace }}/SPECIAL_WORKDIR/SDK
+
       - name: Build Packages
         id: build_packags
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
