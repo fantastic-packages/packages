@@ -152,10 +152,10 @@ jobs:
             src-link|${{ env.PREFIX }}special|${{ github.workspace }}/feeds/special/
         run: |
           # EXTRA_FEEDS
-          echo "Feeds $EXTRA_FEEDS"
+          echo "Feeds: $EXTRA_FEEDS"
           echo "EXTRA_FEEDS=$EXTRA_FEEDS" >> $GITHUB_ENV
           # SPECIAL_FEEDS
-          echo "SpecFeeds $SPECIAL_FEEDS"
+          echo "SpecFeeds: $SPECIAL_FEEDS"
           echo "SPECIAL_FEEDS=$SPECIAL_FEEDS" >> $GITHUB_ENV
           # PACKAGES and SPECIALS
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
@@ -171,10 +171,10 @@ jobs:
               || _manual="${_manual:+$_manual }$_p"
           done
           PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo fantastic-keyring || echo $_all)}"
-          echo "Building $PACKAGES"
+          echo "Building: $PACKAGES"
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
           SPECIALS="${_specmanual:-$([ -n "$_manual" ] && echo '' || echo $_special)}"
-          echo "SpecBuilding $SPECIALS"
+          echo "SpecBuilding: $SPECIALS"
           echo "SPECIALS=$SPECIALS" >> $GITHUB_ENV
 
       - name: Checkout Releases
@@ -359,7 +359,7 @@ jobs:
         run: |
           INSTALLS=$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/generic" | tr '\n' ' ')
           INSTALLS=${INSTALLS:+$INSTALLS }$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/$ARCH" 2>/dev/null | tr '\n' ' ')
-          echo "Installing $INSTALLS"
+          echo "Installing: $INSTALLS"
           echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
 
       - name: Gen KEY_VERIFY
