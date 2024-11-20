@@ -43,7 +43,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [23.05.5, 24.10.1] # or SNAPSHOT
+        version: [SNAPSHOT] # or SNAPSHOT
         arch_packages: [
           x86_64,
           aarch64_cortex-a53,
@@ -120,8 +120,8 @@ jobs:
           #git checkout -B $Branch refs/remotes/origin/$Branch
           git add $release_path/**/
           git reset HEAD $release_path/**/targets/
-          git diff-index --cached --quiet HEAD $release_path/**/packages/**/*.ipk \
-          && git diff-index --cached --quiet HEAD $release_path/**/packages/**/Packages.manifest \
+          git diff-index --cached --quiet HEAD $release_path/**/packages/**/*.{ipk,apk} \
+          && git diff-index --cached --quiet HEAD $release_path/**/packages/**/packages.adb \
           && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
           || (git commit -m "Update packages" && git push)
 
