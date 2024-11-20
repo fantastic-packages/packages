@@ -14,7 +14,7 @@ Choose one of the following methods:
 umask 022
 git clone --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
 cd fantastic_packages
-for v in master 21.02 22.03 23.05; do
+for v in master 22.03 23.05 24.10; do
 	git remote set-branches --add origin $v
 	git fetch origin $v
 	git branch --track $v origin/$v
