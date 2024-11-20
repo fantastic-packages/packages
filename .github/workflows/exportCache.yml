@@ -11,6 +11,7 @@ jobs:
     strategy:
       matrix:
         branch:
+          - '25.12'
           - '24.10'
 
     steps:

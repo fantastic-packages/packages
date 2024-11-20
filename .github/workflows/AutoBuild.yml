@@ -38,6 +38,7 @@ jobs:
       matrix:
         version:
           #- SNAPSHOT
+          - '25.12.0'
           - '24.10.4'
         arch_packages:
           - x86_64
@@ -133,8 +134,8 @@ jobs:
           #git checkout -B $Branch refs/remotes/origin/$Branch
           git add .
           git reset HEAD ./**/targets/
-          git diff-index --cached --quiet HEAD ./**/packages/**/*.ipk \
-          && git diff-index --cached --quiet HEAD ./**/packages/**/Packages.manifest \
+          git diff-index --cached --quiet HEAD ./**/packages/**/*.{ipk,apk} \
+          && git diff-index --cached --quiet HEAD ./**/packages/**/packages.adb \
           && git diff-index --cached --quiet HEAD ./**/*.pub \
           || (git commit -m "Update packages" && git push)
 
