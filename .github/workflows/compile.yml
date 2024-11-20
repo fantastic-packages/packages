@@ -70,7 +70,7 @@ jobs:
       GPG_KEY: ${{ secrets[format('GPG_{0}', inputs.GPG_ID )] }}
       GPG_PUBKEY: ${{ vars[format('GPG_PUB_{0}', inputs.GPG_ID )] }}
       GPG_FINGER: ${{ vars[format('GPG_FING_{0}', inputs.GPG_ID )] }}
-      PREFIX: fantasticpackages_
+      FTSPKGPREFIX: fantasticpackages_
 
     steps:
       - name: Maximize Build Space
@@ -146,10 +146,10 @@ jobs:
         shell: bash
         env:
           EXTRA_FEEDS: >-
-            src-link|${{ env.PREFIX }}packages|/feed/feeds/packages/
-            src-link|${{ env.PREFIX }}luci|/feed/feeds/luci/
+            src-link|${{ env.FTSPKGPREFIX }}packages|/feed/feeds/packages/
+            src-link|${{ env.FTSPKGPREFIX }}luci|/feed/feeds/luci/
           SPECIAL_FEEDS: >-
-            src-link|${{ env.PREFIX }}special|${{ github.workspace }}/feeds/special/
+            src-link|${{ env.FTSPKGPREFIX }}special|${{ github.workspace }}/feeds/special/
         run: |
           # EXTRA_FEEDS
           echo "Feeds: $EXTRA_FEEDS"
@@ -185,11 +185,11 @@ jobs:
         run: |
           git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
           git checkout origin/$Branch -- $TPATH/$BRANCH/packages/$ARCH/ 2>/dev/null || echo
-          echo "mv $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${PREFIX}<feeds>"
+          echo "mv $TPATH/$BRANCH/packages/$ARCH/<feeds> to /workdir/bin/packages/$ARCH/${FTSPKGPREFIX}<feeds>"
           mkdir -p "/workdir/bin/packages/$ARCH" 2>/dev/null
           if [ -d "$TPATH/$BRANCH/packages/$ARCH" ]; then
             pushd $TPATH/$BRANCH/packages/$ARCH
-            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/$ARCH/${PREFIX}{}"
+            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/$ARCH/${FTSPKGPREFIX}{}"
             popd
           fi
 
@@ -329,9 +329,9 @@ jobs:
             for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
               feed=$(cut -f2 -d'|' <<< "$FEED")
               if [ -d "/workdir/bin/packages/$ARCH/$feed" ]; then
-                echo "cp /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
-                cp -Rf "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"
-                pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$PREFIX/}"; sign_packages; popd
+                echo "cp /workdir/bin/packages/$ARCH/$feed to $GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$FTSPKGPREFIX/}"
+                cp -Rf "/workdir/bin/packages/$ARCH/$feed" "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$FTSPKGPREFIX/}"
+                pushd "$GITHUB_WORKSPACE/$TPATH/$BRANCH/packages/$ARCH/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
             #
@@ -390,9 +390,9 @@ jobs:
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ env.ARCH }}
           EXTRA_REPOS: >-
-            src|${{ env.PREFIX }}packages|file:///repo/${{ env.PREFIX }}packages
-            src|${{ env.PREFIX }}luci|file:///repo/${{ env.PREFIX }}luci
-            src|${{ env.PREFIX }}special|file:///repo/${{ env.PREFIX }}special
+            src|${{ env.FTSPKGPREFIX }}packages|file:///repo/${{ env.FTSPKGPREFIX }}packages
+            src|${{ env.FTSPKGPREFIX }}luci|file:///repo/${{ env.FTSPKGPREFIX }}luci
+            src|${{ env.FTSPKGPREFIX }}special|file:///repo/${{ env.FTSPKGPREFIX }}special
           NO_LOCAL_REPOS: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
