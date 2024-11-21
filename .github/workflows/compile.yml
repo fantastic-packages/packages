@@ -281,6 +281,10 @@ jobs:
           # popd SPECIAL_WORKDIR
           popd
 
+      - name: Setup tmate session
+        if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
+        uses: mxschmitt/action-tmate@v3
+
       - name: Upload Specials
         if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
         uses: actions/upload-artifact@v4
