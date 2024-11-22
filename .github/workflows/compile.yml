@@ -24,7 +24,7 @@ on:
       ARCH:
         required: true
         type: string
-      USIGN_ID:
+      APK_SIGN_ID:
         required: true
         type: string
       GPG_ID:
@@ -51,10 +51,10 @@ jobs:
     env:
       MIRROR_URL: 'https://downloads.openwrt.org'
       OP_VERSION: ${{ inputs.OP_VERSION }}
-      USIGN_ID: ${{ inputs.USIGN_ID }}
-      USIGN_KEY: ${{ secrets[format('USIGN_{0}', inputs.USIGN_ID )] }}
-      USIGN_PUBKEY: ${{ vars[format('USIGN_PUB_{0}', inputs.USIGN_ID )] }}
-      VERIFY_KEY_ID: ${{ vars.VERIFY_KEY_ID }}
+      APK_SIGN_ID: ${{ inputs.APK_SIGN_ID }}
+      APK_SIGN_KEY: ${{ secrets[format('APK_SIGN_{0}', inputs.APK_SIGN_ID )] }}
+      APK_SIGN_PUBKEY: ${{ vars[format('APK_SIGN_PUB_{0}', inputs.APK_SIGN_ID )] }}
+      APK_SIGN_VERIFY_KEY_ID: ${{ vars.APK_SIGN_VERIFY_KEY_ID }}
       GPG_ID: ${{ inputs.GPG_ID }}
       GPG_PW: ${{ secrets[format('GPG_PW_{0}', inputs.GPG_ID )] }}
       GPG_KEY: ${{ secrets[format('GPG_{0}', inputs.GPG_ID )] }}

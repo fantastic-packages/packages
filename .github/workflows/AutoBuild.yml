@@ -50,7 +50,7 @@ jobs:
           - mipsel_24kc
           - riscv64_riscv64
         include:
-          - usign_id: ${{ vars.USIGN_ID }}
+          - apk_sign_id: ${{ vars.APK_SIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
           - arch_packages: x86_64
             target: ['x86', '64'] # for imagebuilder
@@ -80,7 +80,7 @@ jobs:
       BOARD: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
       MODEL: ${{ matrix.profile }}
-      USIGN_ID: ${{ matrix.usign_id }}
+      APK_SIGN_ID: ${{ matrix.apk_sign_id }}
       GPG_ID: ${{ matrix.gpg_id }}
     secrets: inherit
 
