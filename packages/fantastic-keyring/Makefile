@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-keyring
-PKG_VERSION:=20240427
+PKG_VERSION:=20241123
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Anya Lin <hukk1996@gmail.com>
@@ -26,8 +26,8 @@ endef
 Build/Compile=
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/etc/opkg/keys/
-	$(INSTALL_DATA) $(CURDIR)/usign/53ff2b6672243d28 $(1)/etc/opkg/keys/
+	$(INSTALL_DIR) $(1)/etc/apk/keys/
+	$(INSTALL_DATA) $(CURDIR)/apksign/*.pem $(1)/etc/apk/keys/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
