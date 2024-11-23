@@ -285,7 +285,7 @@ jobs:
       - name: Build Packages
         id: build_packags
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-        uses: fantastic-packages/gh-action-sdk@master
+        uses: fantastic-packages/gh-action-sdk@23.05
         env:
           #ARCH: ${{ inputs.ARCH }}-${{ env.OP_VERSION }}
           ARCH: ${{ inputs.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
@@ -376,7 +376,7 @@ jobs:
 
       - name: Build Images
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
-        uses: fantastic-packages/gh-action-imagebuilder@master
+        uses: fantastic-packages/gh-action-imagebuilder@23.05
         env:
           ARCH: ${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ env.OP_VERSION }}
           PROFILE: ${{ inputs.MODEL }}
