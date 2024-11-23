@@ -24,7 +24,7 @@ on:
       SUBTARGET:
         required: false
         type: string
-      PROFILE:
+      MODEL:
         required: false
         type: string
       ARCH:
@@ -57,7 +57,6 @@ jobs:
     env:
       OP_VERSION: ${{ inputs.OP_VERSION }}
       SUBTARGET: ${{ inputs.SUBTARGET }}
-      PROFILE: ${{ inputs.PROFILE }}
       USIGN_ID: ${{ inputs.USIGN_ID }}
       USIGN_KEY: ${{ secrets[format('USIGN_{0}', inputs.USIGN_ID )] }}
       USIGN_PUBKEY: ${{ vars[format('USIGN_PUB_{0}', inputs.USIGN_ID )] }}
@@ -386,7 +385,7 @@ jobs:
         uses: fantastic-packages/gh-action-imagebuilder@master
         env:
           ARCH: ${{ inputs.BOARD }}-${{ env.SUBTARGET }}-${{ env.OP_VERSION }}
-          PROFILE: ${{ env.PROFILE }}
+          PROFILE: ${{ inputs.MODEL }}
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ inputs.ARCH }}
           EXTRA_REPOS: >-
@@ -419,7 +418,7 @@ jobs:
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
-          echo "artifact=OpenWRT-Build-$OP_VERSION-${{ inputs.ARCH }}-${{ inputs.BOARD }}-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
+          echo "artifact=OpenWRT-Build-$OP_VERSION-${{ inputs.ARCH }}-${{ inputs.BOARD }}-$SUBTARGET-${{ inputs.MODEL }}" >> $GITHUB_ENV
           find ${{ inputs.GHPAGES_PATH }}/* -maxdepth 0 2>/dev/null | grep -v "$BRANCH" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.ARCH }}" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.BOARD }}" | xargs -I{} rm -rf "{}"

@@ -97,7 +97,7 @@ jobs:
       ARCH: ${{ matrix.arch_packages }}
       BOARD: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
-      PROFILE: ${{ matrix.profile }}
+      MODEL: ${{ matrix.profile }}
       USIGN_ID: ${{ matrix.usign_id }}
       GPG_ID: ${{ matrix.gpg_id }}
     secrets: inherit
