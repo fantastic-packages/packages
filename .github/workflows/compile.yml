@@ -334,8 +334,8 @@ jobs:
           done
           cat SDK/feeds.conf.default
           # key-build
-          echo "$USIGN_KEY" > SDK/key-build
-          echo "$USIGN_PUBKEY" > SDK/key-build.pub
+          echo "$APK_SIGN_KEY" > SDK/private-key.pem
+          echo "$APK_SIGN_PUBKEY" > SDK/public-key.pem
           endgroup
           # Build start
           NPROC=$(nproc)
@@ -412,7 +412,7 @@ jobs:
           NO_SHFMT_CHECK: 1
           PACKAGES: ${{ env.PACKAGES || 'fantastic-keyring' }}
           INDEX: 1
-          KEY_BUILD: ${{ env.USIGN_KEY }}
+          PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
           #V: s
 
       - name: Upload error logs
@@ -456,13 +456,13 @@ jobs:
             done
             #
             pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH"
-            echo "$USIGN_PUBKEY" > ${USIGN_ID,,}.pub
-          cat <<- EOF > ${USIGN_ID,,}.sh
+            echo "$APK_SIGN_PUBKEY" > ${APK_SIGN_ID,,}.pub
+          cat <<- EOF > ${APK_SIGN_ID,,}.sh
           #!/bin/sh
-          KEYID=${USIGN_ID,,}
-          mkdir -p /etc/opkg/keys 2>/dev/null
-          cat <<- PUBKEY > /etc/opkg/keys/\${KEYID}
-          ${USIGN_PUBKEY}
+          KEYID=${APK_SIGN_ID,,}
+          mkdir -p /etc/apk/keys 2>/dev/null
+          cat <<- PUBKEY > /etc/apk/keys/fantastic-packages-\${KEYID}.pem
+          ${APK_SIGN_PUBKEY}
           PUBKEY
           EOF
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
@@ -494,8 +494,8 @@ jobs:
         shell: bash
         run: |
           KEY_VERIFY=''
-          for k in ${VERIFY_KEY_ID}; do
-            key="$(cat "$GITHUB_WORKSPACE/keys/usign/${k^^}.pub" | base64)"
+          for k in ${APK_SIGN_VERIFY_KEY_ID}; do
+            key="$(cat "$GITHUB_WORKSPACE/keys/apksign/${k}.pub" | base64)"
             KEY_VERIFY="${KEY_VERIFY:+$KEY_VERIFY }${key//[[:space:]]/}"
           done
           echo "KEY_VERIFY=$KEY_VERIFY"
@@ -514,9 +514,9 @@ jobs:
             src|${{ env.FTSPKGPREFIX }}luci|file:///repo/${{ env.FTSPKGPREFIX }}luci
             src|${{ env.FTSPKGPREFIX }}special|file:///repo/${{ env.FTSPKGPREFIX }}special
           NO_LOCAL_REPOS: 1
-          KEY_BUILD: ${{ env.USIGN_KEY }}
-          KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
-          KEY_VERIFY: ${{ env.KEY_VERIFY }}
+          PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
+          #PRIVATE_KEY_PUB: ${{ env.APK_SIGN_PUBKEY }}
+          PUBLIC_KEY_VERIFY: ${{ env.KEY_VERIFY }}
           PACKAGES: ${{ env.INSTALLS }}
           ROOTFS_SIZE: 256
 
