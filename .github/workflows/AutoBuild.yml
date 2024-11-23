@@ -92,7 +92,7 @@ jobs:
       build_mode: ${{ inputs.build_mode }}
       compiles: ${{ inputs.compile_packages }}
       no_img: ${{ matrix.no_img }}
-      TPATH: ${{ matrix.release_path }}
+      GHPAGES_PATH: ${{ matrix.release_path }}
       VERSION: ${{ matrix.version }}
       TARGET: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
