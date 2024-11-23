@@ -93,7 +93,7 @@ jobs:
       compiles: ${{ inputs.compile_packages }}
       no_img: ${{ matrix.no_img }}
       GHPAGES_PATH: ${{ matrix.release_path }}
-      VERSION: ${{ matrix.version }}
+      OP_VERSION: ${{ matrix.version }}
       TARGET: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
       PROFILE: ${{ matrix.profile }}

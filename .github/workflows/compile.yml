@@ -15,7 +15,7 @@ on:
       GHPAGES_PATH:
         required: true
         type: string
-      VERSION:
+      OP_VERSION:
         required: true
         type: string
       TARGET:
@@ -55,7 +55,7 @@ jobs:
       contents: write  # To push a branch
       # pull-requests: write  # To create a PR from that branch
     env:
-      VERSION: ${{ inputs.VERSION }}
+      OP_VERSION: ${{ inputs.OP_VERSION }}
       TARGET: ${{ inputs.TARGET }}
       SUBTARGET: ${{ inputs.SUBTARGET }}
       PROFILE: ${{ inputs.PROFILE }}
@@ -92,7 +92,7 @@ jobs:
 
       - name: Determine branch name
         run: |
-          BRANCH="${VERSION%.*}"
+          BRANCH="${OP_VERSION%.*}"
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
@@ -225,7 +225,7 @@ jobs:
           #
           group "Initialize SDK"
           # Download SDK
-          op_target_url_prefix="https://downloads.openwrt.org/releases/$VERSION/targets/$TARGET/$SUBTARGET"
+          op_target_url_prefix="https://downloads.openwrt.org/releases/$OP_VERSION/targets/$TARGET/$SUBTARGET"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
           axel -q -n8 "${op_target_url_prefix}/${sdk}"
@@ -296,7 +296,7 @@ jobs:
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: fantastic-packages/gh-action-sdk@master
         env:
-          #ARCH: ${{ env.ARCH }}-${{ env.VERSION }}
+          #ARCH: ${{ env.ARCH }}-${{ env.OP_VERSION }}
           ARCH: ${{ env.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
           ARTIFACTS_DIR: /workdir
           DL_DIR: /workdir/DL
@@ -387,7 +387,7 @@ jobs:
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         uses: fantastic-packages/gh-action-imagebuilder@master
         env:
-          ARCH: ${{ env.TARGET }}-${{ env.SUBTARGET }}-${{ env.VERSION }}
+          ARCH: ${{ env.TARGET }}-${{ env.SUBTARGET }}-${{ env.OP_VERSION }}
           PROFILE: ${{ env.PROFILE }}
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ env.ARCH }}
@@ -421,13 +421,13 @@ jobs:
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
-          echo "artifact=OpenWRT-Build-$VERSION-$ARCH-$TARGET-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
+          echo "artifact=OpenWRT-Build-$OP_VERSION-$ARCH-$TARGET-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
           find ${{ inputs.GHPAGES_PATH }}/* -maxdepth 0 2>/dev/null | grep -v "$BRANCH" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "$ARCH" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "$TARGET" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/* -maxdepth 0 2>/dev/null | grep -v "$SUBTARGET" | xargs -I{} rm -rf "{}"
 
-      - name: Display structure of upload files (${{ env.VERSION }}, ${{ env.ARCH }}, ${{ env.TARGET }}-${{ env.SUBTARGET }})
+      - name: Display structure of upload files (${{ env.OP_VERSION }}, ${{ env.ARCH }}, ${{ env.TARGET }}-${{ env.SUBTARGET }})
         run: ls -R
         working-directory: ${{ inputs.GHPAGES_PATH }}/
 
