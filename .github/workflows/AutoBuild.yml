@@ -60,7 +60,7 @@ jobs:
     strategy:
       matrix:
         version: [23.05.5]
-        arch: [
+        arch_packages: [
           x86_64,
           aarch64_cortex-a53,
           aarch64_generic,
@@ -73,19 +73,19 @@ jobs:
           - gpg_id: ${{ vars.GPG_ID }}
           - release_path: 'releases'
           - no_img: true
-          - arch: x86_64
+          - arch_packages: x86_64
             target: ['x86', '64'] # for imagebuilder
             profile: generic # for imagebuilder
             no_img: false
-          - arch: aarch64_cortex-a53
+          - arch_packages: aarch64_cortex-a53
             target: ['mvebu', 'cortexa53']
-          - arch: aarch64_generic
+          - arch_packages: aarch64_generic
             target: ['armsr', 'armv8']
-          - arch: arm_cortex-a15_neon-vfpv4
+          - arch_packages: arm_cortex-a15_neon-vfpv4
             target: ['armsr', 'armv7']
-          - arch: mips_24kc
+          - arch_packages: mips_24kc
             target: ['ath79', 'generic']
-          - arch: mipsel_24kc
+          - arch_packages: mipsel_24kc
             target: ['ramips', 'mt7621']
     uses: ./.github/workflows/compile.yml
     with:
@@ -94,10 +94,10 @@ jobs:
       no_img: ${{ matrix.no_img }}
       GHPAGES_PATH: ${{ matrix.release_path }}
       OP_VERSION: ${{ matrix.version }}
+      ARCH: ${{ matrix.arch_packages }}
       TARGET: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
       PROFILE: ${{ matrix.profile }}
-      ARCH: ${{ matrix.arch }}
       USIGN_ID: ${{ matrix.usign_id }}
       GPG_ID: ${{ matrix.gpg_id }}
     secrets: inherit
