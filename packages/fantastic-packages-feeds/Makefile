@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-packages-feeds
-PKG_VERSION:=20240504
+PKG_VERSION:=20241201
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Anya Lin <hukk1996@gmail.com>
@@ -51,10 +51,12 @@ else
 	ARCH_PACKAGES=$$DISTRIB_ARCH
 fi
 if [ "$$VERSION_NUMBER" = "SNAPSHOT" ]; then
-	BRANCH="23.05"
+	BRANCH="24.10"
+	[ "$$REVISION" -lt 28158 ] && BRANCH="23.05"
 	[ "$$REVISION" -lt 23069 ] && BRANCH="22.03"
 	[ "$$REVISION" -lt 19302 ] && BRANCH="21.02"
-	# https://archive.openwrt.org/releases/
+	# https://archive.openwrt.org/releases/**/version.buildinfo
+	# r28158-d276b4c91a    24.10.0-rc1
 	# r23069-e2701e0f33    23.05.0-rc1
 	# r19302-df622768da    22.03.0-rc1
 	# r16122-c2139eef27    21.02.0-rc2
