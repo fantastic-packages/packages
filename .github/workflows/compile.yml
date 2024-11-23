@@ -114,11 +114,6 @@ jobs:
       - name: Import keys
         shell: bash
         run: |
-          # usign
-          #EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          #echo "USIGN_PUBKEY<<$EOF" >> $GITHUB_ENV
-          #cat $GITHUB_WORKSPACE/keys/usign/${USIGN_ID}.pub >> $GITHUB_ENV
-          #echo "$EOF" >> $GITHUB_ENV
           # gpg
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
           gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
