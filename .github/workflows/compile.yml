@@ -18,7 +18,7 @@ on:
       OP_VERSION:
         required: true
         type: string
-      TARGET:
+      BOARD:
         required: false
         type: string
       SUBTARGET:
@@ -56,7 +56,6 @@ jobs:
       # pull-requests: write  # To create a PR from that branch
     env:
       OP_VERSION: ${{ inputs.OP_VERSION }}
-      TARGET: ${{ inputs.TARGET }}
       SUBTARGET: ${{ inputs.SUBTARGET }}
       PROFILE: ${{ inputs.PROFILE }}
       USIGN_ID: ${{ inputs.USIGN_ID }}
@@ -224,7 +223,7 @@ jobs:
           #
           group "Initialize SDK"
           # Download SDK
-          op_target_url_prefix="https://downloads.openwrt.org/releases/$OP_VERSION/targets/$TARGET/$SUBTARGET"
+          op_target_url_prefix="https://downloads.openwrt.org/releases/$OP_VERSION/targets/${{ inputs.BOARD }}/$SUBTARGET"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
           axel -q -n8 "${op_target_url_prefix}/${sdk}"
@@ -386,7 +385,7 @@ jobs:
         if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
         uses: fantastic-packages/gh-action-imagebuilder@master
         env:
-          ARCH: ${{ env.TARGET }}-${{ env.SUBTARGET }}-${{ env.OP_VERSION }}
+          ARCH: ${{ inputs.BOARD }}-${{ env.SUBTARGET }}-${{ env.OP_VERSION }}
           PROFILE: ${{ env.PROFILE }}
           ARTIFACTS_DIR: /workdir
           REPO_DIR: /workdir/bin/packages/${{ inputs.ARCH }}
@@ -407,11 +406,11 @@ jobs:
         run: |
           if [ -d "/workdir/bin" ]; then
             sudo chown -R $USER:$GROUPS /workdir/bin
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/$SUBTARGET" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/" 2>/dev/null
-            echo "mv /workdir/bin/targets/$TARGET/$SUBTARGET to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/$SUBTARGET"
-            mv -f "/workdir/bin/targets/$TARGET/$SUBTARGET" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/$SUBTARGET"
-            pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/$SUBTARGET"
+            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/$SUBTARGET" 2>/dev/null
+            mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/" 2>/dev/null
+            echo "mv /workdir/bin/targets/${{ inputs.BOARD }}/$SUBTARGET to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/$SUBTARGET"
+            mv -f "/workdir/bin/targets/${{ inputs.BOARD }}/$SUBTARGET" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/$SUBTARGET"
+            pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/$SUBTARGET"
             if [ "${{env.GPG_SIGN}}" == "true" ]; then
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
             fi
@@ -420,13 +419,13 @@ jobs:
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
-          echo "artifact=OpenWRT-Build-$OP_VERSION-${{ inputs.ARCH }}-$TARGET-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
+          echo "artifact=OpenWRT-Build-$OP_VERSION-${{ inputs.ARCH }}-${{ inputs.BOARD }}-$SUBTARGET-$PROFILE" >> $GITHUB_ENV
           find ${{ inputs.GHPAGES_PATH }}/* -maxdepth 0 2>/dev/null | grep -v "$BRANCH" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.ARCH }}" | xargs -I{} rm -rf "{}"
-          find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "$TARGET" | xargs -I{} rm -rf "{}"
-          find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/$TARGET/* -maxdepth 0 2>/dev/null | grep -v "$SUBTARGET" | xargs -I{} rm -rf "{}"
+          find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.BOARD }}" | xargs -I{} rm -rf "{}"
+          find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/* -maxdepth 0 2>/dev/null | grep -v "$SUBTARGET" | xargs -I{} rm -rf "{}"
 
-      - name: Display structure of upload files (${{ env.OP_VERSION }}, ${{ inputs.ARCH }}, ${{ env.TARGET }}-${{ env.SUBTARGET }})
+      - name: Display structure of upload files (${{ env.OP_VERSION }}, ${{ inputs.ARCH }}, ${{ inputs.BOARD }}-${{ env.SUBTARGET }})
         run: ls -R
         working-directory: ${{ inputs.GHPAGES_PATH }}/
 

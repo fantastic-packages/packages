@@ -95,7 +95,7 @@ jobs:
       GHPAGES_PATH: ${{ matrix.release_path }}
       OP_VERSION: ${{ matrix.version }}
       ARCH: ${{ matrix.arch_packages }}
-      TARGET: ${{ matrix.target[0] }}
+      BOARD: ${{ matrix.target[0] }}
       SUBTARGET: ${{ matrix.target[1] }}
       PROFILE: ${{ matrix.profile }}
       USIGN_ID: ${{ matrix.usign_id }}
