@@ -300,6 +300,13 @@ jobs:
           KEY_BUILD: ${{ env.USIGN_KEY }}
           V: 99
 
+      - name: Upload error logs
+        if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-logs-${{ hashFiles('**/Makefile') }}
+          path: /workdir/logs
+
       - name: Checkout Packages
         id: checkout_packags
         shell: bash
