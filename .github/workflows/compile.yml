@@ -215,14 +215,16 @@ jobs:
           mkdir -p SPECIAL_WORKDIR
           pushd SPECIAL_WORKDIR
           #
-          group "Initialize SDK"
-          # Download SDK
+          group "Download SDK"
           op_target_url_prefix="https://downloads.openwrt.org/releases/$OP_VERSION/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
           axel -q -n8 "${op_target_url_prefix}/${sdk}"
           tar $(echo "$sdk" | grep -qE '\.tar\.zst$' && echo '-I zstd') -xf "$sdk" && rm -f "$sdk"
           mv *-sdk-* SDK
+          endgroup
+          #
+          group "Initialize SDK"
           # bin
           ln -s "/workdir/bin" SDK/bin
           # dl
