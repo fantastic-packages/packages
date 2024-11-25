@@ -185,8 +185,8 @@ jobs:
 
       - name: Build Specials
         id: build_specials
-        shell: bash
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        shell: bash
         run: |
           grep -q '^\s*$' <<< "$SPECIALS" && exit 0
           group() {
@@ -211,7 +211,7 @@ jobs:
           zlib1g-dev file wget zstd python3-pyelftools \
           clang llvm libbpf-dev pkg-config libdw-dev libelf-dev zlib1g-dev
           endgroup
-          #
+          # pushd SPECIAL_WORKDIR
           mkdir -p SPECIAL_WORKDIR
           pushd SPECIAL_WORKDIR
           #
