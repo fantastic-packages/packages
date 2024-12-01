@@ -1,0 +1,580 @@
+Package: Toolkit
+Version: 0.4.0.2~631954ea-r2
+Depends: libc, libstdcpp6
+License: GPL-2.0
+Section: net
+URL: https://github.com/chengr28/Toolkit
+Architecture: aarch64_cortex-a53
+Installed-Size: 337920
+Filename: Toolkit_0.4.0.2~631954ea-r2_aarch64_cortex-a53.ipk
+Size: 115352
+SHA256sum: ba221b1a822b779b8a27f01375c682de3690648507334a62f6e6db8252671c19
+Description:  A network util can ping with DNS request.
+
+Package: alwaysonline
+Version: 1.2.0~a12e3bdc-r1
+Depends: libc
+License: MIT
+Section: net
+URL: https://github.com/Jamesits/alwaysonline
+Architecture: aarch64_cortex-a53
+Installed-Size: 4935680
+Filename: alwaysonline_1.2.0~a12e3bdc-r1_aarch64_cortex-a53.ipk
+Size: 2041314
+SHA256sum: f0db8ba83fe9fa46f8962c3936d6da41711a5f1e2008d23a2824bb7bcf9e260c
+Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
+
+Package: fantastic-keyring
+Version: 20240427-r1
+Depends: libc
+License: MIT
+Section: base
+Architecture: all
+Installed-Size: 10240
+Filename: fantastic-keyring_20240427-r1_all.ipk
+Size: 1047
+SHA256sum: e37ad2de74aaa5bc40e8bb651384ec8f6039246aaa0926966579bb574f6eeaa2
+Description:  The keyring of with the developer using.
+
+Package: fantastic-packages-feeds
+Version: 20241201-r1
+Depends: libc, fantastic-keyring, opkg
+License: MIT
+Section: base
+Architecture: all
+Installed-Size: 10240
+Filename: fantastic-packages-feeds_20241201-r1_all.ipk
+Size: 1539
+SHA256sum: e25d19c7e8e53651acd20650574e96bcc21c5ec9972cd50c52cf1605d2f9eb5b
+Description:  Installer for fantastic-packages feeds
+
+Package: go-stun
+Version: 0.1.4~d32c135f-r10
+Depends: libc
+License: Apache-2.0
+Section: net
+URL: https://github.com/ccding/go-stun
+Architecture: aarch64_cortex-a53
+Installed-Size: 2222080
+Filename: go-stun_0.1.4~d32c135f-r10_aarch64_cortex-a53.ipk
+Size: 908389
+SHA256sum: 921889fb0c2cf80131896c494b33f3ce5a8b4e9f1634877bb725b5056e8eea33
+Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
+ RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
+ RFC 5389: Session Traversal Utilities for NAT (STUN)
+
+Package: internet-detector-mod-email
+Version: 1.3.1-r1
+Depends: libc, internet-detector, mailsend
+Section: net
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Architecture: all
+Installed-Size: 10240
+Filename: internet-detector-mod-email_1.3.1-r1_all.ipk
+Size: 2547
+SHA256sum: 4ad9e667d8f5d8e8af9e32837619bfb388a6ed70db30894bcd6fe866f3fb7e7c
+Description:  Email support for internet-detector.
+
+Package: internet-detector-mod-modem-restart
+Version: 1.3.1-r1
+Depends: libc, internet-detector, modemmanager
+Section: net
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Architecture: all
+Installed-Size: 10240
+Filename: internet-detector-mod-modem-restart_1.3.1-r1_all.ipk
+Size: 1822
+SHA256sum: 84866e869f76aa41aea03b5beb72faf123d38aa6a6e93e1f2c835d0b3b36ab3f
+Description:  Support modem restart for internet detector.
+
+Package: internet-detector
+Version: 1.3.1-r1
+Depends: libc, lua, luaposix, libuci-lua
+Section: net
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Architecture: all
+Installed-Size: 61440
+Filename: internet-detector_1.3.1-r1_all.ipk
+Size: 11054
+SHA256sum: a8f707c5bd706d700dd1b6e4001bfdc66c4553f4e168fe65405f04d6931ba871
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
+
+Package: libQt6Concurrent
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 81920
+Filename: libQt6Concurrent_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 8549
+SHA256sum: 7203b7237f3535512bb42e6649b834f30198be7b05afe442ed09c1164025d1da
+Description:  This package provides the Qt6 Concurrent v6.8.1 library.
+
+Package: libQt6Core
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 6922240
+Filename: libQt6Core_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 2661614
+SHA256sum: 7f5386233bfa1114fe1c4c02396a6d09eec31b248e8a9a88aee13bc55739b006
+Description:  This package provides the Qt6 Core v6.8.1 library.
+
+Package: libQt6DBus
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 1003520
+Filename: libQt6DBus_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 336544
+SHA256sum: e0a9a2d4b8dd8bcbd4bc8232a8451eb20e69e68384f78433cdf30b81150e0dd3
+Description:  This package provides the Qt6 DBus v6.8.1 library.
+
+Package: libQt6Gui
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 7393280
+Filename: libQt6Gui_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 3003547
+SHA256sum: 8acd5990eac0809904cfa204d14d2480952b3f5ef49314515a795a1b6f4c11a7
+Description:  This package provides the Qt6 Gui v6.8.1 library.
+
+Package: libQt6Network
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 2385920
+Filename: libQt6Network_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 920271
+SHA256sum: 04c4b2ae9738ffee9157914d0acf797989c44d314e89418015832488f02fcb41
+Description:  This package provides the Qt6 Network v6.8.1 library.
+
+Package: libQt6PrintSupport
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 542720
+Filename: libQt6PrintSupport_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 168119
+SHA256sum: c95c729392a6454860bee12df078b4cb9e5ac0079329599796a6a80c79f5d8ae
+Description:  This package provides the Qt6 PrintSupport v6.8.1 library.
+
+Package: libQt6Sql
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 276480
+Filename: libQt6Sql_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 91105
+SHA256sum: e08fc82b00248cf217cd7876a928ad6d4c0a2d2e5029716021ad87926abd5a23
+Description:  This package provides the Qt6 Sql v6.8.1 library.
+
+Package: libQt6Test
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 409600
+Filename: libQt6Test_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 148317
+SHA256sum: e3450ae7b7dd2a4e47bcb5492f47cc8fd7fbe15873234a2b1adb5ab0550b8eed
+Description:  This package provides the Qt6 Test v6.8.1 library.
+
+Package: libQt6Widgets
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 8448000
+Filename: libQt6Widgets_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 3415193
+SHA256sum: 6498133eb76fefa618ee14e8a6a17c0f3889c3879078b5c28a958b33da8c9221
+Description:  This package provides the Qt6 Widgets v6.8.1 library.
+
+Package: libQt6Xml
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 204800
+Filename: libQt6Xml_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 70458
+SHA256sum: 51c970a9f0780eb079cce84c1a8872b097ab5b20a9eb8fb730c7539e8dfbf398
+Description:  This package provides the Qt6 Xml v6.8.1 library.
+
+Package: mihomo
+Version: 1.18.10-r1
+Depends: libc
+License: GPL-2.0
+Section: net
+URL: https://wiki.metacubex.one
+Architecture: aarch64_cortex-a53
+Installed-Size: 27842560
+Filename: mihomo_1.18.10-r1_aarch64_cortex-a53.ipk
+Size: 10006176
+SHA256sum: 8cf61130d789ae198fa6186defc168b85ff5b390332686fc58e3400d247b2ae9
+Description:  Another Mihomo Kernel.
+
+Package: natmapt-client-script-deluge
+Version: 0.2024.06.03
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: natmapt-client-script-deluge_0.2024.06.03_all.ipk
+Size: 1618
+SHA256sum: 8b0d56f591257d097885364a9784998a7784cddfbf2baa1cfc0ecdffc1ee7bb1
+Description:  NATMap client scripts (Deluge)
+
+Package: natmapt-client-script-transmission
+Version: 0.2024.06.03
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: natmapt-client-script-transmission_0.2024.06.03_all.ipk
+Size: 1437
+SHA256sum: a69971f9dc41f4a353fdc5821d6bf77a94a1f5340e4f2c582ca5ac8df06c66f4
+Description:  NATMap client scripts (Transmission)
+
+Package: natmapt-notify-script-pushbullet
+Version: 0.2024.06.03
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: natmapt-notify-script-pushbullet_0.2024.06.03_all.ipk
+Size: 1425
+SHA256sum: 60c97652aaca609457664ee0c1514c004f30c4854da2f326a9af248bc11aabc5
+Description:  NATMap notify scripts (Pushbullet)
+
+Package: natmapt-notify-script-pushover
+Version: 0.2024.06.03
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: natmapt-notify-script-pushover_0.2024.06.03_all.ipk
+Size: 1445
+SHA256sum: d83d2cdf2e6979d02eab1916e3ec7343c7d7d6841fcaf493e18005bef8a5d687
+Description:  NATMap notify scripts (Pushover)
+
+Package: natmapt-notify-script-telegram
+Version: 0.2024.06.03
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: natmapt-notify-script-telegram_0.2024.06.03_all.ipk
+Size: 1435
+SHA256sum: 680d424a1488ad2da0b559041c628b74720bc374ff8a6acadf901aa57901202e
+Description:  NATMap notify scripts (Telegram)
+
+Package: natmapt
+Version: 20240813-r4
+Depends: libc, curl, jsonfilter, bash
+License: MIT
+Section: net
+URL: https://github.com/heiher/natmap
+Architecture: aarch64_cortex-a53
+Installed-Size: 112640
+Filename: natmapt_20240813-r4_aarch64_cortex-a53.ipk
+Size: 28794
+SHA256sum: b526605bfe087b05d78f84bc13830021cfb508e3f8f7da219a2ead102b72eecc
+Description:  TCP/UDP port mapping tool for full cone NAT
+
+Package: netdata-ssl
+Version: 1.33.1-r4
+Depends: libc, zlib, libuuid1, libuv1, libmnl0, libjson-c5, libopenssl3
+License: GPL-3.0-or-later
+Section: admin
+URL: https://www.netdata.cloud/
+CPE-ID: cpe:/a:my-netdata:netdata
+Architecture: aarch64_cortex-a53
+Installed-Size: 27412480
+Filename: netdata-ssl_1.33.1-r4_aarch64_cortex-a53.ipk
+Size: 8011565
+SHA256sum: 225f96a2c88ccf306c08ff5862b298e3c626657e1837ac2b2cee9a52e2ce356c
+Description:  netdata is a highly optimized Linux daemon providing real-time performance
+ monitoring for Linux systems, applications and SNMP devices over the web.
+ 
+ If you want to use Python plugins install python3, python3-yaml and
+ python3-urllib3
+
+Package: pcap-dnsproxy
+Version: 0.4.9.13~70a40bb3-r1
+Depends: libc, libpthread, libstdcpp6, libevent2-core7, libpcap1, libsodium, libopenssl3
+License: GPL-2.0
+Section: net
+URL: https://github.com/chengr28/Pcap_DNSProxy
+Architecture: aarch64_cortex-a53
+Installed-Size: 1116160
+Filename: pcap-dnsproxy_0.4.9.13~70a40bb3-r1_aarch64_cortex-a53.ipk
+Size: 371773
+SHA256sum: 47dfa94fa07e1c45aff856af4b8abfd2714ed2384f34bf9147128b941f14a3c2
+Description:  A local DNS server based on LibPcap
+
+Package: php-nginx
+Version: 0.2023.04.26-r1
+Depends: libc, luci-nginx, luci-ssl-nginx
+License: MIT
+Section: net
+URL: https://github.com/muink/openwrt-php-nginx
+Architecture: all
+Installed-Size: 10240
+Filename: php-nginx_0.2023.04.26-r1_all.ipk
+Size: 1688
+SHA256sum: b8475441c734c32352e246d342fab7692ccc7309b1fc77735f897b21cd3e600c
+Description:  PHP with Nginx as Webserver
+
+Package: plain-nginx
+Version: 20231028
+Depends: libc, luci-nginx
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: plain-nginx_20231028_all.ipk
+Size: 1169
+SHA256sum: ad685f120967474da47cbe2a2c9d53b763fafe38eddf16a036dad259957a47d2
+Description:  Read text document directly
+
+Package: qbittorrent
+Version: 5.0.2-r1
+Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qBittorrent
+License: GPL-2.0+
+Section: net
+URL: https://www.qbittorrent.org/
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: aarch64_cortex-a53
+Installed-Size: 9134080
+Filename: qbittorrent_5.0.2-r1_aarch64_cortex-a53.ipk
+Size: 7801286
+SHA256sum: 403785110a4b8873c31feafadce1f420601f65b9281f5ab9b5aac1fa6acc8285
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
+
+Package: qt6-plugin-libqcertonlybackend
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: qt6-plugin-libqcertonlybackend_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 39371
+SHA256sum: 07ad96392ab2c36669b4776cd2c8676842a0a4a7ff47bdb3e12296f435fa419a
+Description:  Qt6 Plugin libqcertonlybackend
+
+Package: qt6-plugin-libqminimal
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 81920
+Filename: qt6-plugin-libqminimal_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 10751
+SHA256sum: 18b9a950ce5bd71309d70927096ef914ca89a1d008ba6486e5d9e76fc792db70
+Description:  Qt6 Plugin libqminimal
+
+Package: qt6-plugin-libqnetworkmanager
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: qt6-plugin-libqnetworkmanager_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 28647
+SHA256sum: 153cabbd97d02a745ef68a3306b0124473090384f24347985ac373188b265035
+Description:  Qt6 Plugin libqnetworkmanager
+
+Package: qt6-plugin-libqoffscreen
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: qt6-plugin-libqoffscreen_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 40000
+SHA256sum: a38f01698264db032edd1f592b4916a3515f01e8e1d0057c8ec968c74656b2b6
+Description:  Qt6 Plugin libqoffscreen
+
+Package: qt6-plugin-libqopensslbackend
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 409600
+Filename: qt6-plugin-libqopensslbackend_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 121009
+SHA256sum: 0083b9e0a614e00d24ecc2d583095e5e4b65163fd2f3179ea3c26aaf37ba220a
+Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqsqlite
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 1996800
+Filename: qt6-plugin-libqsqlite_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 998882
+SHA256sum: 93a36b700530d2f9b39cc2e2e52536fe2138a7e5ee87d84dc777d6f6e95a8903
+Description:  Qt6 Plugin libqsqlite
+
+Package: qt6-plugin-libqtuiotouchplugin
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: qt6-plugin-libqtuiotouchplugin_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 37590
+SHA256sum: 4f15605fd224c714000473b6a4d0a6b5813794c899ae86d1920f26bbe965d8b9
+Description:  Qt6 Plugin libqtuiotouchplugin
+
+Package: qt6-plugin-libqxdgdesktopportal
+Version: 6.8.1-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+URL: http://qt-project.org
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: qt6-plugin-libqxdgdesktopportal_6.8.1-r1_aarch64_cortex-a53.ipk
+Size: 46621
+SHA256sum: 9b23bcafd883a317ecceda1883120994f16a163911baebd8b78a4e06bac196c8
+Description:  Qt6 Plugin libqxdgdesktopportal
+
+Package: rblibtorrent2.0
+Version: 2.0.10-r1
+Depends: libc, boost, boost-system, libatomic1, libgcc1, libopenssl3, libstdcpp6
+Provides: rblibtorrent
+License: BSD
+Section: libs
+URL: https://www.libtorrent.org
+ABIVersion: 2.0
+Architecture: aarch64_cortex-a53
+Installed-Size: 3809280
+Filename: rblibtorrent2.0_2.0.10-r1_aarch64_cortex-a53.ipk
+Size: 1388918
+SHA256sum: f7c640c9a7402f8d3bf009aeb39e9dfa13533682bee4f51b0ba83548a2a2df9d
+Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
+ all the other bittorrent implementations around. It is a library and not a
+ full featured client, although it comes with a working example client.
+
+Package: rgmac
+Version: 1.5.1-r20240803
+Depends: libc, bash, curl, coreutils-cksum, getopt
+License: MIT
+Section: net
+URL: https://github.com/muink/rgmac
+Architecture: all
+Installed-Size: 20480
+Filename: rgmac_1.5.1-r20240803_all.ipk
+Size: 4498
+SHA256sum: 80e374a6495f720107e5e46d82b4417134f2ca0f14e8be0801b3414c2ecf0d38
+Description:  A random MAC address generator
+
+Package: speedtest-go
+Version: 1.7.9-r1
+Depends: libc, ca-bundle
+License: MIT
+Section: net
+URL: https://github.com/showwin/speedtest-go
+Architecture: aarch64_cortex-a53
+Installed-Size: 23818240
+Filename: speedtest-go_1.7.9-r1_aarch64_cortex-a53.ipk
+Size: 9695570
+SHA256sum: 143439ed6c92c945c91a7265456006c0fbe4b8f12a8181f606ea812658c1d0e4
+Description:  Command Line Interface and pure Go API to
+ Test Internet Speed using speedtest.net
+
+Package: stuntman-client
+Version: 1.2.17~cc5b875b-r20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+URL: https://github.com/jselbie/stunserver
+Architecture: aarch64_cortex-a53
+Installed-Size: 143360
+Filename: stuntman-client_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
+Size: 39629
+SHA256sum: 0b8f2ffcff6d9c5793e71208d8b8f28ab53c7639689ac08caddccb9311048bd7
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-server
+Version: 1.2.17~cc5b875b-r20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+URL: https://github.com/jselbie/stunserver
+Architecture: aarch64_cortex-a53
+Installed-Size: 266240
+Filename: stuntman-server_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
+Size: 90196
+SHA256sum: 4c9bf10a22cb5ee41de4578811630ec736136ad72fdbf4034a6ca0b075e01da1
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-testcode
+Version: 1.2.17~cc5b875b-r20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+URL: https://github.com/jselbie/stunserver
+Architecture: aarch64_cortex-a53
+Installed-Size: 204800
+Filename: stuntman-testcode_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
+Size: 66073
+SHA256sum: 68f300d549ca78cce4c2dca855df940ae6d3c9ff5d9129b7bfebcf6940862b2c
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: uci-alwaysonline
+Version: 0.2024.07.31
+Depends: libc, alwaysonline, kmod-tun, ip-full, rgmac
+License: MIT
+Section: net
+Architecture: aarch64_cortex-a53
+Installed-Size: 20480
+Filename: uci-alwaysonline_0.2024.07.31_aarch64_cortex-a53.ipk
+Size: 3384
+SHA256sum: 82aa3f325de90be7f9fc96577df3e71677c1e6574b99316835215f23c3784e7b
+Description:  alwaysonline uci metapackage
+
