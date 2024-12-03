@@ -89,12 +89,14 @@ jobs:
 
       - name: Determine branch name and Generate op_target_url_prefix
         run: |
+          SNAPSHOTS=$(echo "$OP_VERSION" | grep -q SNAPSHOT && { [ "$OP_VERSION" = "SNAPSHOT" ] && echo y || echo i; } || echo )
+          echo "SNAPSHOTS=$SNAPSHOTS" >> $GITHUB_ENV
           SNAPSHOTS_BRANCH="$(echo "$OP_VERSION" | sed -En 's|^(.+)-SNAPSHOT$|\1|p')"
           echo "SNAPSHOTS_BRANCH=$SNAPSHOTS_BRANCH" >> $GITHUB_ENV
           BRANCH="$([ -n "$SNAPSHOTS_BRANCH" ] && echo "$SNAPSHOTS_BRANCH" || echo "${OP_VERSION%.*}")"
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          op_target_url_prefix="$MIRROR_URL/$([ -n "$SNAPSHOTS_BRANCH" ] && echo 'snapshots' || echo "releases/$OP_VERSION")/targets/${{ inputs.board }}/${{ inputs.subtarget}}"
+          op_target_url_prefix="$MIRROR_URL/$([ -n "$SNAPSHOTS" ] && echo snapshots || echo "releases/$OP_VERSION")/targets/${{ inputs.board }}/${{ inputs.subtarget}}"
           echo "op_target_url_prefix=$op_target_url_prefix" >> $GITHUB_ENV
 
       - name: Check ${{ env.BRANCH }} if deployed
@@ -299,7 +301,7 @@ jobs:
         uses: fantastic-packages/gh-action-sdk@24.10
         env:
           #ARCH: ${{ inputs.ARCH }}-${{ env.OP_VERSION }}
-          ARCH: ${{ inputs.ARCH }}-${{ env.BRANCH }}-SNAPSHOT
+          ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS == 'y' && '' || format('{0}-', env.BRANCH) }}SNAPSHOT
           ARTIFACTS_DIR: /workdir
           DL_DIR: /workdir/DL
           FEED_DIR: ${{ github.workspace }}
