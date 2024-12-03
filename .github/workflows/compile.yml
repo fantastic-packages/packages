@@ -55,6 +55,7 @@ jobs:
       contents: write  # To push a branch
       # pull-requests: write  # To create a PR from that branch
     env:
+      MIRROR_URL: 'https://downloads.openwrt.org'
       OP_VERSION: ${{ inputs.OP_VERSION }}
       USIGN_ID: ${{ inputs.USIGN_ID }}
       USIGN_KEY: ${{ secrets[format('USIGN_{0}', inputs.USIGN_ID )] }}
@@ -216,7 +217,7 @@ jobs:
           pushd SPECIAL_WORKDIR
           #
           group "Download SDK"
-          op_target_url_prefix="https://downloads.openwrt.org/releases/$OP_VERSION/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
+          op_target_url_prefix="$MIRROR_URL/releases/$OP_VERSION/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
           sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
           sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
           axel -q -n8 "${op_target_url_prefix}/${sdk}"
@@ -422,7 +423,7 @@ jobs:
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
-          echo "artifact=OpenWRT-Build-$OP_VERSION-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}" >> $GITHUB_ENV
+          echo "artifact=OpenWRT-Build-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}" >> $GITHUB_ENV
           find ${{ inputs.GHPAGES_PATH }}/* -maxdepth 0 2>/dev/null | grep -v "$BRANCH" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.ARCH }}" | xargs -I{} rm -rf "{}"
           find ${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/* -maxdepth 0 2>/dev/null | grep -v "${{ inputs.BOARD }}" | xargs -I{} rm -rf "{}"
