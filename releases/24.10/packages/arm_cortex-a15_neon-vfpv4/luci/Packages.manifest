@@ -283,19 +283,19 @@ SHA256sum: cd2dd8280547bb99f3b9e3798535cdb5784bc4cf3912219af9075b110688beaf
 Description:  Real-time performance monitoring
 
 Package: luci-app-netspeedtest
-Version: 24.236.59826~ce6079d
+Version: 24.344.14466~4fd196a
 Depends: libc, iperf3, librespeed-go, python3-speedtest-cli, ca-certificates
 Source: /feed/luci/luci-app-netspeedtest
 SourceName: luci-app-netspeedtest
 Section: luci
-SourceDateEpoch: 1724431026
+SourceDateEpoch: 1733716866
 URL: https://github.com/openwrt/luci
 Maintainer: OpenWrt LuCI community
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-netspeedtest_24.236.59826~ce6079d_all.ipk
-Size: 6220
-SHA256sum: ddceda9a3e57058999aa651dbd82466e4d82f29796e9c774a393af15c467e65d
+Filename: luci-app-netspeedtest_24.344.14466~4fd196a_all.ipk
+Size: 6339
+SHA256sum: 4de9a46ce13626fdc5205344d9c21e0040c13af557c22a210452b84f2be87f88
 Description:  Test Net speed
 
 Package: luci-app-packagesync
@@ -1107,31 +1107,31 @@ SHA256sum: bc9bc545d3232ecfd7ef5aa0d89eec0d47877e5c07d91a533b5038712646ef8e
 Description:  Translation for luci-app-netdata - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-netspeedtest-zh-cn
-Version: 24.236.59826~ce6079d
+Version: 24.344.14466~4fd196a
 Depends: libc, luci-app-netspeedtest
 Source: /feed/luci/luci-app-netspeedtest
 SourceName: luci-app-netspeedtest
 Section: luci
-SourceDateEpoch: 1724431026
+SourceDateEpoch: 1733716866
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-cn_24.236.59826~ce6079d_all.ipk
-Size: 1980
-SHA256sum: fa565bc25e3f60990f045b4cb9b33bde7f92579cf5c1cf0762efeabc2299de82
+Filename: luci-i18n-netspeedtest-zh-cn_24.344.14466~4fd196a_all.ipk
+Size: 1977
+SHA256sum: d560b92e8d0e3feef3d2af296848e54fd8f1cb031f56ccce7bb0468a490afd96
 Description:  Translation for luci-app-netspeedtest - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-netspeedtest-zh-tw
-Version: 24.236.59826~ce6079d
+Version: 24.344.14466~4fd196a
 Depends: libc, luci-app-netspeedtest
 Source: /feed/luci/luci-app-netspeedtest
 SourceName: luci-app-netspeedtest
 Section: luci
-SourceDateEpoch: 1724431026
+SourceDateEpoch: 1733716866
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-tw_24.236.59826~ce6079d_all.ipk
-Size: 1993
-SHA256sum: 634e571c23167141b3e317b30055a95ab6a77e09291bc880074c0a0c0a7e1674
+Filename: luci-i18n-netspeedtest-zh-tw_24.344.14466~4fd196a_all.ipk
+Size: 1987
+SHA256sum: 31c98f13c01de38b7012722e3ec17f5cc0b04abc2e7f184241bf946f53ff0427
 Description:  Translation for luci-app-netspeedtest - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-packagesync-zh-cn
