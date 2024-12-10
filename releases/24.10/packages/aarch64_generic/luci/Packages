@@ -1,13 +1,13 @@
 Package: luci-app-alwaysonline
-Version: 24.340.45793~99b5679
+Version: 24.345.30274~d06bc29
 Depends: libc, uci-alwaysonline
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-app-alwaysonline_24.340.45793~99b5679_all.ipk
-Size: 2460
-SHA256sum: c235a8ef2da281e1e81521e8c472ebccdbc53581afea65da96b469db73f417b9
+Filename: luci-app-alwaysonline_24.345.30274~d06bc29_all.ipk
+Size: 2469
+SHA256sum: 608552ab66782662f5f49d83f0cf5a45cb38ca43dceddadee22bb431d166bd44
 Description:  Hijack/bypass Windows NCSI and iOS portal detection
 
 Package: luci-app-argon-config
@@ -30,8 +30,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-change-mac_0.3.9-r1_all.ipk
-Size: 5808
-SHA256sum: 89238fab336d51d67598c77a480331481c29c1898d9b0fd36d9325d64ed560ef
+Size: 5810
+SHA256sum: 3463c240180eef61d40fb53e8f2deb17eda47c8f2d6510e68051b230342cca29
 Description:  Assign a random MAC address to the designated interface on every time boot.
 
 Package: luci-app-cpu-perf
@@ -100,41 +100,41 @@ SHA256sum: ed5d0d371105b70835750bbd2bdcad445066c8f57505b579ad8a94aef82d19f4
 Description:  Information about connected disk devices (partitions, filesystems, SMART).
 
 Package: luci-app-dnsproxy
-Version: 24.340.45743~e7d8373
+Version: 24.345.30363~8063733
 Depends: libc, dnsproxy
 License: Apache-2.0
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-app-dnsproxy_24.340.45743~e7d8373_all.ipk
-Size: 3322
-SHA256sum: 96a9fad2e90760cca37126d029f0f61b77aa0d19c5773261402fd33fecc81a38
+Filename: luci-app-dnsproxy_24.345.30363~8063733_all.ipk
+Size: 3329
+SHA256sum: 28ecd929b2705e13b953952892c3a33e46015907f0ef4e9692c19708a01b9f8d
 Description:  Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
 
 Package: luci-app-einat
-Version: 24.330.13327~f512e56
+Version: 24.345.30380~6273ef4
 Depends: libc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-app-einat_24.330.13327~f512e56_all.ipk
-Size: 3070
-SHA256sum: ebda450409185cd7bcb31c94c55f0fee8cb9b1d36aa3c3e01f5ad782459a399c
+Filename: luci-app-einat_24.345.30380~6273ef4_all.ipk
+Size: 3075
+SHA256sum: 80aa2b334bde076a9e80fe3a87428d591135f50162076251f9c9338962040066
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: 24.337.06422~bf88488
+Version: 24.345.28801~b00545d
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 471040
-Filename: luci-app-fchomo_24.337.06422~bf88488_all.ipk
-Size: 219981
-SHA256sum: 9691d614f0cc7d5ba4bb7501b4cba498c217dae7e1bbff90d127a6611ccf6f51
+Filename: luci-app-fchomo_24.345.28801~b00545d_all.ipk
+Size: 219996
+SHA256sum: 3a7d35902906b7e5bb5464fd7fe569d4863ee2eea91636aa3d6706fddde6a995
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -189,40 +189,40 @@ SHA256sum: 49fa1d962e79844e15b373bc933777fa94af0b33a3a638aa847eba8ae30f318e
 Description:  Advanced syslog and kernel log (tail, search, etc)
 
 Package: luci-app-natmapt
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, natmapt, coreutils-timeout
 License: Apache-2.0
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-natmapt_24.260.56193~f0685d1_all.ipk
-Size: 7945
-SHA256sum: 57bdea5e284832c1ba8fb1e4c168548fb1145b9cbd0ef6f5934f70f907eef442
+Filename: luci-app-natmapt_24.345.29858~48424c1_all.ipk
+Size: 7950
+SHA256sum: d0ea160f66f7e4b3ff4d8b09e55f37b9a73d21167d554da6854d3090ff952c20
 Description:  TCP/UDP port mapping for full cone NAT
 
 Package: luci-app-netdata
-Version: 24.236.56114~0002e6a
+Version: 24.345.29545~1643c53
 Depends: libc, netdata-ssl, openssl-util
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-app-netdata_24.236.56114~0002e6a_all.ipk
-Size: 3537
-SHA256sum: cd2dd8280547bb99f3b9e3798535cdb5784bc4cf3912219af9075b110688beaf
+Filename: luci-app-netdata_24.345.29545~1643c53_all.ipk
+Size: 3543
+SHA256sum: 3c8c5721186b000ace13e766c6472f2527e37e83ed99f6159e6863b4217769e0
 Description:  Real-time performance monitoring
 
 Package: luci-app-netspeedtest
-Version: 24.344.14466~4fd196a
+Version: 24.345.29323~942763e
 Depends: libc, iperf3, librespeed-go, python3-speedtest-cli, ca-certificates
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-netspeedtest_24.344.14466~4fd196a_all.ipk
-Size: 6339
-SHA256sum: 4de9a46ce13626fdc5205344d9c21e0040c13af557c22a210452b84f2be87f88
+Filename: luci-app-netspeedtest_24.345.29323~942763e_all.ipk
+Size: 6343
+SHA256sum: 12d9387aa922cd4b6097f990e0a1696b67b17d72cf4de50ba6f9edc34ac38e36
 Description:  Test Net speed
 
 Package: luci-app-packagesync
@@ -233,8 +233,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 61440
 Filename: luci-app-packagesync_0.2024.08.15-r1_all.ipk
-Size: 12252
-SHA256sum: 6e7874a5f8e48c97295a1a6cc409175ed1dbeb779d296344f886b5822c6e61fb
+Size: 12248
+SHA256sum: 22cdf1d12a823f0f35efc46be9a38aedd6bffe325ea79c36483d00e2a1e1db11
 Description:  Used to build a local mirror feeds source on the router
 
 Package: luci-app-pcap-dnsproxy
@@ -282,8 +282,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 952320
 Filename: luci-app-tinyfilemanager_2.6-r20241204_all.ipk
-Size: 918118
-SHA256sum: 84673fd716fdb4173ae0f8911c5990079ec7dd1129cae47a26c6beab96cfb803
+Size: 918125
+SHA256sum: c9ccd616c626c4a26250917a36579d8b829d4b5da68fb66ab42fa7a110845908
 Description:  A Web based File Manager in PHP
 
 Package: luci-app-tn-netports
@@ -294,8 +294,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 102400
 Filename: luci-app-tn-netports_2.0.6-r1_all.ipk
-Size: 16941
-SHA256sum: 589ecac24a4f197c0dec5c452130f4fdc4f39823ab3c3e8dc9376f4082b0cbd2
+Size: 16942
+SHA256sum: c2e55a59fd4cbc3f14d76e029be5e305a413a0c9d7223b8f3e5f7278e8aa9460
 Description:  Network ports status LuCI application
 
 Package: luci-app-xray-status
@@ -306,8 +306,8 @@ Section: Custom
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-xray-status_3.5.0-r1_all.ipk
-Size: 4148
-SHA256sum: 73549e151a89238b54c2c5c22b95ab6d0d2b69aab8b66379a3a43ca8fbc7977f
+Size: 4140
+SHA256sum: 539b3509609702c28b8cdbc3f4031bc903773046f3c40ee1763a1f489cfe198e
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -323,25 +323,25 @@ SHA256sum: 8d74301c9af58d8474dcc768d7ea1edf6d267a053b2a6c05e50524f0cb620262
 Description:  LuCI Support for Xray (Client-side Rendered).
 
 Package: luci-i18n-alwaysonline-zh-cn
-Version: 24.340.45793~99b5679
+Version: 24.345.30274~d06bc29
 Depends: libc, luci-app-alwaysonline
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-alwaysonline-zh-cn_24.340.45793~99b5679_all.ipk
-Size: 1597
-SHA256sum: 3fbd248d4353a75e424d52912f5ae59f075804e176e151e6dee14631c63a1a26
+Filename: luci-i18n-alwaysonline-zh-cn_24.345.30274~d06bc29_all.ipk
+Size: 1602
+SHA256sum: 4566aa6dcc6ae4a7c5a17cc9833c7b6020a9dbc0f86f74350fa9a5f562028cb2
 Description:  Translation for luci-app-alwaysonline - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-alwaysonline-zh-tw
-Version: 24.340.45793~99b5679
+Version: 24.345.30274~d06bc29
 Depends: libc, luci-app-alwaysonline
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-alwaysonline-zh-tw_24.340.45793~99b5679_all.ipk
-Size: 1595
-SHA256sum: 83da1e19deae4193f314aed6b6159c6221ced36f4deae9a3979017ea5ae1623a
+Filename: luci-i18n-alwaysonline-zh-tw_24.345.30274~d06bc29_all.ipk
+Size: 1596
+SHA256sum: 34eff08b453bab89523e6e7ca5e79abf00580943cfe36a10e3721c63c39e510c
 Description:  Translation for luci-app-alwaysonline - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-argon-config-es
@@ -378,25 +378,25 @@ SHA256sum: 21391a1482577d9c85db1202072633d9f34e6ec54a3361d9316d913f406cd89d
 Description:  Translation for luci-app-argon-config - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-change-mac-zh-cn
-Version: 24.216.25917~56a80fe
+Version: 24.345.30302~8bd052f
 Depends: libc, luci-app-change-mac
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-change-mac-zh-cn_24.216.25917~56a80fe_all.ipk
-Size: 1711
-SHA256sum: 258af367a590f983d89e2ac1d573ba4cf9f995640d54058fd7d34bcfde506265
+Filename: luci-i18n-change-mac-zh-cn_24.345.30302~8bd052f_all.ipk
+Size: 1708
+SHA256sum: 551117fb3636d345a31a319a72409ef9c07a96617c1e6a6ff67e954964a2fe5c
 Description:  Translation for luci-app-change-mac - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-change-mac-zh-tw
-Version: 24.216.25917~56a80fe
+Version: 24.345.30302~8bd052f
 Depends: libc, luci-app-change-mac
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-change-mac-zh-tw_24.216.25917~56a80fe_all.ipk
+Filename: luci-i18n-change-mac-zh-tw_24.345.30302~8bd052f_all.ipk
 Size: 1705
-SHA256sum: 28d10cffeab830edfd58b14d27994d491a1b49787e6f09c6068908a9a0520889
+SHA256sum: a4348b1a006ba33b8e666175ba45197c8e67867dd2a9b7e3649f45976e484491
 Description:  Translation for luci-app-change-mac - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-cpu-perf-ru
@@ -520,38 +520,38 @@ SHA256sum: 158b3a2c3f1fd418f180819d1092cfdfcfc3e91fed4eef2c8884674b5e74711a
 Description:  Translation for luci-app-disks-info - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-einat-zh-cn
-Version: 24.330.13327~f512e56
+Version: 24.345.30380~6273ef4
 Depends: libc, luci-app-einat
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-einat-zh-cn_24.330.13327~f512e56_all.ipk
-Size: 1795
-SHA256sum: de2d10a07e4e56baf6d72fda0a4e7bfc1f9969ba3edb9f715a9b58a011d83e57
+Filename: luci-i18n-einat-zh-cn_24.345.30380~6273ef4_all.ipk
+Size: 1796
+SHA256sum: 4b2536a580e3f78e0921b06eed634e256031d0a4ebe7e4c92671deb3719b353b
 Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-einat-zh-tw
-Version: 24.330.13327~f512e56
+Version: 24.345.30380~6273ef4
 Depends: libc, luci-app-einat
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-einat-zh-tw_24.330.13327~f512e56_all.ipk
-Size: 1805
-SHA256sum: 8cf5b49751c1b26dfb55056e19a74dd083ac9f3071cdb55db935707fdeddd232
+Filename: luci-i18n-einat-zh-tw_24.345.30380~6273ef4_all.ipk
+Size: 1807
+SHA256sum: f162ee8204053818c4a372cda8e02c25a6a249e49020f6c99430d7c9847ecb4b
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: 24.337.06422~bf88488
+Version: 24.345.28801~b00545d
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-cn_24.337.06422~bf88488_all.ipk
-Size: 10551
-SHA256sum: ad18dd21f37a51723c35963fffbc19e893a592951ad9e2c3b24a6324129b9a93
+Filename: luci-i18n-fchomo-zh-cn_24.345.28801~b00545d_all.ipk
+Size: 10554
+SHA256sum: 04c2c518198e72964a4dbb2b4bd7ee935d26055ce1d7a8e9b2ec924889121572
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-interfaces-statistics-ru
@@ -602,285 +602,285 @@ SHA256sum: ad04246691aed91fc79a60d670ae6136967c03f473545ab9dca05a4b9ed5a6e7
 Description:  Translation for luci-app-log-viewer - Русский (Russian)
 
 Package: luci-i18n-natmapt-cs
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-cs_24.260.56193~f0685d1_all.ipk
-Size: 1105
-SHA256sum: 62761a63da4d851741c6a3832cb5c9b6fd22399c664fc11a1d30b7ca9632d70e
+Filename: luci-i18n-natmapt-cs_24.345.29858~48424c1_all.ipk
+Size: 1106
+SHA256sum: 7f0e5e22088b1f40466a0b3da878fc17a0c4c90d91a18618a6f5f71a0288f7b0
 Description:  Translation for luci-app-natmapt - Čeština (Czech)
 
 Package: luci-i18n-natmapt-da
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-da_24.260.56193~f0685d1_all.ipk
-Size: 1412
-SHA256sum: f8b645f6080bcdf7704cef5edd1096e6478c62acce637522b0d82bde81927fbf
+Filename: luci-i18n-natmapt-da_24.345.29858~48424c1_all.ipk
+Size: 1411
+SHA256sum: 8d5656bcb7f3d21ca46eb1de14c3d2bd0f907ff853eebd097e927ec542d401ce
 Description:  Translation for luci-app-natmapt - Dansk (Danish)
 
 Package: luci-i18n-natmapt-de
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-de_24.260.56193~f0685d1_all.ipk
-Size: 1515
-SHA256sum: e6854ed5d86b98c14c167e649c5e336e1ae9d6c4f64af307968be56b16dad872
+Filename: luci-i18n-natmapt-de_24.345.29858~48424c1_all.ipk
+Size: 1510
+SHA256sum: f1bfab4104daa301d421af6b75ea3f89e5cb08ee03ce7179b804bd6830716401
 Description:  Translation for luci-app-natmapt - Deutsch (German)
 
 Package: luci-i18n-natmapt-es
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-es_24.260.56193~f0685d1_all.ipk
-Size: 1532
-SHA256sum: 9f1b39c01a73296417814ad37a90a237fd9ba5a54ea5d68281fc8123816beed6
+Filename: luci-i18n-natmapt-es_24.345.29858~48424c1_all.ipk
+Size: 1528
+SHA256sum: b5983c5f1c5e2eccce11ef05a1f6507d2ede676109cdda1473dcae0360222089
 Description:  Translation for luci-app-natmapt - Español (Spanish)
 
 Package: luci-i18n-natmapt-fr
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-fr_24.260.56193~f0685d1_all.ipk
+Filename: luci-i18n-natmapt-fr_24.345.29858~48424c1_all.ipk
 Size: 1526
-SHA256sum: 8795da338ad660097014899db6c5d6a3342caec92b9678f9dc26b188099ab0e7
+SHA256sum: fdde3e9513e935b0248322dbb91d12e80323e2de36891026d8ff201d3b183f67
 Description:  Translation for luci-app-natmapt - Français (French)
 
 Package: luci-i18n-natmapt-it
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-it_24.260.56193~f0685d1_all.ipk
-Size: 1324
-SHA256sum: 80f22b2f80fc73a2dfc299dad24be0bc3d050bdd8675aa58ec1782e0c2502c1c
+Filename: luci-i18n-natmapt-it_24.345.29858~48424c1_all.ipk
+Size: 1319
+SHA256sum: 9c0b6fb2096dd89fe2e8a9f72c1618fc5c1ff27b0386e07ffd2fe5a686bd21e2
 Description:  Translation for luci-app-natmapt - Italiano (Italian)
 
 Package: luci-i18n-natmapt-lt
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-lt_24.260.56193~f0685d1_all.ipk
-Size: 1635
-SHA256sum: 0d41570de732ea909e57f1f1aa25609b7eef05a8cca1f9535037cb0db616ab5f
+Filename: luci-i18n-natmapt-lt_24.345.29858~48424c1_all.ipk
+Size: 1632
+SHA256sum: 0472dc7b2d9436614b6e192bbd23a40cc3e325e02819e7f329a80771250eb721
 Description:  Translation for luci-app-natmapt - Lietuvių (Lithuanian)
 
 Package: luci-i18n-natmapt-nl
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-nl_24.260.56193~f0685d1_all.ipk
-Size: 1430
-SHA256sum: 78198ef4d7798d2813218fa83e27fd874133011b2cb76b58667f3a83ea212746
+Filename: luci-i18n-natmapt-nl_24.345.29858~48424c1_all.ipk
+Size: 1423
+SHA256sum: 37983f850a0ed31456635987d04884712b9b961cbcb187c9fc489043a6ef73ba
 Description:  Translation for luci-app-natmapt - Nederlands (Dutch)
 
 Package: luci-i18n-natmapt-pl
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-pl_24.260.56193~f0685d1_all.ipk
-Size: 1569
-SHA256sum: 9f91dd509159c76074c6eee23759b5d974528a55f438678c96f608d05468a2f7
+Filename: luci-i18n-natmapt-pl_24.345.29858~48424c1_all.ipk
+Size: 1566
+SHA256sum: 4e9a803040bc3cf889c37c2fa45ee63675251f6d2791d3db5e58b711ad0f9098
 Description:  Translation for luci-app-natmapt - Polski (Polish)
 
 Package: luci-i18n-natmapt-pt-br
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-pt-br_24.260.56193~f0685d1_all.ipk
-Size: 1554
-SHA256sum: 59906ff07982080680778885808a870e7f278f83fb8a58864160c52ae533bae5
+Filename: luci-i18n-natmapt-pt-br_24.345.29858~48424c1_all.ipk
+Size: 1548
+SHA256sum: eb508fef063f5cbec60c79c2dab2b016c5d5b4a2ad609bec0f8a4d71dda229b5
 Description:  Translation for luci-app-natmapt - Português do Brasil (Brazilian Portuguese)
 
 Package: luci-i18n-natmapt-pt
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-pt_24.260.56193~f0685d1_all.ipk
-Size: 1511
-SHA256sum: 9a70021e47f7de72c76da2f69480eba65203d661ea1ae5190231d3764718ef3a
+Filename: luci-i18n-natmapt-pt_24.345.29858~48424c1_all.ipk
+Size: 1507
+SHA256sum: eadb96c44eaa3b9051489ce574a0bcc65ee85674aed36179fc8407f664987930
 Description:  Translation for luci-app-natmapt - Português (Portuguese)
 
 Package: luci-i18n-natmapt-ro
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-ro_24.260.56193~f0685d1_all.ipk
-Size: 1557
-SHA256sum: 27ea3ab74f11325eae31979143b053e504333136c45c36d923beb847aa1e9b1b
+Filename: luci-i18n-natmapt-ro_24.345.29858~48424c1_all.ipk
+Size: 1554
+SHA256sum: d094bd7f340fbae71d632b0c74f60201c140f529c19ffb1dc6fdb41c44ef3fd4
 Description:  Translation for luci-app-natmapt - Română (Romanian)
 
 Package: luci-i18n-natmapt-ru
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-ru_24.260.56193~f0685d1_all.ipk
-Size: 1667
-SHA256sum: d7e2b6b91cd75cbf2440379f0baac1c6e99b519595fd03e985bd7bd5d71f35b9
+Filename: luci-i18n-natmapt-ru_24.345.29858~48424c1_all.ipk
+Size: 1660
+SHA256sum: 73cfac80c82db93d7a80f0d65c06ba5c9df9bf225c105dc0f5c370a27824d0e6
 Description:  Translation for luci-app-natmapt - Русский (Russian)
 
 Package: luci-i18n-natmapt-sv
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-sv_24.260.56193~f0685d1_all.ipk
+Filename: luci-i18n-natmapt-sv_24.345.29858~48424c1_all.ipk
 Size: 1091
-SHA256sum: 7447a299224d909a7bc99e6c5859bed84512474c130615aaaea7e145befa0815
+SHA256sum: f589b17712b7a1d3487e22fefb02f38c80b6b728808556e3f002177be3d4aaa2
 Description:  Translation for luci-app-natmapt - Svenska (Swedish)
 
 Package: luci-i18n-natmapt-tr
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-tr_24.260.56193~f0685d1_all.ipk
-Size: 1103
-SHA256sum: f1da56c00ff4323170071b1d4c4d1cf1d5c85384335c6f8620662201df62dd2f
+Filename: luci-i18n-natmapt-tr_24.345.29858~48424c1_all.ipk
+Size: 1104
+SHA256sum: 3dbd4bbc77f35dcf8b6420635ead064fb5692ffc73b2a47e7457dd749b16fba3
 Description:  Translation for luci-app-natmapt - Türkçe (Turkish)
 
 Package: luci-i18n-natmapt-vi
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-vi_24.260.56193~f0685d1_all.ipk
-Size: 1568
-SHA256sum: c9cb2568e09581d420fc46a8ba2ec793d98aff994b66fc40af21e6e4d163edc9
+Filename: luci-i18n-natmapt-vi_24.345.29858~48424c1_all.ipk
+Size: 1563
+SHA256sum: 3ffdd0fd2666de09721bf250b797387c67a488e9e1bc9afb45030680c46823eb
 Description:  Translation for luci-app-natmapt - Tiếng Việt (Vietnamese)
 
 Package: luci-i18n-natmapt-zh-cn
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-zh-cn_24.260.56193~f0685d1_all.ipk
-Size: 3073
-SHA256sum: bf9399413de7a3f5bff350fb407b2a826d926eef28b79dcd0391a003dfe805b9
+Filename: luci-i18n-natmapt-zh-cn_24.345.29858~48424c1_all.ipk
+Size: 3077
+SHA256sum: 17842d8e00c4e64f2b144b31cc53890bed582dcb5586d3df5c63fc890b30f9fe
 Description:  Translation for luci-app-natmapt - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-natmapt-zh-tw
-Version: 24.260.56193~f0685d1
+Version: 24.345.29858~48424c1
 Depends: libc, luci-app-natmapt
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-natmapt-zh-tw_24.260.56193~f0685d1_all.ipk
-Size: 3091
-SHA256sum: 78f323498f1c0877c5dcc4c94a224c7e32a01cccbc90d123051974b406505b7b
+Filename: luci-i18n-natmapt-zh-tw_24.345.29858~48424c1_all.ipk
+Size: 3094
+SHA256sum: 06ef672a59a5fbd2d96c3d84d3ada4c483320f17315850592c034fda96e2c7ad
 Description:  Translation for luci-app-natmapt - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-netdata-zh-cn
-Version: 24.236.56114~0002e6a
+Version: 24.345.29545~1643c53
 Depends: libc, luci-app-netdata
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netdata-zh-cn_24.236.56114~0002e6a_all.ipk
+Filename: luci-i18n-netdata-zh-cn_24.345.29545~1643c53_all.ipk
 Size: 1690
-SHA256sum: 6a8da1b1b0406a937e1bcddb9d0579f2986979fae75614c7b0d15e92b27aa934
+SHA256sum: 92728f8d5164ea0441d6090bf8e5e3d7b87f46ffaa3ff4e711985803f67c83e5
 Description:  Translation for luci-app-netdata - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-netdata-zh-tw
-Version: 24.236.56114~0002e6a
+Version: 24.345.29545~1643c53
 Depends: libc, luci-app-netdata
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netdata-zh-tw_24.236.56114~0002e6a_all.ipk
-Size: 1702
-SHA256sum: bc9bc545d3232ecfd7ef5aa0d89eec0d47877e5c07d91a533b5038712646ef8e
+Filename: luci-i18n-netdata-zh-tw_24.345.29545~1643c53_all.ipk
+Size: 1713
+SHA256sum: 687a522e9a04fc38f60288e268ffb5d046a741937c0a94af5c286d8782ca5d13
 Description:  Translation for luci-app-netdata - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-netspeedtest-zh-cn
-Version: 24.344.14466~4fd196a
+Version: 24.345.29323~942763e
 Depends: libc, luci-app-netspeedtest
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-cn_24.344.14466~4fd196a_all.ipk
-Size: 1977
-SHA256sum: d560b92e8d0e3feef3d2af296848e54fd8f1cb031f56ccce7bb0468a490afd96
+Filename: luci-i18n-netspeedtest-zh-cn_24.345.29323~942763e_all.ipk
+Size: 1982
+SHA256sum: 34154cfe5d3e0275375fb8c4a82fe24b00cb8082894bd2b158670204a7184e00
 Description:  Translation for luci-app-netspeedtest - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-netspeedtest-zh-tw
-Version: 24.344.14466~4fd196a
+Version: 24.345.29323~942763e
 Depends: libc, luci-app-netspeedtest
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-tw_24.344.14466~4fd196a_all.ipk
-Size: 1987
-SHA256sum: 31c98f13c01de38b7012722e3ec17f5cc0b04abc2e7f184241bf946f53ff0427
+Filename: luci-i18n-netspeedtest-zh-tw_24.345.29323~942763e_all.ipk
+Size: 1994
+SHA256sum: fc465b0775aac807f09c7453d5e4619f2c083effceda433a0eecc908ddf0dfc5
 Description:  Translation for luci-app-netspeedtest - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-packagesync-zh-cn
-Version: 24.340.45576~039aee5
+Version: 24.345.29493~771eeff
 Depends: libc, luci-app-packagesync
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-packagesync-zh-cn_24.340.45576~039aee5_all.ipk
-Size: 2235
-SHA256sum: 49db3664792d0fa0e3f26bb12d7d8a8e1e71445481190bb51d68052ce7ca9741
+Filename: luci-i18n-packagesync-zh-cn_24.345.29493~771eeff_all.ipk
+Size: 2233
+SHA256sum: a792565b4694419110710d4320f20a4eac0211862513eb48b31143960bb338e1
 Description:  Translation for luci-app-packagesync - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-packagesync-zh-tw
-Version: 24.340.45576~039aee5
+Version: 24.345.29493~771eeff
 Depends: libc, luci-app-packagesync
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-packagesync-zh-tw_24.340.45576~039aee5_all.ipk
-Size: 2247
-SHA256sum: a1b5e539233545779c36ca57170668e265c5a4b4cad0c38b7238b431a6f7f57f
+Filename: luci-i18n-packagesync-zh-tw_24.345.29493~771eeff_all.ipk
+Size: 2246
+SHA256sum: 985f03043ba6fa7b943907da9334dece1bdf491933076859fce77ec13119e34a
 Description:  Translation for luci-app-packagesync - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-pcap-dnsproxy-zh-cn
@@ -941,58 +941,58 @@ SHA256sum: 7ac4b913913b4de733bcfa26bb6bc9de9dc1eda6e1517a2a6bd4df48073e1ada
 Description:  Translation for luci-app-temp-status - Русский (Russian)
 
 Package: luci-i18n-tinyfilemanager-zh-cn
-Version: 24.340.45410~dd726cd
+Version: 24.345.29405~762a318
 Depends: libc, luci-app-tinyfilemanager
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-tinyfilemanager-zh-cn_24.340.45410~dd726cd_all.ipk
-Size: 1912
-SHA256sum: 36ba949d2e867fcec677d35bd93be06b83caddc812aedcec44f64bc1fbb09df0
+Filename: luci-i18n-tinyfilemanager-zh-cn_24.345.29405~762a318_all.ipk
+Size: 1915
+SHA256sum: 5cd92f7da653650dfad54f6487d139fdd37ff46b8335ee201c27563bece30e75
 Description:  Translation for luci-app-tinyfilemanager - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-tinyfilemanager-zh-tw
-Version: 24.340.45410~dd726cd
+Version: 24.345.29405~762a318
 Depends: libc, luci-app-tinyfilemanager
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-tinyfilemanager-zh-tw_24.340.45410~dd726cd_all.ipk
-Size: 1926
-SHA256sum: 815248f5464e227ef52817ff8771c8e9eacfbec5ce97889f109374608d63aa0d
+Filename: luci-i18n-tinyfilemanager-zh-tw_24.345.29405~762a318_all.ipk
+Size: 1919
+SHA256sum: 049fe7aed754218cad2b31453072e41c46e0dc5c68fe32f8a32c0cc9f0d759d9
 Description:  Translation for luci-app-tinyfilemanager - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-tn-netports-ru
-Version: 24.041.16828~8c4f951
+Version: 24.345.29371~a6e815b
 Depends: libc, luci-app-tn-netports
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-tn-netports-ru_24.041.16828~8c4f951_all.ipk
-Size: 1788
-SHA256sum: da4f0b5287dacad8b94a94b9f6230c0669139c43dee5a62109d49e30721a0fb1
+Filename: luci-i18n-tn-netports-ru_24.345.29371~a6e815b_all.ipk
+Size: 1790
+SHA256sum: 7bb33294ca743fca96ce5d2ab95ff70fe6c06cbb6c7383a0dc81dfe3dd4eaf09
 Description:  Translation for luci-app-tn-netports - Русский (Russian)
 
 Package: luci-i18n-tn-netports-zh-cn
-Version: 24.041.16828~8c4f951
+Version: 24.345.29371~a6e815b
 Depends: libc, luci-app-tn-netports
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-tn-netports-zh-cn_24.041.16828~8c4f951_all.ipk
-Size: 1954
-SHA256sum: 0e17a4a0e60655bb5f15788715a0f19ce0b35161ab33861659a5400684eb96ae
+Filename: luci-i18n-tn-netports-zh-cn_24.345.29371~a6e815b_all.ipk
+Size: 1952
+SHA256sum: 70df5c821ee5071caa7972ab475aee4bfb76cbdeec806dcb8eff481d60560e14
 Description:  Translation for luci-app-tn-netports - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-tn-netports-zh-tw
-Version: 24.041.16828~8c4f951
+Version: 24.345.29371~a6e815b
 Depends: libc, luci-app-tn-netports
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-tn-netports-zh-tw_24.041.16828~8c4f951_all.ipk
-Size: 1954
-SHA256sum: 731cb66e8a21e8e9c0d8e8da413058661585ca201bae4855ef81de08db2b96e4
+Filename: luci-i18n-tn-netports-zh-tw_24.345.29371~a6e815b_all.ipk
+Size: 1953
+SHA256sum: e61be0bfac1f8a05f8a3840e7fae7a12bfd43cbd40353eca9855f8bfc8fa1a7a
 Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
 
 Package: luci-theme-argon
