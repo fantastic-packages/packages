@@ -271,7 +271,7 @@ jobs:
               BUILD_LOG=y \
               IGNORE_ERRORS="$IGNORE_ERRORS" \
               CONFIG_AUTOREMOVE=y \
-              V=s \
+              V="$V" \
               -j$NPROC
           done
           endgroup
@@ -311,7 +311,7 @@ jobs:
           PACKAGES: ${{ env.PACKAGES }}
           INDEX: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
-          V: s
+          #V: s
 
       - name: Upload error logs
         if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
