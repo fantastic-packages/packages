@@ -151,6 +151,28 @@ SHA256sum: 23e7fc9ea7432a43fe83886c8e9c2e3d7f6a82fb896a7988c4185fb6de1a63b9
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
+Version: git-24.337.06422-bf88488
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
+Section: luci
+Architecture: all
+Installed-Size: 218842
+Filename: luci-app-fchomo_git-24.337.06422-bf88488_all.ipk
+Size: 219959
+SHA256sum: 967fd54fe936f7851aec069634b40b64be402be56898543baeff955975143439
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-24.345.28801-b00545d
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
+Section: luci
+Architecture: all
+Installed-Size: 218854
+Filename: luci-app-fchomo_git-24.345.28801-b00545d_all.ipk
+Size: 219974
+SHA256sum: 2bd5d59b546b7bf1117e5e5b6c6c53842a012f65fc04c764f495845775d9ff1b
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
 Version: git-24.345.30764-08dc0d5
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
 Section: luci
@@ -666,6 +688,28 @@ Filename: luci-i18n-einat-zh-tw_git-24.345.30380-6273ef4_all.ipk
 Size: 1807
 SHA256sum: 9a440e3687a3595609264cd2ad83a1f07c9d9cc1aec7da3ba5fbcf8f9fd87274
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-24.337.06422-bf88488
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 9782
+Filename: luci-i18n-fchomo-zh-cn_git-24.337.06422-bf88488_all.ipk
+Size: 10553
+SHA256sum: bada950c6b5632a0194e5a94d067e1a6bc277109ed5558c52f8e295c064a1e92
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-24.345.28801-b00545d
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 9780
+Filename: luci-i18n-fchomo-zh-cn_git-24.345.28801-b00545d_all.ipk
+Size: 10554
+SHA256sum: f37e5f2cf506bbabcdf1560d3ed775b7f2646ff02f00f4d664bca22022bae772
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-fchomo-zh-cn
 Version: git-24.345.30764-08dc0d5
