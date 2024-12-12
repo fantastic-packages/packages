@@ -41,13 +41,13 @@ SourceName: fantastic-keyring
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1733819263
+SourceDateEpoch: 1733894518
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 310
+Installed-Size: 308
 Filename: fantastic-keyring_20240427-1_all.ipk
-Size: 1051
-SHA256sum: 06b8aa404bcd6ab646ca932505efed05cbc47b90cb2c200027487657d6b9dfbe
+Size: 1050
+SHA256sum: 710d8dcadcbf0d6d4a61ec72a2c2a9ca72049a511c4442ece114e50dd7af809d
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -58,13 +58,13 @@ SourceName: fantastic-packages-feeds
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1733819263
+SourceDateEpoch: 1733894518
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
 Installed-Size: 96
 Filename: fantastic-packages-feeds_20241201-1_all.ipk
-Size: 1545
-SHA256sum: 8d6d03af5a82343890aced5335631b4b2317187d0ad6a48cf567d06a9c72544e
+Size: 1544
+SHA256sum: e41309577b6093deb88a9cfff9a1698719754613ee74bebff0d3e11166f60f90
 Description:  Installer for fantastic-packages feeds
 
 Package: go-stun
@@ -274,24 +274,6 @@ SHA256sum: 754cb21f19f646acc838c44ec351deb914b60d7495dca69fdd3659ab61ddb06c
 Description:  This package provides the Qt6 Xml v6.8.1 library.
 
 Package: mihomo
-Version: 1.18.10-1
-Depends: libc
-Source: /feed/packages/openwrt-fchomo/mihomo
-SourceName: mihomo
-License: GPL-2.0
-LicenseFiles: LICENSE
-Section: net
-Require-User: mihomo=7890:mihomo=7890
-SourceDateEpoch: 1733817601
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 12217227
-Filename: mihomo_1.18.10-1_x86_64.ipk
-Size: 12181641
-SHA256sum: 630034cbb80dde49ef314b420951e8171015aaad43244a41bcd897bad0e3e00b
-Description:  Another Mihomo Kernel.
-
-Package: mihomo
 Version: 1.19.0-1
 Depends: libc
 Source: /feed/packages/openwrt-fchomo/mihomo
@@ -303,10 +285,10 @@ Require-User: mihomo=7890:mihomo=7890
 SourceDateEpoch: 1733819564
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: x86_64
-Installed-Size: 13279030
+Installed-Size: 13279036
 Filename: mihomo_1.19.0-1_x86_64.ipk
-Size: 13240867
-SHA256sum: c0f48b465397b819ec4b3fae4b1b1d26c21d23fafc67e8ab3670ba51130b8e5d
+Size: 13241487
+SHA256sum: d75cea01d19f5dad5423f7072abb85979ddfbcee8c3431ca26a473fdbe0a476a
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -480,13 +462,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1733819263
+SourceDateEpoch: 1733894518
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 366
+Installed-Size: 365
 Filename: plain-nginx_20231028_all.ipk
-Size: 1163
-SHA256sum: 263772be8fbf33d66ab6843ee4b0984fffd8cce453a2a79956e539228650d803
+Size: 1164
+SHA256sum: 3735e934a0e841c777a6993bc0c940e6384290ab34569591378bef2ead173027
 Description:  Read text document directly
 
 Package: qbittorrent
