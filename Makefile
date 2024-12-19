@@ -1,16 +1,14 @@
+# SPDX-License-Identifier: GPL-3
 #
-# Copyright (C) 2023 muink
-#
-# This is free software, licensed under the GNU General Public License v3.
-# See /LICENSE for more information.
-#
+# Copyright (C) 2023-2024 muink <https://github.com/muink>
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-packages
 PKG_VERSION:=1.0
 PKG_RELEASE:=20230428
 
-PKG_MAINTAINER:=muink <hukk1996@gmail.com>
+PKG_MAINTAINER:=Anya Lin <hukk1996@gmail.com>
 PKG_LICENSE:=GPL-3
 PKG_LICENSE_FILES:=LICENSE
 

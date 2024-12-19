@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+#
+# Copyright (C) 2023-2024 fantastic-packages
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fantastic-keyring
