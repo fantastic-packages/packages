@@ -254,7 +254,9 @@ jobs:
           pushd SDK
           #
           group "scripts/feeds update -a"
-          scripts/feeds update -a
+          grep -q ' ' < /dev/null || until [ $? = 0 ]; do
+            scripts/feeds update -a
+          done
           endgroup
           #
           group "scripts/feeds install $SPECIALS"
