@@ -160,8 +160,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 51200
 Filename: luci-app-internet-detector_1.3.1-r1_all.ipk
-Size: 9053
-SHA256sum: f19b34ba0c258eec478e49f0a25acbbcd37fb6bcf401e858c26fd179ef042cab
+Size: 9055
+SHA256sum: 872d1568ee56d11c38f3b2677474d7892f35a39cc423eb6e1e0937a67ba60c2d
 Description:  LuCI support for internet-detector
 
 Package: luci-app-ipinfo
@@ -262,8 +262,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
 Filename: luci-app-qbittorrent_1.0.1-r1_all.ipk
-Size: 2652
-SHA256sum: 7bdbb3c7726837c74227bf76252fac1475ad4bfb628a439533ac4b6370e4477d
+Size: 2655
+SHA256sum: 2a53807c5e1e45426bda21a904f357a1d7ab2f01f4fd4e9d6af3d83f54287cca
 Description:  LuCI support for qBittorrent
 
 Package: luci-app-temp-status
@@ -313,8 +313,8 @@ Section: Custom
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-xray-status_3.5.0-r1_all.ipk
-Size: 4143
-SHA256sum: 1509ac29da29a2b88f295500cefd5cd499c7f71447513bd54828d87bdc5865df
+Size: 4144
+SHA256sum: 566ef5e70ef0bd34ed7fe302110f65c7e8b347f44d0bd9c6460c5582942fbb1c
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -590,14 +590,14 @@ SHA256sum: e349132435d31c1d7bbb5575ce0105ad87d23f5dcfd8353fc7f16bc551dec3ee
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-internet-detector-ru
-Version: 24.320.64501~c4b3f5a
+Version: 24.351.65449~e0e13d4
 Depends: libc, luci-app-internet-detector
 Section: luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-i18n-internet-detector-ru_24.320.64501~c4b3f5a_all.ipk
-Size: 5051
-SHA256sum: 3150ba4f7d4c46dd4c552c09df1a0a95161024572b09760ab4da0ca1155cd29b
+Filename: luci-i18n-internet-detector-ru_24.351.65449~e0e13d4_all.ipk
+Size: 5055
+SHA256sum: 221ab5f5e3105cbfb125d64f1ee367db88da87ff6c6a270dce90290c4fcb6265
 Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
 Package: luci-i18n-log-viewer-ru
@@ -923,14 +923,14 @@ SHA256sum: e77b6bf94e9919898b577beb0571344156ccb9239a9bc2cfff2dbb6b33430d2e
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-qbittorrent-zh-cn
-Version: 24.337.36084~9460415
+Version: 24.352.82817~3c567ba
 Depends: libc, luci-app-qbittorrent
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-qbittorrent-zh-cn_24.337.36084~9460415_all.ipk
-Size: 1447
-SHA256sum: 1bb897cbb31a17b4af30a30054a971e4a297adb52888c678390c1b42b0114968
+Filename: luci-i18n-qbittorrent-zh-cn_24.352.82817~3c567ba_all.ipk
+Size: 1444
+SHA256sum: 091e502c497247b3c1293dbca88eab739670e5ec6d0b7fb8a6d1f0523ec5a684
 Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-temp-status-es
@@ -1018,14 +1018,14 @@ SHA256sum: a7340d9e87c64d2f0293912544b480d77002ed6049d406607dc6fab34631cf77
 Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
 
 Package: luci-theme-argon
-Version: 2.3.1-r20230420
+Version: 24.354.21394~1a22c2e
 Depends: libc, curl, jsonfilter, luci-lua-runtime
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 768000
-Filename: luci-theme-argon_2.3.1-r20230420_all.ipk
-Size: 391000
-SHA256sum: c32e5e78cafb73389dad726c71918ce755ce3be0725ea1300821f96858f1b384
+Filename: luci-theme-argon_24.354.21394~1a22c2e_all.ipk
+Size: 391041
+SHA256sum: e38082e87811bc71a0bc90c26a1d1402123847270ab63d86e7ca33e25782ec68
 Description:  Argon Theme
 
