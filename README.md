@@ -86,8 +86,8 @@ make menuconfig
 
 --------
 
-[fantastic-keyring]: ./packages/fantastic-keyring
-[fantastic-packages-feeds]: ./packages/fantastic-packages-feeds
+[fantastic-keyring]: https://github.com/fantastic-packages/fantastic-keyring
+[fantastic-packages-feeds]: https://github.com/fantastic-packages/fantastic-packages-feeds
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
