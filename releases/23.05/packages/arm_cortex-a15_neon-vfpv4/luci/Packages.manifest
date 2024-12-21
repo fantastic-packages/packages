@@ -159,18 +159,18 @@ SHA256sum: 8f51a2996780a6ea5c71493f3f0ee7c32b54a0c85a71f11214d4c086416b0ba7
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: git-24.354.10496-062055d
+Version: git-24.356.17237-7db0969
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1734576896
+SourceDateEpoch: 1734756437
 Maintainer: OpenWrt LuCI community
 Architecture: all
-Installed-Size: 218848
-Filename: luci-app-fchomo_git-24.354.10496-062055d_all.ipk
-Size: 219973
-SHA256sum: a5282aa2a1c054c0ba1db1b944f81ee39fa5312e78b37b98c418ac9333a55ee5
+Installed-Size: 219724
+Filename: luci-app-fchomo_git-24.356.17237-7db0969_all.ipk
+Size: 220794
+SHA256sum: 0f3f0fe43323e0cb811a7267315fea80024ccb34cddcbb381e52fdebe6a6aed6
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -709,17 +709,17 @@ SHA256sum: 06cb4b9df08d901b33a70ef240f63caf43ae25326580072544e9e1df889d5365
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: git-24.354.10496-062055d
+Version: git-24.356.17237-7db0969
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-i18n-fchomo-zh-cn
 Section: luci
-SourceDateEpoch: 1734576896
+SourceDateEpoch: 1734756437
 Architecture: all
-Installed-Size: 9780
-Filename: luci-i18n-fchomo-zh-cn_git-24.354.10496-062055d_all.ipk
-Size: 10547
-SHA256sum: 7d79c9fcbd1f54e03d92df6808b4cbf5397a2d38c8d0be55887195925a18a6da
+Installed-Size: 9781
+Filename: luci-i18n-fchomo-zh-cn_git-24.356.17237-7db0969_all.ipk
+Size: 10550
+SHA256sum: 6055dd17d29b3e2b511950fac4d27caef978976253a576b021d039605d0e7927
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-interfaces-statistics-ru
@@ -751,6 +751,20 @@ Filename: luci-i18n-interfaces-statistics-zh-cn_git-24.338.63266-6d2efcc_all.ipk
 Size: 1618
 SHA256sum: 54a7e4d3dfe191928a5ed68c3f84fd35f084df9786d438cbd736ac29be6efd4c
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-internet-detector-ru
+Version: git-24.320.64501-c4b3f5a
+Depends: libc, luci-app-internet-detector
+Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
+SourceName: luci-i18n-internet-detector-ru
+Section: luci
+SourceDateEpoch: 1731693301
+Architecture: all
+Installed-Size: 4310
+Filename: luci-i18n-internet-detector-ru_git-24.320.64501-c4b3f5a_all.ipk
+Size: 5054
+SHA256sum: 1285a1a5e1af0fd640dd31394a50ef8f5aaf126bd4f218c0b8281e69ef9adc20
+Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
 Package: luci-i18n-internet-detector-ru
 Version: git-24.351.65449-e0e13d4
@@ -1194,6 +1208,20 @@ SHA256sum: 9757b51fba472c5b02e8a2ccc960ccc919dc683a1b01ea59789d25b5b873c78b
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-qbittorrent-zh-cn
+Version: git-24.337.36084-9460415
+Depends: libc, luci-app-qbittorrent
+Source: /feed/luci/luci-app-qbittorrent/luci-app-qbittorrent
+SourceName: luci-i18n-qbittorrent-zh-cn
+Section: luci
+SourceDateEpoch: 1733133684
+Architecture: all
+Installed-Size: 685
+Filename: luci-i18n-qbittorrent-zh-cn_git-24.337.36084-9460415_all.ipk
+Size: 1445
+SHA256sum: d51fc5d74ec9197d6eadaf9a16e43778125fa49aac598f297377d6824bb130db
+Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-qbittorrent-zh-cn
 Version: git-24.352.82817-3c567ba
 Depends: libc, luci-app-qbittorrent
 Source: /feed/luci/luci-app-qbittorrent/luci-app-qbittorrent
@@ -1316,6 +1344,21 @@ Filename: luci-i18n-tn-netports-zh-tw_git-24.354.13116-47097a4_all.ipk
 Size: 1992
 SHA256sum: 18b5a9c1e88d3f7f884be617536d9bb42e2d6d5bc3ff631e7e90cd1e823a557e
 Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
+
+Package: luci-theme-argon
+Version: 2.3.1
+Depends: libc, curl, jsonfilter, luci-lua-runtime
+Source: /feed/luci/luci-theme-argon
+SourceName: luci-theme-argon
+Section: luci
+SourceDateEpoch: 1723622231
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 390356
+Filename: luci-theme-argon_2.3.1_all.ipk
+Size: 390965
+SHA256sum: f0aea20833f7f1e5a2899ea807a94f1d777b6a46c049114ab91e111fae4ff25f
+Description:  Argon Theme
 
 Package: luci-theme-argon
 Version: git-24.354.21394-1a22c2e
