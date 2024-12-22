@@ -38,8 +38,6 @@ define Package/$(PKG_NAME)-packages
 		+natter \
 		+netdata-ssl \
 		+pcap-dnsproxy \
-		+php-nginx \
-		+plain-nginx \
 		+rgmac \
 		+shadowsocks-rust \
 		+speedtest-go \
@@ -77,9 +75,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
 		+luci-app-xray \
-		+luci-app-xray-status \
-		+luci-theme-argon \
-		+luci-app-argon-config
+		+luci-app-xray-status
 endef
 
 define Package/$(PKG_NAME)
@@ -97,8 +93,6 @@ define Package/$(PKG_NAME)
 		+natter \
 		+netdata-ssl \
 		+pcap-dnsproxy \
-		+php-nginx \
-		+plain-nginx \
 		+rgmac \
 		+shadowsocks-rust \
 		+speedtest-go \
@@ -131,9 +125,7 @@ define Package/$(PKG_NAME)
 		+luci-app-tinyfilemanager \
 		+luci-app-tn-netports \
 		+luci-app-xray \
-		+luci-app-xray-status \
-		+luci-theme-argon \
-		+luci-app-argon-config
+		+luci-app-xray-status
 endef
 
 define Build/Configure
