@@ -285,10 +285,10 @@ Require-User: mihomo=7890:mihomo=7890
 SourceDateEpoch: 1734841856
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 12481001
+Installed-Size: 12481008
 Filename: mihomo_1.19.0-1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 12456809
-SHA256sum: c5ce167eb797cbac253f633ad847c4824587e30baceb3992a2a0460427cca539
+Size: 12456865
+SHA256sum: da2ff28d5687b0fc27140f20e081d177772e44d8b65c75903c7a3d5507ee0606
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -462,36 +462,14 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1734594477
+SourceDateEpoch: 1734841983
 Maintainer: Anya lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 365
+Installed-Size: 366
 Filename: plain-nginx_20231028_all.ipk
-Size: 1167
-SHA256sum: 8b5bf2688feb2d62d305106bd5a2718420fa49bbf655988a7c49c3d015f1f7e3
+Size: 1166
+SHA256sum: f283210d89724e1120342fa8808bd31d529bfebc5c5cb7bd6950a4186daac4b5
 Description:  Read text document directly
-
-Package: qbittorrent
-Version: 5.0.2-1
-Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
-Provides: qBittorrent
-Source: /feed/luci/luci-app-qbittorrent/qbittorrent
-SourceName: qbittorrent
-License: GPL-2.0+
-LicenseFiles: COPYING
-Section: net
-SourceDateEpoch: 1733133684
-CPE-ID: cpe:/a:qbittorrent:qbittorrent
-Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 7723417
-Filename: qbittorrent_5.0.2-1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 7720060
-SHA256sum: 30476132a4091663f638beff3f85719b742c66bd4a562311db19c91aca670a5f
-Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
- libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
- It aims to be a good alternative to all other bittorrent clients out
- there. qBittorrent is fast, stable and provides unicode support as
- well as many features.
 
 Package: qbittorrent
 Version: 5.0.3-1

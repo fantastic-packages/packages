@@ -389,10 +389,10 @@ Section: Custom
 SourceDateEpoch: 1732637037
 Maintainer: yichya <mail@yichya.dev>
 Architecture: all
-Installed-Size: 3369
+Installed-Size: 3371
 Filename: luci-app-xray-status_3.5.0-1_all.ipk
-Size: 4145
-SHA256sum: 1fa6aa394e5839e822ac68f460e7e3cb2fee5620f3c83dfbe24e0c5feeefb39d
+Size: 4149
+SHA256sum: 2f0d7b6a786821604b97c564fa12a2d434eb4aa174832a0a280fe56f146c6dc5
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -751,20 +751,6 @@ Filename: luci-i18n-interfaces-statistics-zh-cn_git-24.338.63266-6d2efcc_all.ipk
 Size: 1618
 SHA256sum: 54a7e4d3dfe191928a5ed68c3f84fd35f084df9786d438cbd736ac29be6efd4c
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-internet-detector-ru
-Version: git-24.320.64501-c4b3f5a
-Depends: libc, luci-app-internet-detector
-Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
-SourceName: luci-i18n-internet-detector-ru
-Section: luci
-SourceDateEpoch: 1731693301
-Architecture: all
-Installed-Size: 4310
-Filename: luci-i18n-internet-detector-ru_git-24.320.64501-c4b3f5a_all.ipk
-Size: 5054
-SHA256sum: 1285a1a5e1af0fd640dd31394a50ef8f5aaf126bd4f218c0b8281e69ef9adc20
-Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
 Package: luci-i18n-internet-detector-ru
 Version: git-24.351.65449-e0e13d4
@@ -1208,20 +1194,6 @@ SHA256sum: 9757b51fba472c5b02e8a2ccc960ccc919dc683a1b01ea59789d25b5b873c78b
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-qbittorrent-zh-cn
-Version: git-24.337.36084-9460415
-Depends: libc, luci-app-qbittorrent
-Source: /feed/luci/luci-app-qbittorrent/luci-app-qbittorrent
-SourceName: luci-i18n-qbittorrent-zh-cn
-Section: luci
-SourceDateEpoch: 1733133684
-Architecture: all
-Installed-Size: 685
-Filename: luci-i18n-qbittorrent-zh-cn_git-24.337.36084-9460415_all.ipk
-Size: 1445
-SHA256sum: d51fc5d74ec9197d6eadaf9a16e43778125fa49aac598f297377d6824bb130db
-Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-qbittorrent-zh-cn
 Version: git-24.352.82817-3c567ba
 Depends: libc, luci-app-qbittorrent
 Source: /feed/luci/luci-app-qbittorrent/luci-app-qbittorrent
@@ -1344,21 +1316,6 @@ Filename: luci-i18n-tn-netports-zh-tw_git-24.354.13116-47097a4_all.ipk
 Size: 1992
 SHA256sum: 18b5a9c1e88d3f7f884be617536d9bb42e2d6d5bc3ff631e7e90cd1e823a557e
 Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
-
-Package: luci-theme-argon
-Version: 2.3.1
-Depends: libc, curl, jsonfilter, luci-lua-runtime
-Source: /feed/luci/luci-theme-argon
-SourceName: luci-theme-argon
-Section: luci
-SourceDateEpoch: 1723622231
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 390356
-Filename: luci-theme-argon_2.3.1_all.ipk
-Size: 390965
-SHA256sum: f0aea20833f7f1e5a2899ea807a94f1d777b6a46c049114ab91e111fae4ff25f
-Description:  Argon Theme
 
 Package: luci-theme-argon
 Version: git-24.354.21394-1a22c2e
