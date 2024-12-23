@@ -118,14 +118,14 @@ SHA256sum: 8f51a2996780a6ea5c71493f3f0ee7c32b54a0c85a71f11214d4c086416b0ba7
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: git-24.357.16256-6d19a6d
+Version: git-24.358.09791-279100f
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl
 Section: luci
 Architecture: all
-Installed-Size: 219748
-Filename: luci-app-fchomo_git-24.357.16256-6d19a6d_all.ipk
-Size: 220812
-SHA256sum: 87a45e6dc3528da6f67961a50134f3e95e3132bdcd4f3613ceffbbe3ba69c002
+Installed-Size: 219770
+Filename: luci-app-fchomo_git-24.358.09791-279100f_all.ipk
+Size: 220843
+SHA256sum: b836fcdeef65e84946f1c932580db51f866d8ebaaad69dd20f6043fa4d3bb357
 Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -531,14 +531,14 @@ SHA256sum: 06cb4b9df08d901b33a70ef240f63caf43ae25326580072544e9e1df889d5365
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: git-24.357.16256-6d19a6d
+Version: git-24.358.09791-279100f
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
-Installed-Size: 9813
-Filename: luci-i18n-fchomo-zh-cn_git-24.357.16256-6d19a6d_all.ipk
-Size: 10585
-SHA256sum: e4eaf4721d368466cde89fd1eefeeaccede73abbbc76e48a4c0a7756a2405ac0
+Installed-Size: 9812
+Filename: luci-i18n-fchomo-zh-cn_git-24.358.09791-279100f_all.ipk
+Size: 10569
+SHA256sum: 9e4245b4fa19cbb77acaef5676aad9b91cb0d8a0b43c5101f113d217c305b442
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-interfaces-statistics-ru
@@ -564,6 +564,17 @@ Filename: luci-i18n-interfaces-statistics-zh-cn_git-24.338.63266-6d2efcc_all.ipk
 Size: 1618
 SHA256sum: 54a7e4d3dfe191928a5ed68c3f84fd35f084df9786d438cbd736ac29be6efd4c
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-internet-detector-ru
+Version: git-24.320.64501-c4b3f5a
+Depends: libc, luci-app-internet-detector
+Section: luci
+Architecture: all
+Installed-Size: 4310
+Filename: luci-i18n-internet-detector-ru_git-24.320.64501-c4b3f5a_all.ipk
+Size: 5054
+SHA256sum: 1285a1a5e1af0fd640dd31394a50ef8f5aaf126bd4f218c0b8281e69ef9adc20
+Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
 Package: luci-i18n-internet-detector-ru
 Version: git-24.351.65449-e0e13d4
@@ -899,6 +910,17 @@ SHA256sum: 9757b51fba472c5b02e8a2ccc960ccc919dc683a1b01ea59789d25b5b873c78b
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-qbittorrent-zh-cn
+Version: git-24.337.36084-9460415
+Depends: libc, luci-app-qbittorrent
+Section: luci
+Architecture: all
+Installed-Size: 685
+Filename: luci-i18n-qbittorrent-zh-cn_git-24.337.36084-9460415_all.ipk
+Size: 1445
+SHA256sum: d51fc5d74ec9197d6eadaf9a16e43778125fa49aac598f297377d6824bb130db
+Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-qbittorrent-zh-cn
 Version: git-24.352.82817-3c567ba
 Depends: libc, luci-app-qbittorrent
 Section: luci
@@ -992,6 +1014,17 @@ Filename: luci-i18n-tn-netports-zh-tw_git-24.354.13116-47097a4_all.ipk
 Size: 1992
 SHA256sum: 18b5a9c1e88d3f7f884be617536d9bb42e2d6d5bc3ff631e7e90cd1e823a557e
 Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
+
+Package: luci-theme-argon
+Version: 2.3.1
+Depends: libc, curl, jsonfilter, luci-lua-runtime
+Section: luci
+Architecture: all
+Installed-Size: 390356
+Filename: luci-theme-argon_2.3.1_all.ipk
+Size: 390965
+SHA256sum: f0aea20833f7f1e5a2899ea807a94f1d777b6a46c049114ab91e111fae4ff25f
+Description:  Argon Theme
 
 Package: luci-theme-argon
 Version: git-24.354.21394-1a22c2e

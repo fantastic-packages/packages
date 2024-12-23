@@ -282,13 +282,13 @@ License: GPL-2.0
 LicenseFiles: LICENSE
 Section: net
 Require-User: mihomo=7890:mihomo=7890
-SourceDateEpoch: 1734841856
+SourceDateEpoch: 1734921791
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: mips_24kc
-Installed-Size: 12004345
+Installed-Size: 12004462
 Filename: mihomo_1.19.0-1_mips_24kc.ipk
-Size: 11973817
-SHA256sum: ecf454fee4528e3102c95d3c87d3249393629d62763895e27ea12b12e29f15ec
+Size: 11974010
+SHA256sum: aec8a844e5ad719fdd90621ab931bf4f370a3bfdda52d14f702a598a3daae2b4
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -470,6 +470,28 @@ Filename: plain-nginx_20231028_all.ipk
 Size: 1166
 SHA256sum: f283210d89724e1120342fa8808bd31d529bfebc5c5cb7bd6950a4186daac4b5
 Description:  Read text document directly
+
+Package: qbittorrent
+Version: 5.0.2-1
+Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qBittorrent
+Source: /feed/luci/luci-app-qbittorrent/qbittorrent
+SourceName: qbittorrent
+License: GPL-2.0+
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1733133684
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: mips_24kc
+Installed-Size: 7659359
+Filename: qbittorrent_5.0.2-1_mips_24kc.ipk
+Size: 7652109
+SHA256sum: 08e1c1d733d8f8f3357ddd3b117213c2d3f17653f76211219d3904444d405a18
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
 
 Package: qbittorrent
 Version: 5.0.3-1

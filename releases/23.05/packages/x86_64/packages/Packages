@@ -211,10 +211,10 @@ Depends: libc
 License: GPL-2.0
 Section: net
 Architecture: x86_64
-Installed-Size: 13279103
+Installed-Size: 13279042
 Filename: mihomo_1.19.0-1_x86_64.ipk
-Size: 13241392
-SHA256sum: 715d3d0b1d18a16a32a229a34e1c5f41c94dbc58431d7d1d627a3d2c84d0dc10
+Size: 13241231
+SHA256sum: c63daf5a956ebca752faee9a876ebd41d75f6c60574f0bbcb9b668033d3c7789
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -346,6 +346,24 @@ Filename: plain-nginx_20231028_all.ipk
 Size: 1166
 SHA256sum: f283210d89724e1120342fa8808bd31d529bfebc5c5cb7bd6950a4186daac4b5
 Description:  Read text document directly
+
+Package: qbittorrent
+Version: 5.0.2-1
+Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qBittorrent
+License: GPL-2.0+
+Section: net
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: x86_64
+Installed-Size: 7860615
+Filename: qbittorrent_5.0.2-1_x86_64.ipk
+Size: 7856685
+SHA256sum: c51ca185c4e1df0b6e95426ae9d9160b7c6555f9694c4100370ee8be9b901f04
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
 
 Package: qbittorrent
 Version: 5.0.3-1
