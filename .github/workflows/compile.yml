@@ -286,16 +286,16 @@ jobs:
           # popd SPECIAL_WORKDIR
           popd
 
-      - name: Setup tmate session
-        if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
-        uses: mxschmitt/action-tmate@v3
+      #- name: Setup tmate session
+      #  if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
+      #  uses: mxschmitt/action-tmate@v3
 
-      - name: Upload Specials
+      - name: Upload Specials Logs
         if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
-          name: Specials-SDK-${{ hashFiles('**/Makefile') }}
-          path: ${{ github.workspace }}/SPECIAL_WORKDIR/SDK
+          name: Specials-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
+          path: ${{ github.workspace }}/SPECIAL_WORKDIR/SDK/logs
 
       - name: Build Packages
         id: build_packags
@@ -319,7 +319,7 @@ jobs:
         if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
-          name: error-logs-${{ hashFiles('**/Makefile') }}
+          name: error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
           path: /workdir/logs
 
       - name: Checkout Packages
