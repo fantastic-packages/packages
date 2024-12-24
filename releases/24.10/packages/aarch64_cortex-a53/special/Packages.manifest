@@ -1,5 +1,5 @@
 Package: einat-ebpf
-Version: 0.1.5-r1
+Version: 0.1.5-r2
 Depends: libc, kmod-sched-core, kmod-sched-bpf
 Provides: einat
 Source: /home/runner/work/packages/packages/packages/openwrt-einat-ebpf
@@ -8,14 +8,14 @@ License: GPL-2.0-or-later GPL-2.0-only
 LicenseFiles: LICENSE
 Section: net
 Require-User: einat:einat
-SourceDateEpoch: 1734576998
+SourceDateEpoch: 1734933474
 URL: https://github.com/EHfive/einat-ebpf
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 1986560
-Filename: einat-ebpf_0.1.5-r1_aarch64_cortex-a53.ipk
-Size: 902289
-SHA256sum: b7541aad5c47b85a07da66c8491e4a0c36d9f133b9b127376b56d1dc112920b6
+Filename: einat-ebpf_0.1.5-r2_aarch64_cortex-a53.ipk
+Size: 902338
+SHA256sum: f366978958d7179b5d663fdd8734649660b32b58e611b86f7c2a555349b8f166
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -667,8 +667,8 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 6707200
 Filename: shadowsocks-rust-ssservice_1.21.2-r1_aarch64_cortex-a53.ipk
-Size: 2893804
-SHA256sum: dfc186d1236cfa81b47eddde17083f00be858ff860f041a310cb6a2b2ecf649c
+Size: 2893809
+SHA256sum: 33b87cce22f7f132d8ea192a47e38679327ae8ea11237fc776951cce1fc03c6b
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl

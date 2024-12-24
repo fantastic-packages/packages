@@ -1,5 +1,5 @@
 Package: einat-ebpf
-Version: 0.1.5-r1
+Version: 0.1.5-r2
 Depends: libc, kmod-sched-core, kmod-sched-bpf
 Provides: einat
 Source: /home/runner/work/packages/packages/packages/openwrt-einat-ebpf
@@ -8,14 +8,14 @@ License: GPL-2.0-or-later GPL-2.0-only
 LicenseFiles: LICENSE
 Section: net
 Require-User: einat:einat
-SourceDateEpoch: 1734576998
+SourceDateEpoch: 1734933474
 URL: https://github.com/EHfive/einat-ebpf
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 1935360
-Filename: einat-ebpf_0.1.5-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 857791
-SHA256sum: 2cfe4367e8caf7ad01d02995f3e70e4e6c4beeaa4159ba7eff86f264dc2c28f4
+Filename: einat-ebpf_0.1.5-r2_arm_cortex-a15_neon-vfpv4.ipk
+Size: 858067
+SHA256sum: 940709eb77e9df39b132e80a7c6f0b687ceef781a28cfd77b7e451392c7cb8e0
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -667,8 +667,8 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 6041600
 Filename: shadowsocks-rust-ssservice_1.21.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 2686694
-SHA256sum: 161dc1f0a3d9cd9a73bcfce33b18067a7d21b9907d27aed3a2953a9b00b1b08e
+Size: 2686707
+SHA256sum: 9b009d03f4f473f41a9a474d8305182fd6e1430d5600768e7729953c7e73d0dd
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl

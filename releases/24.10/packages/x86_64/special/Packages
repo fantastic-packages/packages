@@ -1,5 +1,5 @@
 Package: einat-ebpf
-Version: 0.1.5-r1
+Version: 0.1.5-r2
 Depends: libc, kmod-sched-core, kmod-sched-bpf
 Provides: einat
 License: GPL-2.0-or-later GPL-2.0-only
@@ -7,9 +7,9 @@ Section: net
 URL: https://github.com/EHfive/einat-ebpf
 Architecture: x86_64
 Installed-Size: 2252800
-Filename: einat-ebpf_0.1.5-r1_x86_64.ipk
-Size: 922518
-SHA256sum: 072efc9d51ee0362fc175a9b7a3eec68d18a07a89dc479e9529a5bfc26c16058
+Filename: einat-ebpf_0.1.5-r2_x86_64.ipk
+Size: 922650
+SHA256sum: 84c6ff1406ac86ba5cec84e49674c2916daafd0b4ecf72207eb6048290922ed6
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -496,8 +496,8 @@ URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: x86_64
 Installed-Size: 7669760
 Filename: shadowsocks-rust-ssservice_1.21.2-r1_x86_64.ipk
-Size: 2996826
-SHA256sum: 4c7d8edb8ff81770ac37496f2f0b4045eea3772bc236fe7711ec2ef93dc1b537
+Size: 2996799
+SHA256sum: 1385ed57c29f20ad0c56914a1e7b520d8844708179d4ea5eede082098de45625
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl
