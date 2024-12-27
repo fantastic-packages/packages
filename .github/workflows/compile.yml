@@ -435,7 +435,7 @@ jobs:
           }
           # clean old apk
           clean_old_apk() {
-            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
+            local rmlist=$(ls -1 *.apk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)-\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
             [ -z "$rmlist" ] || rm -f $rmlist
           }
           #
