@@ -274,24 +274,6 @@ SHA256sum: 80b3baf62888f857b9beb961c414bf72b20d85c1e38bb31ea935f4d0a19a1483
 Description:  This package provides the Qt6 Xml v6.8.1 library.
 
 Package: mihomo
-Version: 1.19.0-1
-Depends: libc
-Source: /feed/packages/openwrt-fchomo/mihomo
-SourceName: mihomo
-License: GPL-2.0
-LicenseFiles: LICENSE
-Section: net
-Require-User: mihomo=7890:mihomo=7890
-SourceDateEpoch: 1735466345
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: mipsel_24kc
-Installed-Size: 11772182
-Filename: mihomo_1.19.0-1_mipsel_24kc.ipk
-Size: 11744728
-SHA256sum: 026e0863f348f3a6ddfb64de91707217160d6f1874160f101199658bf790e4e8
-Description:  Another Mihomo Kernel.
-
-Package: mihomo
 Version: 1.19.1-1
 Depends: libc
 Source: /feed/packages/openwrt-fchomo/mihomo
@@ -306,7 +288,7 @@ Architecture: mipsel_24kc
 Installed-Size: 11238107
 Filename: mihomo_1.19.1-1_mipsel_24kc.ipk
 Size: 11212551
-SHA256sum: a59aa3e5bc640368f7a8c21697d31fba69a4f786a49524eaf548733763c5f305
+SHA256sum: b1f256fad61e0cf571da43ba31817917e05471f3aaca3d5fadc280859f4b5400
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -480,13 +462,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1735275919
+SourceDateEpoch: 1735705944
 Maintainer: Anya lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 365
+Installed-Size: 366
 Filename: plain-nginx_20231028_all.ipk
 Size: 1165
-SHA256sum: b82487b1cad9da1ecc7aa59ce1533896a6a2a3893c85730ea4d16edd602649a9
+SHA256sum: f7ad28335c2a36a1fc4235ccbd0ab4b494765c5c1b2eae699bf34116598177a0
 Description:  Read text document directly
 
 Package: qbittorrent
@@ -501,10 +483,10 @@ Section: net
 SourceDateEpoch: 1734476417
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: mipsel_24kc
-Installed-Size: 7656007
+Installed-Size: 7655885
 Filename: qbittorrent_5.0.3-1_mipsel_24kc.ipk
-Size: 7652085
-SHA256sum: 9b48955c7aef70e28f14f27c1b257e5d139e2f678bfd6c8ee1d953a0c5a064f8
+Size: 7652083
+SHA256sum: 37306e5a7a40a98643a4dbc4e5ba70166d09b23949eb7920738d6cb8dde588d3
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -635,10 +617,10 @@ Section: libs
 SourceDateEpoch: 1734476417
 ABIVersion: 2.0
 Architecture: mipsel_24kc
-Installed-Size: 1537213
+Installed-Size: 1537263
 Filename: rblibtorrent2.0_2.0.10-1_mipsel_24kc.ipk
-Size: 1530306
-SHA256sum: bf25ffed7cdb30072303f4817fa0a4adbd58f3a6b6eac65d5255f03d628bf718
+Size: 1530393
+SHA256sum: 257506492ea506d5343c465033200bc840c20ac4b752218e2b605aaf89d2d05f
 Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
  all the other bittorrent implementations around. It is a library and not a
  full featured client, although it comes with a working example client.
@@ -706,10 +688,10 @@ Section: net
 SourceDateEpoch: 1723010223
 Maintainer: muink <hukk1996@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 87447
+Installed-Size: 87445
 Filename: stuntman-server_1.2.17-20240806_mipsel_24kc.ipk
-Size: 88019
-SHA256sum: c5462d3d800c0e99d1feff462167526449f0dadaf1afd8ec46421d67c8b8e0a4
+Size: 88024
+SHA256sum: d015b1919f6ac3165438e06787abd68b314d584da5b71aa43e64f639f15a9053
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode
