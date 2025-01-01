@@ -215,7 +215,7 @@ jobs:
           #
           group "Initialize Environment"
           sudo apt update
-          sudo apt -y install axel build-essential ccache clang curl flex bison g++ gawk \
+          sudo apt -y install jq axel build-essential ccache clang curl flex bison g++ gawk \
           gcc-multilib g++-multilib genisoimage gettext git libdw-dev libelf-dev \
           libncurses5-dev libssl-dev locales pv pwgen python3 python3-pip \
           python3-setuptools qemu-utils rsync signify-openbsd subversion swig unzip \
@@ -333,6 +333,11 @@ jobs:
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
             fi
           }
+          # clean old apk
+          clean_old_apk() {
+            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
+            [ -z "$rmlist" ] || rm -f $rmlist
+          }
           #
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}" 2>/dev/null
           if [ -d "/workdir/bin" ]; then
@@ -346,7 +351,7 @@ jobs:
               if [ -d "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
                 echo "cp /workdir/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
                 cp -Rf "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
+                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; clean_old_apk; sign_packages; popd
               fi
             done
             #
