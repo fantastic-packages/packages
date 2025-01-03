@@ -26,7 +26,7 @@
 6. modify [ version, arch, target, profile, no_img ] matrix to replace the target devices
    + edit [AutoBuild.yml](./.github/workflows/AutoBuild.yml)
    + modify the values ​​in `jobs:compile:strategy:matrix` according to the actual situation
-   + available `arch, target` can refer to [targets.txt](./targets.txt)
+   + available `target, arch` can refer to [targets.txt](./targets.txt)
    + available `profile` can refer to `https://downloads.openwrt.org/releases/<version>/targets/<target[0]>/<target[1]>/config.buildinfo`
 
 7. adjust the imagebuilder preinstalled packages
