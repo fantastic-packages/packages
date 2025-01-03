@@ -63,10 +63,10 @@ Depends: libc
 License: MIT
 Section: luci
 Architecture: all
-Installed-Size: 2388
+Installed-Size: 2391
 Filename: luci-app-cpu-status_0.5.0_all.ipk
-Size: 3222
-SHA256sum: 1cdb5fab72069af288861656da5c9f8d0dd5f3b6dec4564b5b9c63f467ca3657
+Size: 3235
+SHA256sum: e22df72a0e10faf6cbb762548297fb851eb2cbc1f2117095e6f72d94e0a92f17
 Description:  CPU utilization info for the LuCI status page
 
 Package: luci-app-diskman
@@ -423,28 +423,40 @@ SHA256sum: cc4f011753b53cc246f16217f299956e59471802e8c89cd9cda597be24b370e7
 Description:  Translation for luci-app-cpu-status-mini - Русский (Russian)
 
 Package: luci-i18n-cpu-status-ru
-Version: git-24.338.62752-0921aef
+Version: git-25.002.54711-e10af24
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
-Installed-Size: 652
-Filename: luci-i18n-cpu-status-ru_git-24.338.62752-0921aef_all.ipk
-Size: 1400
-SHA256sum: 8391e3dadae1349e90b200e580cb1e370e807f74adcfade510e98c21a8c83c6f
+Installed-Size: 655
+Filename: luci-i18n-cpu-status-ru_git-25.002.54711-e10af24_all.ipk
+Size: 1404
+SHA256sum: 2e44916a1a8a65190b47f5e3850ceb85448015bf02b16dd34aa83877bc83fd12
 Description:  Translation for luci-app-cpu-status - Русский (Russian)
 
 Package: luci-i18n-cpu-status-zh-cn
-Version: git-24.338.62752-0921aef
+Version: git-25.002.54711-e10af24
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
-Installed-Size: 511
-Filename: luci-i18n-cpu-status-zh-cn_git-24.338.62752-0921aef_all.ipk
-Size: 1276
-SHA256sum: cfbebe98f89a31e094237cb87552592e294ecff04c978ebf65dbc39c645e48c7
+Installed-Size: 628
+Filename: luci-i18n-cpu-status-zh-cn_git-25.002.54711-e10af24_all.ipk
+Size: 1398
+SHA256sum: df22d9e9f60796cae86222f34b59628d52c49f5973bca97d3c3acf96a81309ef
 Description:  Translation for luci-app-cpu-status - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-cpu-status-zh-tw
+Version: git-25.002.54711-e10af24
+Depends: libc, luci-app-cpu-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 626
+Filename: luci-i18n-cpu-status-zh-tw_git-25.002.54711-e10af24_all.ipk
+Size: 1390
+SHA256sum: a4b96c9bf5339eb4e57e72f8402242bf14f53e196ad6571c74ec038d1b0c12ac
+Description:  Translation for luci-app-cpu-status - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-diskman-pl
 Version: git-24.341.11429-78969ed

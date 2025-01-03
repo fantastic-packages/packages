@@ -71,8 +71,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
 Filename: luci-app-cpu-status_0.5.0-r1_all.ipk
-Size: 3252
-SHA256sum: d05beb22b52072f3bfc85d1b14794721662d67baf0c7c41140a889ca92e79e10
+Size: 3260
+SHA256sum: 3094e0ec3225a12a9c7acd79b2c87716402f207fd0330fa01a5f9cf69d507e2f
 Description:  CPU utilization info for the LuCI status page
 
 Package: luci-app-diskman
@@ -447,28 +447,40 @@ SHA256sum: 24a7a9cc4b944872b13eed5518ca63ad2cb93222486cefb39b11f2e43aa32662
 Description:  Translation for luci-app-cpu-status-mini - Русский (Russian)
 
 Package: luci-i18n-cpu-status-ru
-Version: 24.338.62752~0921aef
+Version: 25.002.54711~e10af24
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-ru_24.338.62752~0921aef_all.ipk
-Size: 1396
-SHA256sum: a6767aa179f9863e7703c9bc8ca30a016f7f78cdd2d7b7bbcac63eb2969341c8
+Filename: luci-i18n-cpu-status-ru_25.002.54711~e10af24_all.ipk
+Size: 1400
+SHA256sum: aa03b3e657cc8b703ced55a3bb6c09903a6a0f04840fc4cb01b10df8e1cca403
 Description:  Translation for luci-app-cpu-status - Русский (Russian)
 
 Package: luci-i18n-cpu-status-zh-cn
-Version: 24.338.62752~0921aef
+Version: 25.002.54711~e10af24
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-zh-cn_24.338.62752~0921aef_all.ipk
-Size: 1278
-SHA256sum: 51ba21fc77e36331d8b169dcffdf0b3e11edbbf9b3e3969da91d00212cafc115
+Filename: luci-i18n-cpu-status-zh-cn_25.002.54711~e10af24_all.ipk
+Size: 1400
+SHA256sum: f37346d68d948f56cdcff0e7b3b460d0f683f9b753e29ba101744ef2ce10fa79
 Description:  Translation for luci-app-cpu-status - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-cpu-status-zh-tw
+Version: 25.002.54711~e10af24
+Depends: libc, luci-app-cpu-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 10240
+Filename: luci-i18n-cpu-status-zh-tw_25.002.54711~e10af24_all.ipk
+Size: 1388
+SHA256sum: 40ebb7ee085262faf4befed05c9c0d2b11d71b177c1e16bf4308e8431faf2fe0
+Description:  Translation for luci-app-cpu-status - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-diskman-pl
 Version: 24.341.11429~78969ed
