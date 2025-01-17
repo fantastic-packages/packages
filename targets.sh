@@ -3,7 +3,7 @@
 # Ref: https://github.com/muink/luci-app-packagesync/blob/master/root/etc/init.d/packagesync#L126
 OPENWRT_URL="https://downloads.openwrt.org"
 VERSION="$( \
-	curl -sL "$OPENWRT_URL" | sed -En '/Stable Release/,/(Old|Upcoming) Stable Release/p' \
+	curl -sL "$OPENWRT_URL/" | sed -En '/Stable Release/,/(Old|Upcoming) Stable Release/p' \
 	| sed -n '/<ul>/,/<\/ul>/p' | grep 'OpenWrt' \
 	| sed -E "s|.+\breleases/([\.0-9]+)/.+|\1|g" \
 )"
