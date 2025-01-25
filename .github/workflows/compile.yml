@@ -138,6 +138,16 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
+      - name: Download ghost-dl
+        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        shell: bash
+        run: |
+          wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
+          && unzip -o ghost-dl.zip \
+          && cp -rf ghost-dl-*/* /workdir/DL/ \
+          && rm -rf ghost-dl.zip ghost-dl-* \
+          || echo "ghost-dl download failed"
+
       - name: Determine EXTRA_FEEDS and PACKAGES
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
