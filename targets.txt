@@ -13,20 +13,21 @@
 'bcm27xx/bcm2709'         arm_cortex-a7_neon-vfpv4
 'bcm27xx/bcm2710'         aarch64_cortex-a53
 'bcm27xx/bcm2711'         aarch64_cortex-a72
+'bcm27xx/bcm2712'         aarch64_cortex-a76
 'bcm47xx/generic'         mipsel_mips32
 'bcm47xx/legacy'          mipsel_mips32
 'bcm47xx/mips74k'         mipsel_74kc
 'bcm4908/generic'         aarch64_cortex-a53
 'bcm53xx/generic'         arm_cortex-a9
-'bcm63xx/generic'         mips_mips32
-'bcm63xx/smp'             mips_mips32
 'bmips/bcm6318'           mips_mips32
 'bmips/bcm63268'          mips_mips32
 'bmips/bcm6328'           mips_mips32
 'bmips/bcm6358'           mips_mips32
 'bmips/bcm6362'           mips_mips32
 'bmips/bcm6368'           mips_mips32
+'d1/generic'              riscv64_riscv64
 'gemini/generic'          arm_fa526
+'imx/cortexa53'           aarch64_cortex-a53
 'imx/cortexa7'            arm_cortex-a7_neon-vfpv4
 'imx/cortexa9'            arm_cortex-a9_neon
 'ipq40xx/chromium'        arm_cortex-a7_neon-vfpv4
@@ -34,15 +35,20 @@
 'ipq40xx/mikrotik'        arm_cortex-a7_neon-vfpv4
 'ipq806x/chromium'        arm_cortex-a15_neon-vfpv4
 'ipq806x/generic'         arm_cortex-a15_neon-vfpv4
-'ipq807x/generic'         aarch64_cortex-a53
+'ixp4xx/generic'          armeb_xscale
 'kirkwood/generic'        arm_xscale
 'lantiq/ase'              
 'lantiq/xrx200'           mips_24kc
+'lantiq/xrx200_legacy'    mips_24kc
 'lantiq/xway'             mips_24kc
 'lantiq/xway_legacy'      
 'layerscape/armv7'        arm_cortex-a7_neon-vfpv4
 'layerscape/armv8_64b'    aarch64_generic
+'loongarch64/generic'     loongarch64_generic
 'malta/be'                
+'malta/be64'              
+'malta/le'                
+'malta/le64'              
 'mediatek/filogic'        aarch64_cortex-a53
 'mediatek/mt7622'         aarch64_cortex-a53
 'mediatek/mt7623'         arm_cortex-a7_neon-vfpv4
@@ -55,9 +61,10 @@
 'mvebu/cortexa9'          arm_cortex-a9_vfpv3-d16
 'mxs/generic'             arm_arm926ej-s
 'octeon/generic'          mips64_octeonplus
-'octeontx/generic'        
-'oxnas/ox820'             arm_mpcore
+'omap/generic'            arm_cortex-a8_vfpv3
 'pistachio/generic'       mipsel_24kc_24kf
+'qoriq/generic'           powerpc64_e5500
+'qualcommax/ipq807x'      aarch64_cortex-a53
 'ramips/mt7620'           mipsel_24kc
 'ramips/mt7621'           mipsel_24kc
 'ramips/mt76x8'           mipsel_24kc
@@ -70,6 +77,8 @@
 'realtek/rtl931x'         
 'rockchip/armv8'          aarch64_generic
 'sifiveu/generic'         riscv64_riscv64
+'starfive/generic'        riscv64_riscv64
+'stm32/stm32mp1'          arm_cortex-a7_neon-vfpv4
 'sunxi/cortexa53'         aarch64_cortex-a53
 'sunxi/cortexa7'          arm_cortex-a7_neon-vfpv4
 'sunxi/cortexa8'          arm_cortex-a8_vfpv3
