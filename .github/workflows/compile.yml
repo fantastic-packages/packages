@@ -124,10 +124,17 @@ jobs:
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: actions/cache@v4
         with:
-          path: /workdir/FEEDS
-          key: Cache-FEEDS-${{ hashFiles('**/Makefile') }}
+          path: /workdir/FEEDS/${{ env.BRANCH }}
+          key: Cache-FEEDS-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
           restore-keys: |
-            Cache-FEEDS-
+            Cache-FEEDS-${{ env.BRANCH }}-
+
+      - name: Remove ${{ env.FTSPKGPREFIX }} FEED
+        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        shell: bash
+        run: |
+          echo "rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null"
+          sudo rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
@@ -481,8 +488,9 @@ jobs:
             ${{ inputs.GHPAGES_PATH }}/
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
-      - name: Fix permissions of DL
+      - name: Fix permissions of FEEDS/DL
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          sudo chmod -R o+r /workdir/FEEDS/
           sudo chmod -R o+r /workdir/DL/
