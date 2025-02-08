@@ -159,6 +159,31 @@ jobs:
           && rm -rf ghost-dl.zip ghost-dl-* \
           || echo "ghost-dl download failed"
 
+      - name: Display structure of Cache files
+        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        shell: bash
+        run: |
+          group() {
+            endgroup
+            echo "::group::  $1"
+            GROUP=1
+          }
+          endgroup() {
+            if [ -n "$GROUP" ]; then
+              echo "::endgroup::"
+            fi
+            GROUP=
+          }
+          trap 'endgroup' ERR
+          #
+          group "find /workdir/FEEDS -maxdepth 2"
+          sudo find /workdir/FEEDS -maxdepth 2
+          endgroup
+          #
+          group "find /workdir/DL -maxdepth 3"
+          sudo find /workdir/DL -maxdepth 3
+          endgroup
+
       - name: Import keys
         shell: bash
         run: |
