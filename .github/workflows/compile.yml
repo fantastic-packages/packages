@@ -125,20 +125,19 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /workdir/FEEDS
-          key: ${{ runner.os }}-OpenWRT-Cache-FEEDS-${{ hashFiles('**/Makefile') }}
+          key: Cache-FEEDS-${{ hashFiles('**/Makefile') }}
           restore-keys: |
-            ${{ runner.os }}-OpenWRT-Cache-FEEDS-
+            Cache-FEEDS-
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: actions/cache@v4
         with:
           path: /workdir/DL
-          key: ${{ runner.os }}-OpenWRT-Cache-DL-${{ hashFiles('**/Makefile') }}
+          key: Cache-DL-${{ hashFiles('**/Makefile') }}
           #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-OpenWRT-Cache-DL-
-            ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-
+            Cache-DL-
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-

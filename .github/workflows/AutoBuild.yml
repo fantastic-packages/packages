@@ -162,22 +162,22 @@ jobs:
           sudo chown $USER:$GROUPS /workdir
           mkdir -p /workdir/DL
       - name: Cache DL dependencies
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: /workdir/DL
-          key: ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-${{ hashFiles('**/Makefile') }}
+          key: Cache-DL-${{ hashFiles('**/Makefile') }}
           restore-keys: |
-            ${{ runner.os }}-OpenWRT-SDK-DL-Cache-Makefile-
+            Cache-DL-
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
-          tar -cJvf /workdir/DL.txz * --owner=0 --group=0 --no-same-owner --no-same-permissions
+          tar -I zstd -cf /workdir/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
           popd
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DL.txz
-          path: /workdir/DL.txz
+          name: DL.tzst
+          path: /workdir/DL.tzst
           retention-days: 1
 
   deploy_pages:
