@@ -70,6 +70,7 @@ make menuconfig
 | [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
+| [openwrt-fastfetch][] | Fetch and display system information |
 | [openwrt-fchomo][] | FullCombo Mihomo supplies maximum customization on OpenWrt |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
@@ -117,6 +118,7 @@ make menuconfig
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
+[openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
 [openwrt-fchomo]: https://github.com/muink/openwrt-fchomo
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt

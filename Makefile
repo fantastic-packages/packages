@@ -30,6 +30,7 @@ define Package/$(PKG_NAME)-packages
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
+		+fastfetch \
 		+go-stun \
 		+internet-detector \
 		+mihomo \
@@ -88,6 +89,7 @@ define Package/$(PKG_NAME)
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
+		+fastfetch \
 		+go-stun \
 		+internet-detector \
 		+mihomo \
