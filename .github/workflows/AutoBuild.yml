@@ -6,7 +6,7 @@ on:
       build_mode:
         description: 'Build mode'
         required: true
-        default: 'build_pkgs_and_imgs'
+        default: 'build_pkgs'
         type: choice
         options:
         - build_pkgs_and_imgs
