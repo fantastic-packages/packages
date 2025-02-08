@@ -103,6 +103,13 @@ jobs:
           fi
           echo "BUILDBRANCH=$BUILDBRANCH" >> $GITHUB_ENV
 
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BUILDBRANCH }}
+          lfs: true
+          submodules: true
+
       - name: Initialize Environment
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -112,20 +119,6 @@ jobs:
           mkdir -p "/workdir/bin"
           mkdir -p "/workdir/FEEDS/$BRANCH"
           mkdir -p "/workdir/DL"
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.BUILDBRANCH }}
-          lfs: true
-          submodules: true
-
-      - name: Import keys
-        shell: bash
-        run: |
-          # gpg
-          gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
-          gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
 
       - name: Cache FEED
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
@@ -159,6 +152,13 @@ jobs:
           && cp -rf ghost-dl-*/* /workdir/DL/ \
           && rm -rf ghost-dl.zip ghost-dl-* \
           || echo "ghost-dl download failed"
+
+      - name: Import keys
+        shell: bash
+        run: |
+          # gpg
+          gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
+          gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
 
       - name: Determine EXTRA_FEEDS and PACKAGES
         if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
