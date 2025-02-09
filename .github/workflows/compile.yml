@@ -141,10 +141,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /workdir/DL
-          key: Cache-DL-${{ hashFiles('**/Makefile') }}
+          key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
           #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
           restore-keys: |
-            Cache-DL-
+            Cache-DL-${{ env.BRANCH }}-
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-

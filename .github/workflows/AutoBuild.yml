@@ -165,9 +165,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: /workdir/DL
-          key: Cache-DL-${{ hashFiles('**/Makefile') }}
+          key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
           restore-keys: |
-            Cache-DL-
+            Cache-DL-${{ env.BRANCH }}-
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
