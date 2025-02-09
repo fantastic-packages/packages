@@ -110,7 +110,7 @@ jobs:
           lfs: true
           submodules: true
 
-      - name: Initialize Environment
+      - name: Initialize Working environment
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
@@ -129,7 +129,7 @@ jobs:
           restore-keys: |
             Cache-FEEDS-${{ env.BRANCH }}-
 
-      - name: Remove ${{ env.FTSPKGPREFIX }} FEED
+      - name: Remove ${{ env.FTSPKGPREFIX }}* FEED
         if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
         run: |
