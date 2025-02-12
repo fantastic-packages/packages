@@ -128,15 +128,15 @@ SHA256sum: 16f471acdcf89d900aa35656caf54fbd332ab99b686d08337e57c450c83bf9fb
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: 25.042.52570~c921547
+Version: 25.042.57833~ca21718
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 563200
-Filename: luci-app-fchomo_25.042.52570~c921547_all.ipk
-Size: 264338
-SHA256sum: 14306d27fa816997aa491de988dd23c7dcdbf86774f0722a388d098ba5bd6b49
+Filename: luci-app-fchomo_25.042.57833~ca21718_all.ipk
+Size: 264901
+SHA256sum: 87a45a9c512b6028cea4862ec6c3d832fcbbb4411bd5d6ab650e5baff30233a9
 Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -567,25 +567,25 @@ SHA256sum: c4f876cf4b435947d9392e98d1d5fab220f4033174fb3ccab56193ec7856799b
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: 25.042.52570~c921547
+Version: 25.042.57833~ca21718
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-cn_25.042.52570~c921547_all.ipk
-Size: 10842
-SHA256sum: 7deaa616cfa811dc56361dedffbe8942515e94b7e03c0125facbe4f90e0b84e7
+Filename: luci-i18n-fchomo-zh-cn_25.042.57833~ca21718_all.ipk
+Size: 10881
+SHA256sum: 6c67845d778dbfbdfd9b48b7197d46530a165178df06853257be2f04fbae51e6
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-fchomo-zh-tw
-Version: 25.042.52570~c921547
+Version: 25.042.57833~ca21718
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-tw_25.042.52570~c921547_all.ipk
-Size: 10879
-SHA256sum: 8224e9bb2689472e728c41e8150de8490b54c1c7c61cc6296a0ef650187d9acc
+Filename: luci-i18n-fchomo-zh-tw_25.042.57833~ca21718_all.ipk
+Size: 10915
+SHA256sum: 54e1bc7b7c981e37024d1486d740ac55dfe6c068b57f9c24562074dc37c89da6
 Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-interfaces-statistics-ru
