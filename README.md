@@ -119,7 +119,7 @@ make menuconfig
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
-[openwrt-fchomo]: https://github.com/muink/openwrt-fchomo
+[openwrt-fchomo]: https://github.com/fcshark-org/openwrt-fchomo
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter
