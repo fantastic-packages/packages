@@ -292,24 +292,6 @@ SHA256sum: ba4246fe2fa1562aa23590f615fcba66783e46e57bbcd57aeb282a916d953de9
 Description:  This package provides the Qt6 Xml v6.8.1 library.
 
 Package: mihomo
-Version: 1.19.1-1
-Depends: libc
-Source: /feed/packages/openwrt-fchomo/mihomo
-SourceName: mihomo
-License: GPL-2.0
-LicenseFiles: LICENSE
-Section: net
-Require-User: mihomo=7890:mihomo=7890
-SourceDateEpoch: 1738910132
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 12673585
-Filename: mihomo_1.19.1-1_x86_64.ipk
-Size: 12635943
-SHA256sum: 54916a37e7665f9673907a9c163dd30a6179e4d898bba5220bc20311bb72c614
-Description:  Another Mihomo Kernel.
-
-Package: mihomo
 Version: 1.19.2-1
 Depends: libc
 Source: /feed/packages/openwrt-fchomo/mihomo
@@ -318,13 +300,13 @@ License: GPL-2.0
 LicenseFiles: LICENSE
 Section: net
 Require-User: mihomo=7890:mihomo=7890
-SourceDateEpoch: 1739937423
+SourceDateEpoch: 1740363922
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: x86_64
-Installed-Size: 12909217
+Installed-Size: 12909098
 Filename: mihomo_1.19.2-1_x86_64.ipk
-Size: 12872190
-SHA256sum: 3f1016e00857d0a548dcadeee0e355fcaae591b9c2082cd9738bccd83953cbff
+Size: 12871950
+SHA256sum: dfbd71f8f0b70fcfbf2e37e69125b04b05f5a40e4c365c275085cb8bb85d4cb8
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
