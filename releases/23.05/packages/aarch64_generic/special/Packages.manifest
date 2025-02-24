@@ -1,5 +1,5 @@
 Package: einat-ebpf
-Version: 0.1.6-1
+Version: 0.1.5~9aa473a1-5
 Depends: libc, kmod-sched-core, kmod-sched-bpf, libbpf1
 Provides: einat
 Source: /home/runner/work/packages/packages/packages/openwrt-einat-ebpf
@@ -8,13 +8,13 @@ License: GPL-2.0-or-later GPL-2.0-only
 LicenseFiles: LICENSE
 Section: net
 Require-User: einat:einat
-SourceDateEpoch: 1740366878
+SourceDateEpoch: 1740410004
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: aarch64_generic
-Installed-Size: 1026412
-Filename: einat-ebpf_0.1.6-1_aarch64_generic.ipk
-Size: 1019199
-SHA256sum: 98b8d82ac6bf9d7d454754ac66b74df07c9961ae9bbf5fe4fb7fea7dc136bffb
+Installed-Size: 1026269
+Filename: einat-ebpf_0.1.5~9aa473a1-5_aarch64_generic.ipk
+Size: 1019213
+SHA256sum: b67fea938a5c13fcb0f4913472791b93da2b89218f4b165ca633143b06ad7502
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
