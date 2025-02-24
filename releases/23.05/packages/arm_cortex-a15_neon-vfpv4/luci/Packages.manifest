@@ -142,40 +142,6 @@ SHA256sum: 6607c03af16259faadb344719575317661f221ac775edb1d104ed5774036bfa1
 Description:  Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
 
 Package: luci-app-einat
-Version: git-25.017.45838-0972426
-Depends: libc
-Source: /feed/luci/luci-app-einat
-SourceName: luci-app-einat
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737117838
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 2192
-Filename: luci-app-einat_git-25.017.45838-0972426_all.ipk
-Size: 3042
-SHA256sum: b53979f77fae64cada068969c3ef1d02ddad4b213187b00e337739cd31e6ca8c
-Description:  eBPF-based Endpoint-Independent NAT
-
-Package: luci-app-einat
-Version: git-25.025.55538-e7e69ef
-Depends: libc
-Source: /feed/luci/luci-app-einat
-SourceName: luci-app-einat
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737818738
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 2575
-Filename: luci-app-einat_git-25.025.55538-e7e69ef_all.ipk
-Size: 3430
-SHA256sum: 7b1ddc3ad5a01a34b0764fb116b98de02d5f7350c21949f73fc23da854a0d40d
-Description:  eBPF-based Endpoint-Independent NAT
-
-Package: luci-app-einat
 Version: git-25.026.16344-14f124c
 Depends: libc
 Source: /feed/luci/luci-app-einat
@@ -425,8 +391,8 @@ Maintainer: yichya <mail@yichya.dev>
 Architecture: all
 Installed-Size: 3374
 Filename: luci-app-xray-status_3.5.0-1_all.ipk
-Size: 4152
-SHA256sum: 41663b63089baf28c21d22b573e04b30c8af66e7b8b8c2b6016e093cbf91dc2f
+Size: 4148
+SHA256sum: f2948ebb60a2103c1a8a6aa3f7f5fef2d5096ecb3d7c2587ca4e83dfa71cf22c
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -724,40 +690,6 @@ SHA256sum: e0ec50b3f1afa5d68e75166cd90bae1924b8af8d3202466ff9b0b377db1fdc84
 Description:  Translation for luci-app-disks-info - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-einat-zh-cn
-Version: git-25.017.45838-0972426
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-i18n-einat-zh-cn
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737117838
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 993
-Filename: luci-i18n-einat-zh-cn_git-25.017.45838-0972426_all.ipk
-Size: 1794
-SHA256sum: 5db2c9837b48fc5abf28f23e890c95fce71577d551f581edcbba9cc4fa445a6c
-Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-einat-zh-cn
-Version: git-25.025.55538-e7e69ef
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-i18n-einat-zh-cn
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737818738
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 995
-Filename: luci-i18n-einat-zh-cn_git-25.025.55538-e7e69ef_all.ipk
-Size: 1800
-SHA256sum: f688795928b99d623d968ab37c0faff4ffbb3186deaf58ed5b0fa1912e95b14c
-Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-einat-zh-cn
 Version: git-25.026.16344-14f124c
 Depends: libc, luci-app-einat
 Source: /feed/luci/luci-app-einat
@@ -773,40 +705,6 @@ Filename: luci-i18n-einat-zh-cn_git-25.026.16344-14f124c_all.ipk
 Size: 1797
 SHA256sum: 94f74bbb9a445e4dabd74755502a1fa4fe655dcae66db53e59e1b9588a2c4d90
 Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-einat-zh-tw
-Version: git-25.017.45838-0972426
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-i18n-einat-zh-tw
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737117838
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 996
-Filename: luci-i18n-einat-zh-tw_git-25.017.45838-0972426_all.ipk
-Size: 1806
-SHA256sum: 291da9fa2a36e5540f93806b60eee4fdc5d90d433b66b6d5a31e62f0e89060fd
-Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-einat-zh-tw
-Version: git-25.025.55538-e7e69ef
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-i18n-einat-zh-tw
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737818738
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 996
-Filename: luci-i18n-einat-zh-tw_git-25.025.55538-e7e69ef_all.ipk
-Size: 1801
-SHA256sum: beef1bbfd392029dc3d68a61e9c4d84ddfe9871e61ff967b61122b5e88983a35
-Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-einat-zh-tw
 Version: git-25.026.16344-14f124c
