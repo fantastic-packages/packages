@@ -292,6 +292,24 @@ SHA256sum: cc9ec9da3c53dec6be3a6bd1f6229515b464495a8a44cf2e4e4a030681fab9b9
 Description:  This package provides the Qt6 Xml v6.8.1 library.
 
 Package: mihomo
+Version: 1.19.1-1
+Depends: libc
+Source: /feed/packages/openwrt-fchomo/mihomo
+SourceName: mihomo
+License: GPL-2.0
+LicenseFiles: LICENSE
+Section: net
+Require-User: mihomo=7890:mihomo=7890
+SourceDateEpoch: 1738910132
+Maintainer: Anya Lin <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 11454581
+Filename: mihomo_1.19.1-1_mips_24kc.ipk
+Size: 11424649
+SHA256sum: e4f8ec33bc94961144ed2d7f62cfd2de5f370afeff448fa172f49d43928ac02f
+Description:  Another Mihomo Kernel.
+
+Package: mihomo
 Version: 1.19.2-1
 Depends: libc
 Source: /feed/packages/openwrt-fchomo/mihomo
