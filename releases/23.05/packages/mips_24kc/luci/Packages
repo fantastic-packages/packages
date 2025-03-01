@@ -1,0 +1,1662 @@
+Package: luci-app-alwaysonline
+Version: git-25.017.49174-f0405b8
+Depends: libc, uci-alwaysonline
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1599
+Filename: luci-app-alwaysonline_git-25.017.49174-f0405b8_all.ipk
+Size: 2455
+SHA256sum: e56d549c23b6c82fe71c4fc4135e1366af6657450a10bfabdfb3882d46cab066
+Description:  Hijack/bypass Windows NCSI and iOS portal detection
+
+Package: luci-app-argon-config
+Version: 1.0
+Depends: libc, luci-theme-argon
+Section: luci
+Architecture: all
+Installed-Size: 3129
+Filename: luci-app-argon-config_1.0_all.ipk
+Size: 3963
+SHA256sum: 9782d469c0998bc843d54a5cc97f3f2926e00661068e7439b1c7b85b285071e4
+Description:  LuCI app for Argon theme configuration
+
+Package: luci-app-change-mac
+Version: 0.3.9
+Depends: libc, bash, rgmac, getopt
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 4895
+Filename: luci-app-change-mac_0.3.9_all.ipk
+Size: 5788
+SHA256sum: 3d405a946d596baf9a9d8fa078b0b0ce09209ba5883f6079bbd8a20dcdf065e8
+Description:  Assign a random MAC address to the designated interface on every time boot.
+
+Package: luci-app-cpu-perf
+Version: 0.4.0
+Depends: libc, lua, luci-lib-nixio, luci-lib-jsonc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 6465
+Filename: luci-app-cpu-perf_0.4.0_all.ipk
+Size: 7364
+SHA256sum: 954592ee5ea99c810ee1d345f4291743dbd3e2aed2a4f71fd0e3ad45892e792d
+Description:  CPU performance information and management for LuCI
+
+Package: luci-app-cpu-status-mini
+Version: 0.1.0
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1059
+Filename: luci-app-cpu-status-mini_0.1.0_all.ipk
+Size: 1909
+SHA256sum: 1478a83afc8f6c1808f143bdbfce47a2b6743fd65e6bc5bb31676cea67ea8106
+Description:  CPU utilization info for the LuCI status page
+
+Package: luci-app-cpu-status
+Version: 0.5.0
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2391
+Filename: luci-app-cpu-status_0.5.0_all.ipk
+Size: 3235
+SHA256sum: e22df72a0e10faf6cbb762548297fb851eb2cbc1f2117095e6f72d94e0a92f17
+Description:  CPU utilization info for the LuCI status page
+
+Package: luci-app-diskman
+Version: 0.2.13
+Depends: libc, luci-compat, luci-lib-ipkg, e2fsprogs, parted, smartmontools, blkid, kmod-fs-vfat, dosfstools, kmod-fs-msdos, kmod-nls-base, kmod-nls-utf8, kmod-nls-cp932, kmod-nls-cp936, kmod-nls-cp950, kmod-fs-exfat, exfat-mkfs, exfat-fsck, kmod-fs-ntfs, kmod-fs-btrfs, ntfs-3g-utils, btrfs-progs, lsblk, luci-lua-runtime
+License: AGPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 20675
+Filename: luci-app-diskman_0.2.13_all.ipk
+Size: 21662
+SHA256sum: cb05d4040cffca7590860c4746ad61500f2b40e5860b3824994898f6e651f4d2
+Description:  Disk Manager interface for LuCI
+
+Package: luci-app-disks-info
+Version: 0.4.2
+Depends: libc, fdisk, smartmontools, smartmontools-drivedb
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 6596
+Filename: luci-app-disks-info_0.4.2_all.ipk
+Size: 7504
+SHA256sum: 32fe6545043b9b6473d86336a6df144d13c9bd63142de991e6222542beda098d
+Description:  Information about connected disk devices (partitions, filesystems, SMART).
+
+Package: luci-app-dnsproxy
+Version: git-25.017.49779-b276bfd
+Depends: libc, dnsproxy
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 2444
+Filename: luci-app-dnsproxy_git-25.017.49779-b276bfd_all.ipk
+Size: 3306
+SHA256sum: 6607c03af16259faadb344719575317661f221ac775edb1d104ed5774036bfa1
+Description:  Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
+
+Package: luci-app-einat
+Version: git-25.017.45838-0972426
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2192
+Filename: luci-app-einat_git-25.017.45838-0972426_all.ipk
+Size: 3042
+SHA256sum: b53979f77fae64cada068969c3ef1d02ddad4b213187b00e337739cd31e6ca8c
+Description:  eBPF-based Endpoint-Independent NAT
+
+Package: luci-app-einat
+Version: git-25.025.55538-e7e69ef
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2575
+Filename: luci-app-einat_git-25.025.55538-e7e69ef_all.ipk
+Size: 3430
+SHA256sum: 7b1ddc3ad5a01a34b0764fb116b98de02d5f7350c21949f73fc23da854a0d40d
+Description:  eBPF-based Endpoint-Independent NAT
+
+Package: luci-app-einat
+Version: git-25.026.16344-14f124c
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2590
+Filename: luci-app-einat_git-25.026.16344-14f124c_all.ipk
+Size: 3447
+SHA256sum: 73a9ca0815f46536f8a4f7c00418e576efe155a650270b7ef8d1631fd7f6fefa
+Description:  eBPF-based Endpoint-Independent NAT
+
+Package: luci-app-fchomo
+Version: git-25.018.55442-1bdc5df
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 224369
+Filename: luci-app-fchomo_git-25.018.55442-1bdc5df_all.ipk
+Size: 225539
+SHA256sum: 6ef13b67155d1d9bea9c4981f8a0a9cad9e9cf46b1ebd595a3db92db276832c7
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.021.23471-6124bcf
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225003
+Filename: luci-app-fchomo_git-25.021.23471-6124bcf_all.ipk
+Size: 226113
+SHA256sum: 241eb72c65b25426b73cada12402315045cc8b6e653e21fb8429066c4a75222b
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.022.29901-67bea28
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225143
+Filename: luci-app-fchomo_git-25.022.29901-67bea28_all.ipk
+Size: 226227
+SHA256sum: 2541daf83500b6738cb0bf7ea85c84413db04beabb60b8900166854772ec919a
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.024.32625-2e9479e
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225137
+Filename: luci-app-fchomo_git-25.024.32625-2e9479e_all.ipk
+Size: 226245
+SHA256sum: 5d27cb2700393fa3830927deac088fe378611db367459c294c9b21c7ad532093
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.025.40764-417b4e4
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225136
+Filename: luci-app-fchomo_git-25.025.40764-417b4e4_all.ipk
+Size: 226240
+SHA256sum: 68a7d33d88a2d505132b1c799c8be5756bb1aab2a4df195a22271f6e818d9567
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.028.17193-f60d54c
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225140
+Filename: luci-app-fchomo_git-25.028.17193-f60d54c_all.ipk
+Size: 226255
+SHA256sum: 5085be47b8c3f55481c2b8f204295dac4a696ff2dbcdfd7a01d945445164ff6d
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.034.25694-a234144
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225255
+Filename: luci-app-fchomo_git-25.034.25694-a234144_all.ipk
+Size: 226339
+SHA256sum: c91c0f410b3360d7b4a97a92177ac0c1eb1e9dd0afad88b813020955e48dba24
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.037.23812-32b78b8
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225250
+Filename: luci-app-fchomo_git-25.037.23812-32b78b8_all.ipk
+Size: 226369
+SHA256sum: 989c69150dc25e6df3b88b00ecda5e762b0d7801c585446981a9292323388168
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.038.23732-89238b7
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 225245
+Filename: luci-app-fchomo_git-25.038.23732-89238b7_all.ipk
+Size: 226351
+SHA256sum: 8949e71ec9fde412072f6be0ff34b1d0c0b8cac192c0389ba5572d08d095fe52
+Description:  FullCombo Mihomo supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.040.51573-2a64f13
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263144
+Filename: luci-app-fchomo_git-25.040.51573-2a64f13_all.ipk
+Size: 264223
+SHA256sum: fc0b20b68f21afcd23656cde0361e1d402db4ff02722d244f469f47053336c6e
+Description:  FullCombo Shark! supplies maximum customization on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.042.52570-c921547
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263225
+Filename: luci-app-fchomo_git-25.042.52570-c921547_all.ipk
+Size: 264310
+SHA256sum: 7e49a134da6f0b938562147b0eb321ce47b1daad6b722ed2eb2b05be19b58969
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.042.57833-ca21718
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263769
+Filename: luci-app-fchomo_git-25.042.57833-ca21718_all.ipk
+Size: 264876
+SHA256sum: 7f70103a8be15491b8ff6c8693e0645afeed3a0638d58b8ae3386f6fa07538a3
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.044.22492-3f678ad
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263835
+Filename: luci-app-fchomo_git-25.044.22492-3f678ad_all.ipk
+Size: 264936
+SHA256sum: 77a5b4521737b934ec3f8c5cafd85b1ac2049bf13d52eddc49b35a904e955511
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.045.07487-10c1784
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263835
+Filename: luci-app-fchomo_git-25.045.07487-10c1784_all.ipk
+Size: 264936
+SHA256sum: e9025b2509172acf2a22d0ee213b218182a42effddac7cdab1edaffd05324b5f
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.050.14223-4554a11
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263841
+Filename: luci-app-fchomo_git-25.050.14223-4554a11_all.ipk
+Size: 264940
+SHA256sum: 59418951463a926e74e5c743ebe1af853a1dd36dee97c5b8632da56fce5d7b18
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.055.08722-691a5c6
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263840
+Filename: luci-app-fchomo_git-25.055.08722-691a5c6_all.ipk
+Size: 264938
+SHA256sum: ab1163b5d091c57e0ed7e6e3357b673ff80ad2b6e46b63ca7a8992f0be78ac2f
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.055.28262-738f531
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263958
+Filename: luci-app-fchomo_git-25.055.28262-738f531_all.ipk
+Size: 265069
+SHA256sum: 8f8b9d73dbec22e13ce726f5043cfe6ae7327de2ac43a2f7452a298e08eb72ca
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-fchomo
+Version: git-25.056.09006-7f80834
+Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
+Section: luci
+Architecture: all
+Installed-Size: 263998
+Filename: luci-app-fchomo_git-25.056.09006-7f80834_all.ipk
+Size: 265108
+SHA256sum: b2282d22b473221dea050076174d17c1eacb3ffdd314b2510721a33c59c97725
+Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
+
+Package: luci-app-interfaces-statistics
+Version: 0.4.0
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2085
+Filename: luci-app-interfaces-statistics_0.4.0_all.ipk
+Size: 2913
+SHA256sum: 03d3335aecbd4eb392f998f3b95fb9756489ad711d3a0e8315617de46257dc98
+Description:  Network interfaces statistics
+
+Package: luci-app-internet-detector
+Version: 1.3.1
+Depends: libc, internet-detector
+Section: luci
+Architecture: all
+Installed-Size: 8198
+Filename: luci-app-internet-detector_1.3.1_all.ipk
+Size: 9031
+SHA256sum: b6e564c8eef74892f7fc7ffe73f83ea2a7e04eabbfaa29fff9d1d6a2cc1fb5c3
+Description:  LuCI support for internet-detector
+
+Package: luci-app-ipinfo
+Version: 2.4
+Depends: libc, curl
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 2060
+Filename: luci-app-ipinfo_2.4_all.ipk
+Size: 2917
+SHA256sum: fd2e0631ce668d4d80bd85038070d15e0ea2b60146ba751effb8876257089747
+Description:  Displays IP address information in overview via ip.guide.
+
+Package: luci-app-log-viewer
+Version: 1.1.1
+Depends: libc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 8555
+Filename: luci-app-log-viewer_1.1.1_all.ipk
+Size: 9428
+SHA256sum: a808503c79ad77309cf18bb081d0a2dc79a9190cc5b9f054ad41569ebcc0a550
+Description:  Advanced syslog and kernel log (tail, search, etc)
+
+Package: luci-app-natmapt
+Version: git-25.017.48928-b781dd8
+Depends: libc, natmapt, coreutils-timeout
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 6954
+Filename: luci-app-natmapt_git-25.017.48928-b781dd8_all.ipk
+Size: 7916
+SHA256sum: 25d7ebe14db145d07b7d10f5f98719b8480ce3760cf59aa1845fb210e63781ba
+Description:  TCP/UDP port mapping for full cone NAT
+
+Package: luci-app-netdata
+Version: git-25.017.49982-a9e59b2
+Depends: libc, netdata-ssl, openssl-util
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 2672
+Filename: luci-app-netdata_git-25.017.49982-a9e59b2_all.ipk
+Size: 3540
+SHA256sum: 56dc2870123229f39a91c234dbeda865a00a11f20797b0b55356dcad7ebd275a
+Description:  Real-time performance monitoring
+
+Package: luci-app-netspeedtest
+Version: git-25.017.51848-a147325
+Depends: libc, iperf3, librespeed-go, python3-speedtest-cli, ca-certificates
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 5481
+Filename: luci-app-netspeedtest_git-25.017.51848-a147325_all.ipk
+Size: 6340
+SHA256sum: eb7ce16ee56776180116c642d08cba4548969f510395ef645af35322806aebfa
+Description:  Test Net speed
+
+Package: luci-app-packagesync
+Version: git-25.018.42728-3c18d46
+Depends: libc, blockd, curl, getopt, rsync, bash, jsonfilter, ncat-full
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 11323
+Filename: luci-app-packagesync_git-25.018.42728-3c18d46_all.ipk
+Size: 12260
+SHA256sum: aa830855149391723a6d36a6b3c11115f0ce0596543ba3adbbe9b3d05db09e37
+Description:  Used to build a local mirror feeds source on the router
+
+Package: luci-app-pcap-dnsproxy
+Version: 0.4.9.13
+Depends: libc, luci-compat, pcap-dnsproxy, bash, curl, unzip, coreutils-stat, luci-lua-runtime
+Section: luci
+Architecture: all
+Installed-Size: 30228
+Filename: luci-app-pcap-dnsproxy_0.4.9.13_all.ipk
+Size: 31277
+SHA256sum: 295a993cefd42330209708327538ff636e05ece64d5f3db1009e245299a88309
+Description:  LuCI for Pcap_DNSProxy. Pcap_DNSProxy, A DNS Server to avoid contaminated result.
+
+Package: luci-app-qbittorrent
+Version: 1.0.1
+Depends: libc, qbittorrent
+Section: luci
+Architecture: all
+Installed-Size: 1814
+Filename: luci-app-qbittorrent_1.0.1_all.ipk
+Size: 2622
+SHA256sum: 90079c49fe6b0ebce0aa7ac6972c7e604def147dd449674952f64001aa087790
+Description:  LuCI support for qBittorrent
+
+Package: luci-app-temp-status
+Version: 0.4.1
+Depends: libc, lua, luci-lib-nixio, luci-lib-jsonc
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2838
+Filename: luci-app-temp-status_0.4.1_all.ipk
+Size: 3701
+SHA256sum: f65f8645f18f6530daebc90a5f1b7e814b4133f39932880d11e99d61415d095a
+Description:  Temperature sensors data for the LuCI status page
+
+Package: luci-app-tinyfilemanager
+Version: 2.6
+Depends: libc, php8, php8-cgi, php8-fastcgi, php8-fpm, php8-mod-session, php8-mod-ctype, php8-mod-fileinfo, php8-mod-zip, php8-mod-iconv, php8-mod-mbstring, coreutils-stat, zoneinfo-asia, bash, curl, tar, inotifywait
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 917061
+Filename: luci-app-tinyfilemanager_2.6_all.ipk
+Size: 918431
+SHA256sum: ffc291c76c39d820d8773a6b1d8c3d935ed4e84f070aae52133d1c5dc9de08e8
+Description:  A Web based File Manager in PHP
+
+Package: luci-app-tn-netports
+Version: 2.0.6
+Depends: libc, luabitop
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 16105
+Filename: luci-app-tn-netports_2.0.6_all.ipk
+Size: 16921
+SHA256sum: 0bfd0aa813824e5f25202c3e64da543c3ccd52cd2406b9a789841451ebc5f32e
+Description:  Network ports status LuCI application
+
+Package: luci-app-xray-status
+Version: 3.5.0-1
+Depends: libc, luci-app-xray, wget
+License: MPLv2
+Section: Custom
+Architecture: all
+Installed-Size: 3374
+Filename: luci-app-xray-status_3.5.0-1_all.ipk
+Size: 4149
+SHA256sum: ba96c6417886cc12b8cb0a7dcec2363a9b7ff5a4908ebd946195f7a58be3875a
+Description:  LuCI Support for Xray (Client-side Rendered) (status page).
+
+Package: luci-app-xray
+Version: 3.5.0-1
+Depends: libc, firewall4, kmod-nft-tproxy, luci-base, xray-core, dnsmasq, ca-bundle
+License: MPLv2
+Section: Custom
+Architecture: all
+Installed-Size: 31656
+Filename: luci-app-xray_3.5.0-1_all.ipk
+Size: 32633
+SHA256sum: a0cb8733559eda4b98edc473d2c29a4be3ad9bbbce5444cb6bde87b9a4214f6c
+Description:  LuCI Support for Xray (Client-side Rendered).
+
+Package: luci-i18n-alwaysonline-zh-cn
+Version: git-25.017.49174-f0405b8
+Depends: libc, luci-app-alwaysonline
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 839
+Filename: luci-i18n-alwaysonline-zh-cn_git-25.017.49174-f0405b8_all.ipk
+Size: 1643
+SHA256sum: 704bc4c91b864c0c938c2238b7d4ecabb76bf33814ac4034b138b147075ea7e0
+Description:  Translation for luci-app-alwaysonline - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-alwaysonline-zh-tw
+Version: git-25.017.49174-f0405b8
+Depends: libc, luci-app-alwaysonline
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 839
+Filename: luci-i18n-alwaysonline-zh-tw_git-25.017.49174-f0405b8_all.ipk
+Size: 1643
+SHA256sum: af7eeebccde69fc85fcae04b00890f32f5fb2ae90368c880fc2da9ce9018e881
+Description:  Translation for luci-app-alwaysonline - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-argon-config-es
+Version: git-23.357.34048-f539d96
+Depends: libc, luci-app-argon-config
+Section: luci
+Architecture: all
+Installed-Size: 684
+Filename: luci-i18n-argon-config-es_git-23.357.34048-f539d96_all.ipk
+Size: 1442
+SHA256sum: 09f54d565275e6e610f8ed20be07f2f2dc761b932d696cfe48937e1d5f06a1a4
+Description:  Translation for luci-app-argon-config - Español (Spanish)
+
+Package: luci-i18n-argon-config-zh-cn
+Version: git-23.357.34048-f539d96
+Depends: libc, luci-app-argon-config
+Section: luci
+Architecture: all
+Installed-Size: 1449
+Filename: luci-i18n-argon-config-zh-cn_git-23.357.34048-f539d96_all.ipk
+Size: 2239
+SHA256sum: 3f05240b74110d5514d4e6842e29085a54af9c5e4c1bbce7d50281c731c21e78
+Description:  Translation for luci-app-argon-config - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-argon-config-zh-tw
+Version: git-23.357.34048-f539d96
+Depends: libc, luci-app-argon-config
+Section: luci
+Architecture: all
+Installed-Size: 691
+Filename: luci-i18n-argon-config-zh-tw_git-23.357.34048-f539d96_all.ipk
+Size: 1467
+SHA256sum: a917cc37ef4b8fc7079c5c5e35fcccdff6bd170e5aad673dda5f72183142b0aa
+Description:  Translation for luci-app-argon-config - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-change-mac-zh-cn
+Version: git-25.017.49427-af8ef6f
+Depends: libc, luci-app-change-mac
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 946
+Filename: luci-i18n-change-mac-zh-cn_git-25.017.49427-af8ef6f_all.ipk
+Size: 1750
+SHA256sum: c1ab75141fcc74741089592f8daa43bc9448ddca810b8511ce4f8028be268f27
+Description:  Translation for luci-app-change-mac - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-change-mac-zh-tw
+Version: git-25.017.49427-af8ef6f
+Depends: libc, luci-app-change-mac
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 948
+Filename: luci-i18n-change-mac-zh-tw_git-25.017.49427-af8ef6f_all.ipk
+Size: 1747
+SHA256sum: 924ebfa75bf48267ddb21cbf8e1793c4c76de2acde808dd2ce6cab123aaee6e6
+Description:  Translation for luci-app-change-mac - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-cpu-perf-ru
+Version: git-24.338.54727-7764f22
+Depends: libc, luci-app-cpu-perf
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1737
+Filename: luci-i18n-cpu-perf-ru_git-24.338.54727-7764f22_all.ipk
+Size: 2497
+SHA256sum: 9542ec1302d4215a77d909b21923afcf7581b93fa7ae96c21a3c1e01a59d0e82
+Description:  Translation for luci-app-cpu-perf - Русский (Russian)
+
+Package: luci-i18n-cpu-perf-zh-cn
+Version: git-24.338.54727-7764f22
+Depends: libc, luci-app-cpu-perf
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1423
+Filename: luci-i18n-cpu-perf-zh-cn_git-24.338.54727-7764f22_all.ipk
+Size: 2194
+SHA256sum: 61f888655258405d74ace124528aac64a5e1960b527b6e627060889d7aee6329
+Description:  Translation for luci-app-cpu-perf - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-cpu-status-mini-ru
+Version: git-24.338.62969-01a0e63
+Depends: libc, luci-app-cpu-status-mini
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 558
+Filename: luci-i18n-cpu-status-mini-ru_git-24.338.62969-01a0e63_all.ipk
+Size: 1315
+SHA256sum: cc4f011753b53cc246f16217f299956e59471802e8c89cd9cda597be24b370e7
+Description:  Translation for luci-app-cpu-status-mini - Русский (Russian)
+
+Package: luci-i18n-cpu-status-ru
+Version: git-25.002.54711-e10af24
+Depends: libc, luci-app-cpu-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 655
+Filename: luci-i18n-cpu-status-ru_git-25.002.54711-e10af24_all.ipk
+Size: 1404
+SHA256sum: 2e44916a1a8a65190b47f5e3850ceb85448015bf02b16dd34aa83877bc83fd12
+Description:  Translation for luci-app-cpu-status - Русский (Russian)
+
+Package: luci-i18n-cpu-status-zh-cn
+Version: git-25.002.54711-e10af24
+Depends: libc, luci-app-cpu-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 628
+Filename: luci-i18n-cpu-status-zh-cn_git-25.002.54711-e10af24_all.ipk
+Size: 1398
+SHA256sum: df22d9e9f60796cae86222f34b59628d52c49f5973bca97d3c3acf96a81309ef
+Description:  Translation for luci-app-cpu-status - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-cpu-status-zh-tw
+Version: git-25.002.54711-e10af24
+Depends: libc, luci-app-cpu-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 626
+Filename: luci-i18n-cpu-status-zh-tw_git-25.002.54711-e10af24_all.ipk
+Size: 1390
+SHA256sum: a4b96c9bf5339eb4e57e72f8402242bf14f53e196ad6571c74ec038d1b0c12ac
+Description:  Translation for luci-app-cpu-status - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-diskman-pl
+Version: git-24.341.11429-78969ed
+Depends: libc, luci-app-diskman
+License: AGPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1902
+Filename: luci-i18n-diskman-pl_git-24.341.11429-78969ed_all.ipk
+Size: 2689
+SHA256sum: f8bde5e34fa9fc8398b61e27bb8423b3c8a44cff8145a4401bc58434d2410562
+Description:  Translation for luci-app-diskman - Polski (Polish)
+
+Package: luci-i18n-diskman-zh-cn
+Version: git-24.341.11429-78969ed
+Depends: libc, luci-app-diskman
+License: AGPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1870
+Filename: luci-i18n-diskman-zh-cn_git-24.341.11429-78969ed_all.ipk
+Size: 2695
+SHA256sum: 7aab1b09b8f173368b09f548956e5a8b620058757e9312c40db2ebdbe346cd99
+Description:  Translation for luci-app-diskman - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-diskman-zh-tw
+Version: git-24.341.11429-78969ed
+Depends: libc, luci-app-diskman
+License: AGPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1880
+Filename: luci-i18n-diskman-zh-tw_git-24.341.11429-78969ed_all.ipk
+Size: 2701
+SHA256sum: 364e8022d1e744571e7aed58382bed8fc4829f80f67b32be9ab968dea0f456fb
+Description:  Translation for luci-app-diskman - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-disks-info-ru
+Version: git-24.338.63137-ddf5f77
+Depends: libc, luci-app-disks-info
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2220
+Filename: luci-i18n-disks-info-ru_git-24.338.63137-ddf5f77_all.ipk
+Size: 2944
+SHA256sum: 24c7af32dfb106b63f68a914f27cb29e387270b7ed40d79fd582635bccc73b17
+Description:  Translation for luci-app-disks-info - Русский (Russian)
+
+Package: luci-i18n-disks-info-zh-cn
+Version: git-24.338.63137-ddf5f77
+Depends: libc, luci-app-disks-info
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2348
+Filename: luci-i18n-disks-info-zh-cn_git-24.338.63137-ddf5f77_all.ipk
+Size: 3126
+SHA256sum: e0ec50b3f1afa5d68e75166cd90bae1924b8af8d3202466ff9b0b377db1fdc84
+Description:  Translation for luci-app-disks-info - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-einat-zh-cn
+Version: git-25.017.45838-0972426
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 993
+Filename: luci-i18n-einat-zh-cn_git-25.017.45838-0972426_all.ipk
+Size: 1794
+SHA256sum: 5db2c9837b48fc5abf28f23e890c95fce71577d551f581edcbba9cc4fa445a6c
+Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-einat-zh-cn
+Version: git-25.025.55538-e7e69ef
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 995
+Filename: luci-i18n-einat-zh-cn_git-25.025.55538-e7e69ef_all.ipk
+Size: 1800
+SHA256sum: f688795928b99d623d968ab37c0faff4ffbb3186deaf58ed5b0fa1912e95b14c
+Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-einat-zh-cn
+Version: git-25.026.16344-14f124c
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 990
+Filename: luci-i18n-einat-zh-cn_git-25.026.16344-14f124c_all.ipk
+Size: 1797
+SHA256sum: 94f74bbb9a445e4dabd74755502a1fa4fe655dcae66db53e59e1b9588a2c4d90
+Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-einat-zh-tw
+Version: git-25.017.45838-0972426
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 996
+Filename: luci-i18n-einat-zh-tw_git-25.017.45838-0972426_all.ipk
+Size: 1806
+SHA256sum: 291da9fa2a36e5540f93806b60eee4fdc5d90d433b66b6d5a31e62f0e89060fd
+Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-einat-zh-tw
+Version: git-25.025.55538-e7e69ef
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 996
+Filename: luci-i18n-einat-zh-tw_git-25.025.55538-e7e69ef_all.ipk
+Size: 1801
+SHA256sum: beef1bbfd392029dc3d68a61e9c4d84ddfe9871e61ff967b61122b5e88983a35
+Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-einat-zh-tw
+Version: git-25.026.16344-14f124c
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 994
+Filename: luci-i18n-einat-zh-tw_git-25.026.16344-14f124c_all.ipk
+Size: 1807
+SHA256sum: 41dfa68e21893e1b07f674b43acf88766d63c3134ffe3640b3cd72155577c4f8
+Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.018.55442-1bdc5df
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10078
+Filename: luci-i18n-fchomo-zh-cn_git-25.018.55442-1bdc5df_all.ipk
+Size: 10856
+SHA256sum: 160d832c494bee5f5662d6ab7fbd849f232697c2050b7f6a818d04f5bdbe7759
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.021.23471-6124bcf
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10078
+Filename: luci-i18n-fchomo-zh-cn_git-25.021.23471-6124bcf_all.ipk
+Size: 10854
+SHA256sum: e7486cfa7748bf008093b9a2279658dc32782dfd669e5cd565b56c7d0e9804d7
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.022.29901-67bea28
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10077
+Filename: luci-i18n-fchomo-zh-cn_git-25.022.29901-67bea28_all.ipk
+Size: 10851
+SHA256sum: f69a3df246af9c428290a8e80abfd649b5c1d4489fc0acfec2a77ef0a3a548cf
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.024.32625-2e9479e
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10079
+Filename: luci-i18n-fchomo-zh-cn_git-25.024.32625-2e9479e_all.ipk
+Size: 10851
+SHA256sum: 2d7f1a54306aecd1c4a441627c7fa0a4e67feefe3ec9513f40c7a0a39ef1698d
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.025.40764-417b4e4
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10077
+Filename: luci-i18n-fchomo-zh-cn_git-25.025.40764-417b4e4_all.ipk
+Size: 10855
+SHA256sum: eb45e9e009c5199c0bd046bdbcc231d9781bfc565fd47b1e7b425e668dc42043
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.028.17193-f60d54c
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10070
+Filename: luci-i18n-fchomo-zh-cn_git-25.028.17193-f60d54c_all.ipk
+Size: 10844
+SHA256sum: 886dfbbbd44d363ae73da477eca3582de254877aa2f14f3145695bad61bbd3d4
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.034.25694-a234144
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10071
+Filename: luci-i18n-fchomo-zh-cn_git-25.034.25694-a234144_all.ipk
+Size: 10847
+SHA256sum: 0084d5f91047545602bdcf0b92883c9a3a1c035d463d697e72f085b4f5b66cbc
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.037.23812-32b78b8
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10072
+Filename: luci-i18n-fchomo-zh-cn_git-25.037.23812-32b78b8_all.ipk
+Size: 10835
+SHA256sum: 6b9c714ce0319e4eafe3b0ee1c671d24140babde764dc29bf11e919fdbdafc44
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.038.23732-89238b7
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10071
+Filename: luci-i18n-fchomo-zh-cn_git-25.038.23732-89238b7_all.ipk
+Size: 10845
+SHA256sum: 073b527c1aed5850f9e6f8b065d1ec31f1bf2234c0c33092a3c6fe90b58a041c
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.040.51573-2a64f13
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10068
+Filename: luci-i18n-fchomo-zh-cn_git-25.040.51573-2a64f13_all.ipk
+Size: 10842
+SHA256sum: d08aa022c206a43338592f3b5fbb71949c9daeba6fcfadf88853a269a8a3ace2
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.042.52570-c921547
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10065
+Filename: luci-i18n-fchomo-zh-cn_git-25.042.52570-c921547_all.ipk
+Size: 10839
+SHA256sum: 66571746bf1065c3346ea3c3c85434de1266e63de93ae81a3d300a2e00737956
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.042.57833-ca21718
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10111
+Filename: luci-i18n-fchomo-zh-cn_git-25.042.57833-ca21718_all.ipk
+Size: 10885
+SHA256sum: 84b6ab11684e4249111a70159421b1e5864879972866c58b6e178a3f2ef4b071
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.044.22492-3f678ad
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10168
+Filename: luci-i18n-fchomo-zh-cn_git-25.044.22492-3f678ad_all.ipk
+Size: 10944
+SHA256sum: f3057ef12f169171231e85d80cccab8a794f73c3b84280e2d76fa932f6917de2
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.045.07487-10c1784
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10170
+Filename: luci-i18n-fchomo-zh-cn_git-25.045.07487-10c1784_all.ipk
+Size: 10938
+SHA256sum: 3a6f7ea96bc5a48432ff147f5112669480235e0fa4f0935fcc33505ff6c07c92
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.050.14223-4554a11
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10169
+Filename: luci-i18n-fchomo-zh-cn_git-25.050.14223-4554a11_all.ipk
+Size: 10936
+SHA256sum: 974881de7d3dd2f1108f45e6f1283777c91eabe18f072d6e0ae80b4fb908f96b
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.055.08722-691a5c6
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10179
+Filename: luci-i18n-fchomo-zh-cn_git-25.055.08722-691a5c6_all.ipk
+Size: 10949
+SHA256sum: e1f6354675fda275cb01db8265b117a2ff4d074b43f6ed4360e4fe6a1b6a82d1
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.055.28262-738f531
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10262
+Filename: luci-i18n-fchomo-zh-cn_git-25.055.28262-738f531_all.ipk
+Size: 11029
+SHA256sum: e9c0d8b4007eb607812e0f859e712d84e971d094931b0df9f6111603fe9126e6
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-cn
+Version: git-25.056.09006-7f80834
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10295
+Filename: luci-i18n-fchomo-zh-cn_git-25.056.09006-7f80834_all.ipk
+Size: 11065
+SHA256sum: f4c62237c8ae453cab66bfd0d32f14383be33d1caa348f227e4e349b80f92acf
+Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.018.55442-1bdc5df
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10112
+Filename: luci-i18n-fchomo-zh-tw_git-25.018.55442-1bdc5df_all.ipk
+Size: 10885
+SHA256sum: 67e6d9d78d8399f715050132d0e7955fb3251e4e901cf91dc0ccb557b0250430
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.021.23471-6124bcf
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10113
+Filename: luci-i18n-fchomo-zh-tw_git-25.021.23471-6124bcf_all.ipk
+Size: 10884
+SHA256sum: 74a1baf1a255704a3dae4069488a8a4c8ed8ddc33ccfec6d0d4a2a730fca37f3
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.022.29901-67bea28
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10105
+Filename: luci-i18n-fchomo-zh-tw_git-25.022.29901-67bea28_all.ipk
+Size: 10884
+SHA256sum: 716ccc38c8cc6e13340705ebd6726923ed40c56827c20da0d36963950461a2a7
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.024.32625-2e9479e
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10112
+Filename: luci-i18n-fchomo-zh-tw_git-25.024.32625-2e9479e_all.ipk
+Size: 10880
+SHA256sum: 796a43116d64d5384dd2bbc3f52f194f77c558a06bf9c06ae352aab6422a86ac
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.025.40764-417b4e4
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10112
+Filename: luci-i18n-fchomo-zh-tw_git-25.025.40764-417b4e4_all.ipk
+Size: 10890
+SHA256sum: 467336ee7044572c69e67e88625275fa7ae15687dbda440542f1d3b2b79041cb
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.028.17193-f60d54c
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10107
+Filename: luci-i18n-fchomo-zh-tw_git-25.028.17193-f60d54c_all.ipk
+Size: 10879
+SHA256sum: b69c0913205d1f207b7d70901ee085b2c8f7de620fc94b90eb7c1e2641e71d17
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.034.25694-a234144
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10108
+Filename: luci-i18n-fchomo-zh-tw_git-25.034.25694-a234144_all.ipk
+Size: 10885
+SHA256sum: 81b0be4f6245137b7a1495cbc2d745d02500ceb99950d17989555f0b24ba67c3
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.037.23812-32b78b8
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10109
+Filename: luci-i18n-fchomo-zh-tw_git-25.037.23812-32b78b8_all.ipk
+Size: 10877
+SHA256sum: a48ed3dc140d9a75047e2f34d3e1356e1ed76ef0eff0ce4764d36880b8974fdd
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.038.23732-89238b7
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10108
+Filename: luci-i18n-fchomo-zh-tw_git-25.038.23732-89238b7_all.ipk
+Size: 10888
+SHA256sum: 3d5b72399a62f27df7e31c7d0a7fdb42339f97197574b71000a7b8c886effcb7
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.040.51573-2a64f13
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10107
+Filename: luci-i18n-fchomo-zh-tw_git-25.040.51573-2a64f13_all.ipk
+Size: 10876
+SHA256sum: 5b3a4e675c66389a29eb263c7fab4b547ddc75d289296d120915eaef70bd35c2
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.042.52570-c921547
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10097
+Filename: luci-i18n-fchomo-zh-tw_git-25.042.52570-c921547_all.ipk
+Size: 10870
+SHA256sum: 7a61026be747b867c13b998aab7ca0107be029be31045f1d49dc3013b71f9f94
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.042.57833-ca21718
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10145
+Filename: luci-i18n-fchomo-zh-tw_git-25.042.57833-ca21718_all.ipk
+Size: 10911
+SHA256sum: 578813044d75e7d0714045b695e7d11ade423db1df22bd4857141d4626fb7d3f
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.044.22492-3f678ad
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10212
+Filename: luci-i18n-fchomo-zh-tw_git-25.044.22492-3f678ad_all.ipk
+Size: 10976
+SHA256sum: c195cf79413423ca874f85c4fd1e3cc9044a16d932f62af67d08213b28d35ec2
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.045.07487-10c1784
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10213
+Filename: luci-i18n-fchomo-zh-tw_git-25.045.07487-10c1784_all.ipk
+Size: 10976
+SHA256sum: ef1ccc142dc1e20d27be5ef80747a8c834d720d1ae100f3f652dfec7c7492c0b
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.050.14223-4554a11
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10214
+Filename: luci-i18n-fchomo-zh-tw_git-25.050.14223-4554a11_all.ipk
+Size: 10985
+SHA256sum: a47142e67a3f0266ebc44a3c8492870d7fe0d099f67063c03f60e4603ed595a4
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.055.08722-691a5c6
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10222
+Filename: luci-i18n-fchomo-zh-tw_git-25.055.08722-691a5c6_all.ipk
+Size: 10997
+SHA256sum: 944386ef2e31f1361d953ffd93bb70378f202ac28bcd688c075c6db8866c6375
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.055.28262-738f531
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10300
+Filename: luci-i18n-fchomo-zh-tw_git-25.055.28262-738f531_all.ipk
+Size: 11068
+SHA256sum: 9bf36c248cd31781efaa44b7cb3ea4f83c2843e5686fb4926206c9bf34f60e97
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-fchomo-zh-tw
+Version: git-25.056.09006-7f80834
+Depends: libc, luci-app-fchomo
+Section: luci
+Architecture: all
+Installed-Size: 10333
+Filename: luci-i18n-fchomo-zh-tw_git-25.056.09006-7f80834_all.ipk
+Size: 11104
+SHA256sum: c30b819b5ac1c20d0effbc9c21f0aa30b8251b82842021f6f63e0d9fc44b2c29
+Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-interfaces-statistics-ru
+Version: git-24.338.63266-6d2efcc
+Depends: libc, luci-app-interfaces-statistics
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 714
+Filename: luci-i18n-interfaces-statistics-ru_git-24.338.63266-6d2efcc_all.ipk
+Size: 1465
+SHA256sum: f00479db4f5cc2ebbec11d7afac8830d7e680e6db14f9925d8065b9549f23c0b
+Description:  Translation for luci-app-interfaces-statistics - Русский (Russian)
+
+Package: luci-i18n-interfaces-statistics-zh-cn
+Version: git-24.338.63266-6d2efcc
+Depends: libc, luci-app-interfaces-statistics
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 844
+Filename: luci-i18n-interfaces-statistics-zh-cn_git-24.338.63266-6d2efcc_all.ipk
+Size: 1618
+SHA256sum: 54a7e4d3dfe191928a5ed68c3f84fd35f084df9786d438cbd736ac29be6efd4c
+Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-internet-detector-ru
+Version: git-24.351.65449-e0e13d4
+Depends: libc, luci-app-internet-detector
+Section: luci
+Architecture: all
+Installed-Size: 4313
+Filename: luci-i18n-internet-detector-ru_git-24.351.65449-e0e13d4_all.ipk
+Size: 5058
+SHA256sum: 0b40ce179928109434f4937fadcf1c42498e80639471374d644310507127a6e4
+Description:  Translation for luci-app-internet-detector - Русский (Russian)
+
+Package: luci-i18n-log-viewer-ru
+Version: git-24.316.50513-f0a38ca
+Depends: libc, luci-app-log-viewer
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1259
+Filename: luci-i18n-log-viewer-ru_git-24.316.50513-f0a38ca_all.ipk
+Size: 2027
+SHA256sum: 17a8076e6ccacda54db372e65c31b6477f4d3199e9bae6dc2d975688f9a87d75
+Description:  Translation for luci-app-log-viewer - Русский (Russian)
+
+Package: luci-i18n-natmapt-cs
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 315
+Filename: luci-i18n-natmapt-cs_git-25.017.48928-b781dd8_all.ipk
+Size: 1100
+SHA256sum: 25d57e16859db0c0ce8e1a548ae12f156714d3b6fb787dbf2070ca92bf3a4c3b
+Description:  Translation for luci-app-natmapt - Čeština (Czech)
+
+Package: luci-i18n-natmapt-da
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 628
+Filename: luci-i18n-natmapt-da_git-25.017.48928-b781dd8_all.ipk
+Size: 1410
+SHA256sum: 2adde9cb294bec821ae16e57cc13c7d0b02a221d5d903adb995668fb53e93546
+Description:  Translation for luci-app-natmapt - Dansk (Danish)
+
+Package: luci-i18n-natmapt-de
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 727
+Filename: luci-i18n-natmapt-de_git-25.017.48928-b781dd8_all.ipk
+Size: 1512
+SHA256sum: e4e9053602082f189fa27cd5d126d1e5a7c9740cec7a2bdff7def6a163baa19c
+Description:  Translation for luci-app-natmapt - Deutsch (German)
+
+Package: luci-i18n-natmapt-es
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 739
+Filename: luci-i18n-natmapt-es_git-25.017.48928-b781dd8_all.ipk
+Size: 1530
+SHA256sum: 3529c1d8427d8c8219d84e18cdc1d37f6738cebc55c8a499d501961471816503
+Description:  Translation for luci-app-natmapt - Español (Spanish)
+
+Package: luci-i18n-natmapt-fr
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 735
+Filename: luci-i18n-natmapt-fr_git-25.017.48928-b781dd8_all.ipk
+Size: 1526
+SHA256sum: 2efbf313a87735c60783ae8cef8021d15b84c18bd2589e5881fab0092c12cdaa
+Description:  Translation for luci-app-natmapt - Français (French)
+
+Package: luci-i18n-natmapt-it
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 535
+Filename: luci-i18n-natmapt-it_git-25.017.48928-b781dd8_all.ipk
+Size: 1320
+SHA256sum: 3e464e5165bfb9705ebd1d43fe52e151264d3e568872ceb14d3c107a525988a8
+Description:  Translation for luci-app-natmapt - Italiano (Italian)
+
+Package: luci-i18n-natmapt-lt
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 833
+Filename: luci-i18n-natmapt-lt_git-25.017.48928-b781dd8_all.ipk
+Size: 1627
+SHA256sum: 85b021c9f8af41a9c4f5c6c9c77803f5178a388d64ec1e0220e62286dee4ddbd
+Description:  Translation for luci-app-natmapt - Lietuvių (Lithuanian)
+
+Package: luci-i18n-natmapt-nl
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 638
+Filename: luci-i18n-natmapt-nl_git-25.017.48928-b781dd8_all.ipk
+Size: 1420
+SHA256sum: 4534d765445010ac939b9ae1b6b43869a8ecdacfde89305ed65ea59cb07068c0
+Description:  Translation for luci-app-natmapt - Nederlands (Dutch)
+
+Package: luci-i18n-natmapt-pl
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 783
+Filename: luci-i18n-natmapt-pl_git-25.017.48928-b781dd8_all.ipk
+Size: 1573
+SHA256sum: 0a4c993ee3c7ef59d81c8b20d4066fbab38d6c82c4558a08d30524d1c098ef4b
+Description:  Translation for luci-app-natmapt - Polski (Polish)
+
+Package: luci-i18n-natmapt-pt-br
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 740
+Filename: luci-i18n-natmapt-pt-br_git-25.017.48928-b781dd8_all.ipk
+Size: 1547
+SHA256sum: 569fad7dd923c7ef9731ea7bb9f5313f12d373ff2ef75e18ac60d6a380eadb6c
+Description:  Translation for luci-app-natmapt - Português do Brasil (Brazilian Portuguese)
+
+Package: luci-i18n-natmapt-pt
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 717
+Filename: luci-i18n-natmapt-pt_git-25.017.48928-b781dd8_all.ipk
+Size: 1505
+SHA256sum: 56a4c8177b408a83663bc0ff848d0a5d50ec683e899d1be5dc9b44276f10b98d
+Description:  Translation for luci-app-natmapt - Português (Portuguese)
+
+Package: luci-i18n-natmapt-ro
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 760
+Filename: luci-i18n-natmapt-ro_git-25.017.48928-b781dd8_all.ipk
+Size: 1550
+SHA256sum: f3167f468273449c5ebfeca81ebf8a13e17ad343cc4f05119ac8dfb5d5614e44
+Description:  Translation for luci-app-natmapt - Română (Romanian)
+
+Package: luci-i18n-natmapt-ru
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 856
+Filename: luci-i18n-natmapt-ru_git-25.017.48928-b781dd8_all.ipk
+Size: 1654
+SHA256sum: 3b8c126253b6e42b5d1e4548a18481fcfa835059db332121c0ed8dd236516e53
+Description:  Translation for luci-app-natmapt - Русский (Russian)
+
+Package: luci-i18n-natmapt-sv
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 308
+Filename: luci-i18n-natmapt-sv_git-25.017.48928-b781dd8_all.ipk
+Size: 1085
+SHA256sum: d12fe5df2f49fc21aedee25a87c92d600955ff814d6fff48f2ffa55c05d8ef89
+Description:  Translation for luci-app-natmapt - Svenska (Swedish)
+
+Package: luci-i18n-natmapt-tr
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 313
+Filename: luci-i18n-natmapt-tr_git-25.017.48928-b781dd8_all.ipk
+Size: 1094
+SHA256sum: 23e4fd36ad88a2aaf111f8c3ee5a5cc07085335d490584a62b32dd7917837978
+Description:  Translation for luci-app-natmapt - Türkçe (Turkish)
+
+Package: luci-i18n-natmapt-vi
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 765
+Filename: luci-i18n-natmapt-vi_git-25.017.48928-b781dd8_all.ipk
+Size: 1568
+SHA256sum: 18790e3b04183ed7aac2c2a6715ef8f91d7940bd6b57193cafec1ff61e401efd
+Description:  Translation for luci-app-natmapt - Tiếng Việt (Vietnamese)
+
+Package: luci-i18n-natmapt-zh-cn
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 2251
+Filename: luci-i18n-natmapt-zh-cn_git-25.017.48928-b781dd8_all.ipk
+Size: 3082
+SHA256sum: c6aab4bf6c43f9fcfa6edc843f2b6eb8ed328c136ad89369be5e74e2a40b4df1
+Description:  Translation for luci-app-natmapt - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-natmapt-zh-tw
+Version: git-25.017.48928-b781dd8
+Depends: libc, luci-app-natmapt
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 2263
+Filename: luci-i18n-natmapt-zh-tw_git-25.017.48928-b781dd8_all.ipk
+Size: 3094
+SHA256sum: e8e2a7d6c6f47dd25361b108eae620d19b81851908fc61b18e815b91cba46509
+Description:  Translation for luci-app-natmapt - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-netdata-zh-cn
+Version: git-25.017.49982-a9e59b2
+Depends: libc, luci-app-netdata
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 928
+Filename: luci-i18n-netdata-zh-cn_git-25.017.49982-a9e59b2_all.ipk
+Size: 1737
+SHA256sum: d3e4e8b5e584deafd7ed07e1d7694ab9f45d8606996d19be7b53e6042fed0f5b
+Description:  Translation for luci-app-netdata - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-netdata-zh-tw
+Version: git-25.017.49982-a9e59b2
+Depends: libc, luci-app-netdata
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 941
+Filename: luci-i18n-netdata-zh-tw_git-25.017.49982-a9e59b2_all.ipk
+Size: 1748
+SHA256sum: ccdeb57a126b18dc71106f8e42e494ce0f477c39b2b0aa3b25dd8ce2f3e85660
+Description:  Translation for luci-app-netdata - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-netspeedtest-zh-cn
+Version: git-25.017.51848-a147325
+Depends: libc, luci-app-netspeedtest
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1218
+Filename: luci-i18n-netspeedtest-zh-cn_git-25.017.51848-a147325_all.ipk
+Size: 2015
+SHA256sum: 3693c3546a3f0f5e4d7a9fb7590fafffd98fbade0856982fbb1b6a15010f1720
+Description:  Translation for luci-app-netspeedtest - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-netspeedtest-zh-tw
+Version: git-25.017.51848-a147325
+Depends: libc, luci-app-netspeedtest
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1224
+Filename: luci-i18n-netspeedtest-zh-tw_git-25.017.51848-a147325_all.ipk
+Size: 2029
+SHA256sum: ebadcd168217e014935401464f5fb00c50a238be2ec3b05cf80bcb9cc2bc9fc9
+Description:  Translation for luci-app-netspeedtest - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-packagesync-zh-cn
+Version: git-25.018.42728-3c18d46
+Depends: libc, luci-app-packagesync
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1469
+Filename: luci-i18n-packagesync-zh-cn_git-25.018.42728-3c18d46_all.ipk
+Size: 2277
+SHA256sum: 356e6a9c62fbc6be6a8657092b37ae2a8bfd2026565a507b3768876b7708f98a
+Description:  Translation for luci-app-packagesync - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-packagesync-zh-tw
+Version: git-25.018.42728-3c18d46
+Depends: libc, luci-app-packagesync
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1480
+Filename: luci-i18n-packagesync-zh-tw_git-25.018.42728-3c18d46_all.ipk
+Size: 2287
+SHA256sum: 97acd5e34655c42d7c3866c6e10c8fd62c1c52f274da0dbf625b4b1b30ee0b04
+Description:  Translation for luci-app-packagesync - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-pcap-dnsproxy-zh-cn
+Version: git-24.340.45503-07db73f
+Depends: libc, luci-app-pcap-dnsproxy
+Section: luci
+Architecture: all
+Installed-Size: 5577
+Filename: luci-i18n-pcap-dnsproxy-zh-cn_git-24.340.45503-07db73f_all.ipk
+Size: 6335
+SHA256sum: 4a36986b15dbaa3c1059098e4c1e3e65835ef2e3999c797b3125cf52d3bd14a3
+Description:  Translation for luci-app-pcap-dnsproxy - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-pcap-dnsproxy-zh-tw
+Version: git-24.340.45503-07db73f
+Depends: libc, luci-app-pcap-dnsproxy
+Section: luci
+Architecture: all
+Installed-Size: 5581
+Filename: luci-i18n-pcap-dnsproxy-zh-tw_git-24.340.45503-07db73f_all.ipk
+Size: 6325
+SHA256sum: 9757b51fba472c5b02e8a2ccc960ccc919dc683a1b01ea59789d25b5b873c78b
+Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-qbittorrent-zh-cn
+Version: git-24.352.82817-3c567ba
+Depends: libc, luci-app-qbittorrent
+Section: luci
+Architecture: all
+Installed-Size: 685
+Filename: luci-i18n-qbittorrent-zh-cn_git-24.352.82817-3c567ba_all.ipk
+Size: 1442
+SHA256sum: 7b15c8127ee68550161fee207d325294532f24fd7091454aad9f044336d53931
+Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-temp-status-es
+Version: git-24.338.63485-56b53e6
+Depends: libc, luci-app-temp-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 441
+Filename: luci-i18n-temp-status-es_git-24.338.63485-56b53e6_all.ipk
+Size: 1169
+SHA256sum: e63a2c6a918ca919a34ea696c60e479dfd5e5e55c2e87a6f408e5de1a559717b
+Description:  Translation for luci-app-temp-status - Español (Spanish)
+
+Package: luci-i18n-temp-status-ru
+Version: git-24.338.63485-56b53e6
+Depends: libc, luci-app-temp-status
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 551
+Filename: luci-i18n-temp-status-ru_git-24.338.63485-56b53e6_all.ipk
+Size: 1301
+SHA256sum: b52fd84d8f9d82a080b06426ea5847d8a29bf97b043a1c12375f39d34f5a3f20
+Description:  Translation for luci-app-temp-status - Русский (Russian)
+
+Package: luci-i18n-tinyfilemanager-zh-cn
+Version: git-25.017.51141-5e61a64
+Depends: libc, luci-app-tinyfilemanager
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1153
+Filename: luci-i18n-tinyfilemanager-zh-cn_git-25.017.51141-5e61a64_all.ipk
+Size: 1959
+SHA256sum: 1944c8b8a38eb2f9f54b05b63be26024ca0e9d131132379a98d2f4d0e3baa39c
+Description:  Translation for luci-app-tinyfilemanager - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-tinyfilemanager-zh-tw
+Version: git-25.017.51141-5e61a64
+Depends: libc, luci-app-tinyfilemanager
+License: GPL-3.0
+Section: luci
+Architecture: all
+Installed-Size: 1164
+Filename: luci-i18n-tinyfilemanager-zh-tw_git-25.017.51141-5e61a64_all.ipk
+Size: 1982
+SHA256sum: c115a55779c8934e31ed06032007de5a948ea61bdcb86b5a5a1be0388219106f
+Description:  Translation for luci-app-tinyfilemanager - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-tn-netports-ru
+Version: git-24.354.13116-47097a4
+Depends: libc, luci-app-tn-netports
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1041
+Filename: luci-i18n-tn-netports-ru_git-24.354.13116-47097a4_all.ipk
+Size: 1832
+SHA256sum: 8e72c7ba8ad0ff60af212adcb7186fa615ae43b34a4332caf0ed92080ce4dc69
+Description:  Translation for luci-app-tn-netports - Русский (Russian)
+
+Package: luci-i18n-tn-netports-zh-cn
+Version: git-24.354.13116-47097a4
+Depends: libc, luci-app-tn-netports
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1191
+Filename: luci-i18n-tn-netports-zh-cn_git-24.354.13116-47097a4_all.ipk
+Size: 1996
+SHA256sum: 341a6731e3d8315c09b338e60b686516d7460eb411268b0d4781dc210642a06d
+Description:  Translation for luci-app-tn-netports - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-tn-netports-zh-tw
+Version: git-24.354.13116-47097a4
+Depends: libc, luci-app-tn-netports
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1194
+Filename: luci-i18n-tn-netports-zh-tw_git-24.354.13116-47097a4_all.ipk
+Size: 1992
+SHA256sum: 18b5a9c1e88d3f7f884be617536d9bb42e2d6d5bc3ff631e7e90cd1e823a557e
+Description:  Translation for luci-app-tn-netports - 繁體中文 (Chinese Traditional)
+
+Package: luci-theme-argon
+Version: git-24.354.21394-1a22c2e
+Depends: libc, curl, jsonfilter, luci-lua-runtime
+Section: luci
+Architecture: all
+Installed-Size: 390347
+Filename: luci-theme-argon_git-24.354.21394-1a22c2e_all.ipk
+Size: 391015
+SHA256sum: 73aac083cc41f55999d7d8cc8679dfaeeb7d5b234b3d1c1b07d4eaa7b1129798
+Description:  Argon Theme
+
