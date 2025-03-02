@@ -336,13 +336,13 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1621
-SHA256sum: 8630259e5e4afde9ccecc61455e32e3b45063f2b3d967999ba3bd2dde8c824a3
+Size: 1613
+SHA256sum: ce9d7f60c40f136f9cd6a8a57e573617c82aa0a370e8599899e87521f1d081c3
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -354,13 +354,13 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1434
-SHA256sum: 6f3e278fbce7b4dea6d39e6205d96e6652ace39431213c0e55a3d71ec49519f7
+Size: 1432
+SHA256sum: 3e61983c20e55acf070451c42d396bfe892110fb74a98976ba3ea762d53c932b
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -372,13 +372,13 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1429
-SHA256sum: a50c0470f34e2dab8c62df89750cb48c2148f5de5ad9c65587619559c252c3ef
+Size: 1428
+SHA256sum: bddb01e2824034dd15b98b121bff68daec8141117e09157f6b3e59f8f2706138
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -390,13 +390,13 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
-Size: 1444
-SHA256sum: d8d08b848c1ef13f3de9055f472a4c81f8e99dad4865aa949a304ec8446e692c
+Size: 1440
+SHA256sum: 0fb925540bd7a54381b5499265edbb212f5af7ced98452d9255b3b63c73677d4
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -408,31 +408,31 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1434
-SHA256sum: 2f5da39f394d9fb2f1d40046ad4e7fd3f9e8281f200a1a728ba0a3c5d86b8a34
+Size: 1433
+SHA256sum: 3bb27a4691476a3818e3aeb230ea28157bc79b47edbfdb91c7b372cafd5b7dde
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250221~87302559-r2
+Version: 20250221~f8bb0fec-r3
 Depends: libc, curl, jsonfilter, bash
 Source: /feed/packages/openwrt-natmapt
 SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740899186
+SourceDateEpoch: 1740919145
 URL: https://github.com/heiher/natmap
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 81920
-Filename: natmapt_20250221~87302559-r2_arm_cortex-a15_neon-vfpv4.ipk
-Size: 26109
-SHA256sum: 868baeec5a9e4c3fc1cb3c0c45a0900f62c2fad6e3ba6276923d23508b50a94e
+Filename: natmapt_20250221~f8bb0fec-r3_arm_cortex-a15_neon-vfpv4.ipk
+Size: 26235
+SHA256sum: b5a895656d44b69a64633585b87a1cd771654f009619e518240bf7eda6d1dbd6
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
