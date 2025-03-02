@@ -7,8 +7,8 @@ URL: https://github.com/chengr28/Toolkit
 Architecture: aarch64_cortex-a53
 Installed-Size: 337920
 Filename: Toolkit_0.4.0.2~631954ea-r2_aarch64_cortex-a53.ipk
-Size: 115364
-SHA256sum: fb2adc07dd9dd0c23be859a2cac279c4f4f4f1d533731f14ea7e31830da4cafd
+Size: 115366
+SHA256sum: 5c5b7a6d570d5b392a78fff646c86bba4da32782e803c6d4767d3dc2d21bbfae
 Description:  A network util can ping with DNS request.
 
 Package: alwaysonline
@@ -20,8 +20,8 @@ URL: https://github.com/Jamesits/alwaysonline
 Architecture: aarch64_cortex-a53
 Installed-Size: 5795840
 Filename: alwaysonline_1.2.1~206292ca-r1_aarch64_cortex-a53.ipk
-Size: 2312396
-SHA256sum: 4ef96785d17a1345462118cd6b1c6f770d4e48f3c444cf90146b0473e0d5ed67
+Size: 2312340
+SHA256sum: f4f291ae6feea9e90f9925111a1a8fc0ed644bc05a12e99e3650b11d031f2484
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: fantastic-keyring
@@ -71,8 +71,8 @@ URL: https://github.com/ccding/go-stun
 Architecture: aarch64_cortex-a53
 Installed-Size: 2222080
 Filename: go-stun_0.1.4~d32c135f-r10_aarch64_cortex-a53.ipk
-Size: 908457
-SHA256sum: 2c8be04974c6610f972579aecd4e113c8312eb239e982d9112b90ff976654502
+Size: 908414
+SHA256sum: 5daddbd567748b95fa1848f7d651029bd5e7693007cba43d20879d94754cf6ee
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -257,8 +257,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1623
-SHA256sum: abe33766f347a80ccbb3a2612899cd3f1c046c0d9b42556f441b5dab8a22d4cd
+Size: 1616
+SHA256sum: b2f3999ad9f63af11cce5ceed53f68b1eeab21019086b62617c611493393539d
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -270,8 +270,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1431
-SHA256sum: 86ebcfd0bd1c54050c25d51646055934b591ae715d8b78c34ee33d6bb3cf9e75
+Size: 1433
+SHA256sum: 115e11ce93db42678e8886b5365794dca8c11f0dc564657a1060174339a1c24f
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -283,8 +283,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1425
-SHA256sum: 262dd177ea4af02d619d854864fbedd34929a083e0a5db7593daeed625294b55
+Size: 1429
+SHA256sum: 71a41471432a7acf588aa13641749e165d78acf19cc2856774861a015c9fe582
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -297,7 +297,7 @@ Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
 Size: 1445
-SHA256sum: aaaf21882549a50c6faeb46099f7b807c6209b7175164a25ac296c33acc6c27f
+SHA256sum: f2b20cffdd1808bf0f321a8b683e69e5e66bf016a4972509f7536d03099fa4a9
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -309,21 +309,21 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1437
-SHA256sum: 7455076c41a651e10c5d8c136f20c38cc714e6857b99e109b9b6c0fa84a559eb
+Size: 1441
+SHA256sum: bc583b06bd5ea2edd35db4e9feb5e7fd9b7236f4920dc7fc1bfecf1ee1135579
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250101-r2
+Version: 20250221-r1
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 URL: https://github.com/heiher/natmap
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
-Filename: natmapt_20250101-r2_aarch64_cortex-a53.ipk
-Size: 29659
-SHA256sum: 65d9695fd5c891c9bfc30cee2b4856ed9e4ec752d82f3fb39074b8b8070bc2a9
+Filename: natmapt_20250221-r1_aarch64_cortex-a53.ipk
+Size: 29730
+SHA256sum: 2a6ba1df05965a4348dd16819a9776746bfc098f084ff04982e83874c740e9dd
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
@@ -353,8 +353,8 @@ URL: https://github.com/chengr28/Pcap_DNSProxy
 Architecture: aarch64_cortex-a53
 Installed-Size: 1116160
 Filename: pcap-dnsproxy_0.4.9.13~70a40bb3-r1_aarch64_cortex-a53.ipk
-Size: 371795
-SHA256sum: 23d6856218712e28075ba5e266eda02d288c23b1ef4010ef32f11f571d24272f
+Size: 371803
+SHA256sum: 66275ff9afe51f90d84156be9186b35d99e9706ef450e99c8b5e2a25ce81afeb
 Description:  A local DNS server based on LibPcap
 
 Package: php-nginx
@@ -550,8 +550,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: stuntman-client_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
-Size: 39639
-SHA256sum: ca1f25ef03721ab9d342057360b489b7bb94f2c0d41ac260dc32f638245f00f4
+Size: 39640
+SHA256sum: 539a71685d9278c0d7effbf85d60fdb6b5e348b558d2bace5db18f89dcdb8419
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-server
@@ -563,8 +563,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: aarch64_cortex-a53
 Installed-Size: 266240
 Filename: stuntman-server_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
-Size: 90220
-SHA256sum: f457a459c0660db8108b92bd11fb1bc60d0a2b1109840dd83760aa119d8c4398
+Size: 90193
+SHA256sum: 982e4f68318de4fa3bac2bb261b638f06b5778f485173ff4e95e0c80a8af41c2
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode
@@ -576,8 +576,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: aarch64_cortex-a53
 Installed-Size: 204800
 Filename: stuntman-testcode_1.2.17~cc5b875b-r20240806_aarch64_cortex-a53.ipk
-Size: 66066
-SHA256sum: d9d7c034470e7cf3d8eb50cb1e0f1020400dd2891181c1996a66089d96b849da
+Size: 66062
+SHA256sum: 69e18642d1a5625755e36c8866cbc7ec00d45b980f85ebbbf2bb32658ef527bd
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: uci-alwaysonline
@@ -588,7 +588,7 @@ Section: net
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: uci-alwaysonline_0.2025.01.25_aarch64_cortex-a53.ipk
-Size: 3398
-SHA256sum: af2142b623337b40447b9e81d0cef0f69f9875c06ad7c4d2b714b3c135877523
+Size: 3391
+SHA256sum: 58d82738101860941cbe4050f22dbf1be1491b6f3d9e76f2492214758c8d0c0d
 Description:  alwaysonline uci metapackage
 

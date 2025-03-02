@@ -16,10 +16,10 @@ Depends: libc
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 1856604
+Installed-Size: 1856610
 Filename: alwaysonline_1.2.0-1_aarch64_generic.ipk
-Size: 1852726
-SHA256sum: 2fe17089a3844a90db22062e1ea63fcb45c0f5851c3760552ad05632b0cdafe1
+Size: 1852707
+SHA256sum: 8836e11148736c0cd856722f7ce0e51d752e5da84bc7c93f79140bdc63d62f67
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: fantastic-keyring
@@ -65,10 +65,10 @@ Depends: libc
 License: Apache-2.0
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 829751
+Installed-Size: 829761
 Filename: go-stun_0.1.4-10_aarch64_generic.ipk
-Size: 828877
-SHA256sum: 1e7c38ec446bef5f6a8c755cdbcbde7afafdf49287d487374c61ccb22262434e
+Size: 828908
+SHA256sum: 55fe68135b37f9b14369bc85826c2eb6f2b8f2024c13f11605996a5d29915d17
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -243,95 +243,43 @@ SHA256sum: 6e61f3da0b64df107cb15a4f2e714d09cb9ed2229dedbcafc531318b7fe65b6e
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
-Version: 0.2025.1.2
-Depends: libc, natmapt
-Provides: natmapt-client-scripts
-License: MIT
-Section: net
-Architecture: all
-Installed-Size: 818
-Filename: natmapt-client-script-deluge_0.2025.1.2_all.ipk
-Size: 1618
-SHA256sum: d5e4277a11b59013685e5513283745a1290c111465470655fb7eada40d01ab79
-Description:  NATMap client scripts (Deluge)
-
-Package: natmapt-client-script-deluge
 Version: 0.2025.2.19
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 819
+Installed-Size: 816
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
 Size: 1621
-SHA256sum: d4bee2799dd89d3859bc56f57fa76aecd2b78409b2aefa20f3e6bfdce525d02c
+SHA256sum: bc27e7a2ba24062816d81b38d6a8adbafd3ae6b97a85353a802f96e8e04c0531
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
-Version: 0.2025.1.2
-Depends: libc, natmapt
-Provides: natmapt-client-scripts
-License: MIT
-Section: net
-Architecture: all
-Installed-Size: 634
-Filename: natmapt-client-script-transmission_0.2025.1.2_all.ipk
-Size: 1431
-SHA256sum: 1592e1504b64c3495531ccd7be7eda6fed25cf123ed05383798d4ccae59a020b
-Description:  NATMap client scripts (Transmission)
-
-Package: natmapt-client-script-transmission
 Version: 0.2025.2.19
 Depends: libc, natmapt
 Provides: natmapt-client-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 637
+Installed-Size: 636
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1426
-SHA256sum: 5c096f8667f4c325e2b66094dc73328ace979985df0cf5f3d5a3d7bcfa6d9be0
+Size: 1430
+SHA256sum: b69b3983175e3d6c7fc878ee774613bd43aa39a767945b6027d5b0e012500339
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
-Version: 0.2025.1.2
-Depends: libc, natmapt
-Provides: natmapt-notify-scripts
-License: MIT
-Section: net
-Architecture: all
-Installed-Size: 626
-Filename: natmapt-notify-script-pushbullet_0.2025.1.2_all.ipk
-Size: 1426
-SHA256sum: 74b0cee3b1c0e0ba0022e858daf9049d7183d899ab83771e3e867637aa28b09a
-Description:  NATMap notify scripts (Pushbullet)
-
-Package: natmapt-notify-script-pushbullet
 Version: 0.2025.2.19
 Depends: libc, natmapt
 Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 626
+Installed-Size: 627
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1426
-SHA256sum: 02783289a9294b402da60921ce91e79106dd13937da94ce095191e649d7d1e6c
+Size: 1422
+SHA256sum: e195f8c50251c5d22453fcc766f1181022de3749265c024e63acd265ccc14177
 Description:  NATMap notify scripts (Pushbullet)
-
-Package: natmapt-notify-script-pushover
-Version: 0.2025.1.2
-Depends: libc, natmapt
-Provides: natmapt-notify-scripts
-License: MIT
-Section: net
-Architecture: all
-Installed-Size: 646
-Filename: natmapt-notify-script-pushover_0.2025.1.2_all.ipk
-Size: 1440
-SHA256sum: 617670418b83de0552c60fe8262919d69ab0b2ac4a0127d6e1e3a4b6356ea68e
-Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-pushover
 Version: 0.2025.2.19
@@ -340,24 +288,11 @@ Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 646
+Installed-Size: 647
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
-Size: 1447
-SHA256sum: deaafdc87a5ea4710e816d4ff0b964e98c140517771199f9abda2dcc8847c2bc
+Size: 1448
+SHA256sum: 78d8f5466870e3ef03b597df23da345d2f9acb76a93e23027eab8a0f64ed87ec
 Description:  NATMap notify scripts (Pushover)
-
-Package: natmapt-notify-script-telegram
-Version: 0.2025.1.2
-Depends: libc, natmapt
-Provides: natmapt-notify-scripts
-License: MIT
-Section: net
-Architecture: all
-Installed-Size: 640
-Filename: natmapt-notify-script-telegram_0.2025.1.2_all.ipk
-Size: 1433
-SHA256sum: 386a6c5da61de10c153b6727287aa70e6dd7ed7a83b82c697c68a81348a91300
-Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt-notify-script-telegram
 Version: 0.2025.2.19
@@ -368,32 +303,20 @@ Section: net
 Architecture: all
 Installed-Size: 640
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1437
-SHA256sum: 3cbcc4402108508a0922031694085b53cd462ad18d81093da79cd6c05995112c
+Size: 1441
+SHA256sum: 18a21bbdfe4246b5362994cf1ce42b9ca4d6d83a96b5c74106a2884ab3d90dc2
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250101-1
-Depends: libc, curl, jsonfilter, bash
-License: MIT
-Section: net
-Architecture: aarch64_generic
-Installed-Size: 28892
-Filename: natmapt_20250101-1_aarch64_generic.ipk
-Size: 29629
-SHA256sum: 9a767a69edaeeb34fe4067458e31ff8a10b8a8b3b61be771e7f72eda468186d1
-Description:  TCP/UDP port mapping tool for full cone NAT
-
-Package: natmapt
-Version: 20250101-2
+Version: 20250221-1
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 Architecture: aarch64_generic
 Installed-Size: 29033
-Filename: natmapt_20250101-2_aarch64_generic.ipk
-Size: 29820
-SHA256sum: a1612cb9b56fdd37859821c1a78788d4ce2fc9ed28382256530d13ca44499f28
+Filename: natmapt_20250221-1_aarch64_generic.ipk
+Size: 29825
+SHA256sum: 6ccf1b09146a4fddf4aecf34741966012455a7ebd0af0b5402e88f392199e39e
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl

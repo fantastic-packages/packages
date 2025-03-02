@@ -7,8 +7,8 @@ URL: https://github.com/chengr28/Toolkit
 Architecture: mipsel_24kc
 Installed-Size: 337920
 Filename: Toolkit_0.4.0.2~631954ea-r2_mipsel_24kc.ipk
-Size: 116787
-SHA256sum: 7cb68541be59b441c040c416d900666d154634bf7601fd9c4a2c18c2ebd5ce07
+Size: 116781
+SHA256sum: b6ceb41a30cfe69b04f5fe900490be56334cc3b312fde971af4753617fd83a78
 Description:  A network util can ping with DNS request.
 
 Package: alwaysonline
@@ -20,8 +20,8 @@ URL: https://github.com/Jamesits/alwaysonline
 Architecture: mipsel_24kc
 Installed-Size: 6502400
 Filename: alwaysonline_1.2.1~206292ca-r1_mipsel_24kc.ipk
-Size: 2225085
-SHA256sum: 0455957e55ce063a15d00afca01cc1a0c83545962cada0a8c38552d67b611a3b
+Size: 2225123
+SHA256sum: 1cec7f206065ca6ec09de13a8a39f53b36cf54c63d09e53c01d44847ef60a8e5
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: fantastic-keyring
@@ -71,8 +71,8 @@ URL: https://github.com/ccding/go-stun
 Architecture: mipsel_24kc
 Installed-Size: 2478080
 Filename: go-stun_0.1.4~d32c135f-r10_mipsel_24kc.ipk
-Size: 894607
-SHA256sum: 42d9a7fb08b8978b3e303e77799fd10d2e2eba5039e170a1b95ad48e96ea89d3
+Size: 894625
+SHA256sum: 002e320b4b7de0fbd6e3b3297b26ca7588a65be49c181f5af963df4a17ebaa60
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
@@ -257,8 +257,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1623
-SHA256sum: abe33766f347a80ccbb3a2612899cd3f1c046c0d9b42556f441b5dab8a22d4cd
+Size: 1616
+SHA256sum: b2f3999ad9f63af11cce5ceed53f68b1eeab21019086b62617c611493393539d
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -270,8 +270,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1431
-SHA256sum: 86ebcfd0bd1c54050c25d51646055934b591ae715d8b78c34ee33d6bb3cf9e75
+Size: 1433
+SHA256sum: 115e11ce93db42678e8886b5365794dca8c11f0dc564657a1060174339a1c24f
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -283,8 +283,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1425
-SHA256sum: 262dd177ea4af02d619d854864fbedd34929a083e0a5db7593daeed625294b55
+Size: 1429
+SHA256sum: 71a41471432a7acf588aa13641749e165d78acf19cc2856774861a015c9fe582
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -297,7 +297,7 @@ Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
 Size: 1445
-SHA256sum: aaaf21882549a50c6faeb46099f7b807c6209b7175164a25ac296c33acc6c27f
+SHA256sum: f2b20cffdd1808bf0f321a8b683e69e5e66bf016a4972509f7536d03099fa4a9
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -309,21 +309,21 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1437
-SHA256sum: 7455076c41a651e10c5d8c136f20c38cc714e6857b99e109b9b6c0fa84a559eb
+Size: 1441
+SHA256sum: bc583b06bd5ea2edd35db4e9feb5e7fd9b7236f4920dc7fc1bfecf1ee1135579
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250101-r2
+Version: 20250221-r1
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 URL: https://github.com/heiher/natmap
 Architecture: mipsel_24kc
 Installed-Size: 112640
-Filename: natmapt_20250101-r2_mipsel_24kc.ipk
-Size: 26768
-SHA256sum: 7dd4d492c4416b84b5aaabb0987ccd3b194a64a66da4b8a9f6c07797f39997ee
+Filename: natmapt_20250221-r1_mipsel_24kc.ipk
+Size: 26805
+SHA256sum: e10702d4de9e9ecd373109323b99e532f0ee496899bba10c4058368e79c2ac5b
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
@@ -353,8 +353,8 @@ URL: https://github.com/chengr28/Pcap_DNSProxy
 Architecture: mipsel_24kc
 Installed-Size: 921600
 Filename: pcap-dnsproxy_0.4.9.13~70a40bb3-r1_mipsel_24kc.ipk
-Size: 330999
-SHA256sum: e3ff850c5db732a7dcc777ca184caea406488f187f34dad12dd07c865c7b61b4
+Size: 330983
+SHA256sum: 429751eca5c54e1c2a43e69aa0c597915b14783a236746f561de296cfc2cd3df
 Description:  A local DNS server based on LibPcap
 
 Package: php-nginx
@@ -550,8 +550,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: mipsel_24kc
 Installed-Size: 143360
 Filename: stuntman-client_1.2.17~cc5b875b-r20240806_mipsel_24kc.ipk
-Size: 38575
-SHA256sum: 70c34c90157498d6946b95dbfc0dbb67549f772e3bfb3678bddd7f2f5f0928e4
+Size: 38583
+SHA256sum: 618abbbb1aa5d1373812c8786f2063178535d699b5aa5ad0ee7a4029af5dfe1f
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-server
@@ -563,8 +563,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: mipsel_24kc
 Installed-Size: 266240
 Filename: stuntman-server_1.2.17~cc5b875b-r20240806_mipsel_24kc.ipk
-Size: 89081
-SHA256sum: 32721cf1449eba5330d4e07091cf14c9d8fd7081dca4873e39775281792b879e
+Size: 89102
+SHA256sum: fb1c3e0c220e422143aa971e3e4034587cb6d27e602a42e83de89da8c9cbe6b0
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode
@@ -576,8 +576,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: mipsel_24kc
 Installed-Size: 204800
 Filename: stuntman-testcode_1.2.17~cc5b875b-r20240806_mipsel_24kc.ipk
-Size: 64868
-SHA256sum: dce4be83211ff856e4b2cdebef55ab6522fae229ecc48d5e5a163bb86840c5a5
+Size: 64991
+SHA256sum: 0f04d532b3907b7a4a8f14d3aa0962f88ca2044372d40ca5013a598cde28a506
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: uci-alwaysonline
@@ -588,7 +588,7 @@ Section: net
 Architecture: mipsel_24kc
 Installed-Size: 20480
 Filename: uci-alwaysonline_0.2025.01.25_mipsel_24kc.ipk
-Size: 3394
-SHA256sum: 9c34e6e8847b77948aff79ebb22579c358bccdca325b14e5c73b6c32fa67cfbd
+Size: 3390
+SHA256sum: d8626fad7ea5116dcea84c13c2f1f0d78ebe2c8df06eb2d0c886a67eaa2c596c
 Description:  alwaysonline uci metapackage
 
