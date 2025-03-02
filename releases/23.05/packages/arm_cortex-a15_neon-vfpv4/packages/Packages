@@ -249,10 +249,10 @@ Provides: natmapt-client-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 819
+Installed-Size: 813
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1621
-SHA256sum: dd897c02cffe4ad5f4d88d955edef761fae455454b6ec3026d769b3941252f63
+Size: 1612
+SHA256sum: 4a27fe31ddc0e93ccdb209e90d53817189466cc5387d26f50fc796743e842b6f
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -264,8 +264,8 @@ Section: net
 Architecture: all
 Installed-Size: 634
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1431
-SHA256sum: 993d8e7eff26e023ec2df723e8f9c8fd699f3d49f30ed48a8fdf0215230c31bd
+Size: 1430
+SHA256sum: d4cadabbf98c0e3e2f693127f5771f52a31bd6e21cce87059d181bc186acf43b
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -275,10 +275,10 @@ Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 626
+Installed-Size: 625
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1427
-SHA256sum: 4a47c5761e9c52f77326023eb92b8fd6b2e8e6732d39721185329887137ccfd7
+Size: 1424
+SHA256sum: 608240f60b5ba0fad4b8caaf8e64f13232d47c30f80239da2b3375423dc4a2da
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -288,10 +288,10 @@ Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 646
+Installed-Size: 645
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
-Size: 1442
-SHA256sum: 7eb7dab78a3c33fcaf813849300cbe98a9ca53665794ad0f43421f5ee35b1746
+Size: 1443
+SHA256sum: 8f62cb0e9d22304a20eaa6469ea4369eb20a6bcd3ec6e794f58b9e5482191d5e
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -301,22 +301,22 @@ Provides: natmapt-notify-scripts
 License: MIT
 Section: net
 Architecture: all
-Installed-Size: 639
+Installed-Size: 637
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1433
-SHA256sum: 1359a4535bc95b893e89067c5e6bc65070c83403529e470cffef89d840758c7f
+Size: 1432
+SHA256sum: c327b12150ddc84c51bbacc3ce0c6cfef779268d4f252b83279067d9ab0b447a
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250221~87302559-2
+Version: 20250221~f8bb0fec-3
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 25323
-Filename: natmapt_20250221~87302559-2_arm_cortex-a15_neon-vfpv4.ipk
-Size: 26167
-SHA256sum: c2974e1e6966fe897c240823bab5ee4ad68850ca5ab1a9f401cce321ae97ad3e
+Installed-Size: 25400
+Filename: natmapt_20250221~f8bb0fec-3_arm_cortex-a15_neon-vfpv4.ipk
+Size: 26251
+SHA256sum: 0f14a21900637305804febcbd5adff8d80bf94084f21a5887e5b4d819ed64ca3
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
