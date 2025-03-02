@@ -296,6 +296,11 @@ jobs:
           rm -rf SDK/dl
           ln -s "/workdir/DL" SDK/dl
           # feeds.conf.default
+          sed -i \
+            -e 's,https://git.openwrt.org/feed/,https://github.com/openwrt/,' \
+            -e 's,https://git.openwrt.org/openwrt/,https://github.com/openwrt/,' \
+            -e 's,https://git.openwrt.org/project/,https://github.com/openwrt/,' \
+            SDK/feeds.conf.default
           for SPECIAL_FEED in $SPECIAL_FEEDS; do
             tr '|' ' ' <<< "$SPECIAL_FEED" >> SDK/feeds.conf.default
           done
@@ -309,8 +314,8 @@ jobs:
           pushd SDK
           #
           group "scripts/feeds update -a"
-          grep -q ' ' < /dev/null || until [ $? = 0 ]; do
-            scripts/feeds update -a
+          error=1 && until [ $error = 0 ]; do
+            scripts/feeds update -a && error=0 || error=$?
           done
           endgroup
           #
