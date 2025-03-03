@@ -16,9 +16,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: /workdir/DL
-          key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
+          key: Cache-DL-${{ github.ref_name }}-
           restore-keys: |
-            Cache-DL-${{ env.BRANCH }}-
+            Cache-DL-${{ github.ref_name }}-
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
