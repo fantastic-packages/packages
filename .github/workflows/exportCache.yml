@@ -2,6 +2,12 @@ name: Export cache
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'OP branch'
+        required: true
+        default: '24.10'
+        type: string
 
 jobs:
   export_cache:
@@ -12,13 +18,13 @@ jobs:
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
           mkdir -p /workdir/DL
-      - name: Cache ${{ github.ref_name }} DL dependencies
+      - name: Cache ${{ inputs.branch }} DL dependencies
         uses: actions/cache/restore@v4
         with:
           path: /workdir/DL
-          key: Cache-DL-${{ github.ref_name }}-
+          key: Cache-DL-${{ inputs.branch }}-
           restore-keys: |
-            Cache-DL-${{ github.ref_name }}-
+            Cache-DL-${{ inputs.branch }}-
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
@@ -27,6 +33,6 @@ jobs:
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DL-${{ github.ref_name }}.tzst
+          name: DL-${{ inputs.branch }}.tzst
           path: /workdir/DL.tzst
           retention-days: 1
