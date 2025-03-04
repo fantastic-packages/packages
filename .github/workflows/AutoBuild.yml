@@ -22,11 +22,6 @@ on:
         required: true
         default: false
         type: boolean
-      export_dl:
-        description: 'Export DL'
-        required: true
-        default: false
-        type: boolean
 
   push:
     branches: [ master ]
@@ -150,35 +145,6 @@ jobs:
           && git diff-index --cached --quiet HEAD $release_path/**/packages/**/Packages.manifest \
           && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
           || (git commit -m "Update packages" && git push)
-
-  export_dl:
-    needs: compile
-    if: inputs.export_dl == 1 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Initialize Environment
-        run: |
-          sudo mkdir -p /workdir
-          sudo chown $USER:$GROUPS /workdir
-          mkdir -p /workdir/DL
-      - name: Cache DL dependencies
-        uses: actions/cache/restore@v4
-        with:
-          path: /workdir/DL
-          key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
-          restore-keys: |
-            Cache-DL-${{ env.BRANCH }}-
-      - name: Compress DL Cache
-        run: |
-          pushd /workdir/DL
-          tar -I zstd -cf /workdir/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
-          popd
-      - name: Upload DL Cache artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: DL.tzst
-          path: /workdir/DL.tzst
-          retention-days: 1
 
   deploy_pages:
     needs: [compile, push_packages]

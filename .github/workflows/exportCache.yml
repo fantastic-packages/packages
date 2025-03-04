@@ -1,0 +1,38 @@
+name: Export cache
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'OP branch'
+        required: true
+        default: '24.10'
+        type: string
+
+jobs:
+  export_cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initialize Environment
+        run: |
+          sudo mkdir -p /workdir
+          sudo chown $USER:$GROUPS /workdir
+          mkdir -p /workdir/DL
+      - name: Cache ${{ inputs.branch }} DL dependencies
+        uses: actions/cache/restore@v4
+        with:
+          path: /workdir/DL
+          key: Cache-DL-${{ inputs.branch }}-
+          restore-keys: |
+            Cache-DL-${{ inputs.branch }}-
+      - name: Compress DL Cache
+        run: |
+          pushd /workdir/DL
+          tar -I zstd -cf /workdir/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
+          popd
+      - name: Upload DL Cache artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DL-${{ inputs.branch }}.tzst
+          path: /workdir/DL.tzst
+          retention-days: 1
