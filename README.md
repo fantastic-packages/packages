@@ -19,6 +19,8 @@ for v in master 22.03 23.05 24.10; do
 	git fetch origin $v
 	git branch --track $v origin/$v
 done
+# git remote update -p
+git submodule update --init --recursive
 cd ..
 cat <<-EOF >> feeds.conf.default
 src-link fantastic_packages_packages fantastic_packages/feeds/packages
