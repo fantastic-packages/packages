@@ -292,6 +292,24 @@ SHA256sum: 0f4478ee485ef18f402f55096b514e253059ef40eee3f107c067a236b45a4ec9
 Description:  This package provides the Qt6 Xml v6.8.1 library.
 
 Package: mihomo
+Version: 1.19.2-1
+Depends: libc
+Source: /feed/packages/openwrt-fchomo/mihomo
+SourceName: mihomo
+License: GPL-2.0
+LicenseFiles: LICENSE
+Section: net
+Require-User: mihomo=7890:mihomo=7890
+SourceDateEpoch: 1740450606
+Maintainer: Anya Lin <hukk1996@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 11665041
+Filename: mihomo_1.19.2-1_mips_24kc.ipk
+Size: 11635760
+SHA256sum: 37af12a02766c988d7aff4ad9f64a8098ac5b8614da2c503a489fcd7a9e7f368
+Description:  Another Mihomo Kernel.
+
+Package: mihomo
 Version: 1.19.3-1
 Depends: libc
 Source: /feed/packages/openwrt-fchomo/mihomo
@@ -318,13 +336,13 @@ SourceName: natmapt-client-script-deluge
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 813
+Installed-Size: 819
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1612
-SHA256sum: 4a27fe31ddc0e93ccdb209e90d53817189466cc5387d26f50fc796743e842b6f
+Size: 1620
+SHA256sum: 42ee965beeb391e641b8f438476de191d210143c59a05eb36924ac07385696dd
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -336,13 +354,13 @@ SourceName: natmapt-client-script-transmission
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 634
+Installed-Size: 637
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
-Size: 1430
-SHA256sum: d4cadabbf98c0e3e2f693127f5771f52a31bd6e21cce87059d181bc186acf43b
+Size: 1433
+SHA256sum: fc698535ec731a5a7c0501995c062f41586e4673e9c78104e18e18036afc69ce
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -354,13 +372,13 @@ SourceName: natmapt-notify-script-pushbullet
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 625
+Installed-Size: 626
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
-Size: 1424
-SHA256sum: 608240f60b5ba0fad4b8caaf8e64f13232d47c30f80239da2b3375423dc4a2da
+Size: 1422
+SHA256sum: 87795fe346649735ced4e09f2971ca957df7c5d15f5236bfa129e95036d29907
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -372,13 +390,13 @@ SourceName: natmapt-notify-script-pushover
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 645
+Installed-Size: 647
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
 Size: 1443
-SHA256sum: 8f62cb0e9d22304a20eaa6469ea4369eb20a6bcd3ec6e794f58b9e5482191d5e
+SHA256sum: 03a193dae077f3fb50dc6231ca4d89a4b0b728e8099186dc2d32a720db2fe6d3
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -390,13 +408,13 @@ SourceName: natmapt-notify-script-telegram
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: all
-Installed-Size: 637
+Installed-Size: 640
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1432
-SHA256sum: c327b12150ddc84c51bbacc3ce0c6cfef779268d4f252b83279067d9ab0b447a
+Size: 1440
+SHA256sum: 201d00dbbbecf1b071c7931a783080256b3166a57fce86bd99cd2c058703e103
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
@@ -407,13 +425,13 @@ SourceName: natmapt
 License: MIT
 LicenseFiles: License
 Section: net
-SourceDateEpoch: 1740919145
+SourceDateEpoch: 1741225801
 Maintainer: Anya Lin <hukk1996@gmail.com>, Richard Yu <yurichard3839@gmail.com>, Ray Wang <r@hev.cc>
 Architecture: mips_24kc
-Installed-Size: 26368
+Installed-Size: 26373
 Filename: natmapt_20250221~f8bb0fec-3_mips_24kc.ipk
-Size: 26949
-SHA256sum: 562d80064bd827361a4b299efe5c85019aff7d7a9bfe8b159ca7c99349a5a8c0
+Size: 26945
+SHA256sum: 0ff48b6a241987c9aa73879b54283481cb34804fe8bd2a57a91fab38d30f1eed
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
