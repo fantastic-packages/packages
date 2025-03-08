@@ -8,14 +8,14 @@ License: GPL-2.0-or-later GPL-2.0-only
 LicenseFiles: LICENSE
 Section: net
 Require-User: einat:einat
-SourceDateEpoch: 1740899063
+SourceDateEpoch: 1741225151
 URL: https://github.com/EHfive/einat-ebpf
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 1935360
 Filename: einat-ebpf_0.1.7-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 861310
-SHA256sum: 9799a1549851208d1eee7c952ec492586ae692fc07bbf7ef709a019d6060ea31
+Size: 861325
+SHA256sum: 69f169e0ead0b7836e4507c74bd9f84419270c5f47fa1de628c047af89612233
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -667,8 +667,8 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 8345600
 Filename: shadowsocks-rust-ssservice_1.22.0-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 3824532
-SHA256sum: 7c3c835f1482a0348168e64fb161390f79cf24f6879af9fc6544fc6d726b95b2
+Size: 3824971
+SHA256sum: b89037c19a138e4df251fda16885141d0b80e937a80638730f84ffd7c14a7aaf
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl

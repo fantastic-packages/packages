@@ -205,16 +205,16 @@ SHA256sum: e9d3231091e1260998205298d9033c8c6d848ff9c5d9b9f4033bbbe08e940a96
 Description:  Real-time performance monitoring
 
 Package: luci-app-netspeedtest
-Version: 25.017.51848~a147325
+Version: 25.065.06988~729172b
 Depends: libc, iperf3, librespeed-go, python3-speedtest-cli, ca-certificates
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-netspeedtest_25.017.51848~a147325_all.ipk
-Size: 6355
-SHA256sum: c912fa0e145a0f6413bf6082d65610ca892628b6bc4049c26265f754a798195d
+Filename: luci-app-netspeedtest_25.065.06988~729172b_all.ipk
+Size: 6358
+SHA256sum: 538c9e1aeb095b8591d85cdf1dff14b255723e843b78324bede79c25b68d01c3
 Description:  Test Net speed
 
 Package: luci-app-packagesync
@@ -301,8 +301,8 @@ Section: Custom
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-xray-status_3.5.0-r1_all.ipk
-Size: 4148
-SHA256sum: 024cf17134262bd41df9c9379275a1b53fddf3739cd09dac7f71bc796f6edd4a
+Size: 4147
+SHA256sum: 4f3895cae17ba0faabaa85415c2f638b6f4ca799554c1da7414b6acd3fe180a9
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -831,27 +831,27 @@ SHA256sum: cb2e1180e3e5eec3fc6c59a1b840afb48ef8159061677bd66ac892498a8ae399
 Description:  Translation for luci-app-netdata - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-netspeedtest-zh-cn
-Version: 25.017.51848~a147325
+Version: 25.065.06988~729172b
 Depends: libc, luci-app-netspeedtest
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-cn_25.017.51848~a147325_all.ipk
-Size: 2020
-SHA256sum: 21f618bec4fbacf6c70ead7f0735e69da8972234b9baa57e100f5f5d59030b9d
+Filename: luci-i18n-netspeedtest-zh-cn_25.065.06988~729172b_all.ipk
+Size: 2018
+SHA256sum: a111db560a9eb6a49bdd6534983f41648c6ff27d1007edabeddbe860d23692ca
 Description:  Translation for luci-app-netspeedtest - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-netspeedtest-zh-tw
-Version: 25.017.51848~a147325
+Version: 25.065.06988~729172b
 Depends: libc, luci-app-netspeedtest
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-netspeedtest-zh-tw_25.017.51848~a147325_all.ipk
-Size: 2031
-SHA256sum: d4b803011b614cf7f385e131e92e00ce408653eadbbb28e97057314daffd3031
+Filename: luci-i18n-netspeedtest-zh-tw_25.065.06988~729172b_all.ipk
+Size: 2029
+SHA256sum: 281f38f11633233028b16a9c987c33033e968b6ac1ca4625bb4ae77a697021fe
 Description:  Translation for luci-app-netspeedtest - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-packagesync-zh-cn
