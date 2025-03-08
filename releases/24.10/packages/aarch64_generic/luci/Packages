@@ -20,8 +20,8 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-change-mac_0.3.9-r1_all.ipk
-Size: 5816
-SHA256sum: 65f6beba22217adea8314a3ec973f17baa7a01a857d025716d47e7c2b0f562eb
+Size: 5815
+SHA256sum: 67894a107d7fd06928c9dc3b72a7e564444e56796c23b31a2c6718adaf6ca747
 Description:  Assign a random MAC address to the designated interface on every time boot.
 
 Package: luci-app-cpu-perf
@@ -116,15 +116,15 @@ SHA256sum: 16f471acdcf89d900aa35656caf54fbd332ab99b686d08337e57c450c83bf9fb
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: 25.066.06090~5caf739
+Version: 25.067.46404~2480187
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 573440
-Filename: luci-app-fchomo_25.066.06090~5caf739_all.ipk
-Size: 266172
-SHA256sum: 7ce17683583e04ab9d1de763e974917331193161158dec1e0e0a60c53ac5c6d8
+Filename: luci-app-fchomo_25.067.46404~2480187_all.ipk
+Size: 266220
+SHA256sum: b3dff61e29054867b3d772a6d34e02c2acd283d730e4ba1116ea241fb63f2258
 Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -342,27 +342,27 @@ SHA256sum: 6ebb9216136ec9707aebc585f550e94a8f5902f099c6d1ddf9604d549ebf71aa
 Description:  Translation for luci-app-alwaysonline - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-change-mac-zh-cn
-Version: 25.017.49427~af8ef6f
+Version: 25.067.23066~718ae14
 Depends: libc, luci-app-change-mac
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-change-mac-zh-cn_25.017.49427~af8ef6f_all.ipk
-Size: 1755
-SHA256sum: 929603f9b27daa496dc6ed1de341d2b77f56e70c8efcbbe44b6c4439fcf10d24
+Filename: luci-i18n-change-mac-zh-cn_25.067.23066~718ae14_all.ipk
+Size: 1756
+SHA256sum: dc7662a83675e88048ef89cc7ba7c7d8f396d500b6d3f8250013ac6fafe3d02b
 Description:  Translation for luci-app-change-mac - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-change-mac-zh-tw
-Version: 25.017.49427~af8ef6f
+Version: 25.067.23066~718ae14
 Depends: libc, luci-app-change-mac
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-change-mac-zh-tw_25.017.49427~af8ef6f_all.ipk
-Size: 1754
-SHA256sum: c944f8cf0ab06496c85a523baeedab6c5719e5297bfabce1e7669500c0b5a78c
+Filename: luci-i18n-change-mac-zh-tw_25.067.23066~718ae14_all.ipk
+Size: 1747
+SHA256sum: be761d3494a350f1200ae3bb3c2c6f08644cc55e4d651ea7a0d0d6bad2f51dda
 Description:  Translation for luci-app-change-mac - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-cpu-perf-ru
@@ -522,25 +522,25 @@ SHA256sum: c4f876cf4b435947d9392e98d1d5fab220f4033174fb3ccab56193ec7856799b
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: 25.066.06090~5caf739
+Version: 25.067.46404~2480187
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-cn_25.066.06090~5caf739_all.ipk
-Size: 11294
-SHA256sum: 476907743c1a428adc8978ab83fddef78611cd882fca0e232f4255039ab49313
+Filename: luci-i18n-fchomo-zh-cn_25.067.46404~2480187_all.ipk
+Size: 11300
+SHA256sum: 25943bd69b236c71bd3b76c96c83b3c84fd7e39adaec63b2347d81bfdaa7134c
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-fchomo-zh-tw
-Version: 25.066.06090~5caf739
+Version: 25.067.46404~2480187
 Depends: libc, luci-app-fchomo
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-tw_25.066.06090~5caf739_all.ipk
-Size: 11341
-SHA256sum: 0157fe9eb97d8808eff722f453b3d64000c3f43c43b7eb3c8a776e62e060b1f4
+Filename: luci-i18n-fchomo-zh-tw_25.067.46404~2480187_all.ipk
+Size: 11343
+SHA256sum: e3532e26fa4a2bf1f2dac12eb8752b8f5a179135fa43de638dc3b1dadea97696
 Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-interfaces-statistics-ru
