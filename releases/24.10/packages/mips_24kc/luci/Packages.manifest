@@ -169,19 +169,19 @@ SHA256sum: 16f471acdcf89d900aa35656caf54fbd332ab99b686d08337e57c450c83bf9fb
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: 25.070.32130~f44aa88
+Version: 25.070.58416~d6cd024
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1741683330
+SourceDateEpoch: 1741709616
 URL: https://github.com/openwrt/luci
 Maintainer: OpenWrt LuCI community
 Architecture: all
 Installed-Size: 583680
-Filename: luci-app-fchomo_25.070.32130~f44aa88_all.ipk
-Size: 268502
-SHA256sum: 7669b10f9dc19bc67e38174594093596cd81c1eee084c4aa22e8d66c5a276244
+Filename: luci-app-fchomo_25.070.58416~d6cd024_all.ipk
+Size: 268524
+SHA256sum: 25f00454ab0b7083de909b830f980dafeaa2f4e0d6f536fc801b12226add26bf
 Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -748,31 +748,31 @@ SHA256sum: c4f876cf4b435947d9392e98d1d5fab220f4033174fb3ccab56193ec7856799b
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: 25.070.32130~f44aa88
+Version: 25.070.58416~d6cd024
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1741683330
+SourceDateEpoch: 1741709616
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-cn_25.070.32130~f44aa88_all.ipk
-Size: 11410
-SHA256sum: 2295383ec438e5a73432a089ce1847cb30248f0af0b575814423056f27ad31db
+Filename: luci-i18n-fchomo-zh-cn_25.070.58416~d6cd024_all.ipk
+Size: 11414
+SHA256sum: 7928ca5f7bec02ccff8fddaa679ada0ade308c226584e7a7741747bb1da2988b
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-fchomo-zh-tw
-Version: 25.070.32130~f44aa88
+Version: 25.070.58416~d6cd024
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1741683330
+SourceDateEpoch: 1741709616
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-tw_25.070.32130~f44aa88_all.ipk
-Size: 11481
-SHA256sum: ced533c72cb71dd811b650a7889aedac737865069e6f2cf568818208d6264cb2
+Filename: luci-i18n-fchomo-zh-tw_25.070.58416~d6cd024_all.ipk
+Size: 11488
+SHA256sum: 66be52ca5bef5ac14ff14cf58286cbec16884ec27f8b5068a54e36e86db5e7d6
 Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-interfaces-statistics-ru
