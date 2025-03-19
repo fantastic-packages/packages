@@ -20,8 +20,8 @@ URL: https://github.com/Jamesits/alwaysonline
 Architecture: mips_24kc
 Installed-Size: 6502400
 Filename: alwaysonline_1.2.1~206292ca-r1_mips_24kc.ipk
-Size: 2264164
-SHA256sum: 820b978bc55935caccb852eaa0e9c405fb70ddec71baaad75d0f31982bd7bcae
+Size: 2264040
+SHA256sum: 3afced5edbd76b91ae380f3df4fbc1295aa789d6cd446d41e190206b6f0f2048
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: fantastic-keyring
@@ -57,8 +57,8 @@ URL: https://github.com/fastfetch-cli/fastfetch
 Architecture: mips_24kc
 Installed-Size: 1187840
 Filename: fastfetch_2.38.0-r1_mips_24kc.ipk
-Size: 375053
-SHA256sum: 8577c4891747755d4fbd26a56c9146051620052c9d2491a882e782110cdcc732
+Size: 375802
+SHA256sum: 1414a91645355fc1c88107af1d677ec0c884b9b213e50fbce8f285a81b6c0016
 Description:  Fastfetch is a neofetch-like tool for fetching
  system information and displaying it prettily.
 
@@ -71,34 +71,34 @@ URL: https://github.com/ccding/go-stun
 Architecture: mips_24kc
 Installed-Size: 2478080
 Filename: go-stun_0.1.4~d32c135f-r10_mips_24kc.ipk
-Size: 909484
-SHA256sum: b9d025f4a83f12d8ea5d20271a815b0789e0ed93c1fd5e35a7a6a2715d99ce69
+Size: 909468
+SHA256sum: b574d489a2f8f5604c841fabce52d4181c9273a7c7a3e7a78a6ecb95140c0baf
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector-mod-email
-Version: 1.3.1-r1
+Version: 1.4.3-r1
 Depends: libc, internet-detector, mailsend
 Section: net
 URL: https://github.com/gSpotx2f/luci-app-internet-detector
 Architecture: all
 Installed-Size: 10240
-Filename: internet-detector-mod-email_1.3.1-r1_all.ipk
-Size: 2544
-SHA256sum: 1852c23f430092353a32de54c9330a271c7b113806934a66b8f859f80be6aecc
+Filename: internet-detector-mod-email_1.4.3-r1_all.ipk
+Size: 2626
+SHA256sum: 75e7d6518aac295b1f4b9473c25af9b311847943212a269cc2dcf036b4a75563
 Description:  Email support for internet-detector.
 
 Package: internet-detector-mod-modem-restart
-Version: 1.3.1-r1
+Version: 1.4.3-r1
 Depends: libc, internet-detector, modemmanager
 Section: net
 URL: https://github.com/gSpotx2f/luci-app-internet-detector
 Architecture: all
 Installed-Size: 10240
-Filename: internet-detector-mod-modem-restart_1.3.1-r1_all.ipk
-Size: 1827
-SHA256sum: 1802644e170faae911c46fa99b23fd40fcc04e0371047e64e78b9de13c842d95
+Filename: internet-detector-mod-modem-restart_1.4.3-r1_all.ipk
+Size: 1846
+SHA256sum: 7bdfba6cca58b69b1ccb45df6b9abede188c8ee4e1a41983ea9f03fcc47cfaef
 Description:  Support modem restart for internet detector.
 
 Package: internet-detector
@@ -244,8 +244,8 @@ URL: https://wiki.metacubex.one
 Architecture: mips_24kc
 Installed-Size: 32880640
 Filename: mihomo_1.19.3-r1_mips_24kc.ipk
-Size: 10524127
-SHA256sum: 196b36779acba73150bd73efd51c809563103fa1de572fa360e86303659660a5
+Size: 10524055
+SHA256sum: cf54e858b185f16b362a1ba1e4c88bc85eb6d541cbb9519753c0f0b5288c9f81
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -536,8 +536,8 @@ URL: https://github.com/showwin/speedtest-go
 Architecture: mips_24kc
 Installed-Size: 27146240
 Filename: speedtest-go_1.7.10-r1_mips_24kc.ipk
-Size: 9539961
-SHA256sum: fe99a610e811b68c4d5310e52190dfc29821bc1dcad8869304f0509b34e4c65a
+Size: 9540096
+SHA256sum: a6f7fd46c8eadb828181fc862ca5970fffe01a8505e7572f65c19b8e4a069cba
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 
@@ -563,8 +563,8 @@ URL: https://github.com/jselbie/stunserver
 Architecture: mips_24kc
 Installed-Size: 266240
 Filename: stuntman-server_1.2.17~cc5b875b-r20240806_mips_24kc.ipk
-Size: 89317
-SHA256sum: 0c94dd9d9897b49ea14bc9cd07d4aec32925f411099499be04236276316ce3c8
+Size: 89336
+SHA256sum: ce580f47a75ab7f2724857e1f97b5a013acf7be09ebc723aaf479fcc46121317
 Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
 
 Package: stuntman-testcode

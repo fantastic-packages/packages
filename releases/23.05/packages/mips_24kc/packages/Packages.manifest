@@ -78,10 +78,10 @@ Section: utils
 SourceDateEpoch: 1741364299
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: mips_24kc
-Installed-Size: 397915
+Installed-Size: 399786
 Filename: fastfetch_2.38.0-1_mips_24kc.ipk
-Size: 397531
-SHA256sum: a232958e97e0e54ab1950af017d89ea6d82791c80380c04d12081952e010df8e
+Size: 399306
+SHA256sum: 0ecae5d5923385c56ffe1f79b484072d1d36ef182d76b42c69b67a0b3f312313
 Description:  Fastfetch is a neofetch-like tool for fetching
  system information and displaying it prettily.
 
@@ -105,33 +105,33 @@ Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector-mod-email
-Version: 1.3.1-1
+Version: 1.4.3-1
 Depends: libc, internet-detector, mailsend
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-email
 SourceName: internet-detector-mod-email
 Section: net
-SourceDateEpoch: 1734372649
+SourceDateEpoch: 1740843096
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
-Installed-Size: 1782
-Filename: internet-detector-mod-email_1.3.1-1_all.ipk
-Size: 2537
-SHA256sum: 3601a54f19920179c4a2816d342f27743f1a287e5097c311e870ddda4d2adb46
+Installed-Size: 1860
+Filename: internet-detector-mod-email_1.4.3-1_all.ipk
+Size: 2617
+SHA256sum: f0323b30eea567fea2d017846dede3999513b7a23dbf66c802b574c196d6c47f
 Description:  Email support for internet-detector.
 
 Package: internet-detector-mod-modem-restart
-Version: 1.3.1-1
+Version: 1.4.3-1
 Depends: libc, internet-detector, modemmanager
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-modem-restart
 SourceName: internet-detector-mod-modem-restart
 Section: net
-SourceDateEpoch: 1734372649
+SourceDateEpoch: 1740843096
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
-Installed-Size: 1060
-Filename: internet-detector-mod-modem-restart_1.3.1-1_all.ipk
-Size: 1820
-SHA256sum: c46d585b656ca1177023f72010cc9417d106e6987b050986c41cc020f65f2cbe
+Installed-Size: 1077
+Filename: internet-detector-mod-modem-restart_1.4.3-1_all.ipk
+Size: 1840
+SHA256sum: 713c11f9eeb14f453ddfc7d40d0ae6aee3695bef095c292ef9b30edc35495194
 Description:  Support modem restart for internet detector.
 
 Package: internet-detector
@@ -305,8 +305,8 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: mips_24kc
 Installed-Size: 11794686
 Filename: mihomo_1.19.3-1_mips_24kc.ipk
-Size: 11764596
-SHA256sum: df78e5ccdd078643913f6d7d035e3938106b888956b7516fa674139c61aa583f
+Size: 11764608
+SHA256sum: 87211db3691cd5e0bb5145815398e9c352ca6191c69ab2d74688dfba877ec1be
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -480,13 +480,13 @@ SourceName: plain-nginx
 License: MIT
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1742021413
+SourceDateEpoch: 1742277673
 Maintainer: Anya lin <hukk1996@gmail.com>
 Architecture: all
-Installed-Size: 365
+Installed-Size: 366
 Filename: plain-nginx_20231028_all.ipk
-Size: 1162
-SHA256sum: de15dacbb74049825c1f8b3ab024198003eecc70cf276e2775a4771f63b6ede4
+Size: 1165
+SHA256sum: 4c30671701edbbc47d5209043de7494935a526d8b2f55725f7863beb89ffbd79
 Description:  Read text document directly
 
 Package: qbittorrent
