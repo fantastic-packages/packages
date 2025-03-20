@@ -257,8 +257,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
-Size: 1624
-SHA256sum: 8b49bcc04eb84dc5a17f4cb57571d5b2da30375a389bd102ee7c10fbd1a52a47
+Size: 1621
+SHA256sum: 15f95239b8c738d54bdf96bf7e06f863d1d140e1761b37f3017133ff44d2276c
 Description:  NATMap client scripts (Deluge)
 
 Package: natmapt-client-script-transmission
@@ -271,7 +271,7 @@ Architecture: all
 Installed-Size: 10240
 Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
 Size: 1433
-SHA256sum: 7ba2ce67a6b5bc280efc921c3611ca097e6f41aeabd3ff7db1f387e641cdc4ed
+SHA256sum: f74f083218963d7ff7bbd08d312d7ec27d8ba07d7ccfe0d456a68924df70c31e
 Description:  NATMap client scripts (Transmission)
 
 Package: natmapt-notify-script-pushbullet
@@ -284,7 +284,7 @@ Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
 Size: 1427
-SHA256sum: 687962b8159050e3c0652a9f537c96ebd837573f86594e10d35f77bec9025bf7
+SHA256sum: db26284b793853772f3ca11f58613728c6715d2521fd564176b5090ee4167a00
 Description:  NATMap notify scripts (Pushbullet)
 
 Package: natmapt-notify-script-pushover
@@ -296,8 +296,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
-Size: 1445
-SHA256sum: 5867aa25ae14d48d29cce2a01b304ea8cb950bb4a8dd31d2aac0892eedfaf49d
+Size: 1443
+SHA256sum: d1a3a270f01387236b420502417af488de20a90a007dd8bb9eac090c2a25904a
 Description:  NATMap notify scripts (Pushover)
 
 Package: natmapt-notify-script-telegram
@@ -309,21 +309,21 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
-Size: 1440
-SHA256sum: 146d531d5f63299671b3bbc66cfc8ce2ddfc052facc9a2b1c1080891568174ae
+Size: 1432
+SHA256sum: ace1c94d325cde6f45fa4cee17110a45bed1e047e0a75584be36713fed84af12
 Description:  NATMap notify scripts (Telegram)
 
 Package: natmapt
-Version: 20250221~f8bb0fec-r3
+Version: 20250318-r1
 Depends: libc, curl, jsonfilter, bash
 License: MIT
 Section: net
 URL: https://github.com/heiher/natmap
 Architecture: mipsel_24kc
 Installed-Size: 112640
-Filename: natmapt_20250221~f8bb0fec-r3_mipsel_24kc.ipk
-Size: 26829
-SHA256sum: ea32c62966be16f5cd6df79f6c1e4390ada56dfb25ca462dfb123e5d44d87e78
+Filename: natmapt_20250318-r1_mipsel_24kc.ipk
+Size: 26952
+SHA256sum: 00d257b8b12473ba9e970aa1f84198da789678196730513fb1d071182539dd7b
 Description:  TCP/UDP port mapping tool for full cone NAT
 
 Package: netdata-ssl
