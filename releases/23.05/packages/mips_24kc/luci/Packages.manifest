@@ -159,51 +159,6 @@ SHA256sum: 73a9ca0815f46536f8a4f7c00418e576efe155a650270b7ef8d1631fd7f6fefa
 Description:  eBPF-based Endpoint-Independent NAT
 
 Package: luci-app-fchomo
-Version: git-25.072.51058-0ec7303
-Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-app-fchomo
-Section: luci
-SourceDateEpoch: 1741875058
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 269091
-Filename: luci-app-fchomo_git-25.072.51058-0ec7303_all.ipk
-Size: 270192
-SHA256sum: 383ae4d78076def07ec23c7f54a59227eac8326ae3d0154ffc8a24b080d47f73
-Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
-
-Package: luci-app-fchomo
-Version: git-25.073.48368-0e8728f
-Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-app-fchomo
-Section: luci
-SourceDateEpoch: 1741958768
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 269285
-Filename: luci-app-fchomo_git-25.073.48368-0e8728f_all.ipk
-Size: 270394
-SHA256sum: db965cb767388ae62d479ad2d331602b255db78919f0c31c6b43d35fd2eecf78
-Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
-
-Package: luci-app-fchomo
-Version: git-25.074.24378-d121a24
-Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-app-fchomo
-Section: luci
-SourceDateEpoch: 1742021178
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 269793
-Filename: luci-app-fchomo_git-25.074.24378-d121a24_all.ipk
-Size: 270829
-SHA256sum: 349a0491b91e009a15211aa1f9efcdd709186b3902d1114805b6455c2db58916
-Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
-
-Package: luci-app-fchomo
 Version: git-25.074.31671-06c11a6
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
@@ -235,21 +190,6 @@ SHA256sum: 03d3335aecbd4eb392f998f3b95fb9756489ad711d3a0e8315617de46257dc98
 Description:  Network interfaces statistics
 
 Package: luci-app-internet-detector
-Version: 1.3.1
-Depends: libc, internet-detector
-Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
-SourceName: luci-app-internet-detector
-Section: luci
-SourceDateEpoch: 1734372649
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 8198
-Filename: luci-app-internet-detector_1.3.1_all.ipk
-Size: 9031
-SHA256sum: b6e564c8eef74892f7fc7ffe73f83ea2a7e04eabbfaa29fff9d1d6a2cc1fb5c3
-Description:  LuCI support for internet-detector
-
-Package: luci-app-internet-detector
 Version: 1.4.3
 Depends: libc, internet-detector
 Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
@@ -279,22 +219,6 @@ Filename: luci-app-ipinfo_2.4_all.ipk
 Size: 2917
 SHA256sum: fd2e0631ce668d4d80bd85038070d15e0ea2b60146ba751effb8876257089747
 Description:  Displays IP address information in overview via ip.guide.
-
-Package: luci-app-log-viewer
-Version: 1.1.1
-Depends: libc
-Source: /feed/luci/luci-app-log-viewer
-SourceName: luci-app-log-viewer
-License: MIT
-Section: luci
-SourceDateEpoch: 1731333713
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 8555
-Filename: luci-app-log-viewer_1.1.1_all.ipk
-Size: 9428
-SHA256sum: a808503c79ad77309cf18bb081d0a2dc79a9190cc5b9f054ad41569ebcc0a550
-Description:  Advanced syslog and kernel log (tail, search, etc)
 
 Package: luci-app-log-viewer
 Version: 1.2.0
@@ -467,8 +391,8 @@ Maintainer: yichya <mail@yichya.dev>
 Architecture: all
 Installed-Size: 3375
 Filename: luci-app-xray-status_3.5.0-1_all.ipk
-Size: 4150
-SHA256sum: 7810bf6ad680506bcc9a85b7bc903c7ce98a7f022e22022e20bd39134ae137fa
+Size: 4154
+SHA256sum: d2cb7eb05b0faa2bed76c0a3b216da2b8113b81c4165b70c4fc0158f157b981e
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -736,21 +660,6 @@ SHA256sum: 364e8022d1e744571e7aed58382bed8fc4829f80f67b32be9ab968dea0f456fb
 Description:  Translation for luci-app-diskman - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-disks-info-ru
-Version: git-24.338.63137-ddf5f77
-Depends: libc, luci-app-disks-info
-Source: /feed/luci/luci-app-disks-info
-SourceName: luci-i18n-disks-info-ru
-License: MIT
-Section: luci
-SourceDateEpoch: 1733247137
-Architecture: all
-Installed-Size: 2220
-Filename: luci-i18n-disks-info-ru_git-24.338.63137-ddf5f77_all.ipk
-Size: 2944
-SHA256sum: 24c7af32dfb106b63f68a914f27cb29e387270b7ed40d79fd582635bccc73b17
-Description:  Translation for luci-app-disks-info - Русский (Russian)
-
-Package: luci-i18n-disks-info-ru
 Version: git-25.074.83142-f2a78a2
 Depends: libc, luci-app-disks-info
 Source: /feed/luci/luci-app-disks-info
@@ -764,21 +673,6 @@ Filename: luci-i18n-disks-info-ru_git-25.074.83142-f2a78a2_all.ipk
 Size: 2949
 SHA256sum: 172ef2902028ebb2ac7079cf5a55410ca1d202322501aff5121e8fb4f109ac77
 Description:  Translation for luci-app-disks-info - Русский (Russian)
-
-Package: luci-i18n-disks-info-zh-cn
-Version: git-24.338.63137-ddf5f77
-Depends: libc, luci-app-disks-info
-Source: /feed/luci/luci-app-disks-info
-SourceName: luci-i18n-disks-info-zh-cn
-License: MIT
-Section: luci
-SourceDateEpoch: 1733247137
-Architecture: all
-Installed-Size: 2348
-Filename: luci-i18n-disks-info-zh-cn_git-24.338.63137-ddf5f77_all.ipk
-Size: 3126
-SHA256sum: e0ec50b3f1afa5d68e75166cd90bae1924b8af8d3202466ff9b0b377db1fdc84
-Description:  Translation for luci-app-disks-info - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-disks-info-zh-cn
 Version: git-25.074.83142-f2a78a2
@@ -830,48 +724,6 @@ SHA256sum: 41dfa68e21893e1b07f674b43acf88766d63c3134ffe3640b3cd72155577c4f8
 Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-cn
-Version: git-25.072.51058-0ec7303
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-cn
-Section: luci
-SourceDateEpoch: 1741875058
-Architecture: all
-Installed-Size: 10648
-Filename: luci-i18n-fchomo-zh-cn_git-25.072.51058-0ec7303_all.ipk
-Size: 11416
-SHA256sum: afbb1acb6344bd3d20e54a2fe22937a62d3c01b35c281ebbbc13de6638140851
-Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-fchomo-zh-cn
-Version: git-25.073.48368-0e8728f
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-cn
-Section: luci
-SourceDateEpoch: 1741958768
-Architecture: all
-Installed-Size: 10647
-Filename: luci-i18n-fchomo-zh-cn_git-25.073.48368-0e8728f_all.ipk
-Size: 11413
-SHA256sum: 21fdb1b18b6303e5d640b63e6e5c874cd6ad8964f89e7cb6a412c430fb3d8abf
-Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-fchomo-zh-cn
-Version: git-25.074.24378-d121a24
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-cn
-Section: luci
-SourceDateEpoch: 1742021178
-Architecture: all
-Installed-Size: 10645
-Filename: luci-i18n-fchomo-zh-cn_git-25.074.24378-d121a24_all.ipk
-Size: 11412
-SHA256sum: 60489dfa3f98c2622ecaa7bafb11211820a50b6663d1921f05bed4a8dcaec201
-Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-fchomo-zh-cn
 Version: git-25.074.31671-06c11a6
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
@@ -884,48 +736,6 @@ Filename: luci-i18n-fchomo-zh-cn_git-25.074.31671-06c11a6_all.ipk
 Size: 11420
 SHA256sum: e05cae5e5412cbeb5f443b8e59ebdc7e7db22e0af46ce33bd5f071a14334d255
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-fchomo-zh-tw
-Version: git-25.072.51058-0ec7303
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-tw
-Section: luci
-SourceDateEpoch: 1741875058
-Architecture: all
-Installed-Size: 10705
-Filename: luci-i18n-fchomo-zh-tw_git-25.072.51058-0ec7303_all.ipk
-Size: 11470
-SHA256sum: 43cbe5c7f074b5ae24503f5e6be05412980286dbb611ffbfc97683f7d3978748
-Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-fchomo-zh-tw
-Version: git-25.073.48368-0e8728f
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-tw
-Section: luci
-SourceDateEpoch: 1741958768
-Architecture: all
-Installed-Size: 10703
-Filename: luci-i18n-fchomo-zh-tw_git-25.073.48368-0e8728f_all.ipk
-Size: 11477
-SHA256sum: 82767730a0d3400a207b79464f3c315fc37282e711a9c39aa29e8a62d6ca673d
-Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-fchomo-zh-tw
-Version: git-25.074.24378-d121a24
-Depends: libc, luci-app-fchomo
-Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
-SourceName: luci-i18n-fchomo-zh-tw
-Section: luci
-SourceDateEpoch: 1742021178
-Architecture: all
-Installed-Size: 10703
-Filename: luci-i18n-fchomo-zh-tw_git-25.074.24378-d121a24_all.ipk
-Size: 11477
-SHA256sum: 12813855b463ad8543af467dbde711b25813f9168aaa90aba7217fa49369999f
-Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-fchomo-zh-tw
 Version: git-25.074.31671-06c11a6
@@ -972,20 +782,6 @@ SHA256sum: 54a7e4d3dfe191928a5ed68c3f84fd35f084df9786d438cbd736ac29be6efd4c
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-internet-detector-ru
-Version: git-24.351.65449-e0e13d4
-Depends: libc, luci-app-internet-detector
-Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
-SourceName: luci-i18n-internet-detector-ru
-Section: luci
-SourceDateEpoch: 1734372649
-Architecture: all
-Installed-Size: 4313
-Filename: luci-i18n-internet-detector-ru_git-24.351.65449-e0e13d4_all.ipk
-Size: 5058
-SHA256sum: 0b40ce179928109434f4937fadcf1c42498e80639471374d644310507127a6e4
-Description:  Translation for luci-app-internet-detector - Русский (Russian)
-
-Package: luci-i18n-internet-detector-ru
 Version: git-25.060.55896-55802f7
 Depends: libc, luci-app-internet-detector
 Source: /feed/luci/luci-app-internet-detector/luci-app-internet-detector
@@ -998,21 +794,6 @@ Filename: luci-i18n-internet-detector-ru_git-25.060.55896-55802f7_all.ipk
 Size: 5371
 SHA256sum: ab3c98a8baf44dbeb7f32b606a3012d6b651f6facc723212e4e8c5efeab11aaf
 Description:  Translation for luci-app-internet-detector - Русский (Russian)
-
-Package: luci-i18n-log-viewer-ru
-Version: git-24.316.50513-f0a38ca
-Depends: libc, luci-app-log-viewer
-Source: /feed/luci/luci-app-log-viewer
-SourceName: luci-i18n-log-viewer-ru
-License: MIT
-Section: luci
-SourceDateEpoch: 1731333713
-Architecture: all
-Installed-Size: 1259
-Filename: luci-i18n-log-viewer-ru_git-24.316.50513-f0a38ca_all.ipk
-Size: 2027
-SHA256sum: 17a8076e6ccacda54db372e65c31b6477f4d3199e9bae6dc2d975688f9a87d75
-Description:  Translation for luci-app-log-viewer - Русский (Russian)
 
 Package: luci-i18n-log-viewer-ru
 Version: git-25.032.55362-4751c2d
@@ -1440,20 +1221,6 @@ Filename: luci-i18n-pcap-dnsproxy-zh-tw_git-24.340.45503-07db73f_all.ipk
 Size: 6325
 SHA256sum: 9757b51fba472c5b02e8a2ccc960ccc919dc683a1b01ea59789d25b5b873c78b
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-qbittorrent-zh-cn
-Version: git-24.352.82817-3c567ba
-Depends: libc, luci-app-qbittorrent
-Source: /feed/luci/luci-app-qbittorrent/luci-app-qbittorrent
-SourceName: luci-i18n-qbittorrent-zh-cn
-Section: luci
-SourceDateEpoch: 1734476417
-Architecture: all
-Installed-Size: 685
-Filename: luci-i18n-qbittorrent-zh-cn_git-24.352.82817-3c567ba_all.ipk
-Size: 1442
-SHA256sum: 7b15c8127ee68550161fee207d325294532f24fd7091454aad9f044336d53931
-Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-qbittorrent-zh-cn
 Version: git-25.049.82816-1668625
