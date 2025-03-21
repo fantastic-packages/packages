@@ -52,7 +52,7 @@ jobs:
           - apk_sign_id: ${{ vars.APK_SIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
           - arch_packages: x86_64
-            target: ['x86', '64'] # for imagebuilder
+            target: ['x86', '64']
             profile: generic # for imagebuilder
           - arch_packages: aarch64_cortex-a53
             target: ['mvebu', 'cortexa53']
