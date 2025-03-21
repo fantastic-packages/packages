@@ -23,12 +23,8 @@
 5. if you need to use other external feeds to build a image, you need to put their apksign pub-keys in the specified location and add them to the `VERIFY_KEY_ID`
    + `./keys/apksign/<external_feeds_apksign_key-id>.pub`
    + `APK_SIGN_VERIFY_KEY_ID`: "20241123170031 <the_apksign_key-ids,_with_spaces_as_separators>"
-6. modify [ version, arch, target, profile, no_img ] matrix to replace the target devices
+6. modify [ version, arch, target, profile ] matrix to replace the target devices
    + edit [AutoBuild.yml](./.github/workflows/AutoBuild.yml)
    + modify the values ​​in `jobs:compile:strategy:matrix` according to the actual situation
    + available `target, arch` can refer to [targets.txt](./targets.txt)
    + available `profile` can refer to `https://downloads.openwrt.org/releases/<version>/targets/<target[0]>/<target[1]>/config.buildinfo`
-
-7. adjust the imagebuilder preinstalled packages
-   + modify [./.github/workflows/prebuildpackages/generic](./.github/workflows/prebuildpackages/generic)
-   + modify `./.github/workflows/prebuildpackages/<arch>`
