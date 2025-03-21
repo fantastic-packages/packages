@@ -10,8 +10,6 @@ on:
         type: choice
         options:
         - build_pkgs
-        - build_imgs
-        - build_pkgs_and_imgs
       compile_packages:
         description: 'Compile packages'
         required: false
@@ -34,8 +32,6 @@ on:
 env:
 # Release path
   release_path: 'releases'
-# 删除早期版本的 packages
-  DELETE_OLD_PACKAGES: true
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
   WORKFLOW_RETAIN_DAYS: 14
@@ -99,7 +95,6 @@ jobs:
 
   push_packages:
     needs: compile
-    if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
     permissions:
       contents: write  # To push a branch
     runs-on: ubuntu-latest
@@ -118,12 +113,7 @@ jobs:
           merge-multiple: true
       - name: Move artifact
         shell: bash
-        env:
-          keepdir: '22.03|23.05'
         run: |
-          if [ "$DELETE_OLD_PACKAGES" == "true" ]; then
-            find $release_path/* -maxdepth 0 -type d 2>/dev/null | grep -Ev "\b($keepdir)$" | xargs -I{} rm -rf "{}"
-          fi
           mkdir -p $release_path 2>/dev/null
           cp -rf packages-artifact/*/ $release_path/
           rm -rf packages-artifact/ 2>/dev/null
@@ -147,18 +137,13 @@ jobs:
           || (git commit -m "Update packages" && git push)
 
   deploy_pages:
-    needs: [compile, push_packages]
+    needs: push_packages
     if: inputs.no_pages == 0 && !cancelled()
     permissions:
       contents: read
       pages: write
       id-token: write
-    strategy:
-      matrix:
-        release_path: ['releases']
     uses: ./.github/workflows/jekyll.yml
-    with:
-      destination_path: ${{ matrix.release_path }}
 
   clean-up-old-workflow:
     needs: push_packages
