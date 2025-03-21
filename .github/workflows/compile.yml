@@ -1,4 +1,4 @@
-name: Compile packages and Build images
+name: Compile packages
 
 on:
   workflow_call:
@@ -479,63 +479,6 @@ jobs:
         if: ${{ steps.checkin_releases.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
         run: ls -R
         working-directory: /workdir/bin/packages/
-
-      - name: Determine packages be installed
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        shell: bash
-        run: |
-          INSTALLS=$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/generic" | tr '\n' ' ')
-          INSTALLS=${INSTALLS:+$INSTALLS }$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/${{ inputs.ARCH }}" 2>/dev/null | tr '\n' ' ')
-          echo "Installing: $INSTALLS"
-          echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
-
-      - name: Gen KEY_VERIFY
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        shell: bash
-        run: |
-          KEY_VERIFY=''
-          for k in ${APK_SIGN_VERIFY_KEY_ID}; do
-            key="$(cat "$GITHUB_WORKSPACE/keys/apksign/${k}.pub" | base64)"
-            KEY_VERIFY="${KEY_VERIFY:+$KEY_VERIFY }${key//[[:space:]]/}"
-          done
-          echo "KEY_VERIFY=$KEY_VERIFY"
-          echo "KEY_VERIFY=$KEY_VERIFY" >> $GITHUB_ENV
-
-      - name: Build Images
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        uses: fantastic-packages/gh-action-imagebuilder@master
-        env:
-          ARCH: ${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ env.OP_VERSION }}
-          PROFILE: ${{ inputs.MODEL }}
-          ARTIFACTS_DIR: /workdir
-          REPO_DIR: /workdir/bin/packages/${{ inputs.ARCH }}
-          EXTRA_REPOS: >-
-            file:///repo/${{ env.FTSPKGPREFIX }}packages/packages.adb
-            file:///repo/${{ env.FTSPKGPREFIX }}luci/packages.adb
-            file:///repo/${{ env.FTSPKGPREFIX }}special/packages.adb
-          NO_LOCAL_REPOS: 1
-          PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
-          #PRIVATE_KEY_PUB: ${{ env.APK_SIGN_PUBKEY }}
-          PUBLIC_KEY_VERIFY: ${{ env.KEY_VERIFY }}
-          PACKAGES: ${{ env.INSTALLS }}
-          ROOTFS_SIZE: 256
-
-      - name: Checkout Images
-        shell: bash
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        run: |
-          if [ -d "/workdir/bin" ]; then
-            sudo chown -R $USER:$GROUPS /workdir/bin
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/" 2>/dev/null
-            echo "mv /workdir/bin/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }} to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            mv -f "/workdir/bin/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            if [ "${{env.GPG_SIGN}}" == "true" ]; then
-              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
-            fi
-            popd
-          fi
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
