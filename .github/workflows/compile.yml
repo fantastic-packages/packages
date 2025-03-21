@@ -432,7 +432,7 @@ jobs:
         working-directory: /workdir/bin/packages/
 
       - name: Determine packages be installed
-        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        if: env.build_mode == 'build_imgs' && !cancelled()
         shell: bash
         run: |
           INSTALLS=$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/generic" | tr '\n' ' ')
@@ -441,7 +441,7 @@ jobs:
           echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
 
       - name: Gen KEY_VERIFY
-        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        if: env.build_mode == 'build_imgs' && !cancelled()
         shell: bash
         run: |
           KEY_VERIFY=''
@@ -453,7 +453,7 @@ jobs:
           echo "KEY_VERIFY=$KEY_VERIFY" >> $GITHUB_ENV
 
       - name: Build Images
-        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        if: env.build_mode == 'build_imgs' && !cancelled()
         uses: fantastic-packages/gh-action-imagebuilder@24.10
         env:
           ARCH: ${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ env.OP_VERSION }}
@@ -473,7 +473,7 @@ jobs:
 
       - name: Checkout Images
         shell: bash
-        if: inputs.no_img == 0 && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_imgs') && !cancelled()
+        if: env.build_mode == 'build_imgs' && !cancelled()
         run: |
           if [ -d "/workdir/bin" ]; then
             sudo chown -R $USER:$GROUPS /workdir/bin
