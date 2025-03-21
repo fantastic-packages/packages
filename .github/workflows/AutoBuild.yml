@@ -9,9 +9,9 @@ on:
         default: 'build_pkgs'
         type: choice
         options:
-        - build_pkgs_and_imgs
-        - build_imgs
         - build_pkgs
+        - build_imgs
+        - build_pkgs_and_imgs
       compile_packages:
         description: 'Compile packages'
         required: false
