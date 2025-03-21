@@ -3,15 +3,9 @@ name: Compile packages and Build images
 on:
   workflow_call:
     inputs:
-      build_mode:
-        required: false
-        type: string
       compiles:
         required: false
         type: string
-      no_img:
-        required: false
-        type: boolean
       GHPAGES_PATH:
         required: true
         type: string
@@ -121,7 +115,7 @@ jobs:
           mkdir -p "/workdir/DL"
 
       - name: Cache FEED
-        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         uses: actions/cache@v4
         with:
           path: /workdir/FEEDS/${{ env.BRANCH }}
@@ -130,14 +124,14 @@ jobs:
             Cache-FEEDS-${{ env.BRANCH }}-
 
       - name: Remove ${{ env.FTSPKGPREFIX }}* FEED
-        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
           echo "rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null"
           sudo rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null
 
       - name: Cache DL dependencies
-        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         uses: actions/cache@v4
         with:
           path: /workdir/DL
@@ -150,7 +144,7 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
       - name: Download ghost-dl
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
           wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
@@ -160,7 +154,7 @@ jobs:
           || echo "ghost-dl download failed"
 
       - name: Display structure of Cache files
-        if: env.CACHE_DOWNLOAD == 'true' && (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
           group() {
@@ -192,7 +186,6 @@ jobs:
           gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
 
       - name: Determine EXTRA_FEEDS and PACKAGES
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
         env:
           EXTRA_FEEDS: >-
@@ -245,7 +238,6 @@ jobs:
 
       - name: Build Specials
         id: build_specials
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         shell: bash
         run: |
           grep -q '^\s*$' <<< "$SPECIALS" && exit 0
@@ -359,7 +351,6 @@ jobs:
 
       - name: Build Packages
         id: build_packags
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         uses: fantastic-packages/gh-action-sdk@24.10
         env:
           #ARCH: ${{ inputs.ARCH }}-${{ env.OP_VERSION }}
@@ -386,7 +377,6 @@ jobs:
       - name: Checkout Packages
         id: checkout_packags
         shell: bash
-        if: (inputs.build_mode == 0 || inputs.build_mode == 'build_pkgs_and_imgs' || inputs.build_mode == 'build_pkgs') && !cancelled()
         run: |
           sign_packages() {
             # gpg

@@ -3,13 +3,6 @@ name: AutoBuild
 on:
   workflow_dispatch:
     inputs:
-      build_mode:
-        description: 'Build mode'
-        required: true
-        default: 'build_pkgs'
-        type: choice
-        options:
-        - build_pkgs
       compile_packages:
         description: 'Compile packages'
         required: false
@@ -63,11 +56,9 @@ jobs:
           - usign_id: ${{ vars.USIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
           - release_path: 'releases'
-          - no_img: true
           - arch_packages: x86_64
             target: ['x86', '64'] # for imagebuilder
             profile: generic # for imagebuilder
-            no_img: false
           - arch_packages: aarch64_cortex-a53
             target: ['mvebu', 'cortexa53']
           - arch_packages: aarch64_generic
@@ -80,9 +71,7 @@ jobs:
             target: ['ramips', 'mt7621']
     uses: ./.github/workflows/compile.yml
     with:
-      build_mode: ${{ inputs.build_mode }}
       compiles: ${{ inputs.compile_packages }}
-      no_img: ${{ matrix.no_img }}
       GHPAGES_PATH: ${{ matrix.release_path }}
       OP_VERSION: ${{ matrix.version }}
       ARCH: ${{ matrix.arch_packages }}
