@@ -126,7 +126,7 @@ jobs:
           || (git commit -m "Update packages" && git push)
 
   deploy_pages:
-    needs: push_packages
+    needs: [compile, push_packages]
     if: inputs.no_pages == 0 && !cancelled()
     permissions:
       contents: read
