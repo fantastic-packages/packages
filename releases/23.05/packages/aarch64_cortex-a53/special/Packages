@@ -13,6 +13,18 @@ Description:  This eBPF application implements an "Endpoint-Independent Mapping"
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
 
+Package: luci-app-einat
+Version: git-25.087.04343-82838e7
+Depends: libc, einat-ebpf
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2590
+Filename: luci-app-einat_git-25.087.04343-82838e7_all.ipk
+Size: 3462
+SHA256sum: 1b0516a4f79aa202789aa4cd7e8c659176ed98e88bfaf6502dbadd3da2f71b68
+Description:  eBPF-based Endpoint-Independent NAT
+
 Package: luci-app-shadowsocks-rust
 Version: git-24.236.54363-d7cdf6a
 Depends: libc, luci-base, shadowsocks-rust-config
@@ -24,6 +36,30 @@ Filename: luci-app-shadowsocks-rust_git-24.236.54363-d7cdf6a_all.ipk
 Size: 11555
 SHA256sum: d73f2a1cc425c62f9cb4369fb539f47c78fe4d5e8cda503eb658df56393964f6
 Description:  LuCI Support for shadowsocks-rust
+
+Package: luci-i18n-einat-zh-cn
+Version: git-25.087.04343-82838e7
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 992
+Filename: luci-i18n-einat-zh-cn_git-25.087.04343-82838e7_all.ipk
+Size: 1821
+SHA256sum: 6cdaed40565eb61d0b5c273db62bfeed7ce77638a30ad779b37fcca1afba0e87
+Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-einat-zh-tw
+Version: git-25.087.04343-82838e7
+Depends: libc, luci-app-einat
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 997
+Filename: luci-i18n-einat-zh-tw_git-25.087.04343-82838e7_all.ipk
+Size: 1822
+SHA256sum: 5a6d63b673e496c7a24845574ce49b663b88af0a88a2729af40d401a91e58d6d
+Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-shadowsocks-rust-ar
 Version: git-24.236.54363-d7cdf6a

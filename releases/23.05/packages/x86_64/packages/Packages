@@ -47,6 +47,32 @@ SHA256sum: c7d6239f89cd889160f7637f9e25e4a6d175d905d8aa3ec94fc0d81b6612d04d
 Description:  Installer for fantastic-packages feeds
 
 Package: fastfetch
+Version: 2.35.0-1
+Depends: libc
+License: MIT
+Section: utils
+Architecture: x86_64
+Installed-Size: 373090
+Filename: fastfetch_2.35.0-1_x86_64.ipk
+Size: 373829
+SHA256sum: b4d1b29f0f9d83b9865ff785b4f4c621a57aef8fc1a7ea4baa3a2472a3017c81
+Description:  Fastfetch is a neofetch-like tool for fetching
+ system information and displaying it prettily.
+
+Package: fastfetch
+Version: 2.38.0-1
+Depends: libc
+License: MIT
+Section: utils
+Architecture: x86_64
+Installed-Size: 376496
+Filename: fastfetch_2.38.0-1_x86_64.ipk
+Size: 377264
+SHA256sum: 059cdb8eff111306a6e4a2a21142882f7306b2f919902e108c4e88362605d479
+Description:  Fastfetch is a neofetch-like tool for fetching
+ system information and displaying it prettily.
+
+Package: fastfetch
 Version: 2.39.1-1
 Depends: libc
 License: MIT
@@ -116,6 +142,32 @@ Filename: internet-detector-mod-modem-restart_1.4.3-1_all.ipk
 Size: 1840
 SHA256sum: 713c11f9eeb14f453ddfc7d40d0ae6aee3695bef095c292ef9b30edc35495194
 Description:  Support modem restart for internet detector.
+
+Package: internet-detector
+Version: 1.3.1-1
+Depends: libc, lua, luaposix, libuci-lua
+Section: net
+Architecture: all
+Installed-Size: 10162
+Filename: internet-detector_1.3.1-1_all.ipk
+Size: 11036
+SHA256sum: e65879ca4c352382071fc80bd547e5805fb223e9754dbdcaea9345d5109cf2d8
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
+
+Package: internet-detector
+Version: 1.4.3-1
+Depends: libc, lua, luaposix, libuci-lua
+Section: net
+Architecture: all
+Installed-Size: 11290
+Filename: internet-detector_1.4.3-1_all.ipk
+Size: 12143
+SHA256sum: bb5624b4602b925d1a255a34b974cf262e32ab2ba70de4e98b7b8d0b4826a6e8
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
 
 Package: internet-detector
 Version: 1.4.4-1
