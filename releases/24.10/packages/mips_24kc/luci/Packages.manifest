@@ -167,38 +167,20 @@ Size: 3329
 SHA256sum: 0eaac2fb8b405f1ad3671efce929261c392267aceffc881cccc66208f6540e51
 Description:  Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
 
-Package: luci-app-einat
-Version: 25.026.16344~14f124c
-Depends: libc
-Source: /feed/luci/luci-app-einat
-SourceName: luci-app-einat
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737865944
-URL: https://github.com/openwrt/luci
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 20480
-Filename: luci-app-einat_25.026.16344~14f124c_all.ipk
-Size: 3471
-SHA256sum: 16f471acdcf89d900aa35656caf54fbd332ab99b686d08337e57c450c83bf9fb
-Description:  eBPF-based Endpoint-Independent NAT
-
 Package: luci-app-fchomo
-Version: 25.074.31671~06c11a6
+Version: 25.092.07080~bccdaef
 Depends: libc, mihomo, ca-bundle, firewall4, kmod-inet-diag, kmod-nft-tproxy, yq, wget-ssl, coreutils-timeout
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1742028471
+SourceDateEpoch: 1743559080
 URL: https://github.com/openwrt/luci
 Maintainer: OpenWrt LuCI community
 Architecture: all
 Installed-Size: 593920
-Filename: luci-app-fchomo_25.074.31671~06c11a6_all.ipk
-Size: 270890
-SHA256sum: 8c5701d0c3de04d22673500e81e34e1b85e10ade8998f5b14d52504a5e1cee63
+Filename: luci-app-fchomo_25.092.07080~bccdaef_all.ipk
+Size: 270873
+SHA256sum: 7a100c678fbc8634b2715c7af69f107a2ae0e5fefef58cf32b6dbf4d12f8aea4
 Description:  FullCombo Shark! supplies maximum customization of mihomo on OpenWrt.
 
 Package: luci-app-interfaces-statistics
@@ -808,66 +790,32 @@ Size: 3129
 SHA256sum: 8a6dc2d5651951796396556d4a8fba6aef86c6f4dfce0194cf705b720af4c8b6
 Description:  Translation for luci-app-disks-info - 简体中文 (Chinese Simplified)
 
-Package: luci-i18n-einat-zh-cn
-Version: 25.026.16344~14f124c
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-app-einat
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737865944
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-einat-zh-cn_25.026.16344~14f124c_all.ipk
-Size: 1794
-SHA256sum: ba0c8dac1069a699c341d408a8bebcb2ccf54b7ec7ca63426dffc48e6d763554
-Description:  Translation for luci-app-einat - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-einat-zh-tw
-Version: 25.026.16344~14f124c
-Depends: libc, luci-app-einat
-Source: /feed/luci/luci-app-einat
-SourceName: luci-app-einat
-License: MIT
-LicenseFiles: LICENSE
-Section: luci
-SourceDateEpoch: 1737865944
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-einat-zh-tw_25.026.16344~14f124c_all.ipk
-Size: 1804
-SHA256sum: c4f876cf4b435947d9392e98d1d5fab220f4033174fb3ccab56193ec7856799b
-Description:  Translation for luci-app-einat - 繁體中文 (Chinese Traditional)
-
 Package: luci-i18n-fchomo-zh-cn
-Version: 25.074.31671~06c11a6
+Version: 25.092.07080~bccdaef
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1742028471
+SourceDateEpoch: 1743559080
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-cn_25.074.31671~06c11a6_all.ipk
+Filename: luci-i18n-fchomo-zh-cn_25.092.07080~bccdaef_all.ipk
 Size: 11420
-SHA256sum: c5fbab6729b0648e7f7385efaf09a34e1ef7e34aa5385c3301995c472769073e
+SHA256sum: 0738044a4edd8f7ec921a496e760d2fe5b1e53e19015624bab82cf694ee53664
 Description:  Translation for luci-app-fchomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-fchomo-zh-tw
-Version: 25.074.31671~06c11a6
+Version: 25.092.07080~bccdaef
 Depends: libc, luci-app-fchomo
 Source: /feed/packages/openwrt-fchomo/luci-app-fchomo
 SourceName: luci-app-fchomo
 Section: luci
-SourceDateEpoch: 1742028471
+SourceDateEpoch: 1743559080
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-fchomo-zh-tw_25.074.31671~06c11a6_all.ipk
-Size: 11484
-SHA256sum: 2332f2f4051d4e056a4a89ca0694a03394a87a6ae36f93c36c17f0b29c64c51e
+Filename: luci-i18n-fchomo-zh-tw_25.092.07080~bccdaef_all.ipk
+Size: 11480
+SHA256sum: a0e1a3f66267c36c67323f11f5b9d88f4434ee4eacfe324d3bc68851557f55cd
 Description:  Translation for luci-app-fchomo - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-interfaces-statistics-ru
