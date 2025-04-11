@@ -31,8 +31,8 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 5754880
 Filename: alwaysonline_1.2.1~206292ca-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 2334450
-SHA256sum: 54669ab4287802210fcc7c574d31a46e145d34f6119d2362230f79a8e57ef8b7
+Size: 2335188
+SHA256sum: 39e79321d074b20558a1b95d872975c496c716185f8dd295b419d9db70d3079b
 Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
 
 Package: fantastic-keyring
@@ -70,40 +70,21 @@ SHA256sum: fc031277177bf1ea854a13778c3de3977ed3dc353254f87f57d666d53dc3332c
 Description:  Installer for fantastic-packages feeds
 
 Package: fastfetch
-Version: 2.38.0-r1
+Version: 2.40.2-r1
 Depends: libc
 Source: /feed/packages/openwrt-fastfetch
 SourceName: fastfetch
 License: MIT
 LicenseFiles: LICENSE
 Section: utils
-SourceDateEpoch: 1741364299
+SourceDateEpoch: 1743783525
 URL: https://github.com/fastfetch-cli/fastfetch
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 1064960
-Filename: fastfetch_2.38.0-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 379096
-SHA256sum: 6f2aaf70e654433ec6ea50a25f713ca28954b1fdae69e5b99375ae9e44179ac8
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
-Version: 2.39.1-r1
-Depends: libc
-Source: /feed/packages/openwrt-fastfetch
-SourceName: fastfetch
-License: MIT
-LicenseFiles: LICENSE
-Section: utils
-SourceDateEpoch: 1742573970
-URL: https://github.com/fastfetch-cli/fastfetch
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 1064960
-Filename: fastfetch_2.39.1-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 377510
-SHA256sum: 3bcedb14819e25275daba5195cfaf7ac8e4bf7d636de9421be911ef45cbbcdd6
+Filename: fastfetch_2.40.2-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 379134
+SHA256sum: 34160ba9d305941739e34bc76c5bd564d4b5a9649bde21b502ffe648e25a9752
 Description:  Fastfetch is a neofetch-like tool for fetching
  system information and displaying it prettily.
 
@@ -121,229 +102,211 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 2129920
 Filename: go-stun_0.1.4~d32c135f-r10_arm_cortex-a15_neon-vfpv4.ipk
-Size: 918162
-SHA256sum: 7a3a1f5d9e91f8a565aa2246705f2a6f1e7c33fc1d5fc2a7f27c98912532a638
+Size: 918298
+SHA256sum: d168fce4df2e8154726307c6585b6627b2302229279092f148ce10ceaa63a513
 Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
  RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector-mod-email
-Version: 1.4.3-r1
+Version: 1.4.5-r1
 Depends: libc, internet-detector, mailsend
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-email
 SourceName: internet-detector-mod-email
 Section: net
-SourceDateEpoch: 1740843096
+SourceDateEpoch: 1743942903
 URL: https://github.com/gSpotx2f/luci-app-internet-detector
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
 Installed-Size: 10240
-Filename: internet-detector-mod-email_1.4.3-r1_all.ipk
-Size: 2626
-SHA256sum: 75e7d6518aac295b1f4b9473c25af9b311847943212a269cc2dcf036b4a75563
+Filename: internet-detector-mod-email_1.4.5-r1_all.ipk
+Size: 2640
+SHA256sum: a0f90cdc80e338e34649341fb46ee3d0f85d1ca001c573a04e1c0e5ea446fe87
 Description:  Email support for internet-detector.
 
 Package: internet-detector-mod-modem-restart
-Version: 1.4.3-r1
+Version: 1.4.5-r1
 Depends: libc, internet-detector, modemmanager
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-modem-restart
 SourceName: internet-detector-mod-modem-restart
 Section: net
-SourceDateEpoch: 1740843096
+SourceDateEpoch: 1743942903
 URL: https://github.com/gSpotx2f/luci-app-internet-detector
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
 Installed-Size: 10240
-Filename: internet-detector-mod-modem-restart_1.4.3-r1_all.ipk
-Size: 1846
-SHA256sum: 7bdfba6cca58b69b1ccb45df6b9abede188c8ee4e1a41983ea9f03fcc47cfaef
+Filename: internet-detector-mod-modem-restart_1.4.5-r1_all.ipk
+Size: 1858
+SHA256sum: 92d8ad68079e17dbdaff7f1695d5ed1a9d08437478586a1e55dadc45f463b082
 Description:  Support modem restart for internet detector.
 
 Package: internet-detector
-Version: 1.4.3-r1
+Version: 1.4.5-r1
 Depends: libc, lua, luaposix, libuci-lua
 Source: /feed/luci/luci-app-internet-detector/internet-detector
 SourceName: internet-detector
 Section: net
-SourceDateEpoch: 1740843096
+SourceDateEpoch: 1743942903
 URL: https://github.com/gSpotx2f/luci-app-internet-detector
 Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
 Architecture: all
 Installed-Size: 71680
-Filename: internet-detector_1.4.3-r1_all.ipk
-Size: 12154
-SHA256sum: e705f4f4ae77fa7a3a326411b759e7ccc2c4d381171c64f26881ca4211c06467
-Description:  Internet-detector is a small daemon
- for checking Internet availability.
- Written in Lua using the luaposix library.
-
-Package: internet-detector
-Version: 1.4.4-r1
-Depends: libc, lua, luaposix, libuci-lua
-Source: /feed/luci/luci-app-internet-detector/internet-detector
-SourceName: internet-detector
-Section: net
-SourceDateEpoch: 1742741777
-URL: https://github.com/gSpotx2f/luci-app-internet-detector
-Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
-Architecture: all
-Installed-Size: 71680
-Filename: internet-detector_1.4.4-r1_all.ipk
-Size: 12298
-SHA256sum: 713f9e91d46ffc7ed0b6731fdaa9f5e017f3df90bdcdaf11907084106044dfb9
+Filename: internet-detector_1.4.5-r1_all.ipk
+Size: 12412
+SHA256sum: cd22b40ec065c7fe9d3654b5376fbeacda01618040dbdb3bee3362206d82cff9
 Description:  Internet-detector is a small daemon
  for checking Internet availability.
  Written in Lua using the luaposix library.
 
 Package: libQt6Concurrent
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 30720
-Filename: libQt6Concurrent_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 7646
-SHA256sum: 7e152f995da3d178d3f03866252c7f4b476efc7d1347dd289a2dab0903a5cfbe
-Description:  This package provides the Qt6 Concurrent v6.8.2 library.
+Filename: libQt6Concurrent_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 7650
+SHA256sum: e4f52820cb74dcaa8a93d9fcc26dc902c8282093949e8e82205e9430ff76adbc
+Description:  This package provides the Qt6 Concurrent v6.8.3 library.
 
 Package: libQt6Core
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 6440960
-Filename: libQt6Core_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 2550988
-SHA256sum: f56286795f4d12e0f12c0c7d094de3213c49613ef5cafb4d322eec38ac4cd745
-Description:  This package provides the Qt6 Core v6.8.2 library.
+Installed-Size: 6471680
+Filename: libQt6Core_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 2559703
+SHA256sum: f25d5a74dfed54681942f5d4130b2e53eef9726fc3f4e2b361d54f583f66f0f3
+Description:  This package provides the Qt6 Core v6.8.3 library.
 
 Package: libQt6DBus
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 890880
-Filename: libQt6DBus_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 320204
-SHA256sum: 8fdfed261c8ffc84f08167b92866b7efac6cff3b958b29a6d40a7a4d58a85bfd
-Description:  This package provides the Qt6 DBus v6.8.2 library.
+Filename: libQt6DBus_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 320352
+SHA256sum: 0c3a94a16ab9666539f75a619b55ef48727a232977ce356de21b6c99f5f42ac5
+Description:  This package provides the Qt6 DBus v6.8.3 library.
 
 Package: libQt6Gui
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 6932480
-Filename: libQt6Gui_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 2915276
-SHA256sum: b98c60c4225eab6249d1706c07455c890309bbced68b60413eb2d4f0db2ed945
-Description:  This package provides the Qt6 Gui v6.8.2 library.
+Installed-Size: 6942720
+Filename: libQt6Gui_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 2917403
+SHA256sum: ab8471454b9d4f58f9c52d8cfc0a5b8b58da043183c3993417a22464b5284777
+Description:  This package provides the Qt6 Gui v6.8.3 library.
 
 Package: libQt6Network
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 2170880
-Filename: libQt6Network_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 870072
-SHA256sum: d2ac1363881bf8ad68c782b053aa52304b7b990446d05f0567d15906502231a7
-Description:  This package provides the Qt6 Network v6.8.2 library.
+Filename: libQt6Network_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 870076
+SHA256sum: 3150f927505d1acf0493d71562ce95eebcdeb19f972facad0d3de92d602fa424
+Description:  This package provides the Qt6 Network v6.8.3 library.
 
 Package: libQt6PrintSupport
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 389120
-Filename: libQt6PrintSupport_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 154089
-SHA256sum: 320c0f75b15da25506076fff0252241c28dab46afbc7ae821107cf16c37ebb2f
-Description:  This package provides the Qt6 PrintSupport v6.8.2 library.
+Filename: libQt6PrintSupport_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 154276
+SHA256sum: e7453bd097cf3d5175e6bc2940dfe6b6cc2eb181c0b37f85b104d147af44cc82
+Description:  This package provides the Qt6 PrintSupport v6.8.3 library.
 
 Package: libQt6Sql
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 225280
-Filename: libQt6Sql_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 85456
-SHA256sum: 3b22c97605b45bef501efacd58af64344c1321655c39934ca2e9d5549f40ba0b
-Description:  This package provides the Qt6 Sql v6.8.2 library.
+Filename: libQt6Sql_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 85416
+SHA256sum: ce0ba7948d5afabb9718fe3251851aca3b512e3b6c8f38c6abdba33427b79999
+Description:  This package provides the Qt6 Sql v6.8.3 library.
 
 Package: libQt6Test
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 358400
-Filename: libQt6Test_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 146302
-SHA256sum: bb8bd795c620b0b1c187645a02071551f4de3cb1e97c4fbe7aca6387ef4c16fc
-Description:  This package provides the Qt6 Test v6.8.2 library.
+Filename: libQt6Test_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 146007
+SHA256sum: 1095f2749a0adf1cae774030992db3421288f22d5790e5e0ab4fdfd1d55cfe38
+Description:  This package provides the Qt6 Test v6.8.3 library.
 
 Package: libQt6Widgets
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 7301120
-Filename: libQt6Widgets_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 3179000
-SHA256sum: 4173f9e4fd748c5da738460b94fc5b697d80f232d7bb3076c120eed925b2bafd
-Description:  This package provides the Qt6 Widgets v6.8.2 library.
+Installed-Size: 7311360
+Filename: libQt6Widgets_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 3183262
+SHA256sum: 9004838e83ed1259af39d618062e56b77b08b73c5b6fcb967ebdc7ed92216e69
+Description:  This package provides the Qt6 Widgets v6.8.3 library.
 
 Package: libQt6Xml
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 174080
-Filename: libQt6Xml_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 62163
-SHA256sum: d9c2808373a4ea0a5177f7b5f6d57cf81bc81df5dc565bca2f96fe2baab65bdd
-Description:  This package provides the Qt6 Xml v6.8.2 library.
+Filename: libQt6Xml_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 62325
+SHA256sum: 401ea364777a12c8161d0228ec22056e9bb21345feea364df1107567e7f375ac
+Description:  This package provides the Qt6 Xml v6.8.3 library.
 
 Package: mihomo
 Version: 1.19.4-r1
@@ -358,10 +321,10 @@ SourceDateEpoch: 1743559080
 URL: https://wiki.metacubex.one
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 29009920
+Installed-Size: 29020160
 Filename: mihomo_1.19.4-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 10929719
-SHA256sum: 5e2af48d48b10cd04ee64558a89539bf959c8dd147bcdd02ae870fc39cf8cbcf
+Size: 10929530
+SHA256sum: d4c07afe39ba96a3a96cb4d52a6174ccf2231482aac7aad1128a7ebce67e29a6
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -557,14 +520,14 @@ SourceName: qbittorrent
 License: GPL-2.0+
 LicenseFiles: COPYING
 Section: net
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: https://www.qbittorrent.org/
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 8796160
 Filename: qbittorrent_5.0.4-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 7746110
-SHA256sum: 2d781870c4b6c885fd0446c94ec2ad73b1445f50357d48e25df68dad219a18f6
+Size: 7746548
+SHA256sum: 394e7fa3f4a61fa1c91d2652a78c02e0ab684a121dba4610efbcb399746d14ed
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -572,123 +535,123 @@ Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that use
  well as many features.
 
 Package: qt6-plugin-libqcertonlybackend
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 102400
-Filename: qt6-plugin-libqcertonlybackend_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 35754
-SHA256sum: e69e99c414fefbbe61e7e1afbdc70224096ac1596e0de994148e66bf07c9164a
+Filename: qt6-plugin-libqcertonlybackend_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 35821
+SHA256sum: 3e3bb03ed4fa559296909bf89a7741a58b1bcddc751ac391d39aa3d4cdab7afc
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 30720
-Filename: qt6-plugin-libqminimal_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 9194
-SHA256sum: 1cb3d880c9c9b54df96558ebb2764c627004074f82128b51fd9a485bcce4f527
+Filename: qt6-plugin-libqminimal_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 9207
+SHA256sum: 0799a56cc7736afc73a4af12cf988b4c808cc280f3103f402313bebe20758409
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 71680
-Filename: qt6-plugin-libqnetworkmanager_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 25342
-SHA256sum: 9d7abb35d0db1da1f08aa0bbf1715ab1cb9781cd2535ee208aea3f871c2c8c1e
+Filename: qt6-plugin-libqnetworkmanager_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 25507
+SHA256sum: e7ec9328afd94de0dcdc4add5f760dd614527d0719af56a75afe99081ea1ee63
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 102400
-Filename: qt6-plugin-libqoffscreen_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 38888
-SHA256sum: 8c525e9d4ede66cddce0f61445a6c1b38f23b20567158a3254587d68aad59052
+Filename: qt6-plugin-libqoffscreen_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 38865
+SHA256sum: b14531b67ef546e7472b39036fa63f527bd691d4da9f743d7c7c0c68da228c3c
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 327680
-Filename: qt6-plugin-libqopensslbackend_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 116751
-SHA256sum: 524ae50daee20cc69a4e9e643dde0b091a0df60447e25d8822eaa896b7eb2f18
+Filename: qt6-plugin-libqopensslbackend_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 116745
+SHA256sum: bdefe677d404063b4c455aa0cc6cd58149bab754913e644e4e9d76a3b88469cc
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 1925120
-Filename: qt6-plugin-libqsqlite_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 983584
-SHA256sum: c98041a0f9d7bf76522b06c2693ebbdd0f13cf29dff439b1286abba2499739fa
+Filename: qt6-plugin-libqsqlite_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 984362
+SHA256sum: 11fca26ff016f2d4344344ddf0009a068098e93008e6569a0058abab882cc89f
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 92160
-Filename: qt6-plugin-libqtuiotouchplugin_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 36371
-SHA256sum: 2345b57e28f8244c94fcb5855c862c5ff507204fff92971f53d2c973ace08028
+Filename: qt6-plugin-libqtuiotouchplugin_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 36437
+SHA256sum: fc8e5bf1389bbf7485591caec81107e39d60427809c5d682eed790704408b620
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
-Version: 6.8.2-r1
+Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
 SourceName: qt6base
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: http://qt-project.org
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 122880
-Filename: qt6-plugin-libqxdgdesktopportal_6.8.2-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 40403
-SHA256sum: 991c9c0ecdf794e0bf013f9eda61c818f183a49a5dd73312012542e08afa636c
+Filename: qt6-plugin-libqxdgdesktopportal_6.8.3-r1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 40701
+SHA256sum: 51279b15ed224acb3dabc27f1292616691a68203ef8970e452d241fe0c81148c
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -700,14 +663,14 @@ SourceName: rblibtorrent
 License: BSD
 LicenseFiles: COPYING
 Section: libs
-SourceDateEpoch: 1739919616
+SourceDateEpoch: 1742990462
 URL: https://www.libtorrent.org
 ABIVersion: 2.0
 Architecture: arm_cortex-a15_neon-vfpv4
 Installed-Size: 3041280
 Filename: rblibtorrent2.0_2.0.11-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 1256176
-SHA256sum: cfee3bbc8303e793b218572ec4c64def69cb04a924bfefd57a3fe045c9e9dfae
+Size: 1256210
+SHA256sum: 70082946c0aa7f0581c4f2463da0953d4bdf64aa91aeef00faa5982324f63213
 Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
  all the other bittorrent implementations around. It is a library and not a
  full featured client, although it comes with a working example client.
@@ -742,10 +705,10 @@ SourceDateEpoch: 1737731639
 URL: https://github.com/showwin/speedtest-go
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: arm_cortex-a15_neon-vfpv4
-Installed-Size: 23848960
+Installed-Size: 23859200
 Filename: speedtest-go_1.7.10-r1_arm_cortex-a15_neon-vfpv4.ipk
-Size: 9777340
-SHA256sum: 65114b995b4d9d41eba6418c44141f50fd290409153ae021c7126c60ebdbff0b
+Size: 9779483
+SHA256sum: 07ccd6590cbb2ea40e3e7361dbf05372fdaf95244a6e4a7b0163d1653caa83ad
 Description:  Command Line Interface and pure Go API to
  Test Internet Speed using speedtest.net
 

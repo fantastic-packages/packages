@@ -25,55 +25,42 @@ SHA256sum: 67894a107d7fd06928c9dc3b72a7e564444e56796c23b31a2c6718adaf6ca747
 Description:  Assign a random MAC address to the designated interface on every time boot.
 
 Package: luci-app-cpu-perf
-Version: 0.4.0-r1
+Version: 0.4.1-r1
 Depends: libc, lua, luci-lib-nixio, luci-lib-jsonc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-cpu-perf_0.4.0-r1_all.ipk
-Size: 7389
-SHA256sum: d1585203fb78466b3e2166c2670e2d934636f119eff4e7a568fe1738b24c43df
+Filename: luci-app-cpu-perf_0.4.1-r1_all.ipk
+Size: 7386
+SHA256sum: 8a8a5185a2afc83865ee67cbb5e192c1aa73e61b38abfd7e4eb631aaec4e7a62
 Description:  CPU performance information and management for LuCI
 
 Package: luci-app-cpu-status-mini
-Version: 0.1.0-r5
+Version: 0.2.0-r1
 Depends: libc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-app-cpu-status-mini_0.1.0-r5_all.ipk
-Size: 1937
-SHA256sum: 4af77a7485eb621bd7f3665df2be7122162f005ace341832b0ecd5505dbb703f
+Filename: luci-app-cpu-status-mini_0.2.0-r1_all.ipk
+Size: 1847
+SHA256sum: 3b3c928e16afbe3f2931913d45035e82ae61932c212befdab36721ec575efff2
 Description:  CPU utilization info for the LuCI status page
 
 Package: luci-app-cpu-status
-Version: 0.5.0-r1
+Version: 0.6.1-r1
 Depends: libc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
-Installed-Size: 20480
-Filename: luci-app-cpu-status_0.5.0-r1_all.ipk
-Size: 3260
-SHA256sum: 3094e0ec3225a12a9c7acd79b2c87716402f207fd0330fa01a5f9cf69d507e2f
-Description:  CPU utilization info for the LuCI status page
-
-Package: luci-app-cpu-status
-Version: 0.5.1-r1
-Depends: libc
-License: MIT
-Section: luci
-URL: https://github.com/openwrt/luci
-Architecture: all
-Installed-Size: 20480
-Filename: luci-app-cpu-status_0.5.1-r1_all.ipk
-Size: 3265
-SHA256sum: c8244619c05707cb436133532cbe29216bc245d82b65c1f958b3cfc7ff1d7392
+Installed-Size: 40960
+Filename: luci-app-cpu-status_0.6.1-r1_all.ipk
+Size: 6510
+SHA256sum: cd3601765884c8a63dd087ef9f12bdbad5ac2574f9e070087ffd8f7094440e53
 Description:  CPU utilization info for the LuCI status page
 
 Package: luci-app-diskman
@@ -141,27 +128,15 @@ SHA256sum: 390b3feb9bddc17c56477428ae1520f2248caff425426e013b255ff5660a623b
 Description:  Network interfaces statistics
 
 Package: luci-app-internet-detector
-Version: 1.4.3-r1
+Version: 1.4.5-r1
 Depends: libc, internet-detector
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 51200
-Filename: luci-app-internet-detector_1.4.3-r1_all.ipk
-Size: 9524
-SHA256sum: 106dfb2826bc0c7801b9ab1bb2b63a190a1d00c3171a3f8ac4e592c151348cf6
-Description:  LuCI support for internet-detector
-
-Package: luci-app-internet-detector
-Version: 1.4.4-r1
-Depends: libc, internet-detector
-Section: luci
-URL: https://github.com/openwrt/luci
-Architecture: all
-Installed-Size: 51200
-Filename: luci-app-internet-detector_1.4.4-r1_all.ipk
+Filename: luci-app-internet-detector_1.4.5-r1_all.ipk
 Size: 9594
-SHA256sum: 980cc0cf51d3c15068f46232aa8d64776824a13438f7e62e390ed1705905cb22
+SHA256sum: 7e5ca18c6ed32c23ab4dfe81eed734d90577db2cc5eee3574c6111788117880d
 Description:  LuCI support for internet-detector
 
 Package: luci-app-ipinfo
@@ -178,16 +153,16 @@ SHA256sum: a4a4ac2bf54965e83acc1e4dc2e2f10d364bf0185e09eb15e585bb61ee4343a8
 Description:  Displays IP address information in overview via ip.guide.
 
 Package: luci-app-log-viewer
-Version: 1.2.0-r1
+Version: 1.2.1-r1
 Depends: libc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 51200
-Filename: luci-app-log-viewer_1.2.0-r1_all.ipk
-Size: 9639
-SHA256sum: 97137f915a9fc0da8585cb0d20e14bb0df266e2fe6fdc5cd07f3051aa8b67825
+Filename: luci-app-log-viewer_1.2.1-r1_all.ipk
+Size: 9626
+SHA256sum: a66b87e1592eab5c413343a491dc838478403e4c51144f57227a95f5c019b2f0
 Description:  Advanced syslog and kernel log (tail, search, etc)
 
 Package: luci-app-natmapt
@@ -262,34 +237,21 @@ URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 20480
 Filename: luci-app-qbittorrent_1.0.1-r1_all.ipk
-Size: 2644
-SHA256sum: 491c3e645063be8b3cd0b36fde20466c138a13ab70611d46dcd6f405ebf24999
+Size: 2651
+SHA256sum: 513d459b5ae25ca4eb5d7f4bae29135f71c786fa6bfea3a692cd81a6e3878f69
 Description:  LuCI support for qBittorrent
 
 Package: luci-app-temp-status
-Version: 0.4.1-r1
-Depends: libc, lua, luci-lib-nixio, luci-lib-jsonc
-License: MIT
-Section: luci
-URL: https://github.com/openwrt/luci
-Architecture: all
-Installed-Size: 20480
-Filename: luci-app-temp-status_0.4.1-r1_all.ipk
-Size: 3724
-SHA256sum: ec047d27692372c1ac12aa6feb7e1d62381d4d5989222bdbee5d9f66d414712d
-Description:  Temperature sensors data for the LuCI status page
-
-Package: luci-app-temp-status
-Version: 0.5.1-r1
+Version: 0.5.4-r1
 Depends: libc, lua, luci-lib-nixio, luci-lib-jsonc
 License: MIT
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 40960
-Filename: luci-app-temp-status_0.5.1-r1_all.ipk
-Size: 7082
-SHA256sum: f43a8cb1fdf704ff39e09d12b94d62184f212a08d82857736102e60ab0db9415
+Filename: luci-app-temp-status_0.5.4-r1_all.ipk
+Size: 7108
+SHA256sum: 4330f45b5f20d8338eaf75d5e860bc823760900d070ab0c401143f3cd87c4d97
 Description:  Temperature sensors data for the LuCI status page
 
 Package: luci-app-tinyfilemanager
@@ -326,8 +288,8 @@ Section: Custom
 Architecture: all
 Installed-Size: 30720
 Filename: luci-app-xray-status_3.5.0-r1_all.ipk
-Size: 4154
-SHA256sum: e882f83a79d53df771068db852a0c7f0b61a97d35fde109543db050468dbabac
+Size: 4150
+SHA256sum: 3a67a2d22056f72fab3b6cc412a2bd7a3b2fde7b17af80e17d692c7f3c54c9ef
 Description:  LuCI Support for Xray (Client-side Rendered) (status page).
 
 Package: luci-app-xray
@@ -391,111 +353,75 @@ SHA256sum: be761d3494a350f1200ae3bb3c2c6f08644cc55e4d651ea7a0d0d6bad2f51dda
 Description:  Translation for luci-app-change-mac - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-cpu-perf-ru
-Version: 24.338.54727~7764f22
+Version: 25.085.46408~e2c7750
 Depends: libc, luci-app-cpu-perf
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-perf-ru_24.338.54727~7764f22_all.ipk
-Size: 2500
-SHA256sum: 88cbaaccbc9f41eeb2aaffe5875c944cd7488b4b24d972732ef6255c649afc6c
+Filename: luci-i18n-cpu-perf-ru_25.085.46408~e2c7750_all.ipk
+Size: 2504
+SHA256sum: c215353e1e4ead99bbefe22410dc3da384acbbe6ce438138ed5f5e1db847a78f
 Description:  Translation for luci-app-cpu-perf - Русский (Russian)
 
 Package: luci-i18n-cpu-perf-zh-cn
-Version: 24.338.54727~7764f22
+Version: 25.085.46408~e2c7750
 Depends: libc, luci-app-cpu-perf
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-perf-zh-cn_24.338.54727~7764f22_all.ipk
-Size: 2192
-SHA256sum: b9d0ac1592e518e9f7872939879f5d9db43e71ce0be2ee350de7b5498982fccb
+Filename: luci-i18n-cpu-perf-zh-cn_25.085.46408~e2c7750_all.ipk
+Size: 2195
+SHA256sum: 0cbd75ec8fbbb337dd0bf1d74e3a810e425e8797daa6c713529989066d98992d
 Description:  Translation for luci-app-cpu-perf - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-cpu-status-mini-ru
-Version: 24.338.62969~01a0e63
+Version: 25.085.51363~3ca76f1
 Depends: libc, luci-app-cpu-status-mini
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-mini-ru_24.338.62969~01a0e63_all.ipk
-Size: 1311
-SHA256sum: 24a7a9cc4b944872b13eed5518ca63ad2cb93222486cefb39b11f2e43aa32662
+Filename: luci-i18n-cpu-status-mini-ru_25.085.51363~3ca76f1_all.ipk
+Size: 1301
+SHA256sum: b95d6192609a9ea83345e228ab872365c579d068ecc8d214ba22fa741c52c049
 Description:  Translation for luci-app-cpu-status-mini - Русский (Russian)
 
 Package: luci-i18n-cpu-status-ru
-Version: 25.002.54711~e10af24
+Version: 25.097.45841~b481319
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-ru_25.002.54711~e10af24_all.ipk
-Size: 1400
-SHA256sum: aa03b3e657cc8b703ced55a3bb6c09903a6a0f04840fc4cb01b10df8e1cca403
-Description:  Translation for luci-app-cpu-status - Русский (Russian)
-
-Package: luci-i18n-cpu-status-ru
-Version: 25.082.46890~2de834b
-Depends: libc, luci-app-cpu-status
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-cpu-status-ru_25.082.46890~2de834b_all.ipk
-Size: 1402
-SHA256sum: a94a0723557d56084f756504facc7ad35c733900dc383c849d0b26feacd5c746
+Filename: luci-i18n-cpu-status-ru_25.097.45841~b481319_all.ipk
+Size: 1591
+SHA256sum: 3cbe77d6a22359e398d5983e51a17b95ea2d7ddecc25197d63835f1b40a981c1
 Description:  Translation for luci-app-cpu-status - Русский (Russian)
 
 Package: luci-i18n-cpu-status-zh-cn
-Version: 25.002.54711~e10af24
+Version: 25.097.45841~b481319
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-zh-cn_25.002.54711~e10af24_all.ipk
-Size: 1400
-SHA256sum: f37346d68d948f56cdcff0e7b3b460d0f683f9b753e29ba101744ef2ce10fa79
-Description:  Translation for luci-app-cpu-status - 简体中文 (Chinese Simplified)
-
-Package: luci-i18n-cpu-status-zh-cn
-Version: 25.082.46890~2de834b
-Depends: libc, luci-app-cpu-status
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-cpu-status-zh-cn_25.082.46890~2de834b_all.ipk
-Size: 1397
-SHA256sum: 96e3ae30f8b00dbeede8634fa00cd385dae64dd213a0842bd435fd5107c87922
+Filename: luci-i18n-cpu-status-zh-cn_25.097.45841~b481319_all.ipk
+Size: 1396
+SHA256sum: 5197489e19a6f500e074677a47be9a705b8539338403b4fb2d055a5788d509c3
 Description:  Translation for luci-app-cpu-status - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-cpu-status-zh-tw
-Version: 25.002.54711~e10af24
+Version: 25.097.45841~b481319
 Depends: libc, luci-app-cpu-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-cpu-status-zh-tw_25.002.54711~e10af24_all.ipk
-Size: 1388
-SHA256sum: 40ebb7ee085262faf4befed05c9c0d2b11d71b177c1e16bf4308e8431faf2fe0
-Description:  Translation for luci-app-cpu-status - 繁體中文 (Chinese Traditional)
-
-Package: luci-i18n-cpu-status-zh-tw
-Version: 25.082.46890~2de834b
-Depends: libc, luci-app-cpu-status
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-cpu-status-zh-tw_25.082.46890~2de834b_all.ipk
-Size: 1385
-SHA256sum: deeb0b47e11490ef9a91d57fa480f26614c2fb7a191ad8ab9361e17b2a83c01d
+Filename: luci-i18n-cpu-status-zh-tw_25.097.45841~b481319_all.ipk
+Size: 1393
+SHA256sum: af348a2af3b4239a90720d607dcf3b61a97b8ac1fae3304309ed6ff2fc71dafb
 Description:  Translation for luci-app-cpu-status - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-diskman-pl
@@ -605,37 +531,26 @@ SHA256sum: e349132435d31c1d7bbb5575ce0105ad87d23f5dcfd8353fc7f16bc551dec3ee
 Description:  Translation for luci-app-interfaces-statistics - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-internet-detector-ru
-Version: 25.060.55896~55802f7
+Version: 25.096.45303~36a70fa
 Depends: libc, luci-app-internet-detector
 Section: luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-i18n-internet-detector-ru_25.060.55896~55802f7_all.ipk
-Size: 5373
-SHA256sum: e71c37ca016dab4c8c1d994ec690f57a2032c717388d27759b91f8ce625d4c61
-Description:  Translation for luci-app-internet-detector - Русский (Russian)
-
-Package: luci-i18n-internet-detector-ru
-Version: 25.082.53777~5b669fe
-Depends: libc, luci-app-internet-detector
-Section: luci
-Architecture: all
-Installed-Size: 20480
-Filename: luci-i18n-internet-detector-ru_25.082.53777~5b669fe_all.ipk
-Size: 5445
-SHA256sum: 9452c4ba9dad370ec84b77be988a64d1f75d256b77323d93be6a4d2907477660
+Filename: luci-i18n-internet-detector-ru_25.096.45303~36a70fa_all.ipk
+Size: 5438
+SHA256sum: 0e07038956c682d23c9175f835817fef5a0e4bf394ab00038fcaa93f06fc4197
 Description:  Translation for luci-app-internet-detector - Русский (Russian)
 
 Package: luci-i18n-log-viewer-ru
-Version: 25.032.55362~4751c2d
+Version: 25.087.54416~1922a88
 Depends: libc, luci-app-log-viewer
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-log-viewer-ru_25.032.55362~4751c2d_all.ipk
-Size: 2010
-SHA256sum: 26d1f195646930ca17cc60ad77fbd62a67ebce09e5bf4d7e9596e5592d8747ec
+Filename: luci-i18n-log-viewer-ru_25.087.54416~1922a88_all.ipk
+Size: 2013
+SHA256sum: e6f4f34b9d8f37fb2c8f766e8a5950ab0722e3f879e2c4b41a7995a8f82850c7
 Description:  Translation for luci-app-log-viewer - Русский (Russian)
 
 Package: luci-i18n-natmapt-cs
@@ -949,62 +864,38 @@ SHA256sum: e77b6bf94e9919898b577beb0571344156ccb9239a9bc2cfff2dbb6b33430d2e
 Description:  Translation for luci-app-pcap-dnsproxy - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-qbittorrent-zh-cn
-Version: 25.049.82816~1668625
+Version: 25.085.43262~37e47db
 Depends: libc, luci-app-qbittorrent
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-qbittorrent-zh-cn_25.049.82816~1668625_all.ipk
-Size: 1437
-SHA256sum: 64445baf39a55e85531a5b662d9f78293d4d75392f5a7b8bd12bbe9f6fa25d32
+Filename: luci-i18n-qbittorrent-zh-cn_25.085.43262~37e47db_all.ipk
+Size: 1453
+SHA256sum: 31bf19737b706a3479f59b3667d9a7dd3e0345093b1fec2742b8d817c7d72cf4
 Description:  Translation for luci-app-qbittorrent - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-temp-status-es
-Version: 24.338.63485~56b53e6
+Version: 25.097.46171~3b59bbe
 Depends: libc, luci-app-temp-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-temp-status-es_24.338.63485~56b53e6_all.ipk
-Size: 1170
-SHA256sum: 20ebf1b898e5d5189ed282658599a73f90015f33caa09008a4bc5571de2e36b0
-Description:  Translation for luci-app-temp-status - Español (Spanish)
-
-Package: luci-i18n-temp-status-es
-Version: 25.082.45552~58c6755
-Depends: libc, luci-app-temp-status
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-temp-status-es_25.082.45552~58c6755_all.ipk
-Size: 1177
-SHA256sum: ad8dfee070fa51894dffff52181330ed46127050844312ebd364fc560c9bbb56
+Filename: luci-i18n-temp-status-es_25.097.46171~3b59bbe_all.ipk
+Size: 1176
+SHA256sum: 99dd1976d6ff11e8b3022005aad5e4b23fa8f2f47322616f6292576379466fad
 Description:  Translation for luci-app-temp-status - Español (Spanish)
 
 Package: luci-i18n-temp-status-ru
-Version: 24.338.63485~56b53e6
+Version: 25.097.46171~3b59bbe
 Depends: libc, luci-app-temp-status
 License: MIT
 Section: luci
 Architecture: all
 Installed-Size: 10240
-Filename: luci-i18n-temp-status-ru_24.338.63485~56b53e6_all.ipk
-Size: 1297
-SHA256sum: 7ac4b913913b4de733bcfa26bb6bc9de9dc1eda6e1517a2a6bd4df48073e1ada
-Description:  Translation for luci-app-temp-status - Русский (Russian)
-
-Package: luci-i18n-temp-status-ru
-Version: 25.082.45552~58c6755
-Depends: libc, luci-app-temp-status
-License: MIT
-Section: luci
-Architecture: all
-Installed-Size: 10240
-Filename: luci-i18n-temp-status-ru_25.082.45552~58c6755_all.ipk
-Size: 1510
-SHA256sum: f9b3c1520eb92c8d239907d666fa3f22bb37eb0db101f86b6131e490a94db30c
+Filename: luci-i18n-temp-status-ru_25.097.46171~3b59bbe_all.ipk
+Size: 1509
+SHA256sum: 18323307f266c36e69cd3da34d26f16ae718fc660a03bb9bbb2e07220bdbfc69
 Description:  Translation for luci-app-temp-status - Русский (Russian)
 
 Package: luci-i18n-tinyfilemanager-zh-cn
