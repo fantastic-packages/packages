@@ -70,21 +70,21 @@ SHA256sum: fc031277177bf1ea854a13778c3de3977ed3dc353254f87f57d666d53dc3332c
 Description:  Installer for fantastic-packages feeds
 
 Package: fastfetch
-Version: 2.40.2-r1
+Version: 2.40.4-r1
 Depends: libc
 Source: /feed/packages/openwrt-fastfetch
 SourceName: fastfetch
 License: MIT
 LicenseFiles: LICENSE
 Section: utils
-SourceDateEpoch: 1743783525
+SourceDateEpoch: 1744388385
 URL: https://github.com/fastfetch-cli/fastfetch
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: mipsel_24kc
 Installed-Size: 1187840
-Filename: fastfetch_2.40.2-r1_mipsel_24kc.ipk
-Size: 374705
-SHA256sum: 2a8d854b286f435eabe7dafa0e2826dce604a9ad04ddde6fa9a125222f0dd852
+Filename: fastfetch_2.40.4-r1_mipsel_24kc.ipk
+Size: 372705
+SHA256sum: 46f0ba4a4824c9ad9aecaed2cec664ad835eaea533d5919c6f5200f213825f71
 Description:  Fastfetch is a neofetch-like tool for fetching
  system information and displaying it prettily.
 
@@ -109,6 +109,22 @@ Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector-mod-email
+Version: 1.4.3-r1
+Depends: libc, internet-detector, mailsend
+Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-email
+SourceName: internet-detector-mod-email
+Section: net
+SourceDateEpoch: 1740843096
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 10240
+Filename: internet-detector-mod-email_1.4.3-r1_all.ipk
+Size: 2626
+SHA256sum: 75e7d6518aac295b1f4b9473c25af9b311847943212a269cc2dcf036b4a75563
+Description:  Email support for internet-detector.
+
+Package: internet-detector-mod-email
 Version: 1.4.5-r1
 Depends: libc, internet-detector, mailsend
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-email
@@ -125,6 +141,22 @@ SHA256sum: a0f90cdc80e338e34649341fb46ee3d0f85d1ca001c573a04e1c0e5ea446fe87
 Description:  Email support for internet-detector.
 
 Package: internet-detector-mod-modem-restart
+Version: 1.4.3-r1
+Depends: libc, internet-detector, modemmanager
+Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-modem-restart
+SourceName: internet-detector-mod-modem-restart
+Section: net
+SourceDateEpoch: 1740843096
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 10240
+Filename: internet-detector-mod-modem-restart_1.4.3-r1_all.ipk
+Size: 1846
+SHA256sum: 7bdfba6cca58b69b1ccb45df6b9abede188c8ee4e1a41983ea9f03fcc47cfaef
+Description:  Support modem restart for internet detector.
+
+Package: internet-detector-mod-modem-restart
 Version: 1.4.5-r1
 Depends: libc, internet-detector, modemmanager
 Source: /feed/luci/luci-app-internet-detector/internet-detector-mod-modem-restart
@@ -139,6 +171,42 @@ Filename: internet-detector-mod-modem-restart_1.4.5-r1_all.ipk
 Size: 1858
 SHA256sum: 92d8ad68079e17dbdaff7f1695d5ed1a9d08437478586a1e55dadc45f463b082
 Description:  Support modem restart for internet detector.
+
+Package: internet-detector
+Version: 1.4.3-r1
+Depends: libc, lua, luaposix, libuci-lua
+Source: /feed/luci/luci-app-internet-detector/internet-detector
+SourceName: internet-detector
+Section: net
+SourceDateEpoch: 1740843096
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 71680
+Filename: internet-detector_1.4.3-r1_all.ipk
+Size: 12154
+SHA256sum: e705f4f4ae77fa7a3a326411b759e7ccc2c4d381171c64f26881ca4211c06467
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
+
+Package: internet-detector
+Version: 1.4.4-r1
+Depends: libc, lua, luaposix, libuci-lua
+Source: /feed/luci/luci-app-internet-detector/internet-detector
+SourceName: internet-detector
+Section: net
+SourceDateEpoch: 1742741777
+URL: https://github.com/gSpotx2f/luci-app-internet-detector
+Maintainer: gSpot <https://github.com/gSpotx2f/luci-app-internet-detector>
+Architecture: all
+Installed-Size: 71680
+Filename: internet-detector_1.4.4-r1_all.ipk
+Size: 12298
+SHA256sum: 713f9e91d46ffc7ed0b6731fdaa9f5e017f3df90bdcdaf11907084106044dfb9
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
 
 Package: internet-detector
 Version: 1.4.5-r1
@@ -159,6 +227,21 @@ Description:  Internet-detector is a small daemon
  Written in Lua using the luaposix library.
 
 Package: libQt6Concurrent
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 81920
+Filename: libQt6Concurrent_6.8.2-r1_mipsel_24kc.ipk
+Size: 9191
+SHA256sum: 3e95c211f31af21177f719ccd8ed812b77d0ec12e53338919990f463d47c4daa
+Description:  This package provides the Qt6 Concurrent v6.8.2 library.
+
+Package: libQt6Concurrent
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -172,6 +255,21 @@ Filename: libQt6Concurrent_6.8.3-r1_mipsel_24kc.ipk
 Size: 9199
 SHA256sum: a9c34c19cfbc92c79a6e4b4bf635489948ebebdb384675a24154537c436ec546
 Description:  This package provides the Qt6 Concurrent v6.8.3 library.
+
+Package: libQt6Core
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 7680000
+Filename: libQt6Core_6.8.2-r1_mipsel_24kc.ipk
+Size: 2702177
+SHA256sum: b2caf7615475cfe5584a3a3eea11b74a26e1a9033323beefbde9064163c33ae3
+Description:  This package provides the Qt6 Core v6.8.2 library.
 
 Package: libQt6Core
 Version: 6.8.3-r1
@@ -189,6 +287,21 @@ SHA256sum: f07a0e9f1e8c4ebccb462783eac91dbbefdb9066f87d22276e9aea91d42f8f92
 Description:  This package provides the Qt6 Core v6.8.3 library.
 
 Package: libQt6DBus
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 993280
+Filename: libQt6DBus_6.8.2-r1_mipsel_24kc.ipk
+Size: 311508
+SHA256sum: 1293054bd6079fce51028cdcd258fbdac519b8b3158a554cbd082a872fdb03ab
+Description:  This package provides the Qt6 DBus v6.8.2 library.
+
+Package: libQt6DBus
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -202,6 +315,21 @@ Filename: libQt6DBus_6.8.3-r1_mipsel_24kc.ipk
 Size: 311729
 SHA256sum: 7dab30f7c806567ec36877f391cf222cfa3893fe4556882281cdebe7fbc4e865
 Description:  This package provides the Qt6 DBus v6.8.3 library.
+
+Package: libQt6Gui
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 8181760
+Filename: libQt6Gui_6.8.2-r1_mipsel_24kc.ipk
+Size: 2975225
+SHA256sum: d636fa5b86199da00924c0ca0a5136842664a8c54c5b75cf66d74838f25bf685
+Description:  This package provides the Qt6 Gui v6.8.2 library.
 
 Package: libQt6Gui
 Version: 6.8.3-r1
@@ -219,6 +347,21 @@ SHA256sum: ee51504b353cbaf9dd70bff3f2f55bdef496876242ddafe10a47572ec64d7543
 Description:  This package provides the Qt6 Gui v6.8.3 library.
 
 Package: libQt6Network
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 2406400
+Filename: libQt6Network_6.8.2-r1_mipsel_24kc.ipk
+Size: 852742
+SHA256sum: 899fd9109a7ff86aedb58942d79f180f7eea745820ffee4f8ef3f7d0b82aef16
+Description:  This package provides the Qt6 Network v6.8.2 library.
+
+Package: libQt6Network
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -232,6 +375,21 @@ Filename: libQt6Network_6.8.3-r1_mipsel_24kc.ipk
 Size: 852852
 SHA256sum: 2f0528cf3ebbe217fb499228be1936a4f3e3499dad07516f2bced9bf2e9a2193
 Description:  This package provides the Qt6 Network v6.8.3 library.
+
+Package: libQt6PrintSupport
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 501760
+Filename: libQt6PrintSupport_6.8.2-r1_mipsel_24kc.ipk
+Size: 155219
+SHA256sum: db9897f6839904aa6a3b3429530afdefc0ab9ab0d32a85ccffeb08a24af6fb5f
+Description:  This package provides the Qt6 PrintSupport v6.8.2 library.
 
 Package: libQt6PrintSupport
 Version: 6.8.3-r1
@@ -249,6 +407,21 @@ SHA256sum: 0cf2d484bd7a938cb968d1ccc979976ab0abb8d4a1b16dd9f557e5e3da2db552
 Description:  This package provides the Qt6 PrintSupport v6.8.3 library.
 
 Package: libQt6Sql
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 286720
+Filename: libQt6Sql_6.8.2-r1_mipsel_24kc.ipk
+Size: 80342
+SHA256sum: 85750f87bbfbc61d7fbc6b3587c41b186296edbda9c1a04fe763f852110b2790
+Description:  This package provides the Qt6 Sql v6.8.2 library.
+
+Package: libQt6Sql
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -262,6 +435,21 @@ Filename: libQt6Sql_6.8.3-r1_mipsel_24kc.ipk
 Size: 80335
 SHA256sum: 2934b0f30e61af07a360be262beec053ddc2607c48f6970995f6de34b45ebb75
 Description:  This package provides the Qt6 Sql v6.8.3 library.
+
+Package: libQt6Test
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 430080
+Filename: libQt6Test_6.8.2-r1_mipsel_24kc.ipk
+Size: 157252
+SHA256sum: e651f0904d2402b0d69dabcb57771e1fbdaac6f21d68b635aa3393fe5baf6207
+Description:  This package provides the Qt6 Test v6.8.2 library.
 
 Package: libQt6Test
 Version: 6.8.3-r1
@@ -279,6 +467,21 @@ SHA256sum: 2cdcacae5a6c900fb37ff58249e0c4b245d158d26a1ac7477855a09913c821b0
 Description:  This package provides the Qt6 Test v6.8.3 library.
 
 Package: libQt6Widgets
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 8335360
+Filename: libQt6Widgets_6.8.2-r1_mipsel_24kc.ipk
+Size: 3255485
+SHA256sum: 98240312a685362d81523a6d471e41370d5e0a1366428ecbca10d10cfbaab675
+Description:  This package provides the Qt6 Widgets v6.8.2 library.
+
+Package: libQt6Widgets
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -294,6 +497,21 @@ SHA256sum: 793961933c7255362857118502301aea61d42f4a5e283fea29a87c92544ef990
 Description:  This package provides the Qt6 Widgets v6.8.3 library.
 
 Package: libQt6Xml
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 225280
+Filename: libQt6Xml_6.8.2-r1_mipsel_24kc.ipk
+Size: 63368
+SHA256sum: 72fb52874fed962b2c7e07cc1beab6a64ff3a238ae59295e8cb593cd06570ff4
+Description:  This package provides the Qt6 Xml v6.8.2 library.
+
+Package: libQt6Xml
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -307,6 +525,25 @@ Filename: libQt6Xml_6.8.3-r1_mipsel_24kc.ipk
 Size: 63424
 SHA256sum: 195032210ada287ced02f128c9bf93d0b1bd8f7a640b29e956ab46249c4c2685
 Description:  This package provides the Qt6 Xml v6.8.3 library.
+
+Package: mihomo
+Version: 1.19.3-r1
+Depends: libc
+Source: /feed/packages/openwrt-fchomo/mihomo
+SourceName: mihomo
+License: GPL-2.0
+LicenseFiles: LICENSE
+Section: net
+Require-User: mihomo=7890:mihomo=7890
+SourceDateEpoch: 1742028471
+URL: https://wiki.metacubex.one
+Maintainer: Anya Lin <hukk1996@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 32880640
+Filename: mihomo_1.19.3-r1_mipsel_24kc.ipk
+Size: 10328268
+SHA256sum: 321599f260113f0d8011f3bff6248c541e9c18b31a7bea43a007ca4614d4befd
+Description:  Another Mihomo Kernel.
 
 Package: mihomo
 Version: 1.19.4-r1
@@ -535,6 +772,21 @@ Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that use
  well as many features.
 
 Package: qt6-plugin-libqcertonlybackend
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 143360
+Filename: qt6-plugin-libqcertonlybackend_6.8.2-r1_mipsel_24kc.ipk
+Size: 37818
+SHA256sum: 4277ee31143e0e6c36071ab53092cd5342602e935e3b3702a9c25c6ab7ac64df
+Description:  Qt6 Plugin libqcertonlybackend
+
+Package: qt6-plugin-libqcertonlybackend
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -548,6 +800,21 @@ Filename: qt6-plugin-libqcertonlybackend_6.8.3-r1_mipsel_24kc.ipk
 Size: 37826
 SHA256sum: 2f371802385e95e7035dcf7a984c22bab60a805433ccc6099489b7fe39386858
 Description:  Qt6 Plugin libqcertonlybackend
+
+Package: qt6-plugin-libqminimal
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 81920
+Filename: qt6-plugin-libqminimal_6.8.2-r1_mipsel_24kc.ipk
+Size: 9412
+SHA256sum: 480d94ca9843f71a684a827e5efbd91c53252831725c5bd660b21f8824dd35cd
+Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqminimal
 Version: 6.8.3-r1
@@ -565,6 +832,21 @@ SHA256sum: fda496b2286a28a69f70ab4065b94082b83d4980ba331faef1663133d905cc7d
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 81920
+Filename: qt6-plugin-libqnetworkmanager_6.8.2-r1_mipsel_24kc.ipk
+Size: 26282
+SHA256sum: 0c76d8c898fd2817b4cb47f732743675db9303e701f9b5156689e8a7a2464a93
+Description:  Qt6 Plugin libqnetworkmanager
+
+Package: qt6-plugin-libqnetworkmanager
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -578,6 +860,21 @@ Filename: qt6-plugin-libqnetworkmanager_6.8.3-r1_mipsel_24kc.ipk
 Size: 26569
 SHA256sum: 43b44c1374bb5e6383bf51d50ab9d655c804dd64bfb1775cfc939a40603cb992
 Description:  Qt6 Plugin libqnetworkmanager
+
+Package: qt6-plugin-libqoffscreen
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 143360
+Filename: qt6-plugin-libqoffscreen_6.8.2-r1_mipsel_24kc.ipk
+Size: 37623
+SHA256sum: 955a94f3f84077f1c9fc0489ad21b816c1e01089cb384261b2f6e305b9d00841
+Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqoffscreen
 Version: 6.8.3-r1
@@ -595,6 +892,21 @@ SHA256sum: f595c3969e0af57545a3fedb799ef683a79b86aa0f6bb06cf2c981db5ae3bc5a
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 358400
+Filename: qt6-plugin-libqopensslbackend_6.8.2-r1_mipsel_24kc.ipk
+Size: 115190
+SHA256sum: f9e6f3537058b0a1d2e565495e3a219956d3020d290582a2994d08466bfbaae0
+Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqopensslbackend
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -608,6 +920,21 @@ Filename: qt6-plugin-libqopensslbackend_6.8.3-r1_mipsel_24kc.ipk
 Size: 115302
 SHA256sum: 657c6b4647a789b0d5a2e9ef128c8011cffc6d59292dc5aa574318813401e02a
 Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqsqlite
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 2314240
+Filename: qt6-plugin-libqsqlite_6.8.2-r1_mipsel_24kc.ipk
+Size: 1068155
+SHA256sum: df7597c1142cf11c66f62b9898f10a85e39a4a2eabd7964c6c443c640a6c8890
+Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqsqlite
 Version: 6.8.3-r1
@@ -625,6 +952,21 @@ SHA256sum: e6b316355a31c8e844170dbf6bece16b48046603c4dc43af494160f40a3d8441
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 143360
+Filename: qt6-plugin-libqtuiotouchplugin_6.8.2-r1_mipsel_24kc.ipk
+Size: 39774
+SHA256sum: 5d02594f3336af5d990a3a50a5a1691bd37fbe677668939d243a13c1d2f7acf2
+Description:  Qt6 Plugin libqtuiotouchplugin
+
+Package: qt6-plugin-libqtuiotouchplugin
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
 Source: /feed/luci/luci-app-qbittorrent/qt6base
@@ -638,6 +980,21 @@ Filename: qt6-plugin-libqtuiotouchplugin_6.8.3-r1_mipsel_24kc.ipk
 Size: 39773
 SHA256sum: 0babdb604c0b05ddc446d46c96a36fbf778f47d9c292f79537aead1bbbc6ff70
 Description:  Qt6 Plugin libqtuiotouchplugin
+
+Package: qt6-plugin-libqxdgdesktopportal
+Version: 6.8.2-r1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Source: /feed/luci/luci-app-qbittorrent/qt6base
+SourceName: qt6base
+Section: libs
+SourceDateEpoch: 1739919616
+URL: http://qt-project.org
+Architecture: mipsel_24kc
+Installed-Size: 153600
+Filename: qt6-plugin-libqxdgdesktopportal_6.8.2-r1_mipsel_24kc.ipk
+Size: 42179
+SHA256sum: 2f2cb23007484107e2864af6361c7a90787c4e1d5263bc5c8dd0bef2561e5c5e
+Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: qt6-plugin-libqxdgdesktopportal
 Version: 6.8.3-r1
