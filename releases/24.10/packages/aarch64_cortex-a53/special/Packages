@@ -1,15 +1,15 @@
 Package: einat-ebpf
-Version: 0.1.7-r1
+Version: 0.1.8-r1
 Depends: libc, kmod-sched-core, kmod-sched-bpf, libbpf1
 Provides: einat
 License: GPL-2.0-or-later GPL-2.0-only
 Section: net
 URL: https://github.com/EHfive/einat-ebpf
 Architecture: aarch64_cortex-a53
-Installed-Size: 2242560
-Filename: einat-ebpf_0.1.7-r1_aarch64_cortex-a53.ipk
-Size: 1019437
-SHA256sum: 6b6ffb94ccd49aa776e9695e99022ba4fc58bc7eb0f458e1b7f2d739910390d2
+Installed-Size: 2314240
+Filename: einat-ebpf_0.1.8-r1_aarch64_cortex-a53.ipk
+Size: 1042830
+SHA256sum: 664f886da1bdd65332ad7a2b5a2dca05409a4378f390ec644f48df3bb8fdba68
 Description:  This eBPF application implements an "Endpoint-Independent Mapping" and
  "Endpoint-Independent Filtering" NAT(network address translation) on
  TC egress and ingress hooks.
@@ -473,80 +473,80 @@ SHA256sum: f2979c2a4f8363257030466a7b93370d2b5f41861e2a638c02f0c64c1fd43778
 Description:  Translation for luci-app-shadowsocks-rust - 繁體中文 (Chinese Traditional)
 
 Package: shadowsocks-rust-config
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: all
 Installed-Size: 10240
-Filename: shadowsocks-rust-config_1.22.0-r1_all.ipk
-Size: 1061
-SHA256sum: 53b1a374cc1271fb75c6a1acdc87a97ab8c9d89aeb11b7ba68b225d0c5406647
+Filename: shadowsocks-rust-config_1.23.0-r1_all.ipk
+Size: 1063
+SHA256sum: fb8abc6601a1e76541205cbc336f44b012435d6a9dd9aca11251a6379b24cc1e
 Description:  shadowsocks-rust config scripts
 
 Package: shadowsocks-rust-sslocal
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
-Filename: shadowsocks-rust-sslocal_1.22.0-r1_aarch64_cortex-a53.ipk
-Size: 1014
-SHA256sum: 8a93dfc5138dbaf2c9438c25dc5c1b99574213b6af3c92c4b5f16170b80d1e73
+Filename: shadowsocks-rust-sslocal_1.23.0-r1_aarch64_cortex-a53.ipk
+Size: 1012
+SHA256sum: 9eb7dd56ef290847e99b74f87f4ad70baa608a7bf5bc35efba4f247f38190e83
 Description:  shadowsocks-rust sslocal. client provides HTTP/SOCKS proxy, port forwarding, transparent proxy and tun.
 
 Package: shadowsocks-rust-ssmanager
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
-Filename: shadowsocks-rust-ssmanager_1.22.0-r1_aarch64_cortex-a53.ipk
-Size: 957
-SHA256sum: 4adda5bd0fc72238c40964d1b2eeff2f4d3bd44a78be69edbc1d1254581946a1
+Filename: shadowsocks-rust-ssmanager_1.23.0-r1_aarch64_cortex-a53.ipk
+Size: 960
+SHA256sum: d4f0e5cc6f9ec36bbe73f0e53571124e559e05388f37281d4e406cf50f774f56
 Description:  shadowsocks-rust ssmanager. server manager.
 
 Package: shadowsocks-rust-ssserver
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
-Filename: shadowsocks-rust-ssserver_1.22.0-r1_aarch64_cortex-a53.ipk
-Size: 947
-SHA256sum: 9cf23445c9c4439f8e4baf75a5a09e9fc2157b59c178c5e4f701b0114f558183
+Filename: shadowsocks-rust-ssserver_1.23.0-r1_aarch64_cortex-a53.ipk
+Size: 955
+SHA256sum: 6f4cfd93449221ad410aedb01fdc99296e6b8adc5e7c7b805b1ae363ed93f063
 Description:  shadowsocks-rust ssserver. 
 
 Package: shadowsocks-rust-ssservice
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: aarch64_cortex-a53
-Installed-Size: 9195520
-Filename: shadowsocks-rust-ssservice_1.22.0-r1_aarch64_cortex-a53.ipk
-Size: 4220715
-SHA256sum: 37f2ee881cbbaecb3004f7c7637f944f4fe2789b6612611fa4ac5e9f727696b3
+Installed-Size: 8601600
+Filename: shadowsocks-rust-ssservice_1.23.0-r1_aarch64_cortex-a53.ipk
+Size: 3939640
+SHA256sum: 47cb09d486f430e20bbd11e7285dc408747729774f4fcbf783a39798d8a2a64b
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
 
 Package: shadowsocks-rust-ssurl
-Version: 1.22.0-r1
+Version: 1.23.0-r1
 Depends: libc
 License: MIT
 Section: net
 URL: https://github.com/shadowsocks/shadowsocks-rust
 Architecture: aarch64_cortex-a53
-Installed-Size: 2498560
-Filename: shadowsocks-rust-ssurl_1.22.0-r1_aarch64_cortex-a53.ipk
-Size: 1038009
-SHA256sum: bbe842ebc0ecdda159a5cb95c0b1db8c8a89da622e751e54ea3089175a06430a
+Installed-Size: 2437120
+Filename: shadowsocks-rust-ssurl_1.23.0-r1_aarch64_cortex-a53.ipk
+Size: 1029320
+SHA256sum: 661d27718ec140118c2afac1ba69ad83ac1823aca383662b8b6e7407c22f3ca5
 Description:  shadowsocks-rust ssurl. for encoding/decoding SIP002 URLs.
 
