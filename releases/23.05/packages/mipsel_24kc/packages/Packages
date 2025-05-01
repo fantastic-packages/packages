@@ -1,0 +1,557 @@
+Package: Toolkit
+Version: 0.4.0.2-2
+Depends: libc, libstdcpp6
+License: GPL-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 116250
+Filename: Toolkit_0.4.0.2-2_mipsel_24kc.ipk
+Size: 116907
+SHA256sum: 7b94caa258baa0866271910e222ed7782d2ebd161eb15d9fbf48e6a454e2e444
+Description:  A network util can ping with DNS request.
+
+Package: alwaysonline
+Version: 1.2.0-1
+Depends: libc
+License: MIT
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 1820304
+Filename: alwaysonline_1.2.0-1_mipsel_24kc.ipk
+Size: 1816561
+SHA256sum: 979bbb89f836699888d58837b52b95207212678a47c18ad0d7d5bd8bc5667d29
+Description:  AlwaysOnline is a HTTP and DNS server which mocks a lot network/internet/portal detection servers.
+
+Package: fantastic-keyring
+Version: 20240427-1
+Depends: libc
+License: MIT
+Section: base
+Architecture: all
+Installed-Size: 309
+Filename: fantastic-keyring_20240427-1_all.ipk
+Size: 1047
+SHA256sum: 5e9642858dfa5d63bec6de1579791a6968ccd65e7beb6588b35b518e8db608ad
+Description:  The keyring of with the developer using.
+
+Package: fantastic-packages-feeds
+Version: 20241201-1
+Depends: libc, fantastic-keyring, opkg
+License: MIT
+Section: base
+Architecture: all
+Installed-Size: 96
+Filename: fantastic-packages-feeds_20241201-1_all.ipk
+Size: 1546
+SHA256sum: c7d6239f89cd889160f7637f9e25e4a6d175d905d8aa3ec94fc0d81b6612d04d
+Description:  Installer for fantastic-packages feeds
+
+Package: fastfetch
+Version: 2.41.0-1
+Depends: libc
+License: MIT
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 402113
+Filename: fastfetch_2.41.0-1_mipsel_24kc.ipk
+Size: 401792
+SHA256sum: ef042d369abb5d0517577b3c79232707ef29a26429f6a9283b5d22efb868a74b
+Description:  Fastfetch is a neofetch-like tool for fetching
+ system information and displaying it prettily.
+
+Package: go-stun
+Version: 0.1.4-10
+Depends: libc
+License: Apache-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 824634
+Filename: go-stun_0.1.4-10_mipsel_24kc.ipk
+Size: 824466
+SHA256sum: 5c49f63c6f86e6f64dbbd473eefea8321e36ee650d0cbefcd6ec94294736aee2
+Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang (a.k.a. UDP hole punching).
+ RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)
+ RFC 5389: Session Traversal Utilities for NAT (STUN)
+
+Package: internet-detector-mod-email
+Version: 1.4.5-1
+Depends: libc, internet-detector, mailsend
+Section: net
+Architecture: all
+Installed-Size: 1872
+Filename: internet-detector-mod-email_1.4.5-1_all.ipk
+Size: 2630
+SHA256sum: d39afe753d07a0b940e6a0791456c5366b9689f7df1baa82517df86a50efed87
+Description:  Email support for internet-detector.
+
+Package: internet-detector-mod-modem-restart
+Version: 1.4.5-1
+Depends: libc, internet-detector, modemmanager
+Section: net
+Architecture: all
+Installed-Size: 1087
+Filename: internet-detector-mod-modem-restart_1.4.5-1_all.ipk
+Size: 1851
+SHA256sum: 7e0f9cb9086f8cfc13827d5dafec9eb1a4dde3169cce702edbb215b76d569eec
+Description:  Support modem restart for internet detector.
+
+Package: internet-detector
+Version: 1.4.5-1
+Depends: libc, lua, luaposix, libuci-lua
+Section: net
+Architecture: all
+Installed-Size: 11532
+Filename: internet-detector_1.4.5-1_all.ipk
+Size: 12397
+SHA256sum: d3c8eefd5ba04f2f250cb774486801dff4e8ad9859baf40ba61168008a2602e6
+Description:  Internet-detector is a small daemon
+ for checking Internet availability.
+ Written in Lua using the luaposix library.
+
+Package: libQt6Concurrent
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 8340
+Filename: libQt6Concurrent_6.8.3-1_mipsel_24kc.ipk
+Size: 8987
+SHA256sum: 482ff58ae476d6de80dd2c3c88a3c8742894753849d1ba3a266174a83f54ce7c
+Description:  This package provides the Qt6 Concurrent v6.8.3 library.
+
+Package: libQt6Core
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 2693378
+Filename: libQt6Core_6.8.3-1_mipsel_24kc.ipk
+Size: 2682904
+SHA256sum: 20e4374a98892a2b7797f8de33d55788967501becc34ba415beb9eebe1d12c70
+Description:  This package provides the Qt6 Core v6.8.3 library.
+
+Package: libQt6DBus
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 312815
+Filename: libQt6DBus_6.8.3-1_mipsel_24kc.ipk
+Size: 312531
+SHA256sum: c8fff3f321f5a4dcc29cddb079f3e81baccbb7fb81938452f5db576e8889b8fb
+Description:  This package provides the Qt6 DBus v6.8.3 library.
+
+Package: libQt6Gui
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 2952940
+Filename: libQt6Gui_6.8.3-1_mipsel_24kc.ipk
+Size: 2944140
+SHA256sum: 81b3bbe183863db970a5d03d9108323a03ed5bc81cd054b459902fa06d485b83
+Description:  This package provides the Qt6 Gui v6.8.3 library.
+
+Package: libQt6Network
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 854070
+Filename: libQt6Network_6.8.3-1_mipsel_24kc.ipk
+Size: 851463
+SHA256sum: 44a9296c7135b6fa8a1939e70ed8e70995146a26ec887cb16edc6fe500e8c0be
+Description:  This package provides the Qt6 Network v6.8.3 library.
+
+Package: libQt6PrintSupport
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 155589
+Filename: libQt6PrintSupport_6.8.3-1_mipsel_24kc.ipk
+Size: 155757
+SHA256sum: a6eec78fe3d68ba2afd1b7f4a864a5961dc0092aad2b9fd9f248bac87ea315d0
+Description:  This package provides the Qt6 PrintSupport v6.8.3 library.
+
+Package: libQt6Sql
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 79011
+Filename: libQt6Sql_6.8.3-1_mipsel_24kc.ipk
+Size: 79628
+SHA256sum: 62f743ee9ca7e317c6763520c39901d4f30389526ed3140c0278a4237557f8f7
+Description:  This package provides the Qt6 Sql v6.8.3 library.
+
+Package: libQt6Test
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 156801
+Filename: libQt6Test_6.8.3-1_mipsel_24kc.ipk
+Size: 157321
+SHA256sum: 5e48d7d908e172c431b3630d0f22c4213963f44253cc9bc9dc23fcd1d949b486
+Description:  This package provides the Qt6 Test v6.8.3 library.
+
+Package: libQt6Widgets
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 3260068
+Filename: libQt6Widgets_6.8.3-1_mipsel_24kc.ipk
+Size: 3249373
+SHA256sum: ea0e0d4983d36b922d5d0d73d9ea540183dd88d38a0ab2aa2a48b82033bfb247
+Description:  This package provides the Qt6 Widgets v6.8.3 library.
+
+Package: libQt6Xml
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 62514
+Filename: libQt6Xml_6.8.3-1_mipsel_24kc.ipk
+Size: 63112
+SHA256sum: cd98f44d3f4d17976b4c031ba3338b34713f1f9d121c13158ed48e3b7c9d98f3
+Description:  This package provides the Qt6 Xml v6.8.3 library.
+
+Package: mihomo
+Version: 1.19.5-1
+Depends: libc
+License: GPL-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 11412112
+Filename: mihomo_1.19.5-1_mipsel_24kc.ipk
+Size: 11384950
+SHA256sum: db8ca516f2641d96b1dab295f363b5d3ad78ac83f6b7b76f89583eb0bf19e3ef
+Description:  Another Mihomo Kernel.
+
+Package: natmapt-client-script-deluge
+Version: 0.2025.2.19
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 815
+Filename: natmapt-client-script-deluge_0.2025.2.19_all.ipk
+Size: 1615
+SHA256sum: ce3fc4933395ad0df8fada1e956f72beaf6ea6efc82ba80a51a59066bf583102
+Description:  NATMap client scripts (Deluge)
+
+Package: natmapt-client-script-transmission
+Version: 0.2025.2.19
+Depends: libc, natmapt
+Provides: natmapt-client-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 635
+Filename: natmapt-client-script-transmission_0.2025.2.19_all.ipk
+Size: 1429
+SHA256sum: f74efce7124dfebd17fed9a9bd9862c1cdb83a6b26cfb2d6e6ee1a51e451feb1
+Description:  NATMap client scripts (Transmission)
+
+Package: natmapt-notify-script-pushbullet
+Version: 0.2025.2.19
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 625
+Filename: natmapt-notify-script-pushbullet_0.2025.2.19_all.ipk
+Size: 1426
+SHA256sum: a7a300a032c9ae8fc05127e0d3e9afa3ce34981cbe0592f88a2a3a729190085d
+Description:  NATMap notify scripts (Pushbullet)
+
+Package: natmapt-notify-script-pushover
+Version: 0.2025.2.19
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 646
+Filename: natmapt-notify-script-pushover_0.2025.2.19_all.ipk
+Size: 1446
+SHA256sum: 94859ea81cf38aaf3e0d53941a812e70680e9fa540958d575cf97243666eaf99
+Description:  NATMap notify scripts (Pushover)
+
+Package: natmapt-notify-script-telegram
+Version: 0.2025.2.19
+Depends: libc, natmapt
+Provides: natmapt-notify-scripts
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 639
+Filename: natmapt-notify-script-telegram_0.2025.2.19_all.ipk
+Size: 1429
+SHA256sum: 1e6b634483694ea2c6e7681f005b43e22d803ea819ad15d621afdc5c958b37e2
+Description:  NATMap notify scripts (Telegram)
+
+Package: natmapt
+Version: 20250318-1
+Depends: libc, curl, jsonfilter, bash
+License: MIT
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 26316
+Filename: natmapt_20250318-1_mipsel_24kc.ipk
+Size: 27053
+SHA256sum: 1fd84110a9caabc40d4a1793b917c93380135e5fddfe4bdbcbc046dd92fe56a9
+Description:  TCP/UDP port mapping tool for full cone NAT
+
+Package: netdata-ssl
+Version: 1.33.1-4
+Depends: libc, zlib, libuuid1, libuv1, libmnl0, libjson-c5, libopenssl3
+License: GPL-3.0-or-later
+Section: admin
+CPE-ID: cpe:/a:my-netdata:netdata
+Architecture: mipsel_24kc
+Installed-Size: 8023063
+Filename: netdata-ssl_1.33.1-4_mipsel_24kc.ipk
+Size: 7989909
+SHA256sum: e86bad7044c6d63193dfcdf24994d54c639c0d0069cda1f91498b7963d14c5ad
+Description:  netdata is a highly optimized Linux daemon providing real-time performance
+ monitoring for Linux systems, applications and SNMP devices over the web.
+ 
+ If you want to use Python plugins install python3, python3-yaml and
+ python3-urllib3
+
+Package: pcap-dnsproxy
+Version: 0.4.9.13-70a40bb
+Depends: libc, libpthread, libstdcpp6, libevent2-core7, libpcap1, libsodium, libopenssl3
+License: GPL-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 318477
+Filename: pcap-dnsproxy_0.4.9.13-70a40bb_mipsel_24kc.ipk
+Size: 317946
+SHA256sum: 148aed2841ba666a1a1655773de4dbe7f56838bf44fa01746ce1728bd7199f3b
+Description:  A local DNS server based on LibPcap
+
+Package: php-nginx
+Version: 0.2023.04.26-1
+Depends: libc, luci-nginx, luci-ssl-nginx
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 854
+Filename: php-nginx_0.2023.04.26-1_all.ipk
+Size: 1666
+SHA256sum: ff0d22a3f684a2f026506b87de04b6d2459acadaa52ac75cbd0449083525e350
+Description:  PHP with Nginx as Webserver
+
+Package: plain-nginx
+Version: 20231028
+Depends: libc, luci-nginx
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 366
+Filename: plain-nginx_20231028_all.ipk
+Size: 1165
+SHA256sum: f1cff05de49eaf17262c8b3f68184279add06c7278485ce4c336e5457b60a91d
+Description:  Read text document directly
+
+Package: qbittorrent
+Version: 5.0.4-1
+Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qBittorrent
+License: GPL-2.0+
+Section: net
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: mipsel_24kc
+Installed-Size: 7670545
+Filename: qbittorrent_5.0.4-1_mipsel_24kc.ipk
+Size: 7666510
+SHA256sum: 2116893e66a29c32b6eb0446a3923d702ee1600a397529d3aee0e899364eb0f9
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
+
+Package: qt6-plugin-libqcertonlybackend
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 36962
+Filename: qt6-plugin-libqcertonlybackend_6.8.3-1_mipsel_24kc.ipk
+Size: 37627
+SHA256sum: af3f9e97ae60e166bcc1100dd5611e912d0ebd197fe1006a447d540383510bc8
+Description:  Qt6 Plugin libqcertonlybackend
+
+Package: qt6-plugin-libqminimal
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 8801
+Filename: qt6-plugin-libqminimal_6.8.3-1_mipsel_24kc.ipk
+Size: 9420
+SHA256sum: 95427a1146e851fb45b7c20ccd2a614ff32423ea29fa0709f287b6183172aad6
+Description:  Qt6 Plugin libqminimal
+
+Package: qt6-plugin-libqnetworkmanager
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 25812
+Filename: qt6-plugin-libqnetworkmanager_6.8.3-1_mipsel_24kc.ipk
+Size: 26481
+SHA256sum: 3702101f39a268837a47dfc2748aa9468acc7d8e2a02365230ef4f31d913f9e2
+Description:  Qt6 Plugin libqnetworkmanager
+
+Package: qt6-plugin-libqoffscreen
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 36883
+Filename: qt6-plugin-libqoffscreen_6.8.3-1_mipsel_24kc.ipk
+Size: 37442
+SHA256sum: 7a89438ef7afcfaf6de4bde15058462fd1deca87572f47ae4c7a01f820be1ce2
+Description:  Qt6 Plugin libqoffscreen
+
+Package: qt6-plugin-libqopensslbackend
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 115190
+Filename: qt6-plugin-libqopensslbackend_6.8.3-1_mipsel_24kc.ipk
+Size: 115525
+SHA256sum: 41e4f245048c0f0717b9ec2f140cba936ef71669ce7092c0b0ce70a8606a0665
+Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqsqlite
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 1059037
+Filename: qt6-plugin-libqsqlite_6.8.3-1_mipsel_24kc.ipk
+Size: 1057702
+SHA256sum: 26e0eb379d434ad908a4be835ea209a224aa86176f2ef074f8fe166a6d0fe76a
+Description:  Qt6 Plugin libqsqlite
+
+Package: qt6-plugin-libqtuiotouchplugin
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 39278
+Filename: qt6-plugin-libqtuiotouchplugin_6.8.3-1_mipsel_24kc.ipk
+Size: 39902
+SHA256sum: e980bb8a167db69f3aa1f3a9e94a0b4a93556e14aeb05b85814bb03bd5f71b07
+Description:  Qt6 Plugin libqtuiotouchplugin
+
+Package: qt6-plugin-libqxdgdesktopportal
+Version: 6.8.3-1
+Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 41353
+Filename: qt6-plugin-libqxdgdesktopportal_6.8.3-1_mipsel_24kc.ipk
+Size: 41986
+SHA256sum: 888b105a4b1e80424b55ab6c42146dc63713948a7487649d0c3b504301409eb1
+Description:  Qt6 Plugin libqxdgdesktopportal
+
+Package: rblibtorrent2.0
+Version: 2.0.11-1
+Depends: libc, boost, boost-system, libatomic1, libgcc1, libopenssl3, libstdcpp6
+Provides: rblibtorrent
+License: BSD
+Section: libs
+ABIVersion: 2.0
+Architecture: mipsel_24kc
+Installed-Size: 1537454
+Filename: rblibtorrent2.0_2.0.11-1_mipsel_24kc.ipk
+Size: 1530544
+SHA256sum: f805daa4f05563981f8fb44c9b024b907ab9a5ad31c80dca6ba748bb3f8d4847
+Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
+ all the other bittorrent implementations around. It is a library and not a
+ full featured client, although it comes with a working example client.
+
+Package: rgmac
+Version: 1.5.1-20240803
+Depends: libc, bash, curl, coreutils-cksum, getopt
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 3655
+Filename: rgmac_1.5.1-20240803_all.ipk
+Size: 4481
+SHA256sum: 9f5c14f621d79e0a8f7162696cad162ee060280aa9b76572667850028c7e573c
+Description:  A random MAC address generator
+
+Package: speedtest-go
+Version: 1.7.9-1
+Depends: libc, ca-bundle
+License: MIT
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 8764929
+Filename: speedtest-go_1.7.9-1_mipsel_24kc.ipk
+Size: 8746656
+SHA256sum: 10d407fcd2c922fcbed908dfd152ba8059ca63946257d5ffb485a538c4576506
+Description:  Command Line Interface and pure Go API to
+ Test Internet Speed using speedtest.net
+
+Package: stuntman-client
+Version: 1.2.17-20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 37339
+Filename: stuntman-client_1.2.17-20240806_mipsel_24kc.ipk
+Size: 38054
+SHA256sum: f4d09706409def26f4771de9976b4ec1b2a8be419e98a1dceb3539446b6b8540
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-server
+Version: 1.2.17-20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 87445
+Filename: stuntman-server_1.2.17-20240806_mipsel_24kc.ipk
+Size: 88024
+SHA256sum: d015b1919f6ac3165438e06787abd68b314d584da5b71aa43e64f639f15a9053
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: stuntman-testcode
+Version: 1.2.17-20240806
+Depends: libc, libpthread, libstdcpp6, libopenssl3
+License: Apache-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 63552
+Filename: stuntman-testcode_1.2.17-20240806_mipsel_24kc.ipk
+Size: 64189
+SHA256sum: 4caf20849ac18c42886ae2ea78648a2e3b8da264b6eb3570b39ec5e53436636d
+Description:  An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.
+
+Package: uci-alwaysonline
+Version: 0.2024.07.31
+Depends: libc, alwaysonline, kmod-tun, ip-full, rgmac
+License: MIT
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 2570
+Filename: uci-alwaysonline_0.2024.07.31_mipsel_24kc.ipk
+Size: 3376
+SHA256sum: 3c6ac51ef208e36bfe323e344c15ccff6c3a08610d5b2f2221a2ca84c7f53a11
+Description:  alwaysonline uci metapackage
+
