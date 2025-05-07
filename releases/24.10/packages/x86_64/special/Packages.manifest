@@ -634,24 +634,6 @@ SHA256sum: f2979c2a4f8363257030466a7b93370d2b5f41861e2a638c02f0c64c1fd43778
 Description:  Translation for luci-app-shadowsocks-rust - 繁體中文 (Chinese Traditional)
 
 Package: shadowsocks-rust-config
-Version: 1.22.0-r1
-Depends: libc, shadowsocks-rust-ssservice
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: all
-Installed-Size: 10240
-Filename: shadowsocks-rust-config_1.22.0-r1_all.ipk
-Size: 1061
-SHA256sum: 53b1a374cc1271fb75c6a1acdc87a97ab8c9d89aeb11b7ba68b225d0c5406647
-Description:  shadowsocks-rust config scripts
-
-Package: shadowsocks-rust-config
 Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
@@ -668,24 +650,6 @@ Filename: shadowsocks-rust-config_1.23.0-r1_all.ipk
 Size: 1063
 SHA256sum: fb8abc6601a1e76541205cbc336f44b012435d6a9dd9aca11251a6379b24cc1e
 Description:  shadowsocks-rust config scripts
-
-Package: shadowsocks-rust-sslocal
-Version: 1.22.0-r1
-Depends: libc, shadowsocks-rust-ssservice
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 10240
-Filename: shadowsocks-rust-sslocal_1.22.0-r1_x86_64.ipk
-Size: 1003
-SHA256sum: 4b9d0295d2d735c954d87ba624289ad3a34561761b490311b7f9c95455ac3453
-Description:  shadowsocks-rust sslocal. client provides HTTP/SOCKS proxy, port forwarding, transparent proxy and tun.
 
 Package: shadowsocks-rust-sslocal
 Version: 1.23.0-r1
@@ -706,24 +670,6 @@ SHA256sum: 07aa1133ee9dfff46e0a29dcb79ae5e89e9c9609b63f884b58119af3ff95c716
 Description:  shadowsocks-rust sslocal. client provides HTTP/SOCKS proxy, port forwarding, transparent proxy and tun.
 
 Package: shadowsocks-rust-ssmanager
-Version: 1.22.0-r1
-Depends: libc, shadowsocks-rust-ssservice
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 10240
-Filename: shadowsocks-rust-ssmanager_1.22.0-r1_x86_64.ipk
-Size: 956
-SHA256sum: 7b5a3a1a03d6409053a22b08626c85bbb753648b5690830569d3f81d5a48551b
-Description:  shadowsocks-rust ssmanager. server manager.
-
-Package: shadowsocks-rust-ssmanager
 Version: 1.23.0-r1
 Depends: libc, shadowsocks-rust-ssservice
 Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
@@ -740,24 +686,6 @@ Filename: shadowsocks-rust-ssmanager_1.23.0-r1_x86_64.ipk
 Size: 957
 SHA256sum: f281f44c62c2c52fa73aa673ad9f659512a8512ea96f5b9aa60bccf0198cac24
 Description:  shadowsocks-rust ssmanager. server manager.
-
-Package: shadowsocks-rust-ssserver
-Version: 1.22.0-r1
-Depends: libc, shadowsocks-rust-ssservice
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 10240
-Filename: shadowsocks-rust-ssserver_1.22.0-r1_x86_64.ipk
-Size: 939
-SHA256sum: 6d5e169979ac56f966d5f95f9ec6e3dda6b4ba631cad468ee81b958524a913b1
-Description:  shadowsocks-rust ssserver. 
 
 Package: shadowsocks-rust-ssserver
 Version: 1.23.0-r1
@@ -778,24 +706,6 @@ SHA256sum: 57c647fdbfdeed5df1220783cc6bb29f1f81d43962ea1cb6e10927623bdf5543
 Description:  shadowsocks-rust ssserver. 
 
 Package: shadowsocks-rust-ssservice
-Version: 1.22.0-r1
-Depends: libc
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 10629120
-Filename: shadowsocks-rust-ssservice_1.22.0-r1_x86_64.ipk
-Size: 4378315
-SHA256sum: 274fd4600120efece2956f5b236fa6c50edf1bab70f8ccf0ba48fc56ed473567
-Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
-
-Package: shadowsocks-rust-ssservice
 Version: 1.23.0-r1
 Depends: libc
 Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
@@ -809,27 +719,9 @@ Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: x86_64
 Installed-Size: 9881600
 Filename: shadowsocks-rust-ssservice_1.23.0-r1_x86_64.ipk
-Size: 4072603
-SHA256sum: 1f995d29f681ee370188790e10eacaef66831a745632ceba62fb5b4d005fcded
+Size: 4072649
+SHA256sum: f5c7fa01dfb80cff17ef649b92677b6424e2a71dd560771778ffe642f12e9bf0
 Description:  shadowsocks-rust ssservice. single bundled of local,server,manager. also used to generate safed secured password.
-
-Package: shadowsocks-rust-ssurl
-Version: 1.22.0-r1
-Depends: libc
-Source: /home/runner/work/packages/packages/packages/openwrt-shadowsocks-rust
-SourceName: shadowsocks-rust
-License: MIT
-LicenseFiles: LICENSE
-Section: net
-SourceDateEpoch: 1740901155
-URL: https://github.com/shadowsocks/shadowsocks-rust
-Maintainer: Anya Lin <hukk1996@gmail.com>
-Architecture: x86_64
-Installed-Size: 2836480
-Filename: shadowsocks-rust-ssurl_1.22.0-r1_x86_64.ipk
-Size: 1084859
-SHA256sum: 7d63c50ff9d6f6fea2c0437cf197004f0cdf8c3794de08fed28af392e850b472
-Description:  shadowsocks-rust ssurl. for encoding/decoding SIP002 URLs.
 
 Package: shadowsocks-rust-ssurl
 Version: 1.23.0-r1
