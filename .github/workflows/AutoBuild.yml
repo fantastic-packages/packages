@@ -3,8 +3,13 @@ name: AutoBuild
 on:
   workflow_dispatch:
     inputs:
-      compile_packages:
-        description: 'Compile packages'
+      all_specials:
+        description: 'Build specials by default'
+        required: true
+        default: false
+        type: boolean
+      specify_packages:
+        description: 'Specify packages'
         required: false
         default: 'A B C etc.'
         type: string
@@ -72,7 +77,8 @@ jobs:
             target: ['sifiveu', 'generic']
     uses: ./.github/workflows/compile.yml
     with:
-      compiles: ${{ inputs.compile_packages }}
+      all_specials: ${{ inputs.all_specials }}
+      compiles: ${{ inputs.specify_packages }}
       GHPAGES_PATH: 'releases'
       OP_VERSION: ${{ matrix.version }}
       ARCH: ${{ matrix.arch_packages }}
