@@ -221,7 +221,7 @@ jobs:
           # PACKAGES and SPECIALS
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
-          _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/ | tr '\n' ' ')"
+          _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/ | grep -v "qbittorrent" | tr '\n' ' ')"
           _all="$_packages $_luci"
           _manual=''
           _specmanual=''
