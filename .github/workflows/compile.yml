@@ -232,6 +232,7 @@ jobs:
       - name: Determine EXTRA_FEEDS and PACKAGES
         shell: bash
         env:
+          IGNORE_BY_DEFAULT: '(qbittorrent)'
           EXTRA_FEEDS: >-
             src-link|${{ env.FTSPKGPREFIX }}packages|/feed/feeds/packages/
             src-link|${{ env.FTSPKGPREFIX }}luci|/feed/feeds/luci/
@@ -245,10 +246,12 @@ jobs:
           echo "SpecFeeds: $SPECIAL_FEEDS"
           echo "SPECIAL_FEEDS=$SPECIAL_FEEDS" >> $GITHUB_ENV
           # PACKAGES and SPECIALS
-          _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/ | tr '\n' ' ')"
-          _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/ | tr '\n' ' ')"
-          _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/ | tr '\n' ' ')"
-          _all="$_packages $_luci"
+          _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/)"
+          _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/)"
+          _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/)"
+
+          _all="$(echo -e "$_packages\n$_luci" | grep -Ev "${{ env.IGNORE_BY_DEFAULT }}" | tr '\n' ' ')"
+          _special="$(echo -e "$_special" | grep -Ev "${{ env.IGNORE_BY_DEFAULT }}" | tr '\n' ' ')"
           _manual=''
           _specmanual=''
           for _p in ${{ inputs.compiles }}; do
