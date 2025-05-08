@@ -3,6 +3,9 @@ name: Compile packages
 on:
   workflow_call:
     inputs:
+      all_specials:
+        required: true
+        type: boolean
       compiles:
         required: false
         type: string
@@ -260,10 +263,10 @@ jobs:
               && _specmanual="${_specmanual:+$_specmanual }$_p" \
               || _manual="${_manual:+$_manual }$_p"
           done
-          PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo '' || echo $_all)}"
+          PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo '' || [ "${{ inputs.all_specials }}" = "true"  ] && echo '' || echo $_all)}"
           echo "Building: $PACKAGES"
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
-          SPECIALS="${_specmanual:-$([ -n "$_manual" ] && echo '' || echo $_special)}"
+          SPECIALS="${_specmanual:-$([ -n "$_manual" ] && echo '' || [ "${{ inputs.all_specials }}" = "false" ] && echo '' || echo $_special)}"
           echo "SpecBuilding: $SPECIALS"
           echo "SPECIALS=$SPECIALS" >> $GITHUB_ENV
 
