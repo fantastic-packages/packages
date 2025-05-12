@@ -49,76 +49,6 @@ SHA256sum: fc031277177bf1ea854a13778c3de3977ed3dc353254f87f57d666d53dc3332c
 Description:  Installer for fantastic-packages feeds
 
 Package: fastfetch
-Version: 2.38.0-r1
-Depends: libc
-License: MIT
-Section: utils
-URL: https://github.com/fastfetch-cli/fastfetch
-Architecture: aarch64_cortex-a53
-Installed-Size: 1126400
-Filename: fastfetch_2.38.0-r1_aarch64_cortex-a53.ipk
-Size: 383084
-SHA256sum: 4efc2647367f7c5868a2fd420e86bfca350ef032e9e419f12123f9c3381a00dc
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
-Version: 2.39.1-r1
-Depends: libc
-License: MIT
-Section: utils
-URL: https://github.com/fastfetch-cli/fastfetch
-Architecture: aarch64_cortex-a53
-Installed-Size: 1126400
-Filename: fastfetch_2.39.1-r1_aarch64_cortex-a53.ipk
-Size: 381597
-SHA256sum: f0dcb1f870156cb128164cd9d39719c188052f4e326916f6ec794b576317899a
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
-Version: 2.40.2-r1
-Depends: libc
-License: MIT
-Section: utils
-URL: https://github.com/fastfetch-cli/fastfetch
-Architecture: aarch64_cortex-a53
-Installed-Size: 1126400
-Filename: fastfetch_2.40.2-r1_aarch64_cortex-a53.ipk
-Size: 383045
-SHA256sum: d1c113ef4eb2286a1d80f4d7dc03c5cfa67aca7ca93a5a46fb903eba656c9176
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
-Version: 2.40.4-r1
-Depends: libc
-License: MIT
-Section: utils
-URL: https://github.com/fastfetch-cli/fastfetch
-Architecture: aarch64_cortex-a53
-Installed-Size: 1126400
-Filename: fastfetch_2.40.4-r1_aarch64_cortex-a53.ipk
-Size: 383055
-SHA256sum: eab457245794f1fa99b50efe1fb8c5e56d19582b9fc041ada500ceadb1b2c34e
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
-Version: 2.41.0-r1
-Depends: libc
-License: MIT
-Section: utils
-URL: https://github.com/fastfetch-cli/fastfetch
-Architecture: aarch64_cortex-a53
-Installed-Size: 1126400
-Filename: fastfetch_2.41.0-r1_aarch64_cortex-a53.ipk
-Size: 383790
-SHA256sum: 0aecfeda5f8f9a08da3d812f2b0fc60598505347ca0d28bb880ef5a398be7060
-Description:  Fastfetch is a neofetch-like tool for fetching
- system information and displaying it prettily.
-
-Package: fastfetch
 Version: 2.42.0-r1
 Depends: libc
 License: MIT
@@ -148,18 +78,6 @@ Description:  go-stun is a STUN (RFC 3489, 5389) client implementation in golang
  RFC 5389: Session Traversal Utilities for NAT (STUN)
 
 Package: internet-detector-mod-email
-Version: 1.4.3-r1
-Depends: libc, internet-detector, mailsend
-Section: net
-URL: https://github.com/gSpotx2f/luci-app-internet-detector
-Architecture: all
-Installed-Size: 10240
-Filename: internet-detector-mod-email_1.4.3-r1_all.ipk
-Size: 2626
-SHA256sum: 75e7d6518aac295b1f4b9473c25af9b311847943212a269cc2dcf036b4a75563
-Description:  Email support for internet-detector.
-
-Package: internet-detector-mod-email
 Version: 1.4.5-r1
 Depends: libc, internet-detector, mailsend
 Section: net
@@ -172,18 +90,6 @@ SHA256sum: a0f90cdc80e338e34649341fb46ee3d0f85d1ca001c573a04e1c0e5ea446fe87
 Description:  Email support for internet-detector.
 
 Package: internet-detector-mod-modem-restart
-Version: 1.4.3-r1
-Depends: libc, internet-detector, modemmanager
-Section: net
-URL: https://github.com/gSpotx2f/luci-app-internet-detector
-Architecture: all
-Installed-Size: 10240
-Filename: internet-detector-mod-modem-restart_1.4.3-r1_all.ipk
-Size: 1846
-SHA256sum: 7bdfba6cca58b69b1ccb45df6b9abede188c8ee4e1a41983ea9f03fcc47cfaef
-Description:  Support modem restart for internet detector.
-
-Package: internet-detector-mod-modem-restart
 Version: 1.4.5-r1
 Depends: libc, internet-detector, modemmanager
 Section: net
@@ -194,34 +100,6 @@ Filename: internet-detector-mod-modem-restart_1.4.5-r1_all.ipk
 Size: 1858
 SHA256sum: 92d8ad68079e17dbdaff7f1695d5ed1a9d08437478586a1e55dadc45f463b082
 Description:  Support modem restart for internet detector.
-
-Package: internet-detector
-Version: 1.4.3-r1
-Depends: libc, lua, luaposix, libuci-lua
-Section: net
-URL: https://github.com/gSpotx2f/luci-app-internet-detector
-Architecture: all
-Installed-Size: 71680
-Filename: internet-detector_1.4.3-r1_all.ipk
-Size: 12154
-SHA256sum: e705f4f4ae77fa7a3a326411b759e7ccc2c4d381171c64f26881ca4211c06467
-Description:  Internet-detector is a small daemon
- for checking Internet availability.
- Written in Lua using the luaposix library.
-
-Package: internet-detector
-Version: 1.4.4-r1
-Depends: libc, lua, luaposix, libuci-lua
-Section: net
-URL: https://github.com/gSpotx2f/luci-app-internet-detector
-Architecture: all
-Installed-Size: 71680
-Filename: internet-detector_1.4.4-r1_all.ipk
-Size: 12298
-SHA256sum: 713f9e91d46ffc7ed0b6731fdaa9f5e017f3df90bdcdaf11907084106044dfb9
-Description:  Internet-detector is a small daemon
- for checking Internet availability.
- Written in Lua using the luaposix library.
 
 Package: internet-detector
 Version: 1.4.5-r1
@@ -238,18 +116,6 @@ Description:  Internet-detector is a small daemon
  Written in Lua using the luaposix library.
 
 Package: libQt6Concurrent
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 81920
-Filename: libQt6Concurrent_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 8559
-SHA256sum: aaa3411d39a917682be07fa946131ab652c6cdca4bf37ed6abf0ec4a72406135
-Description:  This package provides the Qt6 Concurrent v6.8.2 library.
-
-Package: libQt6Concurrent
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
@@ -260,18 +126,6 @@ Filename: libQt6Concurrent_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 8561
 SHA256sum: 06fe59e5d8e0d3e424127057fb111752998f89a21ce26750763f3b4e5b458e4b
 Description:  This package provides the Qt6 Concurrent v6.8.3 library.
-
-Package: libQt6Core
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 6922240
-Filename: libQt6Core_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 2662298
-SHA256sum: 71a0043ba657f32a068f123bdcd9b9822578110dde38ddddf197eacd2f6534f0
-Description:  This package provides the Qt6 Core v6.8.2 library.
 
 Package: libQt6Core
 Version: 6.8.3-r1
@@ -286,18 +140,6 @@ SHA256sum: 40b4ce787a6f5676b437c12474ce9a5bc387e066a6185b9d64c9c485785e16f2
 Description:  This package provides the Qt6 Core v6.8.3 library.
 
 Package: libQt6DBus
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 1003520
-Filename: libQt6DBus_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 336337
-SHA256sum: 22143e979c60e54a56d1aab54f4721fe0f51676df4debaefcc1df932dacb7a68
-Description:  This package provides the Qt6 DBus v6.8.2 library.
-
-Package: libQt6DBus
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
@@ -308,18 +150,6 @@ Filename: libQt6DBus_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 336901
 SHA256sum: 5366214455d06eeb7dcad19910473d667d34720343fb4ea7a19564e5d4a2431d
 Description:  This package provides the Qt6 DBus v6.8.3 library.
-
-Package: libQt6Gui
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libdrm, libfreetype
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 7454720
-Filename: libQt6Gui_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 3019585
-SHA256sum: 430aa021986fbb99128494fd711223a2ee0ececb4b546da12c49699b85d2f5b9
-Description:  This package provides the Qt6 Gui v6.8.2 library.
 
 Package: libQt6Gui
 Version: 6.8.3-r1
@@ -334,18 +164,6 @@ SHA256sum: b18b5f4b0530e837533fde74cd2f0e5ed3cfec2ab5a1fdd170a7f5d73613ab44
 Description:  This package provides the Qt6 Gui v6.8.3 library.
 
 Package: libQt6Network
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 2385920
-Filename: libQt6Network_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 921156
-SHA256sum: 7a3b71fd6ff66f354d1ac9426b4e288c0033f09bb9bfd604f9dfa0da63fce579
-Description:  This package provides the Qt6 Network v6.8.2 library.
-
-Package: libQt6Network
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
 Section: libs
@@ -356,18 +174,6 @@ Filename: libQt6Network_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 921742
 SHA256sum: d800ff55fb960cbc52916dc5db189a34edb13dd2b35160cbe98bd48be52b067c
 Description:  This package provides the Qt6 Network v6.8.3 library.
-
-Package: libQt6PrintSupport
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 542720
-Filename: libQt6PrintSupport_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 168184
-SHA256sum: 2643f2f5cdd9d48506864a8fad30f97bc1dbfbc7dbcde40dd2741d19b56325e2
-Description:  This package provides the Qt6 PrintSupport v6.8.2 library.
 
 Package: libQt6PrintSupport
 Version: 6.8.3-r1
@@ -382,18 +188,6 @@ SHA256sum: 7c0e313ed25835c3b50e1fc3f0233d8ea6248b505b26c6d78e0591fafd75946c
 Description:  This package provides the Qt6 PrintSupport v6.8.3 library.
 
 Package: libQt6Sql
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 276480
-Filename: libQt6Sql_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 91103
-SHA256sum: 3c122d6ea8ba5aeeec8b0272f6f7efc62fa66d0fe4e1d176105526e886b06c1a
-Description:  This package provides the Qt6 Sql v6.8.2 library.
-
-Package: libQt6Sql
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
@@ -404,18 +198,6 @@ Filename: libQt6Sql_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 91090
 SHA256sum: 8544ff57dabcb16edf777ba73d4cccfcad84423f2b0c4eabe7afabf46804bef0
 Description:  This package provides the Qt6 Sql v6.8.3 library.
-
-Package: libQt6Test
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 409600
-Filename: libQt6Test_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 152687
-SHA256sum: 870f8ef2847857142637634b22f825a19d6f5e47c71997e1ddcf679fd1cd37e3
-Description:  This package provides the Qt6 Test v6.8.2 library.
 
 Package: libQt6Test
 Version: 6.8.3-r1
@@ -430,18 +212,6 @@ SHA256sum: 6a10295a8c06254998b88545734d30d09d5a689ffa8e98dc9a4494528a5deb43
 Description:  This package provides the Qt6 Test v6.8.3 library.
 
 Package: libQt6Widgets
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 8448000
-Filename: libQt6Widgets_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 3416088
-SHA256sum: 304a861888286199c3da2764a2eb5605d356fd38c6db053407a457f60113daa8
-Description:  This package provides the Qt6 Widgets v6.8.2 library.
-
-Package: libQt6Widgets
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
@@ -452,18 +222,6 @@ Filename: libQt6Widgets_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 3421596
 SHA256sum: 12aa2a3a7ae7eb9951701b9b3a100f0054ac6243a2846d124f6bd2fa4f513b94
 Description:  This package provides the Qt6 Widgets v6.8.3 library.
-
-Package: libQt6Xml
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 204800
-Filename: libQt6Xml_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 71277
-SHA256sum: 974418f57a0a4dedbb0257e9480af356f0bceac93e3e94020d509e7cbbeda622
-Description:  This package provides the Qt6 Xml v6.8.2 library.
 
 Package: libQt6Xml
 Version: 6.8.3-r1
@@ -478,16 +236,16 @@ SHA256sum: aebbcbe9be4638ab86b84b71c0605fa4d0e97d63629a3e8e115c2f290867707a
 Description:  This package provides the Qt6 Xml v6.8.3 library.
 
 Package: mihomo
-Version: 1.19.6-r1
+Version: 1.19.7-r1
 Depends: libc
 License: GPL-2.0
 Section: net
 URL: https://wiki.metacubex.one
 Architecture: aarch64_cortex-a53
 Installed-Size: 29716480
-Filename: mihomo_1.19.6-r1_aarch64_cortex-a53.ipk
-Size: 10672071
-SHA256sum: 441c8d2703062a0f7442d637d43cd72ba4781eb0d762ef07759bc427ca93539f
+Filename: mihomo_1.19.7-r1_aarch64_cortex-a53.ipk
+Size: 10672025
+SHA256sum: c05452dec58f1bcf700a4d8914a56b338f77b7f55a0b73d8fce7dc4c67e6c5cd
 Description:  Another Mihomo Kernel.
 
 Package: natmapt-client-script-deluge
@@ -625,25 +383,6 @@ SHA256sum: 96f240c9a9fa3b2c0d7b5cd5f86acd5b6116027e8a4a61cb1c017569bf1186d1
 Description:  Read text document directly
 
 Package: qbittorrent
-Version: 5.0.4-r1
-Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
-Provides: qBittorrent
-License: GPL-2.0+
-Section: net
-URL: https://www.qbittorrent.org/
-CPE-ID: cpe:/a:qbittorrent:qbittorrent
-Architecture: aarch64_cortex-a53
-Installed-Size: 9205760
-Filename: qbittorrent_5.0.4-r1_aarch64_cortex-a53.ipk
-Size: 7830315
-SHA256sum: 1b779d487de2b88135c2f8c2b0f595829ce35c278cecc4923faeff5e85f3ef25
-Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
- libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
- It aims to be a good alternative to all other bittorrent clients out
- there. qBittorrent is fast, stable and provides unicode support as
- well as many features.
-
-Package: qbittorrent
 Version: 5.1.0-r1
 Depends: libc, libgcc1, libstdcpp6, rblibtorrent2.0, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
 Provides: qBittorrent
@@ -663,18 +402,6 @@ Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that use
  well as many features.
 
 Package: qt6-plugin-libqcertonlybackend
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 143360
-Filename: qt6-plugin-libqcertonlybackend_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 39363
-SHA256sum: 66651088987f2653b8b95b184237a634060569dd3a1d45986b432056e75980c5
-Description:  Qt6 Plugin libqcertonlybackend
-
-Package: qt6-plugin-libqcertonlybackend
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Section: libs
@@ -685,18 +412,6 @@ Filename: qt6-plugin-libqcertonlybackend_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 39365
 SHA256sum: ba8a7a65a0642fa32a1bcda866b09392091eebe46607dbd75f15d542f90c2e9f
 Description:  Qt6 Plugin libqcertonlybackend
-
-Package: qt6-plugin-libqminimal
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 81920
-Filename: qt6-plugin-libqminimal_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 10746
-SHA256sum: 42dfb3970cb3c79128c9f0068382a6322ccac300bc9cf3f33ee9ad4625aaa5cb
-Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqminimal
 Version: 6.8.3-r1
@@ -711,18 +426,6 @@ SHA256sum: 209448d776766523a2fcf2209187a48d1d1ed01e6fb0a07c9174784f5b2bc8d1
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 143360
-Filename: qt6-plugin-libqnetworkmanager_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 28629
-SHA256sum: 1914c638b39d681a585d22d002e0d6b10f7894a7799f507a4e294b431fd4e0f9
-Description:  Qt6 Plugin libqnetworkmanager
-
-Package: qt6-plugin-libqnetworkmanager
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
 Section: libs
@@ -733,18 +436,6 @@ Filename: qt6-plugin-libqnetworkmanager_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 28790
 SHA256sum: 7088a829eef4082f4a89ed0b0cba1e360e6965efa2d6057d75c00ea2e124500f
 Description:  Qt6 Plugin libqnetworkmanager
-
-Package: qt6-plugin-libqoffscreen
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 143360
-Filename: qt6-plugin-libqoffscreen_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 40066
-SHA256sum: ef2dd3e8a4a9203e44fb49acebaa09cf4a2684a1cb273044dc0a27043b6f4f4a
-Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqoffscreen
 Version: 6.8.3-r1
@@ -759,18 +450,6 @@ SHA256sum: 6066c474bca1190bd1f5d709b5fcaa99459abb51fe02696159cb867e8a33f2ba
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 409600
-Filename: qt6-plugin-libqopensslbackend_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 121082
-SHA256sum: 746fe2c62fede9dcd20cfa9c97a3ee00344b6887867e79e416d2c1069fa4b281
-Description:  Qt6 Plugin libqopensslbackend
-
-Package: qt6-plugin-libqopensslbackend
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Section: libs
@@ -781,18 +460,6 @@ Filename: qt6-plugin-libqopensslbackend_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 121038
 SHA256sum: b97005fc4861151d2dfa27e605e73dd892673d73f755006b582cd159565f296e
 Description:  Qt6 Plugin libqopensslbackend
-
-Package: qt6-plugin-libqsqlite
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 1996800
-Filename: qt6-plugin-libqsqlite_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 1001513
-SHA256sum: cbf4c0b75fd4a9410df77434f92265ddc323a995f01f4dcf96de76233d73b6fc
-Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqsqlite
 Version: 6.8.3-r1
@@ -807,18 +474,6 @@ SHA256sum: 41f9887d61be85af9402b230c45992fa8378c48088578363fe35971233151387
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 143360
-Filename: qt6-plugin-libqtuiotouchplugin_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 37588
-SHA256sum: 35dd99bcb761ffc024d1d769589a3d3fa5152ebf7c6b869c66f572c404115c5e
-Description:  Qt6 Plugin libqtuiotouchplugin
-
-Package: qt6-plugin-libqtuiotouchplugin
 Version: 6.8.3-r1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
 Section: libs
@@ -829,18 +484,6 @@ Filename: qt6-plugin-libqtuiotouchplugin_6.8.3-r1_aarch64_cortex-a53.ipk
 Size: 37584
 SHA256sum: 35a74595779128930e2bc046089c5ce6cd3dfe46bcc7beecdf6d20034e47e75c
 Description:  Qt6 Plugin libqtuiotouchplugin
-
-Package: qt6-plugin-libqxdgdesktopportal
-Version: 6.8.2-r1
-Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
-Section: libs
-URL: http://qt-project.org
-Architecture: aarch64_cortex-a53
-Installed-Size: 143360
-Filename: qt6-plugin-libqxdgdesktopportal_6.8.2-r1_aarch64_cortex-a53.ipk
-Size: 46615
-SHA256sum: a956a2d142b17d2661a8df20555ae710e2b2e9764f54b979b5c0a405c40cdcb9
-Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: qt6-plugin-libqxdgdesktopportal
 Version: 6.8.3-r1
