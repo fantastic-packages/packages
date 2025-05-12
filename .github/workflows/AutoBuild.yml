@@ -106,6 +106,20 @@ jobs:
           mkdir -p $release_path 2>/dev/null
           cp -rf packages-artifact/*/ $release_path/
           rm -rf packages-artifact/ 2>/dev/null
+      - name: Clean old ipk
+        shell: bash
+        run: |
+          # clean old ipk
+          clean_old_ipk() {
+            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
+            [ -z "$rmlist" ] || rm -f $rmlist
+          }
+          #
+          pushd "$release_path"
+          for pa in $(find * -name index.json -type f | grep -E '^(23.05|24.10)'); do
+            pushd "$(dirname $pa)"; clean_old_ipk; popd
+          done
+          popd
       - name: Display structure of downloaded files
         working-directory: ${{ env.release_path }}
         run: ls -R
