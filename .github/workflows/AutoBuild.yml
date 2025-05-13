@@ -49,6 +49,7 @@ jobs:
           aarch64_cortex-a53,
           aarch64_generic,
           arm_cortex-a15_neon-vfpv4,
+          arm_cortex-a9_vfpv3-d16,
           mips_24kc,
           mipsel_24kc
           ]
@@ -65,6 +66,8 @@ jobs:
             target: ['armsr', 'armv8']
           - arch_packages: arm_cortex-a15_neon-vfpv4
             target: ['armsr', 'armv7']
+          - arch_packages: arm_cortex-a9_vfpv3-d16
+            target: ['mvebu', 'cortexa9']
           - arch_packages: mips_24kc
             target: ['ath79', 'generic']
           - arch_packages: mipsel_24kc
