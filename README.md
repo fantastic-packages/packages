@@ -2,23 +2,21 @@ fantastic packages
 ==================
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/fantastic-packages/packages/AutoBuild.yml?label=AutoBuild&style=flat-square)](https://github.com/fantastic-packages/packages/actions/workflows/AutoBuild.yml)
-[![Website](https://img.shields.io/website?down_message=offline&label=Donwload%20pages&style=flat-square&up_message=online&url=https%3A%2F%2Ffantastic-packages.github.io%2Fpackages%2F)](https://fantastic-packages.github.io/packages/)
-[![Website](https://img.shields.io/website?down_message=open&label=Install%20Guide&style=flat-square&up_message=open&up_color=blue&down_color=blue&url=https%3A%2F%2Fgithub.com%2Ffantastic-packages%2Fpackages%2Ftree%2Fgh-pages)](https://github.com/fantastic-packages/packages/tree/gh-pages#how-to-use-on-openwrt)
+[![Website](https://img.shields.io/website?down_message=offline&label=Donwload%20pages&style=flat-square&up_message=online&url=https%3A%2F%2Ffantastic-packages.github.io%2Freleases%2F)](https://fantastic-packages.github.io/releases/)
+[![Website](https://img.shields.io/website?down_message=open&label=Install%20Guide&style=flat-square&up_message=open&up_color=blue&down_color=blue&url=https%3A%2F%2Fgithub.com%2Ffantastic-packages%2Freleases%2Ftree%2Fgh-pages)](https://github.com/fantastic-packages/releases/tree/gh-pages#how-to-use-on-openwrt)
 [![Website](https://img.shields.io/website?down_message=open&label=Fork%20Guide&style=flat-square&up_message=open&up_color=8A2BE2&down_color=8A2BE2&url=https%3A%2F%2Fgithub.com%2Ffantastic-packages%2Fpackages%2Fblob%2Fmaster%2FForkTheProject.md)](https://github.com/fantastic-packages/packages/blob/master/ForkTheProject.md)
 [![GitHub](https://img.shields.io/github/license/fantastic-packages/packages?style=flat-square)](./LICENSE)
+
+> [!NOTE]\
+> The feed url has moved from https://fantastic-packages.github.io/packages/releases/ to https://fantastic-packages.github.io/releases/
 
 ### How to use
 Choose one of the following methods:
 1. Add to `feeds.conf.default`
 ```shell
 umask 022
-git clone --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
+git clone --branch master --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
 cd fantastic_packages
-for v in master 22.03 23.05 24.10; do
-	git remote set-branches --add origin $v
-	git fetch origin $v
-	git branch --track $v origin/$v
-done
 # git remote update -p
 git submodule update --init --recursive
 cd ..

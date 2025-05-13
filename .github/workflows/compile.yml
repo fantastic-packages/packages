@@ -223,11 +223,14 @@ jobs:
       - name: Checkout Releases
         id: checkout_releases
         env:
+          RELEASES_PUSH_KEY: ${{ secrets.RELEASES_PUSH }}
           Branch: gh-pages
         shell: bash
         run: |
-          git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
-          git checkout origin/$Branch -- ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/ 2>/dev/null || echo
+          sudo apt update
+          sudo apt -y install axel
+          axel -q -n8 -o releases.tgz "https://codeload.github.com/$GITHUB_REPOSITORY_OWNER/releases/tar.gz/refs/heads/$Branch"
+          tar -xzf releases.tgz releases-$Branch/$BRANCH/packages/${{ inputs.ARCH }}/ && mv releases-$Branch ${{ inputs.GHPAGES_PATH }} || echo
           echo "mv ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/<feeds> to /workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}<feeds>"
           mkdir -p "/workdir/bin/packages/${{ inputs.ARCH }}" 2>/dev/null
           if [ -d "${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}" ]; then

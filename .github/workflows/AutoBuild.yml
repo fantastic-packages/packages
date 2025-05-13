@@ -18,8 +18,6 @@ on:
     types: [started]
 
 env:
-# Release path
-  release_path: 'releases'
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
   WORKFLOW_RETAIN_DAYS: 14
@@ -51,7 +49,6 @@ jobs:
         include:
           - usign_id: ${{ vars.USIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
-          - release_path: 'releases'
           - arch_packages: x86_64
             target: ['x86', '64'] # for imagebuilder
             profile: generic # for imagebuilder
@@ -70,7 +67,7 @@ jobs:
     uses: ./.github/workflows/compile.yml
     with:
       compiles: ${{ inputs.compile_packages }}
-      GHPAGES_PATH: ${{ matrix.release_path }}
+      GHPAGES_PATH: 'releases'
       OP_VERSION: ${{ matrix.version }}
       ARCH: ${{ matrix.arch_packages }}
       BOARD: ${{ matrix.target[0] }}
@@ -89,9 +86,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.RELEASES_PUSH }}
+          repository: ${{ github.repository_owner }}/releases
           ref: 'gh-pages'
-          lfs: false
-          submodules: false
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -101,8 +98,7 @@ jobs:
       - name: Move artifact
         shell: bash
         run: |
-          mkdir -p $release_path 2>/dev/null
-          cp -rf packages-artifact/*/ $release_path/
+          cp -rf packages-artifact/*/ ./
           rm -rf packages-artifact/ 2>/dev/null
       - name: Clean old ipk
         shell: bash
@@ -113,13 +109,10 @@ jobs:
             [ -z "$rmlist" ] || rm -f $rmlist
           }
           #
-          pushd "$release_path"
           for pa in $(find * -name index.json -type f | grep -E '^(23.05|24.10)'); do
             pushd "$(dirname $pa)"; clean_old_ipk; popd
           done
-          popd
       - name: Display structure of downloaded files
-        working-directory: ${{ env.release_path }}
         run: ls -R
       - name: Commit and push Packages
         env:
@@ -130,11 +123,11 @@ jobs:
           #git remote update # include submodules
           #git fetch --no-tags --prune --no-recurse-submodules --depth=1 origin $Branch
           #git checkout -B $Branch refs/remotes/origin/$Branch
-          git add $release_path/**/
-          git reset HEAD $release_path/**/targets/
-          git diff-index --cached --quiet HEAD $release_path/**/packages/**/*.ipk \
-          && git diff-index --cached --quiet HEAD $release_path/**/packages/**/Packages.manifest \
-          && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
+          git add .
+          git reset HEAD ./**/targets/
+          git diff-index --cached --quiet HEAD ./**/packages/**/*.ipk \
+          && git diff-index --cached --quiet HEAD ./**/packages/**/Packages.manifest \
+          && git diff-index --cached --quiet HEAD ./**/*.pub \
           || (git commit -m "Update packages" && git push)
 
   clean-up-old-workflow:
