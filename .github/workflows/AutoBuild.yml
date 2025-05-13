@@ -8,11 +8,6 @@ on:
         required: false
         default: 'A B C etc.'
         type: string
-      no_pages:
-        description: 'Donot deploy pages'
-        required: true
-        default: false
-        type: boolean
 
   push:
     branches: [ master ]
@@ -141,15 +136,6 @@ jobs:
           && git diff-index --cached --quiet HEAD $release_path/**/packages/**/Packages.manifest \
           && git diff-index --cached --quiet HEAD $release_path/**/*.pub \
           || (git commit -m "Update packages" && git push)
-
-  deploy_pages:
-    needs: [compile, push_packages]
-    if: inputs.no_pages == 0 && !cancelled()
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    uses: ./.github/workflows/jekyll.yml
 
   clean-up-old-workflow:
     needs: push_packages
