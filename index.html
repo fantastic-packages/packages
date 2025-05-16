@@ -1,44 +1,6 @@
 ---
-layout: base
+layout: redirect
+redirect_to: /releases
 ---
 
 {{ content }}
-
-<h1 id="path"></h1>
-<table style="width:100%">
-  <tr>
-    <th>Name</th>
-  </tr>
-
-<!-- ref: <github.com/bryango/resources> start -->
-{%- for res in site.pages -%}
-
-<!-- ignore /assets/ -->
-  {%- assign checkStart = res.url | split: '/assets/' -%}
-  {%- if checkStart[0] == '' -%}
-    {%- continue -%}
-  {%- endif -%}
-<!-- ignore / -->
-  {%- assign checkStart = res.url | split: page.url -%}
-  {%- if checkStart[0] != '' -%}
-    {%- continue -%}
-  {%- endif -%}
-<!-- keep /*/ -->
-  {%- assign target = res.url | remove_first: page.url -%}
-  {%- if target contains '/' -%}
-    {%- assign folder_new = target | split: '/' | first -%}
-  {%- else -%}
-    {%- continue -%}
-  {%- endif -%}
-<!-- register new subdir -->
-  {%- if folder_new != folder -%}
-    {%- assign folder = folder_new -%}
-    <tr>
-      <td><a class="post-link" href="{{ folder | append: '/' }}" >{{ folder | append: '/' }}</a></td>
-    </tr>
-  {%- endif -%}
-
-{% endfor %}
-<!-- ref: <github.com/bryango/resources> end -->
-
-</table>

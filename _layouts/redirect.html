@@ -1,0 +1,33 @@
+---
+sitemap: false
+noindex: true
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="1; url=/releases">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">{{ page.title }}</title>
+  <link href="{{ '/assets/css/openwrt.css' | relative_url }}" rel="stylesheet">
+  {% seo %}
+</head>
+
+<body>
+  <main class="page-content" aria-label="Content">
+    <h1 style="display: inline-flex; flex-direction: row; align-items: center;">
+      <span>{{ page.title | default: 'redirecting...' }}</span>
+    </h1>
+    <blockquote><a href="{{ '/../releases' | relative_url}}" id="url">Click to continue</a></blockquote>
+    {{ content }}
+  </main>
+</body>
+
+<script>
+  window.onload = function () {
+    window.location = document.getElementById('url').href
+  }
+</script>
+
+</html>
