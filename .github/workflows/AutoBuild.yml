@@ -47,7 +47,7 @@ jobs:
           - arm_cortex-a9_vfpv3-d16
           - mips_24kc
           - mipsel_24kc
-          - riscv64_riscv64
+          - riscv64_generic
         include:
           - apk_sign_id: ${{ vars.APK_SIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
@@ -68,7 +68,7 @@ jobs:
             target: ['ath79', 'generic']
           - arch_packages: mipsel_24kc
             target: ['ramips', 'mt7621']
-          - arch_packages: riscv64_riscv64
+          - arch_packages: riscv64_generic
             target: ['sifiveu', 'generic']
     uses: ./.github/workflows/compile.yml
     with:
