@@ -44,7 +44,8 @@ jobs:
           arm_cortex-a15_neon-vfpv4,
           arm_cortex-a9_vfpv3-d16,
           mips_24kc,
-          mipsel_24kc
+          mipsel_24kc,
+          riscv64_riscv64
           ]
         include:
           - usign_id: ${{ vars.USIGN_ID }}
@@ -64,6 +65,8 @@ jobs:
             target: ['ath79', 'generic']
           - arch_packages: mipsel_24kc
             target: ['ramips', 'mt7621']
+          - arch_packages: riscv64_riscv64
+            target: ['sifiveu', 'generic']
     uses: ./.github/workflows/compile.yml
     with:
       compiles: ${{ inputs.compile_packages }}
