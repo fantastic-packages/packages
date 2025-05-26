@@ -63,6 +63,24 @@ jobs:
       FTSPKGPREFIX: fantasticpackages_
 
     steps:
+      - name: Get system info
+        uses: kenchan0130/actions-system-info@master
+        id: system-info
+      - name: Print system info
+        shell: bash
+        run: |
+          cat <<- EOF
+          CPU Core: ${{ steps.system-info.outputs.cpu-core }}
+          CPU Model: ${{ steps.system-info.outputs.cpu-model }}
+          Hostname: ${{ steps.system-info.outputs.hostname }}
+          Kernel release: ${{ steps.system-info.outputs.kernel-release }}
+          Kernel version: ${{ steps.system-info.outputs.kernel-version }}
+          Name: ${{ steps.system-info.outputs.name }}
+          Platform: ${{ steps.system-info.outputs.platform }}
+          Release: ${{ steps.system-info.outputs.release }}
+          Total memory: $[ ${{ steps.system-info.outputs.totalmem }} / 1024**3 ] GB
+          EOF
+
       - name: Maximize Build Space
         if: env.DELETE_USELESS_FILES == 'true' && !cancelled()
         uses: easimon/maximize-build-space@master
