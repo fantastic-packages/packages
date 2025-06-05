@@ -343,9 +343,21 @@ jobs:
           make defconfig
           endgroup
           #
+          group "tmp fix"
+          # Set Rust build arg llvm.download-ci-llvm to false.
+          unCI() {
+            unset CI GITHUB_ACTIONS
+            local func="$1"; shift
+            if [ -n "$func" ]; then
+              "$func" "$@"
+            fi
+          }
+          #sed -i 's|\(--set=llvm\.download-ci-llvm\)=true|\1=false|' feeds/packages/lang/rust/Makefile
+          endgroup
+          #
           group "make package/*/compile V=s -j$NPROC"
           for PKG in $SPECIALS; do
-            make "package/$PKG/compile" \
+            unCI make "package/$PKG/compile" \
               BUILD_LOG=y \
               IGNORE_ERRORS="$IGNORE_ERRORS" \
               CONFIG_AUTOREMOVE=y \
