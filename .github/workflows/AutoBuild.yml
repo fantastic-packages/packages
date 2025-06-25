@@ -36,17 +36,19 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [23.05.5, 24.10.2] # or SNAPSHOT
-        arch_packages: [
-          x86_64,
-          aarch64_cortex-a53,
-          aarch64_generic,
-          arm_cortex-a15_neon-vfpv4,
-          arm_cortex-a9_vfpv3-d16,
-          mips_24kc,
-          mipsel_24kc,
-          riscv64_riscv64
-          ]
+        version:
+          #- SNAPSHOT
+          - 24.10.2
+          - 23.05.5
+        arch_packages:
+          - x86_64
+          - aarch64_cortex-a53
+          - aarch64_generic
+          - arm_cortex-a15_neon-vfpv4
+          - arm_cortex-a9_vfpv3-d16
+          - mips_24kc
+          - mipsel_24kc
+          - riscv64_riscv64
         include:
           - usign_id: ${{ vars.USIGN_ID }}
           - gpg_id: ${{ vars.GPG_ID }}
