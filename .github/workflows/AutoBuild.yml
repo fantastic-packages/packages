@@ -36,7 +36,7 @@ jobs:
       contents: write  # To push a branch
     strategy:
       matrix:
-        version: [23.05.5, 24.10.1] # or SNAPSHOT
+        version: [23.05.5, 24.10.2] # or SNAPSHOT
         arch_packages: [
           x86_64,
           aarch64_cortex-a53,
