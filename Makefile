@@ -30,6 +30,7 @@ define Package/$(PKG_NAME)-packages
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
+		+fakehttp \
 		+fastfetch \
 		+go-stun \
 		+internet-detector \
@@ -58,6 +59,7 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-disks-info \
 		+luci-app-dnsproxy \
 		+luci-app-einat \
+		+luci-app-fakehttp \
 		+luci-app-fchomo \
 		+luci-app-interfaces-statistics \
 		+luci-app-internet-detector \
@@ -85,6 +87,7 @@ define Package/$(PKG_NAME)
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
+		+fakehttp \
 		+fastfetch \
 		+go-stun \
 		+internet-detector \

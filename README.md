@@ -50,6 +50,7 @@ make menuconfig
 | [luci-app-disks-info][] | Information about connected disk devices (partitions, filesystems, SMART) for LuCI |
 | [luci-app-dnsproxy][] | A simple DNS proxy server |
 | [luci-app-einat][] | LuCI Support for einat-ebpf |
+| [luci-app-fakehttp][] | LuCI Support for fakehttp |
 | [luci-app-interfaces-statistics][] | Network interfaces statistics for LuCI |
 | [luci-app-internet-detector][] | Internet detector for OpenWrt |
 | [luci-app-ipinfo][] | LuCI support for ip.guide |
@@ -71,6 +72,7 @@ make menuconfig
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-fastfetch][] | Fetch and display system information |
+| [openwrt-fakehttp][] | Obfuscate all your TCP connections into HTTP protocol for OpenWrt |
 | [openwrt-fchomo][] | FullCombo Mihomo supplies maximum customization on OpenWrt |
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
@@ -98,6 +100,7 @@ make menuconfig
 [luci-app-disks-info]: https://github.com/gSpotx2f/luci-app-disks-info
 [luci-app-dnsproxy]: https://github.com/muink/luci-app-dnsproxy
 [luci-app-einat]: https://github.com/muink/luci-app-einat
+[luci-app-fakehttp]: https://github.com/yingziwu/luci-app-fakehttp
 [luci-app-interfaces-statistics]: https://github.com/gSpotx2f/luci-app-interfaces-statistics
 [luci-app-internet-detector]: https://github.com/gSpotx2f/luci-app-internet-detector
 [luci-app-ipinfo]: https://github.com/animegasan/luci-app-ipinfo
@@ -118,6 +121,7 @@ make menuconfig
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
+[openwrt-fakehttp]: https://github.com/yingziwu/openwrt-fakehttp
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
 [openwrt-fchomo]: https://github.com/fcshark-org/openwrt-fchomo
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
