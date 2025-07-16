@@ -257,7 +257,7 @@ jobs:
               && _specmanual="${_specmanual:+$_specmanual }$_p" \
               || _manual="${_manual:+$_manual }$_p"
           done
-          PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo fantastic-keyring || echo $_all)}"
+          PACKAGES="${_manual:-$([ -n "$_specmanual" ] && echo '' || echo $_all)}"
           echo "Building: $PACKAGES"
           echo "PACKAGES=$PACKAGES" >> $GITHUB_ENV
           SPECIALS="${_specmanual:-$([ -n "$_manual" ] && echo '' || echo $_special)}"
@@ -406,7 +406,7 @@ jobs:
           EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }}
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
-          PACKAGES: ${{ env.PACKAGES }}
+          PACKAGES: ${{ env.PACKAGES || 'fantastic-keyring' }}
           INDEX: 1
           KEY_BUILD: ${{ env.USIGN_KEY }}
           #V: s
