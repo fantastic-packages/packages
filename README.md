@@ -29,6 +29,15 @@ EOF
 ./scripts/feeds install -a
 make menuconfig
 ```
+OR
+```shell
+cat <<-EOF >> feeds.conf.default
+src-git fantastic_packages https://github.com/fantastic-packages/packages.git;24.10
+EOF
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+```
 2. Pull in the src/sdk directory
 ```shell
 umask 022

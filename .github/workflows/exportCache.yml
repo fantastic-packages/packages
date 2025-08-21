@@ -1,30 +1,31 @@
 name: Export cache
 
 on:
+  schedule:
+  - cron: "0 0 6 * *"
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'OP branch'
-        required: true
-        default: '24.10'
-        type: string
 
 jobs:
   export_cache:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch:
+          - '24.10'
+
     steps:
       - name: Initialize Environment
         run: |
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
           mkdir -p /workdir/DL
-      - name: Cache ${{ inputs.branch }} DL dependencies
+      - name: Cache ${{ matrix.branch }} DL dependencies
         uses: actions/cache/restore@v4
         with:
           path: /workdir/DL
-          key: Cache-DL-${{ inputs.branch }}-
+          key: Cache-DL-${{ matrix.branch }}-
           restore-keys: |
-            Cache-DL-${{ inputs.branch }}-
+            Cache-DL-${{ matrix.branch }}-
       - name: Compress DL Cache
         run: |
           pushd /workdir/DL
@@ -33,6 +34,6 @@ jobs:
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DL-${{ inputs.branch }}.tzst
+          name: DL-${{ matrix.branch }}.tzst
           path: /workdir/DL.tzst
           retention-days: 1
