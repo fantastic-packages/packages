@@ -433,12 +433,6 @@ jobs:
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o packages.adb.asc --detach-sign packages.adb
             fi
           }
-          # clean old apk
-          clean_old_apk() {
-            local abi_version='[0-9\\.]*'
-            local rmlist=$(ls -1 *.apk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)'"$abi_version"'-\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
-            [ -z "$rmlist" ] || rm -f $rmlist
-          }
           #
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}" 2>/dev/null
           if [ -d "/workdir/bin" ]; then
@@ -452,7 +446,7 @@ jobs:
               if [ -d "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
                 echo "cp /workdir/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
                 cp -Rf "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; clean_old_apk; sign_packages; popd
+                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
             #
