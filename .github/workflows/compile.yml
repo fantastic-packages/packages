@@ -322,6 +322,7 @@ jobs:
             -e 's,https://git.openwrt.org/openwrt/,https://github.com/openwrt/,' \
             -e 's,https://git.openwrt.org/project/,https://github.com/openwrt/,' \
             SDK/feeds.conf.default
+          #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           sed -i \
             -e "s,\\^.*,;openwrt-$BRANCH," \
             SDK/feeds.conf.default
