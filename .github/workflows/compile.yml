@@ -63,6 +63,7 @@ jobs:
       FTSPKGPREFIX: fantasticpackages_
 
     steps:
+      # Container initialization START
       - name: Get system info
         uses: kenchan0130/actions-system-info@master
         id: system-info
@@ -90,7 +91,9 @@ jobs:
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
+      # Container initialization END
 
+      # Workspace initialization START
       - name: Determine branch name and Generate op_target_url_prefix
         run: |
           SNAPSHOTS=$(echo "$OP_VERSION" | grep -q SNAPSHOT && { [ "$OP_VERSION" = "SNAPSHOT" ] && echo y || echo i; } || echo )
@@ -132,6 +135,7 @@ jobs:
           mkdir -p "/workdir/FEEDS/$BRANCH"
           mkdir -p "/workdir/DL"
 
+      # Cache restore
       - name: Cache FEED
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         uses: actions/cache@v4
@@ -196,12 +200,34 @@ jobs:
           sudo find /workdir/DL -maxdepth 3
           endgroup
 
+      # Key restore
       - name: Import keys
         shell: bash
         run: |
           # gpg
           gpg --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" --import <(echo "${GPG_KEY}")
           gpg --import-ownertrust <<< "${GPG_FINGER//[[:space:]]/}:6:"
+
+      # Releases restore
+      - name: Checkout Releases
+        id: checkout_releases
+        env:
+          RELEASES_PUSH_KEY: ${{ secrets.RELEASES_PUSH }}
+          Branch: gh-pages
+        shell: bash
+        run: |
+          sudo apt update
+          sudo apt -y install axel
+          axel -q -n8 -o releases.tgz "https://codeload.github.com/$GITHUB_REPOSITORY_OWNER/releases/tar.gz/refs/heads/$Branch"
+          tar -xzf releases.tgz releases-$Branch/$BRANCH/packages/${{ inputs.ARCH }}/ && mv releases-$Branch ${{ inputs.GHPAGES_PATH }} || echo
+          echo "mv ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/<feeds> to /workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}<feeds>"
+          mkdir -p "/workdir/bin/packages/${{ inputs.ARCH }}" 2>/dev/null
+          if [ -d "${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}" ]; then
+            pushd ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}
+            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}{}"
+            popd
+          fi
+      # Workspace initialization END
 
       - name: Determine EXTRA_FEEDS and PACKAGES
         shell: bash
@@ -238,25 +264,7 @@ jobs:
           echo "SpecBuilding: $SPECIALS"
           echo "SPECIALS=$SPECIALS" >> $GITHUB_ENV
 
-      - name: Checkout Releases
-        id: checkout_releases
-        env:
-          RELEASES_PUSH_KEY: ${{ secrets.RELEASES_PUSH }}
-          Branch: gh-pages
-        shell: bash
-        run: |
-          sudo apt update
-          sudo apt -y install axel
-          axel -q -n8 -o releases.tgz "https://codeload.github.com/$GITHUB_REPOSITORY_OWNER/releases/tar.gz/refs/heads/$Branch"
-          tar -xzf releases.tgz releases-$Branch/$BRANCH/packages/${{ inputs.ARCH }}/ && mv releases-$Branch ${{ inputs.GHPAGES_PATH }} || echo
-          echo "mv ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/<feeds> to /workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}<feeds>"
-          mkdir -p "/workdir/bin/packages/${{ inputs.ARCH }}" 2>/dev/null
-          if [ -d "${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}" ]; then
-            pushd ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}
-            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}{}"
-            popd
-          fi
-
+      # Build work START
       - name: Build Specials
         id: build_specials
         shell: bash
@@ -409,9 +417,10 @@ jobs:
         with:
           name: error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
           path: /workdir/logs
+      # Build work END
 
-      - name: Checkout Packages
-        id: checkout_packags
+      - name: Checkin Releases
+        id: checkin_releases
         shell: bash
         run: |
           sign_packages() {
@@ -463,7 +472,7 @@ jobs:
           fi
 
       - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ inputs.ARCH }})
-        if: ${{ steps.checkout_packags.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
+        if: ${{ steps.checkin_releases.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
         run: ls -R
         working-directory: /workdir/bin/packages/
 
