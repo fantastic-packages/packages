@@ -112,18 +112,6 @@ jobs:
         run: |
           cp -rf packages-artifact/*/ ./
           rm -rf packages-artifact/ 2>/dev/null
-      - name: Clean old apk
-        shell: bash
-        run: |
-          # clean old apk
-          clean_old_apk() {
-            local rmlist=$(ls -1 *.apk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)-\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
-            [ -z "$rmlist" ] || rm -f $rmlist
-          }
-          #
-          for pa in $(find * -name index.json -type f | grep -Ev '^(23.05|24.10)'); do
-            pushd "$(dirname $pa)"; clean_old_apk; popd
-          done
       - name: Display structure of downloaded files
         run: ls -R
       - name: Commit and push Packages
