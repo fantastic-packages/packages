@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3
 #
-# Copyright (C) 2023-2024 muink <https://github.com/muink>
+# Copyright (C) 2023-2025 muink <https://github.com/muink>
 
 include $(TOPDIR)/rules.mk
 
@@ -39,7 +39,6 @@ define Package/$(PKG_NAME)-packages
 		+mihomo \
 		+natmapt \
 		+natter \
-		+netdata-ssl \
 		+pcap-dnsproxy \
 		+rgmac \
 		+scart \
@@ -71,7 +70,6 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
 		+luci-app-natter \
-		+luci-app-netdata \
 		+luci-app-netspeedtest \
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
@@ -100,7 +98,6 @@ define Package/$(PKG_NAME)
 		+mihomo \
 		+natmapt \
 		+natter \
-		+netdata-ssl \
 		+pcap-dnsproxy \
 		+rgmac \
 		+scart \
@@ -126,7 +123,6 @@ define Package/$(PKG_NAME)
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
 		+luci-app-natter \
-		+luci-app-netdata \
 		+luci-app-netspeedtest \
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
