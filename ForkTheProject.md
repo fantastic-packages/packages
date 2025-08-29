@@ -1,7 +1,7 @@
 
 # How to fork the project and build the feed and image for yourself
 
-1. fork all branches of repo
+1. fork all branches of repo: `packages` `releases`
 2. exec `gen_new_usign_key.sh` and `gen_new_gpg_key.sh` generate usign&gpg key for yourself
    + `./keys/usign/*.pub`
    + `./keys/usign/*.sec`
