@@ -40,6 +40,7 @@ define Package/$(PKG_NAME)-packages
 		+netdata-ssl \
 		+pcap-dnsproxy \
 		+rgmac \
+		+scart \
 		+shadowsocks-rust \
 		+speedtest-go \
 		+stuntman \
@@ -97,6 +98,7 @@ define Package/$(PKG_NAME)
 		+netdata-ssl \
 		+pcap-dnsproxy \
 		+rgmac \
+		+scart \
 		+shadowsocks-rust \
 		+speedtest-go \
 		+stuntman \

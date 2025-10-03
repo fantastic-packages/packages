@@ -97,6 +97,7 @@ make menuconfig
 | [openwrt-php-nginx][] | PHP with Nginx as Webserver |
 | [openwrt-plain-nginx][] | Read text document directly |
 | [openwrt-rgmac][] | a simple random MAC address generator for OpenWRT |
+| [openwrt-scart][] | scart on OpenWrt |
 | [openwrt-shadowsocks-rust][] | A Rust port of shadowsocks |
 | [openwrt-speedtest-go][] | CLI and Go API to Test Internet Speed using speedtest.net |
 | [openwrt-stuntman][] | an open source STUN server and client code by john selbie |
@@ -147,6 +148,7 @@ make menuconfig
 [openwrt-php-nginx]: https://github.com/muink/openwrt-php-nginx
 [openwrt-plain-nginx]: ./packages/openwrt-plain-nginx
 [openwrt-rgmac]: https://github.com/muink/openwrt-rgmac
+[openwrt-scart]: https://github.com/fcshark-org/openwrt-scart
 [openwrt-shadowsocks-rust]: https://github.com/muink/openwrt-shadowsocks-rust
 [openwrt-speedtest-go]: https://github.com/muink/openwrt-speedtest-go
 [openwrt-stuntman]: https://github.com/muink/openwrt-stuntman
