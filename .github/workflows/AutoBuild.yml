@@ -38,7 +38,7 @@ jobs:
       matrix:
         version:
           #- SNAPSHOT
-          - '24.10.2'
+          - '24.10.4'
         arch_packages:
           - x86_64
           - aarch64_cortex-a53
