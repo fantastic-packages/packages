@@ -38,7 +38,6 @@ jobs:
       matrix:
         version:
           #- SNAPSHOT
-          - 24.10.2
           - 23.05.6
         arch_packages:
           - x86_64
