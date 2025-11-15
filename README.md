@@ -57,6 +57,7 @@ make menuconfig
 | [fantastic-keyring][] | fantastic-packages Developer Keyring |
 | [fantastic-packages-feeds][] | Installer for fantastic-packages feeds |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
+| [luci-app-bandix][] | A powerful OpenWrt LuCI application for network traffic monitoring. |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
 | [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
 | [luci-app-cpu-status][] | CPU utilization info for the LuCI status page |
@@ -85,6 +86,7 @@ make menuconfig
 | [luci-theme-argon][] | A clean and tidy OpenWrt LuCI theme |
 | [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
+| [openwrt-bandix][] | A dependency package for luci-app-bandix that provides core network traffic monitoring. |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-fastfetch][] | Fetch and display system information |
 | [openwrt-fakehttp][] | Obfuscate all your TCP connections into HTTP protocol for OpenWrt |
@@ -108,6 +110,7 @@ make menuconfig
 [fantastic-keyring]: https://github.com/fantastic-packages/fantastic-keyring
 [fantastic-packages-feeds]: https://github.com/fantastic-packages/fantastic-packages-feeds
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
+[luci-app-bandix]: https://github.com/timsaya/luci-app-bandix
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
 [luci-app-cpu-status]: https://github.com/gSpotx2f/luci-app-cpu-status
@@ -136,6 +139,7 @@ make menuconfig
 [luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
+[openwrt-bandix]: hhttps://github.com/timsaya/openwrt-bandix
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fakehttp]: https://github.com/yingziwu/openwrt-fakehttp
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
