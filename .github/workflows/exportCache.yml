@@ -36,4 +36,4 @@ jobs:
         with:
           name: DL-${{ matrix.branch }}.tzst
           path: /workdir/DL.tzst
-          retention-days: 1
+          retention-days: 90
