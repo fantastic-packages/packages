@@ -139,7 +139,7 @@ make menuconfig
 [luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
 [luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
-[openwrt-bandix]: hhttps://github.com/timsaya/openwrt-bandix
+[openwrt-bandix]: https://github.com/timsaya/openwrt-bandix
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fakehttp]: https://github.com/yingziwu/openwrt-fakehttp
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
