@@ -112,7 +112,8 @@ jobs:
         run: |
           # clean old ipk
           clean_old_ipk() {
-            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
+            local abi_version='[0-9\\.]*'
+            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)'"$abi_version"'_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
             [ -z "$rmlist" ] || rm -f $rmlist
           }
           #
