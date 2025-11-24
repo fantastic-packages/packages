@@ -119,7 +119,7 @@ jobs:
           echo "BUILDBRANCH=$BUILDBRANCH" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ env.BUILDBRANCH }}
           lfs: true

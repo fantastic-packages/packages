@@ -40,7 +40,7 @@ jobs:
           clang llvm libbpf-dev pkg-config libdw-dev libelf-dev zlib1g-dev
 
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
           lfs: true
