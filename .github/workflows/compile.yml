@@ -232,7 +232,7 @@ jobs:
       - name: Determine EXTRA_FEEDS and PACKAGES
         shell: bash
         env:
-          IGNORE_BY_DEFAULT: '(qbittorrent)'
+          IGNORE_BY_DEFAULT: '(qbittorrent|rblibtorrent|qt6base|qt6tools)'
           EXTRA_FEEDS: >-
             src-link|${{ env.FTSPKGPREFIX }}packages|/feed/feeds/packages/
             src-link|${{ env.FTSPKGPREFIX }}luci|/feed/feeds/luci/
