@@ -42,8 +42,7 @@ jobs:
     strategy:
       matrix:
         version:
-          #- SNAPSHOT
-          - '25.12.0-rc1'
+          - SNAPSHOT
         arch_packages:
           - x86_64
           - aarch64_cortex-a53
