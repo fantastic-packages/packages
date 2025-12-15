@@ -20,7 +20,7 @@ jobs:
           sudo chown $USER:$GROUPS /workdir
           mkdir -p /workdir/DL
       - name: Cache ${{ matrix.branch }} DL dependencies
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: /workdir/DL
           key: Cache-DL-${{ matrix.branch }}-

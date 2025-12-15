@@ -138,7 +138,7 @@ jobs:
       # Cache restore
       - name: Cache FEED
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /workdir/FEEDS/${{ env.BRANCH }}
           key: Cache-FEEDS-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
@@ -154,7 +154,7 @@ jobs:
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /workdir/DL
           key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
