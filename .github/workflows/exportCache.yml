@@ -32,7 +32,7 @@ jobs:
           tar -I zstd -cf /workdir/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
           popd
       - name: Upload DL Cache artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: DL-${{ matrix.branch }}.tzst
           path: /workdir/DL.tzst
