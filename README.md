@@ -92,6 +92,7 @@ make menuconfig
 | [openwrt-fakehttp][] | Obfuscate all your TCP connections into HTTP protocol for OpenWrt |
 | [openwrt-fchomo][] | FullCombo Mihomo supplies maximum customization on OpenWrt |
 | [openwrt-go-stun][] | A GO STUN client |
+| [openwrt-iusebash][] | Use bash as the default terminal |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
 | [openwrt-Natter][] | TCP/UDP hole punching tool |
 | [openwrt-netdata-ssl][] | Real-time performance monitoring tool |
@@ -145,6 +146,7 @@ make menuconfig
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch
 [openwrt-fchomo]: https://github.com/fcshark-org/openwrt-fchomo
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
+[openwrt-iusebash]: https://github.com/muink/openwrt-iusebash
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
 [openwrt-Natter]: https://github.com/muink/openwrt-Natter
 [openwrt-netdata-ssl]: https://github.com/muink/openwrt-netdata-ssl

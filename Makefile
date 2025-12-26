@@ -35,6 +35,7 @@ define Package/$(PKG_NAME)-packages
 		+fastfetch \
 		+go-stun \
 		+internet-detector \
+		+iusebash \
 		+mihomo \
 		+natmapt \
 		+natter \
@@ -95,6 +96,7 @@ define Package/$(PKG_NAME)
 		+fastfetch \
 		+go-stun \
 		+internet-detector \
+		+iusebash \
 		+mihomo \
 		+natmapt \
 		+natter \
