@@ -20,6 +20,15 @@ fantastic packages
 Choose one of the following methods:
 1. Add to `feeds.conf.default`
 ```shell
+cat <<-EOF >> feeds.conf.default
+src-git --root=feeds fantastic_packages https://github.com/fantastic-packages/packages.git;25.12
+EOF
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+```
+OR
+```shell
 umask 022
 git clone --branch master --no-tags --recurse-submodules https://github.com/fantastic-packages/packages.git fantastic_packages
 cd fantastic_packages
@@ -30,15 +39,6 @@ cat <<-EOF >> feeds.conf.default
 src-link fantastic_packages_packages fantastic_packages/feeds/packages
 src-link fantastic_packages_luci fantastic_packages/feeds/luci
 src-link fantastic_packages_special fantastic_packages/feeds/special
-EOF
-./scripts/feeds update -a
-./scripts/feeds install -a
-make menuconfig
-```
-OR
-```shell
-cat <<-EOF >> feeds.conf.default
-src-git fantastic_packages https://github.com/fantastic-packages/packages.git;24.10
 EOF
 ./scripts/feeds update -a
 ./scripts/feeds install -a
