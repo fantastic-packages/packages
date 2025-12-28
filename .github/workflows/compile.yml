@@ -327,7 +327,7 @@ jobs:
             SDK/feeds.conf.default
           #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           sed -i \
-            -e "s,\\^.*,;openwrt-$BRANCH," \
+            -e "s,\\^.*,;$([ "$SNAPSHOTS" = 'y' ] || echo openwrt-$BRANCH)," \
             SDK/feeds.conf.default
           for SPECIAL_FEED in $SPECIAL_FEEDS; do
             tr '|' ' ' <<< "$SPECIAL_FEED" >> SDK/feeds.conf.default
