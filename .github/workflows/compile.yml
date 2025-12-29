@@ -126,18 +126,17 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo mkdir -p /workdir
-          sudo chown $USER:$GROUPS /workdir
-          mkdir -p "/workdir/bin"
-          mkdir -p "/workdir/FEEDS/$BRANCH"
-          mkdir -p "/workdir/DL"
+          mkdir -p "${{ github.workspace }}/ARTIFACTS/bin"
+          mkdir -p "${{ github.workspace }}/ARTIFACTS/logs"
+          mkdir -p "${{ github.workspace }}/FEEDS/${{ env.BRANCH }}"
+          mkdir -p "${{ github.workspace }}/DL"
 
       # Cache restore
       - name: Cache FEED
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         uses: actions/cache@v5
         with:
-          path: /workdir/FEEDS/${{ env.BRANCH }}
+          path: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
           key: Cache-FEEDS-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
           restore-keys: |
             Cache-FEEDS-${{ env.BRANCH }}-
@@ -146,14 +145,14 @@ jobs:
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
-          echo "rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null"
-          sudo rm -rf /workdir/FEEDS/$BRANCH/${FTSPKGPREFIX}* 2>/dev/null
+          echo "rm -rf ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}/${FTSPKGPREFIX}* 2>/dev/null"
+          sudo rm -rf ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}/${FTSPKGPREFIX}* 2>/dev/null
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         uses: actions/cache@v5
         with:
-          path: /workdir/DL
+          path: ${{ github.workspace }}/DL
           key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
           #key: ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-${{ github.sha }}
           restore-keys: |
@@ -179,12 +178,12 @@ jobs:
           }
           trap 'endgroup' ERR
           #
-          group "find /workdir/FEEDS -maxdepth 2"
-          sudo find /workdir/FEEDS -maxdepth 2
+          group "find ${{ github.workspace }}/FEEDS -maxdepth 2"
+          sudo find ${{ github.workspace }}/FEEDS -maxdepth 2
           endgroup
           #
-          group "find /workdir/DL -maxdepth 3"
-          sudo find /workdir/DL -maxdepth 3
+          group "find ${{ github.workspace }}/DL -maxdepth 3"
+          sudo find ${{ github.workspace }}/DL -maxdepth 3
           endgroup
 
       # Key restore
@@ -208,11 +207,11 @@ jobs:
           sudo apt -y install axel
           axel -q -n8 -o releases.tgz "https://codeload.github.com/$GITHUB_REPOSITORY_OWNER/releases/tar.gz/refs/heads/$Branch"
           tar -xzf releases.tgz releases-$Branch/$BRANCH/packages/${{ inputs.ARCH }}/ && mv releases-$Branch ${{ inputs.GHPAGES_PATH }} || echo
-          echo "mv ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/<feeds> to /workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}<feeds>"
-          mkdir -p "/workdir/bin/packages/${{ inputs.ARCH }}" 2>/dev/null
+          echo "mv ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/<feeds> to ${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}<feeds>"
+          mkdir -p "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}" 2>/dev/null
           if [ -d "${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}" ]; then
             pushd ${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}
-            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "/workdir/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}{}"
+            find * -maxdepth 0 -type d 2>/dev/null | xargs -I{} mv "{}" "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/${FTSPKGPREFIX}{}"
             popd
           fi
       # Workspace initialization END
@@ -263,9 +262,9 @@ jobs:
           #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
           VERSION: ${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
-          ARTIFACTS_DIR: /workdir
-          FEEDS_DIR: /workdir/FEEDS/$BRANCH
-          DL_DIR: /workdir/DL
+          ARTIFACTS_DIR: ${{ github.workspace }}/ARTIFACTS
+          FEEDS_DIR: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
+          DL_DIR: ${{ github.workspace }}/DL
           EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }} ${{ env.SPECIAL_FEEDS }}
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
@@ -283,7 +282,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: Error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
-          path: /workdir/logs
+          path: ${{ github.workspace }}/ARTIFACTS/logs
       # Build work END
 
       - name: Checkin Releases
@@ -298,17 +297,17 @@ jobs:
           }
           #
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}" 2>/dev/null
-          if [ -d "/workdir/bin" ]; then
-            sudo chown -R $USER:$GROUPS /workdir/bin
+          if [ -d "${{ github.workspace }}/ARTIFACTS/bin" ]; then
+            sudo chown -R $USER:$GROUPS ${{ github.workspace }}/ARTIFACTS/bin
             rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/packages" 2>/dev/null
             rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/luci" 2>/dev/null
             rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/special" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/" 2>/dev/null
             for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
               feed=$(cut -f2 -d'|' <<< "$FEED")
-              if [ -d "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
-                echo "cp /workdir/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                cp -Rf "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
+              if [ -d "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
+                echo "cp ${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
+                cp -Rf "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
                 pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
@@ -330,13 +329,13 @@ jobs:
             fi
             popd
             # Clean images output dir
-            rm -rf /workdir/bin/targets 2>/dev/null
+            rm -rf ${{ github.workspace }}/ARTIFACTS/bin/targets 2>/dev/null
           fi
 
       - name: Display structure of downloaded files (${{ env.BRANCH }}, ${{ inputs.ARCH }})
         if: ${{ steps.checkin_releases.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
         run: ls -R
-        working-directory: /workdir/bin/packages/
+        working-directory: ${{ github.workspace }}/ARTIFACTS/bin/packages/
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
@@ -362,5 +361,5 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo chmod -R o+r /workdir/FEEDS/
-          sudo chmod -R o+r /workdir/DL/
+          sudo chmod -R o+r ${{ github.workspace }}/FEEDS/
+          sudo chmod -R o+r ${{ github.workspace }}/DL/
