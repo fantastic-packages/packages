@@ -49,7 +49,6 @@ jobs:
       contents: write  # To push a branch
       # pull-requests: write  # To create a PR from that branch
     env:
-      MIRROR_URL: 'https://downloads.openwrt.org'
       OP_VERSION: ${{ inputs.OP_VERSION }}
       APK_SIGN_ID: ${{ inputs.APK_SIGN_ID }}
       APK_SIGN_KEY: ${{ secrets[format('APK_SIGN_{0}', inputs.APK_SIGN_ID )] }}
@@ -94,7 +93,7 @@ jobs:
       # Container initialization END
 
       # Workspace initialization START
-      - name: Determine branch name and Generate op_target_url_prefix
+      - name: Determine branch name
         run: |
           SNAPSHOTS=$(echo "$OP_VERSION" | grep -q SNAPSHOT && { [ "$OP_VERSION" = "SNAPSHOT" ] && echo y || echo i; } || echo )
           echo "SNAPSHOTS=$SNAPSHOTS" >> $GITHUB_ENV
@@ -103,8 +102,6 @@ jobs:
           BRANCH="$([ -n "$SNAPSHOTS_BRANCH" ] && echo "$SNAPSHOTS_BRANCH" || echo "${OP_VERSION%.*}")"
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          op_target_url_prefix="$MIRROR_URL/$([ -n "$SNAPSHOTS" ] && echo snapshots || echo "releases/$OP_VERSION")/targets/${{ inputs.board }}/${{ inputs.subtarget}}"
-          echo "op_target_url_prefix=$op_target_url_prefix" >> $GITHUB_ENV
 
       - name: Check ${{ env.BRANCH }} if deployed
         run: |
@@ -125,7 +122,7 @@ jobs:
           lfs: true
           submodules: true
 
-      - name: Initialize Working environment
+      - name: Initialize Cache directory
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
@@ -145,7 +142,7 @@ jobs:
           restore-keys: |
             Cache-FEEDS-${{ env.BRANCH }}-
 
-      - name: Remove ${{ env.FTSPKGPREFIX }}* FEED
+      - name: Remove ${{ env.FTSPKGPREFIX }}* FEEDS
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
@@ -164,16 +161,6 @@ jobs:
           #restore-keys: |
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
-
-      - name: Download ghost-dl
-        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        shell: bash
-        run: |
-          wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
-          && unzip -o ghost-dl.zip \
-          && cp -rf ghost-dl-*/* /workdir/DL/ \
-          && rm -rf ghost-dl.zip ghost-dl-* \
-          || echo "ghost-dl download failed"
 
       - name: Display structure of Cache files
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
@@ -212,6 +199,7 @@ jobs:
       - name: Checkout Releases
         id: checkout_releases
         env:
+          DEBIAN_FRONTEND: noninteractive
           RELEASES_PUSH_KEY: ${{ secrets.RELEASES_PUSH }}
           Branch: gh-pages
         shell: bash
@@ -234,8 +222,8 @@ jobs:
         env:
           IGNORE_BY_DEFAULT: '(qbittorrent|rblibtorrent|qt6base|qt6tools)'
           EXTRA_FEEDS: >-
-            src-link|${{ env.FTSPKGPREFIX }}packages|/feed/feeds/packages/
-            src-link|${{ env.FTSPKGPREFIX }}luci|/feed/feeds/luci/
+            src-link|${{ env.FTSPKGPREFIX }}packages|${{ github.workspace }}/feeds/packages/
+            src-link|${{ env.FTSPKGPREFIX }}luci|${{ github.workspace }}/feeds/luci/
           SPECIAL_FEEDS: >-
             src-link|${{ env.FTSPKGPREFIX }}special|${{ github.workspace }}/feeds/special/
         run: |
@@ -268,158 +256,33 @@ jobs:
           echo "SPECIALS=$SPECIALS" >> $GITHUB_ENV
 
       # Build work START
-      - name: Build Specials
-        id: build_specials
-        shell: bash
-        run: |
-          grep -q '^\s*$' <<< "$SPECIALS" && exit 0
-          group() {
-            endgroup
-            echo "::group::  $1"
-            GROUP=1
-          }
-          endgroup() {
-            if [ -n "$GROUP" ]; then
-              echo "::endgroup::"
-            fi
-            GROUP=
-          }
-          trap 'endgroup' ERR
-          #
-          group "echo start"
-          echo start
-          endgroup
-          #
-          group "Initialize Environment"
-          sudo apt update
-          sudo apt -y install jq axel build-essential ccache clang curl flex bison g++ gawk \
-          gcc-multilib g++-multilib genisoimage gettext git libdw-dev libelf-dev \
-          libncurses5-dev libssl-dev locales pv pwgen python3 python3-pip \
-          python3-setuptools qemu-utils rsync signify-openbsd subversion swig unzip \
-          zlib1g-dev file wget zstd python3-venv python3-pyelftools python3-cryptography \
-          clang llvm libbpf-dev pkg-config libdw-dev libelf-dev zlib1g-dev
-          endgroup
-          # pushd SPECIAL_WORKDIR
-          mkdir -p SPECIAL_WORKDIR
-          pushd SPECIAL_WORKDIR
-          #
-          group "Download SDK"
-          sha256sums="$(curl -L "${op_target_url_prefix}/sha256sums")"
-          sdk="$(sed -n '/\bsdk\b/{s|^[[:xdigit:]]*\s*\*||;p}' <<< "$sha256sums")"
-          axel -q -n8 "${op_target_url_prefix}/${sdk}"
-          tar $(echo "$sdk" | grep -qE '\.tar\.zst$' && echo '-I zstd') -xf "$sdk" && rm -f "$sdk"
-          mv *-sdk-* SDK
-          endgroup
-          #
-          group "Initialize SDK"
-          # bin
-          ln -s "/workdir/bin" SDK/bin
-          # feeds
-          ln -s "/workdir/FEEDS/$BRANCH" SDK/feeds
-          # dl
-          rm -rf SDK/dl
-          ln -s "/workdir/DL" SDK/dl
-          # feeds.conf.default
-          sed -i \
-            -e 's,https://git.openwrt.org/feed/,https://github.com/openwrt/,' \
-            -e 's,https://git.openwrt.org/openwrt/,https://github.com/openwrt/,' \
-            -e 's,https://git.openwrt.org/project/,https://github.com/openwrt/,' \
-            SDK/feeds.conf.default
-          #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
-          sed -i \
-            -e "s,\\^.*,;$([ "$SNAPSHOTS" = 'y' ] || echo openwrt-$BRANCH)," \
-            SDK/feeds.conf.default
-          for SPECIAL_FEED in $SPECIAL_FEEDS; do
-            tr '|' ' ' <<< "$SPECIAL_FEED" >> SDK/feeds.conf.default
-          done
-          cat SDK/feeds.conf.default
-          # key-build
-          echo "$APK_SIGN_KEY" > SDK/private-key.pem
-          echo "$APK_SIGN_PUBKEY" > SDK/public-key.pem
-          endgroup
-          # Build start
-          NPROC=$(nproc)
-          pushd SDK
-          #
-          group "scripts/feeds update -a"
-          error=1 && until [ $error = 0 ]; do
-            scripts/feeds update -a && error=0 || error=$?
-          done
-          endgroup
-          #
-          group "scripts/feeds install $SPECIALS"
-          scripts/feeds install $SPECIALS
-          endgroup
-          #
-          group "make defconfig"
-          make defconfig
-          endgroup
-          #
-          group "tmp fix"
-          # Set Rust build arg llvm.download-ci-llvm to false.
-          unCI() {
-            unset CI GITHUB_ACTIONS
-            local func="$1"; shift
-            if [ -n "$func" ]; then
-              "$func" "$@"
-            fi
-          }
-          #sed -i 's|\(--set=llvm\.download-ci-llvm\)=true|\1=false|' feeds/packages/lang/rust/Makefile
-          endgroup
-          #
-          group "make package/*/compile V=s -j$NPROC"
-          for PKG in $SPECIALS; do
-            unCI make "package/$PKG/compile" \
-              BUILD_LOG=y \
-              IGNORE_ERRORS="$IGNORE_ERRORS" \
-              CONFIG_AUTOREMOVE=y \
-              V="$V" \
-              -j$NPROC
-          done
-          endgroup
-          #
-          group "make package/index"
-          make package/index
-          endgroup
-          # Build done
-          popd
-          # popd SPECIAL_WORKDIR
-          popd
-
-      #- name: Setup tmate session
-      #  if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
-      #  uses: mxschmitt/action-tmate@v3
-
-      - name: Upload Specials Logs
-        if: ${{ failure() && steps.build_specials.conclusion == 'failure' }}
-        uses: actions/upload-artifact@v6
-        with:
-          name: Specials-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
-          path: ${{ github.workspace }}/SPECIAL_WORKDIR/SDK/logs
-
       - name: Build Packages
         id: build_packags
         uses: fantastic-packages/gh-action-sdk@master
         env:
-          #ARCH: ${{ inputs.ARCH }}-${{ env.OP_VERSION }}
-          ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
+          #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
+          TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
+          VERSION: ${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           ARTIFACTS_DIR: /workdir
           FEEDS_DIR: /workdir/FEEDS/$BRANCH
           DL_DIR: /workdir/DL
-          FEED_DIR: ${{ github.workspace }}
-          EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }}
+          EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }} ${{ env.SPECIAL_FEEDS }}
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
-          PACKAGES: ${{ env.PACKAGES || 'fantastic-keyring' }}
+          PACKAGES: ${{ env.SPECIALS }} ${{ env.PACKAGES || 'fantastic-keyring' }}
           INDEX: 1
           PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
           #V: s
 
-      - name: Upload error logs
+      #- name: Setup tmate session
+      #  if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
+      #  uses: mxschmitt/action-tmate@v3
+
+      - name: Upload Error Logs
         if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
         uses: actions/upload-artifact@v6
         with:
-          name: error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
+          name: Error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
           path: /workdir/logs
       # Build work END
 
