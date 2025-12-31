@@ -258,6 +258,9 @@ jobs:
       - name: Build Packages
         id: build_packags
         uses: fantastic-packages/gh-action-sdk@master
+        with:
+          cache_used: true
+          token: ${{ secrets.RELEASES_PUSH }}
         env:
           #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
