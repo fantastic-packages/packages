@@ -265,6 +265,7 @@ jobs:
           #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
           VERSION: ${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
+          #VERSION: ${{ env.OP_VERSION }}
           ARTIFACTS_DIR: ${{ github.workspace }}/ARTIFACTS
           FEEDS_DIR: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
           DL_DIR: ${{ github.workspace }}/DL
