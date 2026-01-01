@@ -21,7 +21,7 @@ Choose one of the following methods:
 1. Add to `feeds.conf.default`
 ```shell
 cat <<-EOF >> feeds.conf.default
-src-git --root=feeds fantastic_packages https://github.com/fantastic-packages/packages.git;25.12
+src-git --root=feeds fantastic_packages https://github.com/fantastic-packages/packages.git;master
 EOF
 ./scripts/feeds update -a
 ./scripts/feeds install -a
