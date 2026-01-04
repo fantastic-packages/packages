@@ -72,8 +72,6 @@ make menuconfig
 | [luci-app-ipinfo][] | LuCI support for ip.guide |
 | [luci-app-log-viewer][] | Advanced syslog and kernel log (tail, search, etc) for LuCI |
 | [luci-app-natmapt][] | TCP/UDP port mapping for LuCI |
-| [luci-app-natter][] | TCP/UDP hole punching tool for LuCI |
-| [luci-app-netdata][] | Netdata for LuCI |
 | [luci-app-netspeedtest][] | Network Speed Test LuCI |
 | [luci-app-packagesync][] | Used to build a local mirror feeds source on the router |
 | [luci-app-pcap-dnsproxy][] | A DNS server for LuCI |
@@ -83,8 +81,6 @@ make menuconfig
 | [luci-app-tinyfilemanager][] | Web based File Manager in PHP |
 | [luci-app-tn-netports][] | Network ports status LuCI |
 | [luci-app-xray][] | (Almost) full feature Xray client for OpenWrt |
-| [luci-theme-argon][] | A clean and tidy OpenWrt LuCI theme |
-| [luci-app-argon-config][] | Argon Theme Config Plugin |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-bandix][] | A dependency package for luci-app-bandix that provides core network traffic monitoring. |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
@@ -94,8 +90,6 @@ make menuconfig
 | [openwrt-go-stun][] | A GO STUN client |
 | [openwrt-iusebash][] | Use bash as the default terminal |
 | [openwrt-natmapt][] | TCP/UDP port mapping for full cone NAT |
-| [openwrt-Natter][] | TCP/UDP hole punching tool |
-| [openwrt-netdata-ssl][] | Real-time performance monitoring tool |
 | [openwrt-Pcap_DNSProxy][] | Pcap_DNSProxy for OpenWrt/LEDE |
 | [openwrt-php-nginx][] | PHP with Nginx as Webserver |
 | [openwrt-plain-nginx][] | Read text document directly |
@@ -126,8 +120,6 @@ make menuconfig
 [luci-app-ipinfo]: https://github.com/animegasan/luci-app-ipinfo
 [luci-app-log-viewer]: https://github.com/gSpotx2f/luci-app-log
 [luci-app-natmapt]: https://github.com/muink/luci-app-natmapt
-[luci-app-natter]: https://github.com/muink/luci-app-natter
-[luci-app-netdata]: https://github.com/muink/luci-app-netdata
 [luci-app-netspeedtest]: https://github.com/muink/luci-app-netspeedtest
 [luci-app-packagesync]: https://github.com/muink/luci-app-packagesync
 [luci-app-pcap-dnsproxy]: https://github.com/muink/luci-app-pcap-dnsproxy
@@ -137,8 +129,6 @@ make menuconfig
 [luci-app-tinyfilemanager]: https://github.com/muink/luci-app-tinyfilemanager
 [luci-app-tn-netports]: https://github.com/muink/luci-app-tn-netports
 [luci-app-xray]: https://github.com/yichya/luci-app-xray
-[luci-theme-argon]: https://github.com/jerrykuku/luci-theme-argon
-[luci-app-argon-config]: https://github.com/jerrykuku/luci-app-argon-config
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-bandix]: https://github.com/timsaya/openwrt-bandix
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
@@ -148,8 +138,6 @@ make menuconfig
 [openwrt-go-stun]: https://github.com/muink/openwrt-go-stun
 [openwrt-iusebash]: https://github.com/muink/openwrt-iusebash
 [openwrt-natmapt]: https://github.com/muink/openwrt-natmapt
-[openwrt-Natter]: https://github.com/muink/openwrt-Natter
-[openwrt-netdata-ssl]: https://github.com/muink/openwrt-netdata-ssl
 [openwrt-Pcap_DNSProxy]: https://github.com/muink/openwrt-Pcap_DNSProxy
 [openwrt-php-nginx]: https://github.com/muink/openwrt-php-nginx
 [openwrt-plain-nginx]: ./packages/openwrt-plain-nginx

@@ -69,7 +69,6 @@ define Package/$(PKG_NAME)-luci
 		+luci-app-ipinfo \
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
-		+luci-app-natter \
 		+luci-app-netspeedtest \
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
@@ -97,7 +96,6 @@ define Package/$(PKG_NAME)
 		+iusebash \
 		+mihomo \
 		+natmapt \
-		+natter \
 		+pcap-dnsproxy \
 		+rgmac \
 		+scart \
@@ -122,7 +120,6 @@ define Package/$(PKG_NAME)
 		+luci-app-ipinfo \
 		+luci-app-log-viewer \
 		+luci-app-natmapt \
-		+luci-app-natter \
 		+luci-app-netspeedtest \
 		+luci-app-packagesync \
 		+luci-app-pcap-dnsproxy \
