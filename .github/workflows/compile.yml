@@ -6,6 +6,9 @@ on:
       compiles:
         required: false
         type: string
+      ignores:
+        required: false
+        type: string
       GHPAGES_PATH:
         required: true
         type: string
@@ -219,7 +222,6 @@ jobs:
       - name: Determine EXTRA_FEEDS and PACKAGES
         shell: bash
         env:
-          IGNORE_BY_DEFAULT: '(qbittorrent|rblibtorrent|qt6base|qt6tools)'
           EXTRA_FEEDS: >-
             src-link|${{ env.FTSPKGPREFIX }}packages|${{ github.workspace }}/feeds/packages/
             src-link|${{ env.FTSPKGPREFIX }}luci|${{ github.workspace }}/feeds/luci/
@@ -237,8 +239,9 @@ jobs:
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/)"
           _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/)"
 
-          _all="$(echo -e "$_packages\n$_luci" | grep -Ev "${{ env.IGNORE_BY_DEFAULT }}" | tr '\n' ' ')"
-          _special="$(echo -e "$_special" | grep -Ev "${{ env.IGNORE_BY_DEFAULT }}" | tr '\n' ' ')"
+          _ignores="^($(echo ${{ inputs.ignores }} | sed -E 's,\s+,|,g'))$"
+          _all="$(echo -e "$_packages\n$_luci" | grep -Ev "$_ignores" | tr '\n' ' ')"
+          _special="$(echo -e "$_special" | grep -Ev "$_ignores" | tr '\n' ' ')"
           _manual=''
           _specmanual=''
           for _p in ${{ inputs.compiles }}; do
