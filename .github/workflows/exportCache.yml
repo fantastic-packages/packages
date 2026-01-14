@@ -14,26 +14,21 @@ jobs:
           - '25.12'
 
     steps:
-      - name: Initialize Environment
-        run: |
-          sudo mkdir -p /workdir
-          sudo chown $USER:$GROUPS /workdir
-          mkdir -p /workdir/DL
       - name: Cache ${{ matrix.branch }} DL dependencies
         uses: actions/cache/restore@v5
         with:
-          path: /workdir/DL
+          path: ${{ github.workspace }}/DL # MUST same with compile.yml # https://github.com/actions/cache/issues/1653
           key: Cache-DL-${{ matrix.branch }}-
           restore-keys: |
             Cache-DL-${{ matrix.branch }}-
       - name: Compress DL Cache
         run: |
-          pushd /workdir/DL
-          tar -I zstd -cf /workdir/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
+          pushd ${{ github.workspace }}/DL
+          tar -I zstd -cf /${{ github.workspace }}/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
           popd
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v6
         with:
           name: DL-${{ matrix.branch }}.tzst
-          path: /workdir/DL.tzst
+          path: ${{ github.workspace }}/DL.tzst
           retention-days: 90
