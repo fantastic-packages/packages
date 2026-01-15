@@ -97,12 +97,12 @@ jobs:
 
       # Workspace initialization START
       - name: Determine branch name
+        shell: bash
         run: |
-          SNAPSHOTS=$(echo "$OP_VERSION" | grep -q SNAPSHOT && { [ "$OP_VERSION" = "SNAPSHOT" ] && echo y || echo i; } || echo )
-          echo "SNAPSHOTS=$SNAPSHOTS" >> $GITHUB_ENV
-          SNAPSHOTS_BRANCH="$(echo "$OP_VERSION" | sed -En 's|^(.+)-SNAPSHOT$|\1|p')"
-          echo "SNAPSHOTS_BRANCH=$SNAPSHOTS_BRANCH" >> $GITHUB_ENV
-          BRANCH="$([ -n "$SNAPSHOTS_BRANCH" ] && echo "$SNAPSHOTS_BRANCH" || echo "${OP_VERSION%.*}")"
+          FMTED_VERSION=$([ -z "$OP_VERSION" ] || grep -qiE "^(main|master|snapshots?)$" <<< "$OP_VERSION" || echo "$OP_VERSION")
+          echo "Building for $FMTED_VERSION"
+          echo "FMTED_VERSION=$FMTED_VERSION" >> $GITHUB_ENV
+          BRANCH=$([ -z "$FMTED_VERSION" ] && echo SNAPSHOT || grep -oE '^[0-9]+\.[0-9]+' <<< "$FMTED_VERSION")
           echo "Building for $BRANCH"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
@@ -265,10 +265,8 @@ jobs:
           cache: true
           token: ${{ secrets.RELEASES_PUSH }}
         env:
-          #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
           TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
-          VERSION: ${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
-          #VERSION: ${{ env.OP_VERSION }}
+          VERSION: ${{ env.FMTED_VERSION }}
           ARTIFACTS_DIR: ${{ github.workspace }}/ARTIFACTS
           FEEDS_DIR: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
           DL_DIR: ${{ github.workspace }}/DL
