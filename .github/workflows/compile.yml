@@ -262,7 +262,7 @@ jobs:
         id: build_packags
         uses: fantastic-packages/gh-action-sdk@master
         with:
-          sdk_cache: true
+          cache: true
           token: ${{ secrets.RELEASES_PUSH }}
         env:
           #ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
