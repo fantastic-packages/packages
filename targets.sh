@@ -5,17 +5,17 @@ OPENWRT_URL="https://downloads.openwrt.org"
 VERSION="$( \
 	curl -sL "$OPENWRT_URL/" | sed -En '/Stable Release/,/(Old|Upcoming) Stable Release/p' \
 	| sed -n '/<ul>/,/<\/ul>/p' | grep 'OpenWrt' \
-	| sed -E "s|.+\breleases/([\.0-9]+)/.+|\1|g" \
+	| sed -E "s|.+\breleases/([^/]+)/.+|\1|g" \
 )"
 TARGETS="$(curl -sL "$OPENWRT_URL/releases/$VERSION/targets/" \
-	| sed -n '/<table>/,/<\/table>/p' | grep '<a href=' \
+	| grep -E '<a href=.+\d+:\d+' \
 	| sed -E "s|.+\bhref=\"([^/]+)/.+|\1|g" \
 )"
 
 print_target_arch() {
 for target in $TARGETS; do
 	SUBTARGETS="$(curl -sL "$OPENWRT_URL/releases/$VERSION/targets/$target/" \
-		| sed -n '/<table>/,/<\/table>/p' | grep '<a href=' \
+		| grep -E '<a href=.+\d+:\d+' \
 		| sed -E "s|.+\bhref=\"([^/]+)/.+|\1|g" \
 	)"
 	for subtarget in $SUBTARGETS; do
