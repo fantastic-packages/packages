@@ -8,6 +8,11 @@ on:
         required: false
         default: 'A B C etc.'
         type: string
+      ignore_packages:
+        description: 'Ignore packages'
+        required: false
+        default: 'luci-app-qbittorrent qbittorrent rblibtorrent qt6base qt6tools'
+        type: string
 
   push:
     branches: [ master ]
@@ -74,6 +79,7 @@ jobs:
     uses: ./.github/workflows/compile.yml
     with:
       compiles: ${{ inputs.compile_packages }}
+      ignores: ${{ inputs.ignore_packages }}
       GHPAGES_PATH: 'releases'
       OP_VERSION: ${{ matrix.version }}
       ARCH: ${{ matrix.arch_packages }}
