@@ -1,4 +1,4 @@
-name: Compile packages and Build images
+name: Compile packages
 
 on:
   workflow_call:
@@ -95,6 +95,7 @@ jobs:
 
       # Workspace initialization START
       - name: Determine branch name and Generate op_target_url_prefix
+        shell: bash
         run: |
           SNAPSHOTS=$(echo "$OP_VERSION" | grep -q SNAPSHOT && { [ "$OP_VERSION" = "SNAPSHOT" ] && echo y || echo i; } || echo )
           echo "SNAPSHOTS=$SNAPSHOTS" >> $GITHUB_ENV
@@ -145,7 +146,7 @@ jobs:
           restore-keys: |
             Cache-FEEDS-${{ env.BRANCH }}-
 
-      - name: Remove ${{ env.FTSPKGPREFIX }}* FEED
+      - name: Remove ${{ env.FTSPKGPREFIX }}* FEEDS
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
@@ -212,6 +213,7 @@ jobs:
       - name: Checkout Releases
         id: checkout_releases
         env:
+          DEBIAN_FRONTEND: noninteractive
           RELEASES_PUSH_KEY: ${{ secrets.RELEASES_PUSH }}
           Branch: gh-pages
         shell: bash
@@ -401,8 +403,8 @@ jobs:
         id: build_packags
         uses: fantastic-packages/gh-action-sdk@24.10
         env:
-          #ARCH: ${{ inputs.ARCH }}-${{ env.OP_VERSION }}
-          ARCH: ${{ inputs.ARCH }}-${{ env.SNAPSHOTS != 'y' && format('{0}-', env.BRANCH) || '' }}SNAPSHOT
+          TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
+          VERSION: ${{ env.FMTED_VERSION }}
           ARTIFACTS_DIR: /workdir
           FEEDS_DIR: /workdir/FEEDS/$BRANCH
           DL_DIR: /workdir/DL
@@ -415,7 +417,11 @@ jobs:
           KEY_BUILD: ${{ env.USIGN_KEY }}
           #V: s
 
-      - name: Upload error logs
+      #- name: Setup tmate session
+      #  if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
+      #  uses: mxschmitt/action-tmate@v3
+
+      - name: Upload Error Logs
         if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
         uses: actions/upload-artifact@v6
         with:
@@ -433,12 +439,6 @@ jobs:
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o Packages.asc --detach-sign Packages
             fi
           }
-          # clean old apk
-          clean_old_ipk() {
-            local abi_version='[0-9\\.]*'
-            local rmlist=$(ls -1 *.ipk | grep -Ev "^($(jq -rc '.packages|to_entries[]|"\(.key)'"$abi_version"'_\(.value)"' index.json | tr '\n' '|' | sed 's,|$,,'))")
-            [ -z "$rmlist" ] || rm -f $rmlist
-          }
           #
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}" 2>/dev/null
           if [ -d "/workdir/bin" ]; then
@@ -452,7 +452,7 @@ jobs:
               if [ -d "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
                 echo "cp /workdir/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
                 cp -Rf "/workdir/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; clean_old_ipk; sign_packages; popd
+                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
             #
@@ -480,63 +480,6 @@ jobs:
         if: ${{ steps.checkin_releases.outcome == 'success' || steps.checkout_releases.outcome == 'success' }}
         run: ls -R
         working-directory: /workdir/bin/packages/
-
-      - name: Determine packages be installed
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        shell: bash
-        run: |
-          INSTALLS=$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/generic" | tr '\n' ' ')
-          INSTALLS=${INSTALLS:+$INSTALLS }$(cat "$GITHUB_WORKSPACE/.github/workflows/prebuildpackages/${{ inputs.ARCH }}" 2>/dev/null | tr '\n' ' ')
-          echo "Installing: $INSTALLS"
-          echo "INSTALLS=$INSTALLS" >> $GITHUB_ENV
-
-      - name: Gen KEY_VERIFY
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        shell: bash
-        run: |
-          KEY_VERIFY=''
-          for k in ${VERIFY_KEY_ID}; do
-            key="$(cat "$GITHUB_WORKSPACE/keys/usign/${k^^}.pub" | base64)"
-            KEY_VERIFY="${KEY_VERIFY:+$KEY_VERIFY }${key//[[:space:]]/}"
-          done
-          echo "KEY_VERIFY=$KEY_VERIFY"
-          echo "KEY_VERIFY=$KEY_VERIFY" >> $GITHUB_ENV
-
-      - name: Build Images
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        uses: fantastic-packages/gh-action-imagebuilder@24.10
-        env:
-          ARCH: ${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ env.OP_VERSION }}
-          PROFILE: ${{ inputs.MODEL }}
-          ARTIFACTS_DIR: /workdir
-          REPO_DIR: /workdir/bin/packages/${{ inputs.ARCH }}
-          EXTRA_REPOS: >-
-            src|${{ env.FTSPKGPREFIX }}packages|file:///repo/${{ env.FTSPKGPREFIX }}packages
-            src|${{ env.FTSPKGPREFIX }}luci|file:///repo/${{ env.FTSPKGPREFIX }}luci
-            src|${{ env.FTSPKGPREFIX }}special|file:///repo/${{ env.FTSPKGPREFIX }}special
-          NO_LOCAL_REPOS: 1
-          KEY_BUILD: ${{ env.USIGN_KEY }}
-          KEY_BUILD_PUB: ${{ env.USIGN_PUBKEY }}
-          KEY_VERIFY: ${{ env.KEY_VERIFY }}
-          PACKAGES: ${{ env.INSTALLS }}
-          ROOTFS_SIZE: 256
-
-      - name: Checkout Images
-        shell: bash
-        if: env.build_mode == 'build_imgs' && !cancelled()
-        run: |
-          if [ -d "/workdir/bin" ]; then
-            sudo chown -R $USER:$GROUPS /workdir/bin
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}" 2>/dev/null
-            mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/" 2>/dev/null
-            echo "mv /workdir/bin/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }} to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            mv -f "/workdir/bin/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/targets/${{ inputs.BOARD }}/${{ inputs.SUBTARGET }}"
-            if [ "${{env.GPG_SIGN}}" == "true" ]; then
-              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
-            fi
-            popd
-          fi
 
       - name: Generate artifact name and clean up irrelevant packages
         run: |
