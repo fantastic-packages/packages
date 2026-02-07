@@ -28,6 +28,7 @@ define Package/$(PKG_NAME)-packages
 	DEPENDS+:=\
 		+alwaysonline \
 		+bandix \
+		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
@@ -86,6 +87,7 @@ define Package/$(PKG_NAME)
 	DEPENDS+:=\
 		+alwaysonline \
 		+bandix \
+		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
 		+fantastic-packages-feeds \
