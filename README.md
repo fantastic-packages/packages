@@ -54,6 +54,7 @@ make menuconfig
 ### Package description
 | Packages | Description |
 | ---- | ---- |
+| [distfeeds-mirror-sjtu][] | Use Shanghai Jiao Tong University mirror as distfeeds |
 | [fantastic-keyring][] | fantastic-packages Developer Keyring |
 | [fantastic-packages-feeds][] | Installer for fantastic-packages feeds |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
@@ -108,6 +109,7 @@ make menuconfig
 
 --------
 
+[distfeeds-mirror-sjtu]: ./packages/distfeeds-mirror-sjtu
 [fantastic-keyring]: https://github.com/fantastic-packages/fantastic-keyring
 [fantastic-packages-feeds]: https://github.com/fantastic-packages/fantastic-packages-feeds
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
