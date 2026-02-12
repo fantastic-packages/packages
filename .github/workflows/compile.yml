@@ -164,6 +164,16 @@ jobs:
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-${{ hashFiles('Makefile') }}-
           #  ${{ runner.os }}-DL-${{ github.ref_name }}-
 
+      - name: Download ghost-dl
+        if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
+        shell: bash
+        run: |
+          wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
+          && unzip -o ghost-dl.zip \
+          && cp -rf ghost-dl-*/* /workdir/DL/ \
+          && rm -rf ghost-dl.zip ghost-dl-* \
+          || echo "ghost-dl download failed"
+
       - name: Display structure of Cache files
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
