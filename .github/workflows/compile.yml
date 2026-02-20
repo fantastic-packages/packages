@@ -170,7 +170,7 @@ jobs:
         run: |
           wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
           && unzip -o ghost-dl.zip \
-          && cp -rf ghost-dl-*/* /workdir/DL/ \
+          && cp -rf ghost-dl-*/* "${{ github.workspace }}/DL/" \
           && rm -rf ghost-dl.zip ghost-dl-* \
           || echo "ghost-dl download failed"
 
