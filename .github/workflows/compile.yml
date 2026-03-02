@@ -276,7 +276,7 @@ jobs:
 
       - name: Upload Error Logs
         if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
           path: ${{ github.workspace }}/ARTIFACTS/logs
@@ -347,7 +347,7 @@ jobs:
         working-directory: ${{ inputs.GHPAGES_PATH }}/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.artifact }}
           path: |

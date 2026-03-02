@@ -27,7 +27,7 @@ jobs:
           tar -I zstd -cf /${{ github.workspace }}/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
           popd
       - name: Upload DL Cache artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: DL-${{ matrix.branch }}.tzst
           path: ${{ github.workspace }}/DL.tzst
