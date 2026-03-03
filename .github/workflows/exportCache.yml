@@ -24,11 +24,11 @@ jobs:
       - name: Compress DL Cache
         run: |
           pushd ${{ github.workspace }}/DL
-          tar -I zstd -cf /${{ github.workspace }}/DL.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
+          tar --zstd -cf ${{ github.workspace }}/DL-${{ matrix.branch }}.tzst * --owner=0 --group=0 --no-same-owner --no-same-permissions || echo "No files to compress"
           popd
       - name: Upload DL Cache artifact
         uses: actions/upload-artifact@v7
         with:
-          name: DL-${{ matrix.branch }}.tzst
-          path: ${{ github.workspace }}/DL.tzst
+          archive: false
+          path: ${{ github.workspace }}/DL-${{ matrix.branch }}.tzst
           retention-days: 90
