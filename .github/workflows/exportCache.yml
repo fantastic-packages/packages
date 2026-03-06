@@ -21,6 +21,25 @@ jobs:
           key: Cache-DL-${{ matrix.branch }}-
           restore-keys: |
             Cache-DL-${{ matrix.branch }}-
+      - name: Display structure of Cache files
+        shell: bash
+        run: |
+          group() {
+            endgroup
+            echo "::group::  $1"
+            GROUP=1
+          }
+          endgroup() {
+            if [ -n "$GROUP" ]; then
+              echo "::endgroup::"
+            fi
+            GROUP=
+          }
+          trap 'endgroup' ERR
+          #
+          group "find ${{ github.workspace }}/DL -maxdepth 3"
+          sudo find ${{ github.workspace }}/DL -maxdepth 3
+          endgroup
       - name: Compress DL Cache
         run: |
           pushd ${{ github.workspace }}/DL
