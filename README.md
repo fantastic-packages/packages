@@ -8,7 +8,7 @@ fantastic packages
 [![GitHub](https://img.shields.io/github/license/fantastic-packages/packages?style=flat-square)](./LICENSE)
 
 > [!NOTE]\
-> The feed url has moved from https://fantastic-packages.github.io/packages/releases/ to https://fantastic-packages.github.io/releases/
+> The feed url has moved to https://fantastic-packages.github.io/releases/
 
 ### About branches
 
