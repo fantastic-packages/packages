@@ -25,7 +25,7 @@
 'bmips/bcm6358'           mips_mips32
 'bmips/bcm6362'           mips_mips32
 'bmips/bcm6368'           mips_mips32
-'d1/generic'              riscv64_riscv64
+'d1/generic'              riscv64_generic
 'gemini/generic'          arm_fa526
 'imx/cortexa53'           aarch64_cortex-a53
 'imx/cortexa7'            arm_cortex-a7_neon-vfpv4
@@ -37,11 +37,9 @@
 'ipq806x/generic'         arm_cortex-a15_neon-vfpv4
 'ixp4xx/generic'          armeb_xscale
 'kirkwood/generic'        arm_xscale
-'lantiq/ase'              
 'lantiq/xrx200'           mips_24kc
 'lantiq/xrx200_legacy'    mips_24kc
 'lantiq/xway'             mips_24kc
-'lantiq/xway_legacy'      
 'layerscape/armv7'        arm_cortex-a7_neon-vfpv4
 'layerscape/armv8_64b'    aarch64_generic
 'loongarch64/generic'     loongarch64_generic
@@ -53,6 +51,7 @@
 'mediatek/mt7622'         aarch64_cortex-a53
 'mediatek/mt7623'         arm_cortex-a7_neon-vfpv4
 'mediatek/mt7629'         arm_cortex-a7
+'microchipsw/lan969x'     aarch64_cortex-a53
 'mpc85xx/p1010'           powerpc_8548
 'mpc85xx/p1020'           powerpc_8548
 'mpc85xx/p2020'           powerpc_8548
@@ -64,21 +63,26 @@
 'omap/generic'            arm_cortex-a8_vfpv3
 'pistachio/generic'       mipsel_24kc_24kf
 'qoriq/generic'           powerpc64_e5500
+'qualcommax/ipq50xx'      aarch64_cortex-a53
+'qualcommax/ipq60xx'      aarch64_cortex-a53
 'qualcommax/ipq807x'      aarch64_cortex-a53
 'ramips/mt7620'           mipsel_24kc
 'ramips/mt7621'           mipsel_24kc
 'ramips/mt76x8'           mipsel_24kc
-'ramips/rt288x'           
 'ramips/rt305x'           mipsel_24kc
 'ramips/rt3883'           mipsel_74kc
-'realtek/rtl838x'         mips_4kec
+'realtek/rtl838x'         mips_24kc
 'realtek/rtl839x'         mips_24kc
 'realtek/rtl930x'         mips_24kc
-'realtek/rtl931x'         
+'realtek/rtl930x_nand'    mips_24kc
+'realtek/rtl931x'         mips_24kc
+'realtek/rtl931x_nand'    mips_24kc
 'rockchip/armv8'          aarch64_generic
-'sifiveu/generic'         riscv64_riscv64
-'starfive/generic'        riscv64_riscv64
+'sifiveu/generic'         riscv64_generic
+'siflower/sf21'           riscv64_generic
+'starfive/generic'        riscv64_generic
 'stm32/stm32mp1'          arm_cortex-a7_neon-vfpv4
+'sunxi/arm926ejs'         arm_arm926ej-s
 'sunxi/cortexa53'         aarch64_cortex-a53
 'sunxi/cortexa7'          arm_cortex-a7_neon-vfpv4
 'sunxi/cortexa8'          arm_cortex-a8_vfpv3
