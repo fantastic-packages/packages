@@ -108,6 +108,7 @@ make menuconfig
 | [openwrt-speedtest-go][] | CLI and Go API to Test Internet Speed using speedtest.net |
 | [openwrt-stuntman][] | an open source STUN server and client code by john selbie |
 | [openwrt-Toolkit][] | DNS Toolkit |
+| [vmlinux-btf][] | vmlinux-btf |
 
 --------
 
@@ -165,3 +166,4 @@ make menuconfig
 [openwrt-speedtest-go]: https://github.com/muink/openwrt-speedtest-go
 [openwrt-stuntman]: https://github.com/muink/openwrt-stuntman
 [openwrt-Toolkit]: https://github.com/muink/openwrt-Toolkit
+[vmlinux-btf]: https://github.com/kenzok8/vmlinux-btf
