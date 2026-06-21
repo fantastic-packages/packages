@@ -59,6 +59,7 @@ make menuconfig
 | [fantastic-packages-feeds][] | Installer for fantastic-packages feeds |
 | [luci-app-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [luci-app-bandix][] | A powerful OpenWrt LuCI application for network traffic monitoring. |
+| [luci-app-bandix-plus][] | An advanced multi-interface network traffic monitoring application for OpenWrt. |
 | [luci-app-change-mac][] | MAC address randomizer for LuCI |
 | [luci-app-cpu-perf][] | CPU performance information and management for LuCI |
 | [luci-app-cpu-status][] | CPU utilization info for the LuCI status page |
@@ -84,6 +85,7 @@ make menuconfig
 | [luci-app-xray][] | (Almost) full feature Xray client for OpenWrt |
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-bandix][] | A dependency package for luci-app-bandix that provides core network traffic monitoring. |
+| [openwrt-bandix-plus][] | A dependency package for luci-app-bandix-plus that provides core network traffic monitoring. |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-fastfetch][] | Fetch and display system information |
 | [openwrt-fakehttp][] | Obfuscate all your TCP connections into HTTP protocol for OpenWrt |
@@ -108,6 +110,7 @@ make menuconfig
 [fantastic-packages-feeds]: https://github.com/fantastic-packages/fantastic-packages-feeds
 [luci-app-alwaysonline]: https://github.com/muink/luci-app-alwaysonline
 [luci-app-bandix]: https://github.com/timsaya/luci-app-bandix
+[luci-app-bandix-plus]: https://github.com/timsaya/luci-app-bandix-plus
 [luci-app-change-mac]: https://github.com/muink/luci-app-change-mac
 [luci-app-cpu-perf]: https://github.com/gSpotx2f/luci-app-cpu-perf
 [luci-app-cpu-status]: https://github.com/gSpotx2f/luci-app-cpu-status
@@ -133,6 +136,7 @@ make menuconfig
 [luci-app-xray]: https://github.com/yichya/luci-app-xray
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-bandix]: https://github.com/timsaya/openwrt-bandix
+[openwrt-bandix-plus]: https://github.com/timsaya/openwrt-bandix-plus
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fakehttp]: https://github.com/yingziwu/openwrt-fakehttp
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch

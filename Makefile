@@ -28,6 +28,7 @@ define Package/$(PKG_NAME)-packages
 	DEPENDS+:=\
 		+alwaysonline \
 		+bandix \
+		+bandix-plus \
 		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
@@ -55,6 +56,7 @@ define Package/$(PKG_NAME)-luci
 	DEPENDS+:=\
 		+luci-app-alwaysonline \
 		+luci-app-bandix \
+		+luci-app-bandix-plus \
 		+luci-app-change-mac \
 		+luci-app-cpu-perf \
 		+luci-app-cpu-status \
@@ -87,6 +89,7 @@ define Package/$(PKG_NAME)
 	DEPENDS+:=\
 		+alwaysonline \
 		+bandix \
+		+bandix-plus \
 		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
@@ -108,6 +111,7 @@ define Package/$(PKG_NAME)
 		+uci-alwaysonline \
 		+luci-app-alwaysonline \
 		+luci-app-bandix \
+		+luci-app-bandix-plus \
 		+luci-app-change-mac \
 		+luci-app-cpu-perf \
 		+luci-app-cpu-status \
