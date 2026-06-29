@@ -137,7 +137,7 @@ jobs:
       # Cache restore
       - name: Cache FEED
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
           key: Cache-FEEDS-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
@@ -153,7 +153,7 @@ jobs:
 
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ github.workspace }}/DL
           key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}

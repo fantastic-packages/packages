@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Cache ${{ matrix.branch }} DL dependencies
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: ${{ github.workspace }}/DL # MUST same with compile.yml # https://github.com/actions/cache/issues/1653
           key: Cache-DL-${{ matrix.branch }}-
