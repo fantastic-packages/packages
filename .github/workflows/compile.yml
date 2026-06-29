@@ -137,7 +137,7 @@ jobs:
       # Cache restore
       - name: Cache DL dependencies
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ github.workspace }}/DL
           key: Cache-DL-${{ env.BRANCH }}-${{ hashFiles('**/Makefile') }}
