@@ -325,6 +325,11 @@ jobs:
                 pushd "${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
+            sed -i -e 's|src-link|src-get|' \
+              -e "s|${{ github.workspace }}/feeds/.*|https://github.com/${{ github.repository }}.git;$BUILDBRANCH|" \
+              feeds.conf
+            find * -type f -not -name 'sha256sums' | sort \
+              | xargs sha256sum | sed -ne 's|^\(.*\) \(.*\)$|\1 *\2|p' > sha256sums
             if [ "${{env.GPG_SIGN}}" == "true" -a -f sha256sums ]; then
               gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
             fi
