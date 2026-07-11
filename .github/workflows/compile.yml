@@ -314,18 +314,21 @@ jobs:
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}" 2>/dev/null
           if [ -d "${{ github.workspace }}/ARTIFACTS/bin" ]; then
             sudo chown -R $USER:$GROUPS ${{ github.workspace }}/ARTIFACTS/bin
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/packages" 2>/dev/null
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/luci" 2>/dev/null
-            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/special" 2>/dev/null
+            rm -rf   "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/" 2>/dev/null
             mkdir -p "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/" 2>/dev/null
+            pushd    "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/"
+            find "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/"* -maxdepth 0 -type f -exec cp -f {} ./ \;
             for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
               feed=$(cut -f2 -d'|' <<< "$FEED")
-              if [ -d "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
-                echo "cp ${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed to $GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                cp -Rf "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"
-                pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/${feed/$FTSPKGPREFIX/}"; sign_packages; popd
+              if [ -d  "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
+                cp -Rf "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" "${feed/$FTSPKGPREFIX/}"
+                pushd "${feed/$FTSPKGPREFIX/}"; sign_packages; popd
               fi
             done
+            if [ "${{env.GPG_SIGN}}" == "true" -a -f sha256sums ]; then
+              gpg -u ${GPG_ID} --batch --pinentry-mode=loopback --yes --passphrase "$(echo -n "${GPG_PW}")" -a -o sha256sums.asc --detach-sign sha256sums
+            fi
+            popd
             #
             pushd "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH"
             echo "$APK_SIGN_PUBKEY" > ${APK_SIGN_ID,,}.pub
