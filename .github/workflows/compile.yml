@@ -318,7 +318,7 @@ jobs:
             pushd    "$GITHUB_WORKSPACE/${{ inputs.GHPAGES_PATH }}/$BRANCH/packages/${{ inputs.ARCH }}/"
             find "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/"* -maxdepth 0 -type f -exec cp -f {} ./ \;
             for FEED in $EXTRA_FEEDS $SPECIAL_FEEDS; do
-              feed=$(cut -f2 -d'|' <<< "$FEED")
+              feed=$(awk -F'|' '{print $(NF-1)}' <<< "$FEED")
               if [ -d  "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" ]; then
                 cp -Rf "${{ github.workspace }}/ARTIFACTS/bin/packages/${{ inputs.ARCH }}/$feed" "${feed/$FTSPKGPREFIX/}"
                 pushd "${feed/$FTSPKGPREFIX/}"; sign_packages; popd
