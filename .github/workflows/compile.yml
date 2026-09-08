@@ -228,19 +228,25 @@ jobs:
           # SPECIAL_FEEDS
           echo "SpecFeeds: $SPECIAL_FEEDS"
           echo "SPECIAL_FEEDS=$SPECIAL_FEEDS" >> $GITHUB_ENV
-          # PACKAGES and SPECIALS
+          echo
+          # PACKAGES and SPECIALS and IGNORES
           _packages="$(ls -1 $GITHUB_WORKSPACE/feeds/packages/)"
           _luci="$(ls -1 $GITHUB_WORKSPACE/feeds/luci/)"
           _special="$(ls -1 $GITHUB_WORKSPACE/feeds/special/)"
-
           _ignores="^($(echo ${{ inputs.ignores }} | sed -E 's,\s+,|,g'))$"
+          echo Packages: $_packages
+          echo LuCI: $_luci
+          echo Special: $_special
+          echo Ignore: $_ignores
+          echo
+
           _all="$(echo -e "$_packages\n$_luci" | grep -Ev "$_ignores" | tr '\n' ' ')"
           _special="$(echo -e "$_special" | grep -Ev "$_ignores" | tr '\n' ' ')"
           _manual=''
           _specmanual=''
           for _p in ${{ inputs.compiles }}; do
-            [ -z "$(find "$GITHUB_WORKSPACE/feeds" -maxdepth 2 -name $_p 2>/dev/null)" ] && continue
-            [ -e "$GITHUB_WORKSPACE/feeds/special/$_p" ] \
+            [ -n "$(find "$GITHUB_WORKSPACE/feeds" -maxdepth 2 -name $_p 2>/dev/null)" ] || continue
+            find "$GITHUB_WORKSPACE/feeds/special" -maxdepth 1 -name "$_p" | grep -q . \
               && _specmanual="${_specmanual:+$_specmanual }$_p" \
               || _manual="${_manual:+$_manual }$_p"
           done
