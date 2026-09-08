@@ -268,7 +268,7 @@ jobs:
 
       # Build work START
       - name: Build Packages
-        id: build_packags
+        id: build_packages
         uses: fantastic-packages/gh-action-sdk@master
         with:
           cache: true
@@ -288,11 +288,11 @@ jobs:
           #V: s
 
       #- name: Setup tmate session
-      #  if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
+      #  if: ${{ failure() && steps.build_packages.conclusion == 'failure' }}
       #  uses: mxschmitt/action-tmate@v3
 
       - name: Upload Error Logs
-        if: ${{ failure() && steps.build_packags.conclusion == 'failure' }}
+        if: ${{ failure() && steps.build_packages.conclusion == 'failure' }}
         uses: actions/upload-artifact@v7
         with:
           name: Error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
