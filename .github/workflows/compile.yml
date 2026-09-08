@@ -282,7 +282,7 @@ jobs:
           EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }} ${{ env.SPECIAL_FEEDS }}
           NO_REPO_FEEDS: 1
           NO_SHFMT_CHECK: 1
-          PACKAGES: ${{ env.SPECIALS }} ${{ env.PACKAGES || 'fantastic-keyring' }}
+          PACKAGES: ${{ env.PACKAGES || 'fantastic-keyring' }}
           INDEX: 1
           PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
           #V: s
@@ -296,6 +296,38 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: Error-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
+          path: ${{ github.workspace }}/ARTIFACTS/logs
+
+      - name: Build Special Packages
+        if: ${{ env.SPECIALS != '' }}
+        id: build_special_packages
+        uses: fantastic-packages/gh-action-sdk@master
+        with:
+          cache: true
+          token: ${{ secrets.RELEASES_PUSH }}
+        env:
+          TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
+          VERSION: ${{ env.FMTED_VERSION }}
+          ARTIFACTS_DIR: ${{ github.workspace }}/ARTIFACTS
+          FEEDS_DIR: ${{ github.workspace }}/FEEDS/${{ env.BRANCH }}
+          DL_DIR: ${{ github.workspace }}/DL
+          EXTRA_FEEDS: ${{ env.EXTRA_FEEDS }} ${{ env.SPECIAL_FEEDS }}
+          NO_REPO_FEEDS: 1
+          NO_SHFMT_CHECK: 1
+          PACKAGES: ${{ env.SPECIALS }}
+          INDEX: 1
+          PRIVATE_KEY: ${{ env.APK_SIGN_KEY }}
+          #V: s
+
+      #- name: Setup tmate session
+      #  if: ${{ failure() && steps.build_special_packages.conclusion == 'failure' }}
+      #  uses: mxschmitt/action-tmate@v3
+
+      - name: Upload Error Logs
+        if: ${{ failure() && steps.build_special_packages.conclusion == 'failure' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: Error-special-logs-${{ env.OP_VERSION }}-${{ inputs.ARCH }}-${{ inputs.BOARD }}-${{ inputs.SUBTARGET }}-${{ inputs.MODEL }}-${{ hashFiles('**/Makefile') }}
           path: ${{ github.workspace }}/ARTIFACTS/logs
       # Build work END
 
