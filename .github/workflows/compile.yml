@@ -311,6 +311,7 @@ jobs:
         with:
           cache: true
           token: ${{ secrets.RELEASES_PUSH }}
+          download-ci-llvm: true
         env:
           TARGET: ${{ inputs.BOARD  }}/${{ inputs.SUBTARGET }}
           VERSION: ${{ env.FMTED_VERSION }}
