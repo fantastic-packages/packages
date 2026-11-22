@@ -25,11 +25,11 @@
 [submodule "luci/luci-app-tn-netports"]
 	path = luci/luci-app-tn-netports
 	url = https://github.com/muink/luci-app-tn-netports.git
-[submodule "packages/openwrt-rgmac"]
-	path = packages/openwrt-rgmac
+[submodule "packages/rgmac"]
+	path = packages/rgmac
 	url = https://github.com/muink/openwrt-rgmac.git
-[submodule "packages/openwrt-Pcap_DNSProxy"]
-	path = packages/openwrt-Pcap_DNSProxy
+[submodule "packages/pcap-dnsproxy"]
+	path = packages/pcap-dnsproxy
 	url = https://github.com/muink/openwrt-Pcap_DNSProxy.git
 [submodule "packages/openwrt-Natter"]
 	path = packages/openwrt-Natter
@@ -40,11 +40,11 @@
 [submodule "luci/luci-app-netspeedtest"]
 	path = luci/luci-app-netspeedtest
 	url = https://github.com/muink/luci-app-netspeedtest.git
-[submodule "packages/openwrt-go-stun"]
-	path = packages/openwrt-go-stun
+[submodule "packages/go-stun"]
+	path = packages/go-stun
 	url = https://github.com/muink/openwrt-go-stun.git
-[submodule "packages/openwrt-alwaysonline"]
-	path = packages/openwrt-alwaysonline
+[submodule "packages/alwaysonline"]
+	path = packages/alwaysonline
 	url = https://github.com/muink/openwrt-alwaysonline.git
 [submodule "luci/luci-app-alwaysonline"]
 	path = luci/luci-app-alwaysonline
@@ -73,8 +73,8 @@
 [submodule "luci/luci-app-internet-detector"]
 	path = luci/luci-app-internet-detector
 	url = https://github.com/gSpotx2f/luci-app-internet-detector.git
-[submodule "packages/openwrt-php-nginx"]
-	path = packages/openwrt-php-nginx
+[submodule "packages/php-nginx"]
+	path = packages/php-nginx
 	url = https://github.com/muink/openwrt-php-nginx.git
 [submodule "luci/luci-app-argon-config"]
 	path = luci/luci-app-argon-config
@@ -85,17 +85,15 @@
 [submodule "packages/openwrt-netdata-ssl"]
 	path = packages/openwrt-netdata-ssl
 	url = https://github.com/muink/openwrt-netdata-ssl.git
-[submodule "packages/openwrt-stuntman"]
-	path = packages/openwrt-stuntman
 	url = https://github.com/muink/openwrt-stuntman.git
-[submodule "packages/openwrt-natmapt"]
-	path = packages/openwrt-natmapt
+[submodule "packages/natmapt"]
+	path = packages/natmapt
 	url = https://github.com/muink/openwrt-natmapt.git
 [submodule "luci/luci-app-natmapt"]
 	path = luci/luci-app-natmapt
 	url = https://github.com/muink/luci-app-natmapt.git
-[submodule "packages/openwrt-Toolkit"]
-	path = packages/openwrt-Toolkit
+[submodule "packages/Toolkit"]
+	path = packages/Toolkit
 	url = https://github.com/muink/openwrt-Toolkit.git
 [submodule "luci/luci-app-dnsproxy"]
 	path = luci/luci-app-dnsproxy
@@ -109,35 +107,35 @@
 [submodule "luci/luci-app-xray"]
 	path = luci/luci-app-xray
 	url = https://github.com/yichya/luci-app-xray.git
-[submodule "packages/openwrt-speedtest-go"]
-	path = packages/openwrt-speedtest-go
+[submodule "packages/speedtest-go"]
+	path = packages/speedtest-go
 	url = https://github.com/muink/openwrt-speedtest-go.git
-[submodule "packages/openwrt-einat-ebpf"]
-	path = packages/openwrt-einat-ebpf
+[submodule "packages/einat-ebpf"]
+	path = packages/einat-ebpf
 	url = https://github.com/muink/openwrt-einat-ebpf.git
 [submodule "luci/luci-app-einat"]
 	path = luci/luci-app-einat
 	url = https://github.com/muink/luci-app-einat.git
-[submodule "packages/openwrt-shadowsocks-rust"]
-	path = packages/openwrt-shadowsocks-rust
+[submodule "packages/shadowsocks-rust"]
+	path = packages/shadowsocks-rust
 	url = https://github.com/muink/openwrt-shadowsocks-rust.git
-[submodule "luci/luci-app-ssrust"]
-	path = luci/luci-app-ssrust
+[submodule "luci/luci-app-shadowsocks-rust"]
+	path = luci/luci-app-shadowsocks-rust
 	url = https://github.com/muink/luci-app-ssrust.git
 [submodule "packages/openwrt-fchomo"]
 	path = packages/openwrt-fchomo
 	url = https://github.com/fcshark-org/openwrt-fchomo.git
-[submodule "packages/openwrt-fastfetch"]
-	path = packages/openwrt-fastfetch
+[submodule "packages/fastfetch"]
+	path = packages/fastfetch
 	url = https://github.com/muink/openwrt-fastfetch.git
-[submodule "packages/openwrt-fakehttp"]
-	path = packages/openwrt-fakehttp
+[submodule "packages/fakehttp"]
+	path = packages/fakehttp
 	url = https://github.com/yingziwu/openwrt-fakehttp.git
 [submodule "luci/luci-app-fakehttp"]
 	path = luci/luci-app-fakehttp
 	url = https://github.com/yingziwu/luci-app-fakehttp.git
-[submodule "packages/openwrt-scart"]
-	path = packages/openwrt-scart
+[submodule "packages/scart"]
+	path = packages/scart
 	url = https://github.com/fcshark-org/openwrt-scart.git
 [submodule "packages/openwrt-bandix"]
 	path = packages/openwrt-bandix
@@ -145,8 +143,8 @@
 [submodule "luci/luci-app-bandix"]
 	path = luci/luci-app-bandix
 	url = https://github.com/timsaya/luci-app-bandix.git
-[submodule "packages/openwrt-iusebash"]
-	path = packages/openwrt-iusebash
+[submodule "packages/iusebash"]
+	path = packages/iusebash
 	url = https://github.com/muink/openwrt-iusebash.git
 [submodule "packages/openwrt-bandix-plus"]
 	path = packages/openwrt-bandix-plus
