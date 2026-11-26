@@ -88,6 +88,7 @@ make menuconfig
 | [openwrt-alwaysonline][] | Hijack/bypass Windows NCSI and iOS portal detection |
 | [openwrt-bandix][] | A dependency package for luci-app-bandix that provides core network traffic monitoring. |
 | [openwrt-bandix-plus][] | A dependency package for luci-app-bandix-plus that provides core network traffic monitoring. |
+| [openwrt-clash-speedtest][] | A speed-testing tool based on the Clash/Mihomo core, designed to quickly test the speed of your nodes. |
 | [openwrt-einat-ebpf][] | eBPF-based Endpoint-Independent NAT |
 | [openwrt-fastfetch][] | Fetch and display system information |
 | [openwrt-fakehttp][] | Obfuscate all your TCP connections into HTTP protocol for OpenWrt |
@@ -140,6 +141,7 @@ make menuconfig
 [openwrt-alwaysonline]: https://github.com/muink/openwrt-alwaysonline
 [openwrt-bandix]: https://github.com/timsaya/openwrt-bandix
 [openwrt-bandix-plus]: https://github.com/timsaya/openwrt-bandix-plus
+[openwrt-clash-speedtest]: https://github.com/muink/openwrt-clash-speedtest
 [openwrt-einat-ebpf]: https://github.com/muink/openwrt-einat-ebpf
 [openwrt-fakehttp]: https://github.com/yingziwu/openwrt-fakehttp
 [openwrt-fastfetch]: https://github.com/muink/openwrt-fastfetch

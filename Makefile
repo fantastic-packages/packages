@@ -29,6 +29,7 @@ define Package/$(PKG_NAME)-packages
 		+alwaysonline \
 		+bandix \
 		+bandix-plus \
+		+clash-speedtest \
 		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
@@ -48,6 +49,7 @@ define Package/$(PKG_NAME)-packages
 		+speedtest-go \
 		+stuntman \
 		+Toolkit \
+		+vmlinux-btf \
 		+uci-alwaysonline
 endef
 
@@ -90,6 +92,7 @@ define Package/$(PKG_NAME)
 		+alwaysonline \
 		+bandix \
 		+bandix-plus \
+		+clash-speedtest \
 		+distfeeds-mirror-sjtu \
 		+einat-ebpf \
 		+fantastic-keyring \
@@ -108,6 +111,7 @@ define Package/$(PKG_NAME)
 		+speedtest-go \
 		+stuntman \
 		+Toolkit \
+		+vmlinux-btf \
 		+uci-alwaysonline \
 		+luci-app-alwaysonline \
 		+luci-app-bandix \
