@@ -168,11 +168,21 @@ jobs:
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
         shell: bash
         run: |
-          wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip \
-          && unzip -o ghost-dl.zip \
-          && cp -rf ghost-dl-*/* "${{ github.workspace }}/DL/" \
-          && rm -rf ghost-dl.zip ghost-dl-* \
-          || echo "ghost-dl download failed"
+          if wget -q "https://codeload.github.com/fantastic-packages/ghost-dl/zip/refs/heads/$BRANCH" -O ghost-dl.zip; then
+            unzip -o ghost-dl.zip
+            cp -rf ghost-dl-*/* "${{ github.workspace }}/DL/"
+            rm -rf ghost-dl.zip ghost-dl-*
+            #
+            find . -type f -name "*.aa" -exec sh -c '
+              for f do
+                prefix="${f%.aa}";
+                cat "${prefix}."* > "$prefix";
+                rm -f "${prefix}."*;
+              done
+            ' sh '{}' \;
+          else
+            echo "ghost-dl download failed"
+          fi
 
       - name: Display structure of Cache files
         if: env.CACHE_DOWNLOAD == 'true' && !cancelled()
